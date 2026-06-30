@@ -2,19 +2,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
-
 public class IntroManager : MonoBehaviour
 {
-    public VideoPlayer videoPlayer; // tu componente Video Player
-    public Button skipButton;       // botón Omitir
+    [Header("Referencias")]
+    public VideoPlayer videoPlayer; // Componente Video Player
 
     void Start()
     {
-        // cuando se haga clic en Omitir
-        skipButton.onClick.AddListener(SkipIntro);
-
-        // cuando el video termine
+        // Cuando el video termine
         videoPlayer.loopPointReached += OnVideoEnd;
+    }
+
+    void Update()
+    {
+        // Si el jugador presiona ESC, salta la intro
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SkipIntro();
+        }
     }
 
     void SkipIntro()
@@ -29,6 +34,6 @@ public class IntroManager : MonoBehaviour
 
     void LoadMenu()
     {
-        SceneManager.LoadScene("MenuScene"); // usa exactamente el nombre de tu escena
+        SceneManager.LoadScene("MenuScene"); // Usa el nombre exacto de tu escena de menú
     }
 }

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ad54231483e6e4bb28c7041f186d09, type: 3}
+  m_Name: Level1_Layout
+  m_EditorClassIdentifier: 
+  levelName: Woods
+  levelIndex: 0
+  columns: 3
+  rows: 2
+  cellWidth: 40
+  cellHeight: 25
+  gridOrigin: {x: 0, y: 0}
+  startZonePrefab: {fileID: 526033332859031135, guid: 92e67e8025080574f8d50c7aca656040, type: 3}
+  endZonePrefab: {fileID: 526033332859031135, guid: 48b0d3cb767569647bb0752bfb854d0a, type: 3}
+  middleZonePrefabs:
+  - {fileID: 526033332859031135, guid: 229ad1a135a338942a2b5fd6cb875979, type: 3}
+  - {fileID: 526033332859031135, guid: 60729fd5ab42564439dc93d3d6d03242, type: 3}
+  - {fileID: 526033332859031135, guid: 9e3f39b7f131ded47847daf7a3dad37c, type: 3}
+  - {fileID: 526033332859031135, guid: 535deb4aea9f95b46a008cf2b8daaccc, type: 3}

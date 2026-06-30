@@ -1,44 +1,66 @@
-# === UNITY ===
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
-[Mm]emoryCaptures/
-UserSettings/
+# ==============================================================================
+# UNIDAD: CACHÉ, ARCHIVOS TEMPORALES Y GENERADOS AUTOMÁTICAMENTE
+# ==============================================================================
+# Estas carpetas son generadas por Unity en runtime y pueden ser recreadas.
+# Nunca deben subirse al repositorio por su gran tamaño.
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
 
-# Asset meta data should only be ignored when the corresponding asset is also ignored
-!/[Aa]ssets/**/*.meta
+# Archivos autogenerados y de bloqueo
+*.apk
+*.aab
+*.unitypackage
+*.app
+sysinfo.txt
+*.crash
+crash_info.txt
 
-# Uncomment if you have local project settings
-# [Pp]rojectSettings/
-
-# === VISUAL STUDIO ===
+# ==============================================================================
+# EDITORES E IDEs
+# ==============================================================================
+# Archivos autogenerados por Visual Studio, VS Code, Rider y MonoDevelop
+# Visual Studio
 .vs/
-.vscode/
-*.csproj
-*.unityproj
 *.sln
-*.suo
-*.tmp
-*.user
+*.csproj
 *.userprefs
-*.pidb
-*.booproj
-*.svd
-*.pdb
-*.mdb
-*.opendb
-*.VC.db
+*.suo
+*.user
 
-# === OS GENERATED ===
-.DS_Store
-Thumbs.db
+# Visual Studio Code
+.vscode/
 
-# === RIDER (JetBrains) ===
+# JetBrains Rider / IntelliJ
 .idea/
-*.iml
+*.sln.DotSettings.user
+*.sln.DotSettings
 
-# === CRASH / DEBUG ===
-*.stacktrace
+# ==============================================================================
+# ARCHIVOS DEL SISTEMA OPERATIVO
+# ==============================================================================
+# Basura del sistema que no pertenece al proyecto
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ==============================================================================
+# EXCEPCIONES IMPORTANTES (PROTEGER LO ESENCIAL)
+# ==============================================================================
+# Asegurarnos de que las carpetas vitales NUNCA se ignoren por accidente
+!/[Aa]ssets/
+!/[Pp]roject[Ss]ettings/
+!/[Pp]ackages/
+
+# Ignorar videos pesados específicos
+Assets/creditos finales.mov

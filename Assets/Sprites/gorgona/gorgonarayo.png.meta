@@ -1,0 +1,402 @@
+fileFormatVersion: 2
+guid: 0043940fee097df4b8b8317e83efb3a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2207922377842595034
+    second: gorgonarayo_0
+  - first:
+      213: 7942265152367088490
+    second: gorgonarayo_1
+  - first:
+      213: -9009324513465204621
+    second: gorgonarayo_2
+  - first:
+      213: -6513647642291061074
+    second: gorgonarayo_3
+  - first:
+      213: 5190349208404873247
+    second: gorgonarayo_4
+  - first:
+      213: 3522997740123128428
+    second: gorgonarayo_5
+  - first:
+      213: -8059802336579094565
+    second: gorgonarayo_6
+  - first:
+      213: 9191466144008902596
+    second: gorgonarayo_7
+  - first:
+      213: -1542684371531361020
+    second: gorgonarayo_8
+  - first:
+      213: 5351829752248919417
+    second: gorgonarayo_9
+  - first:
+      213: -2526425298172772860
+    second: gorgonarayo_10
+  - first:
+      213: -2171968533211446174
+    second: gorgonarayo_11
+  - first:
+      213: 8290852146468149612
+    second: gorgonarayo_12
+  - first:
+      213: 5802940414409543360
+    second: gorgonarayo_13
+  - first:
+      213: 6457182562655834328
+    second: gorgonarayo_14
+  - first:
+      213: 4745958504454886045
+    second: gorgonarayo_15
+  - first:
+      213: -409974821821058815
+    second: gorgonarayo_16
+  - first:
+      213: 5526564419602596881
+    second: gorgonarayo_17
+  - first:
+      213: -5179738144138159229
+    second: gorgonarayo_18
+  - first:
+      213: -6527768363439196268
+    second: gorgonarayo_19
+  - first:
+      213: 7727518501574575969
+    second: gorgonarayo_20
+  - first:
+      213: -5270488426332680621
+    second: gorgonarayo_21
+  - first:
+      213: -4476383674760354586
+    second: gorgonarayo_22
+  - first:
+      213: 1719858801514241377
+    second: gorgonarayo_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 125
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gorgonarayo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 1080
+        height: 360
+      alignment: 9
+      pivot: {x: 0.08003767, y: 0.49559972}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 502, y: -47}
+        - {x: 496, y: 52}
+        - {x: 448, y: 109}
+        - {x: 379, y: 162}
+        - {x: 232, y: 162}
+        - {x: 232, y: 138}
+        - {x: 153, y: 138}
+        - {x: 135, y: 130}
+        - {x: 131, y: 121}
+        - {x: 130.9207, y: 118.4624}
+        - {x: 124, y: 121}
+        - {x: 29, y: 121}
+        - {x: 29, y: 97}
+        - {x: -60, y: 97}
+        - {x: -60, y: 83}
+        - {x: -135, y: 83}
+        - {x: -137, y: 82}
+        - {x: -138.78116, y: 59.201202}
+        - {x: -148, y: 61}
+        - {x: -220, y: 61}
+        - {x: -220, y: 37}
+        - {x: -253, y: 37}
+        - {x: -253, y: -36}
+        - {x: -220, y: -36}
+        - {x: -220, y: -58}
+        - {x: -147, y: -58}
+        - {x: -147, y: -80}
+        - {x: -76, y: -80}
+        - {x: -60, y: -78.04878}
+        - {x: -60, y: -89}
+        - {x: -59, y: -96}
+        - {x: 20, y: -96}
+        - {x: 29, y: -93.37079}
+        - {x: 29, y: -113}
+        - {x: 36, y: -118}
+        - {x: 124, y: -118}
+        - {x: 124, y: -134}
+        - {x: 232, y: -134}
+        - {x: 232, y: -159}
+        - {x: 382, y: -152}
+      - - {x: -264, y: -56}
+        - {x: -264, y: 39}
+        - {x: -302, y: 64}
+        - {x: -356, y: 64}
+        - {x: -368, y: 54}
+        - {x: -391, y: 20}
+        - {x: -395, y: -18}
+        - {x: -376, y: -48}
+        - {x: -329, y: -74}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b6e01ab42eb51e0800000000000000
+      internalID: -2207922377842595034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gorgonarayo_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 1080
+        height: 360
+      alignment: 9
+      pivot: {x: 0.07773994, y: 0.4558555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 504, y: -44}
+        - {x: 500, y: 94}
+        - {x: 355, y: 159}
+        - {x: 239, y: 161}
+        - {x: 239, y: 147}
+        - {x: 169, y: 147}
+        - {x: 169, y: 118}
+        - {x: 89, y: 118}
+        - {x: 89, y: 100}
+        - {x: 19, y: 100}
+        - {x: 14, y: 93}
+        - {x: 17, y: 89}
+        - {x: 16.566269, y: 87}
+        - {x: -82, y: 87}
+        - {x: -89.33333, y: 76}
+        - {x: -196, y: 74}
+        - {x: -208, y: 51}
+        - {x: -264, y: 51}
+        - {x: -270, y: 41}
+        - {x: -271.63635, y: 29}
+        - {x: -297, y: 29}
+        - {x: -297, y: 30}
+        - {x: -325, y: 54}
+        - {x: -390, y: 54}
+        - {x: -406, y: 45}
+        - {x: -427, y: 13}
+        - {x: -424, y: -32}
+        - {x: -412, y: -70}
+        - {x: -323, y: -78}
+        - {x: -297, y: -69}
+        - {x: -297, y: -58}
+        - {x: -283.5, y: -58}
+        - {x: -285, y: -69}
+        - {x: -285, y: -81}
+        - {x: -208, y: -81}
+        - {x: -208, y: -98}
+        - {x: -84, y: -98}
+        - {x: -81.35715, y: -97}
+        - {x: -1, y: -97}
+        - {x: -1, y: -98}
+        - {x: 89, y: -98}
+        - {x: 89, y: -117}
+        - {x: 169, y: -117}
+        - {x: 169, y: -128}
+        - {x: 174, y: -129}
+        - {x: 239, y: -129}
+        - {x: 239, y: -160}
+        - {x: 404, y: -153}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63ddce7318983e60800000000000000
+      internalID: 7942265152367088490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gorgonarayo_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1080
+        height: 360
+      alignment: 9
+      pivot: {x: 0.07292859, y: 0.44680414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 520, y: -53}
+        - {x: 520, y: 46}
+        - {x: 469, y: 110}
+        - {x: 380, y: 170}
+        - {x: 237, y: 170}
+        - {x: 237, y: 144}
+        - {x: 121, y: 144}
+        - {x: 133, y: 130}
+        - {x: 157, y: 120}
+        - {x: 155.39018, y: 109.62561}
+        - {x: 115, y: 126}
+        - {x: 43, y: 126}
+        - {x: 19, y: 123}
+        - {x: 19, y: 114}
+        - {x: 21, y: 105}
+        - {x: 20.600006, y: 100}
+        - {x: -77, y: 100}
+        - {x: -77, y: 85}
+        - {x: -169, y: 85}
+        - {x: -170, y: 82}
+        - {x: -170, y: 61}
+        - {x: -246, y: 61}
+        - {x: -248, y: 60}
+        - {x: -248, y: 36}
+        - {x: -286, y: 36}
+        - {x: -286, y: -42}
+        - {x: -248, y: -42}
+        - {x: -248, y: -66}
+        - {x: -170, y: -66}
+        - {x: -170, y: -89}
+        - {x: -77, y: -89}
+        - {x: -77, y: -106}
+        - {x: 19, y: -106}
+        - {x: 19, y: -130}
+        - {x: 121, y: -130}
+        - {x: 121, y: -147}
+        - {x: 237, y: -147}
+        - {x: 237, y: -174}
+        - {x: 401, y: -162}
+      - - {x: -301, y: -67}
+        - {x: -301, y: 48}
+        - {x: -305, y: 50}
+        - {x: -389, y: 52}
+        - {x: -426, y: 12}
+        - {x: -431, y: -39}
+        - {x: -404, y: -77}
+        - {x: -304, y: -82}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37000b4a61378f280800000000000000
+      internalID: -9009324513465204621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 79acc391eaf2d074c982cc94c850eb70
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gorgonarayo_0: -2207922377842595034
+      gorgonarayo_1: 7942265152367088490
+      gorgonarayo_2: -9009324513465204621
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: 7eb557a06d04dcf46b03ea7dbeb4e62e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8465071931568437624
+    second: palustrus 2_0
+  - first:
+      213: 6340227298312673051
+    second: palustrus 2_1
+  - first:
+      213: 5309544590848561719
+    second: palustrus 2_2
+  - first:
+      213: -1577993032150690999
+    second: palustrus 2_3
+  - first:
+      213: 3012875851342915428
+    second: palustrus 2_4
+  - first:
+      213: -2506255008695404996
+    second: palustrus 2_5
+  - first:
+      213: 8947540765809972956
+    second: palustrus 2_6
+  - first:
+      213: -9128922483735498830
+    second: palustrus 2_7
+  - first:
+      213: 4981936755982373078
+    second: palustrus 2_8
+  - first:
+      213: -5369578258199297357
+    second: palustrus 2_9
+  - first:
+      213: 449314589986282431
+    second: palustrus 2_10
+  - first:
+      213: 8121797871839991094
+    second: palustrus 2_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: palustrus 2_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 10
+        width: 434
+        height: 630
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886cbb89de5068a80800000000000000
+      internalID: -8465071931568437624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palustrus 2_1
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 639
+        width: 16
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b175927c2230df750800000000000000
+      internalID: 6340227298312673051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palustrus 2_2
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 639
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73210a89caa4fa940800000000000000
+      internalID: 5309544590848561719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palustrus 2_3
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 639
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 943dd94a2b7d91ae0800000000000000
+      internalID: -1577993032150690999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palustrus 2_4
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 8
+        width: 1
+        height: 632
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467a5a7bf92efc920800000000000000
+      internalID: 3012875851342915428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 47f692bb69232e0439e0e21bd43833b1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      palustrus 2_0: -8465071931568437624
+      palustrus 2_1: 6340227298312673051
+      palustrus 2_10: 449314589986282431
+      palustrus 2_11: 8121797871839991094
+      palustrus 2_2: 5309544590848561719
+      palustrus 2_3: -1577993032150690999
+      palustrus 2_4: 3012875851342915428
+      palustrus 2_5: -2506255008695404996
+      palustrus 2_6: 8947540765809972956
+      palustrus 2_7: -9128922483735498830
+      palustrus 2_8: 4981936755982373078
+      palustrus 2_9: -5369578258199297357
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

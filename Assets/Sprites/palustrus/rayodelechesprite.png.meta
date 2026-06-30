@@ -1,0 +1,363 @@
+fileFormatVersion: 2
+guid: 900174f103dc59f43aeab3178ee6743c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6479422426856621644
+    second: rayodelechesprite_0
+  - first:
+      213: -8605340894904303948
+    second: rayodelechesprite_1
+  - first:
+      213: -5067201901132430852
+    second: rayodelechesprite_2
+  - first:
+      213: -6993087374612299650
+    second: rayodelechesprite_3
+  - first:
+      213: -123222262334476630
+    second: rayodelechesprite_4
+  - first:
+      213: -1673227561629499025
+    second: rayodelechesprite_5
+  - first:
+      213: 779192350608647260
+    second: rayodelechesprite_6
+  - first:
+      213: 4519229071925974619
+    second: rayodelechesprite_7
+  - first:
+      213: 7365531605162234062
+    second: rayodelechesprite_8
+  - first:
+      213: 5319347215304797578
+    second: rayodelechesprite_9
+  - first:
+      213: -4494723951789352537
+    second: rayodelechesprite_10
+  - first:
+      213: -4215038615050859286
+    second: rayodelechesprite_11
+  - first:
+      213: 67388277092468606
+    second: rayodelechesprite_12
+  - first:
+      213: 6200000801800470377
+    second: rayodelechesprite_13
+  - first:
+      213: -5397482255426231067
+    second: rayodelechesprite_14
+  - first:
+      213: -3584096363831227109
+    second: rayodelechesprite_15
+  - first:
+      213: -7192286267502756508
+    second: rayodelechesprite_16
+  - first:
+      213: -8003306014554083083
+    second: rayodelechesprite_17
+  - first:
+      213: 1523041379045199532
+    second: rayodelechesprite_18
+  - first:
+      213: -2008633315795652561
+    second: rayodelechesprite_19
+  - first:
+      213: 759362276286163923
+    second: rayodelechesprite_20
+  - first:
+      213: -8329375275901892482
+    second: rayodelechesprite_21
+  - first:
+      213: 4657918042112591905
+    second: rayodelechesprite_22
+  - first:
+      213: 2102409054282465364
+    second: rayodelechesprite_23
+  - first:
+      213: 6650713791423836985
+    second: rayodelechesprite_24
+  - first:
+      213: -7928971533972984755
+    second: rayodelechesprite_25
+  - first:
+      213: -3599286621458093039
+    second: rayodelechesprite_26
+  - first:
+      213: 1017912627959676440
+    second: rayodelechesprite_27
+  - first:
+      213: -3270514731693502554
+    second: rayodelechesprite_28
+  - first:
+      213: -5261273153617345218
+    second: rayodelechesprite_29
+  - first:
+      213: 7107989618723336132
+    second: rayodelechesprite_30
+  - first:
+      213: -4334480730469789934
+    second: rayodelechesprite_31
+  - first:
+      213: -2339792228530003098
+    second: rayodelechesprite_32
+  - first:
+      213: 634147675178153132
+    second: rayodelechesprite_33
+  - first:
+      213: 9103755291037275278
+    second: rayodelechesprite_34
+  - first:
+      213: -1409299544483627723
+    second: rayodelechesprite_35
+  - first:
+      213: 5078535311075058637
+    second: rayodelechesprite_36
+  - first:
+      213: -2234470594136832323
+    second: rayodelechesprite_37
+  - first:
+      213: 9220121753320787709
+    second: rayodelechesprite_38
+  - first:
+      213: -6344515885135848267
+    second: rayodelechesprite_39
+  - first:
+      213: -7225432835185453202
+    second: rayodelechesprite_40
+  - first:
+      213: 7096168728172226625
+    second: rayodelechesprite_41
+  - first:
+      213: -8699062507293774342
+    second: rayodelechesprite_42
+  - first:
+      213: -2537877055883758459
+    second: rayodelechesprite_43
+  - first:
+      213: -7496100606980372226
+    second: rayodelechesprite_44
+  - first:
+      213: -9151723762930489188
+    second: rayodelechesprite_45
+  - first:
+      213: -5059015042930979560
+    second: rayodelechesprite_46
+  - first:
+      213: 1355500410217643566
+    second: rayodelechesprite_47
+  - first:
+      213: 6263314149124380642
+    second: rayodelechesprite_48
+  - first:
+      213: 594197734238823323
+    second: rayodelechesprite_49
+  - first:
+      213: -6114655577445408723
+    second: rayodelechesprite_50
+  - first:
+      213: -4532602749023618008
+    second: rayodelechesprite_51
+  - first:
+      213: 8205547781687847453
+    second: rayodelechesprite_52
+  - first:
+      213: -4157815761056473766
+    second: rayodelechesprite_53
+  - first:
+      213: -5419350909368688283
+    second: rayodelechesprite_54
+  - first:
+      213: -6624139630148600128
+    second: rayodelechesprite_55
+  - first:
+      213: -883329380467862406
+    second: rayodelechesprite_56
+  - first:
+      213: 8117131649401827670
+    second: rayodelechesprite_57
+  - first:
+      213: -6060386243470744544
+    second: rayodelechesprite_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rayodelechesprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 819
+        width: 1043
+        height: 242
+      alignment: 9
+      pivot: {x: 0.122470714, y: 0.54265577}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c460d762e588be950800000000000000
+      internalID: 6479422426856621644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rayodelechesprite_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 478
+        width: 1024
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be36149c00b39880800000000000000
+      internalID: -8605340894904303948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rayodelechesprite_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105
+        width: 1040
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf141d5d7beada9b0800000000000000
+      internalID: -5067201901132430852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 650c67ec1a702704d92a26f98bfcb98e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rayodelechesprite_0: 6479422426856621644
+      rayodelechesprite_1: -8605340894904303948
+      rayodelechesprite_2: -5067201901132430852
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

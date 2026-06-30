@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: 251e1e22fef608241a29056f2971f2ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9044787177157085637
+    second: pajataque_0
+  - first:
+      213: -6373317864507660216
+    second: pajataque_1
+  - first:
+      213: 8946417529343596068
+    second: pajataque_2
+  - first:
+      213: -1315950737617793683
+    second: pajataque_3
+  - first:
+      213: -7270548997879313467
+    second: pajataque_4
+  - first:
+      213: -165291991224644232
+    second: pajataque_5
+  - first:
+      213: -7992967244197629242
+    second: pajataque_6
+  - first:
+      213: -4295842664040057539
+    second: pajataque_7
+  - first:
+      213: 5360312294640641498
+    second: pajataque_8
+  - first:
+      213: 5648512677270345411
+    second: pajataque_9
+  - first:
+      213: -824574437681894799
+    second: pajataque_10
+  - first:
+      213: -2369330040776835797
+    second: pajataque_11
+  - first:
+      213: 3348247589850024270
+    second: pajataque_12
+  - first:
+      213: 4202218484606761719
+    second: pajataque_13
+  - first:
+      213: 5327651416845405101
+    second: pajataque_14
+  - first:
+      213: 179638603059362105
+    second: pajataque_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pajataque_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 124
+        width: 313
+        height: 443
+      alignment: 9
+      pivot: {x: 0.52751905, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9c47b240a858d70800000000000000
+      internalID: 9044787177157085637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajataque_1
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 119
+        width: 317
+        height: 458
+      alignment: 9
+      pivot: {x: 0.49094293, y: 0.46656606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 848ae556b2d6d87a0800000000000000
+      internalID: -6373317864507660216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajataque_2
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 99
+        width: 409
+        height: 512
+      alignment: 9
+      pivot: {x: 0.48362035, y: 0.41962302}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4265ad0c75f082c70800000000000000
+      internalID: 8946417529343596068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajataque_3
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 135
+        width: 427
+        height: 517
+      alignment: 9
+      pivot: {x: 0.47534552, y: 0.40744212}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6dc06eb6cdccbde0800000000000000
+      internalID: -1315950737617793683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b94c1be3fff4df545a0fde2a4ef7ad28
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pajataque_0: 9044787177157085637
+      pajataque_1: -6373317864507660216
+      pajataque_10: -824574437681894799
+      pajataque_11: -2369330040776835797
+      pajataque_12: 3348247589850024270
+      pajataque_13: 4202218484606761719
+      pajataque_14: 5327651416845405101
+      pajataque_15: 179638603059362105
+      pajataque_2: 8946417529343596068
+      pajataque_3: -1315950737617793683
+      pajataque_4: -7270548997879313467
+      pajataque_5: -165291991224644232
+      pajataque_6: -7992967244197629242
+      pajataque_7: -4295842664040057539
+      pajataque_8: 5360312294640641498
+      pajataque_9: 5648512677270345411
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
