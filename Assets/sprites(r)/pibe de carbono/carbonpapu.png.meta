@@ -1,0 +1,1677 @@
+fileFormatVersion: 2
+guid: ab307525e02d2087ebd119d0cf5a213f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2272008646894327435
+    second: carbonpapu_0
+  - first:
+      213: 7858652125290416211
+    second: carbonpapu_1
+  - first:
+      213: 7054319558243771141
+    second: carbonpapu_2
+  - first:
+      213: -2489078463174784783
+    second: carbonpapu_3
+  - first:
+      213: -624912334477394208
+    second: carbonpapu_4
+  - first:
+      213: 8312611314921660746
+    second: carbonpapu_5
+  - first:
+      213: -6444990224223532057
+    second: carbonpapu_6
+  - first:
+      213: -2771478918616935971
+    second: carbonpapu_7
+  - first:
+      213: 4004825335393567440
+    second: carbonpapu_8
+  - first:
+      213: -9001149104410088848
+    second: carbonpapu_9
+  - first:
+      213: -2600532443000952420
+    second: carbonpapu_10
+  - first:
+      213: 4653308128890832574
+    second: carbonpapu_11
+  - first:
+      213: 7924072342117725984
+    second: carbonpapu_12
+  - first:
+      213: 7553776280978875310
+    second: carbonpapu_13
+  - first:
+      213: 8694291245537635897
+    second: carbonpapu_14
+  - first:
+      213: -6295001702857961039
+    second: carbonpapu_15
+  - first:
+      213: -6818596453832023090
+    second: carbonpapu_16
+  - first:
+      213: -6883413381426927647
+    second: carbonpapu_17
+  - first:
+      213: -8635483147902928682
+    second: carbonpapu_18
+  - first:
+      213: -8148196079716094738
+    second: carbonpapu_19
+  - first:
+      213: 1500495674345975016
+    second: carbonpapu_20
+  - first:
+      213: -7109860065620458520
+    second: carbonpapu_21
+  - first:
+      213: 189682104139073116
+    second: carbonpapu_22
+  - first:
+      213: 8808787494379143716
+    second: carbonpapu_23
+  - first:
+      213: -3216614631031661281
+    second: carbonpapu_24
+  - first:
+      213: -9202643252639839609
+    second: carbonpapu_25
+  - first:
+      213: -591150043538024291
+    second: carbonpapu_26
+  - first:
+      213: -3564526171711327836
+    second: carbonpapu_27
+  - first:
+      213: 5265593425477680267
+    second: carbonpapu_28
+  - first:
+      213: -6311130634474446799
+    second: carbonpapu_29
+  - first:
+      213: -2012747013853274545
+    second: carbonpapu_30
+  - first:
+      213: -145989079367524271
+    second: carbonpapu_31
+  - first:
+      213: 3076126934609961899
+    second: carbonpapu_32
+  - first:
+      213: 5284026808071378832
+    second: carbonpapu_33
+  - first:
+      213: 7838059979447496026
+    second: carbonpapu_34
+  - first:
+      213: 5515271213955289226
+    second: carbonpapu_35
+  - first:
+      213: 306272503584751201
+    second: carbonpapu_36
+  - first:
+      213: 519987414397833988
+    second: carbonpapu_37
+  - first:
+      213: -7320118450909063546
+    second: carbonpapu_38
+  - first:
+      213: 1395904857988847
+    second: carbonpapu_39
+  - first:
+      213: -4802592747183910564
+    second: carbonpapu_40
+  - first:
+      213: -6242359876115321302
+    second: carbonpapu_41
+  - first:
+      213: -5777868218029283101
+    second: carbonpapu_42
+  - first:
+      213: -4588374752449091487
+    second: carbonpapu_43
+  - first:
+      213: -1335606268950421378
+    second: carbonpapu_44
+  - first:
+      213: 1469072533524024040
+    second: carbonpapu_45
+  - first:
+      213: 4742938483848922951
+    second: carbonpapu_46
+  - first:
+      213: 2357206491986830698
+    second: carbonpapu_47
+  - first:
+      213: 7549531149916650326
+    second: carbonpapu_48
+  - first:
+      213: -7610980180211924324
+    second: carbonpapu_49
+  - first:
+      213: 1977698271303369621
+    second: carbonpapu_50
+  - first:
+      213: -434999188455858416
+    second: carbonpapu_51
+  - first:
+      213: 8001439837962731846
+    second: carbonpapu_52
+  - first:
+      213: 6564154463584501984
+    second: carbonpapu_53
+  - first:
+      213: 4867429792099690196
+    second: carbonpapu_54
+  - first:
+      213: 4739814410587252905
+    second: carbonpapu_55
+  - first:
+      213: -3779772042904608303
+    second: carbonpapu_56
+  - first:
+      213: -1302538320349559102
+    second: carbonpapu_57
+  - first:
+      213: -7927580619429655554
+    second: carbonpapu_58
+  - first:
+      213: -9018838761038593350
+    second: carbonpapu_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: carbonpapu_0
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2288
+        width: 224
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5796f3b5c243870e0800000000000000
+      internalID: -2272008646894327435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_1
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 2648
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358cd45987a8f0d60800000000000000
+      internalID: 7858652125290416211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_2
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 2291
+        width: 222
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 503e539434af5e160800000000000000
+      internalID: 7054319558243771141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_3
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 2649
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f844605354057dd0800000000000000
+      internalID: -2489078463174784783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_4
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 2292
+        width: 216
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eef6bfea8dd357f0800000000000000
+      internalID: -624912334477394208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_5
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 2650
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a416cc5e2f35c5370800000000000000
+      internalID: 8312611314921660746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_6
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 2288
+        width: 221
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb8a40c98bce86a0800000000000000
+      internalID: -6444990224223532057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_7
+      rect:
+        serializedVersion: 2
+        x: 2632
+        y: 2651
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd19a518b9ab989d0800000000000000
+      internalID: -2771478918616935971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_8
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 2457
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d24e9f8c6ff39730800000000000000
+      internalID: 4004825335393567440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_9
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 2290
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07aaf45649e751380800000000000000
+      internalID: -9001149104410088848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_10
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 2287
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99ac04758d09ebd0800000000000000
+      internalID: -2600532443000952420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_11
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1837
+        width: 228
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6c9f4c61fd39040800000000000000
+      internalID: 4653308128890832574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_12
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 2206
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 027bc66cfc5f7fd60800000000000000
+      internalID: 7924072342117725984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_13
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 2208
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea36484818764d860800000000000000
+      internalID: 7553776280978875310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_14
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1836
+        width: 231
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e2f00d2d358a870800000000000000
+      internalID: 8694291245537635897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_15
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 2208
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b11ca8bd49a3a8a0800000000000000
+      internalID: -6295001702857961039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_16
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1836
+        width: 233
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3aa96d6aa7f51a0800000000000000
+      internalID: -6818596453832023090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_17
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 2207
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7a0eddff33970a0800000000000000
+      internalID: -6883413381426927647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_18
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 1838
+        width: 224
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d8bf5964d9982880800000000000000
+      internalID: -8635483147902928682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_19
+      rect:
+        serializedVersion: 2
+        x: 2634
+        y: 2204
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eecaa4426dacbee80800000000000000
+      internalID: -8148196079716094738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_20
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 2204
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ece668add4d2d410800000000000000
+      internalID: 1500495674345975016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_21
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 1837
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e305f1a0f3b45d90800000000000000
+      internalID: -7109860065620458520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_22
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1389
+        width: 229
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5645756ed2e1a200800000000000000
+      internalID: 189682104139073116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_23
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1753
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4224f502e891f3a70800000000000000
+      internalID: 8808787494379143716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_24
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1391
+        width: 228
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d9802190a4c53d0800000000000000
+      internalID: -3216614631031661281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_25
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 1753
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ac1cb28b4a94080800000000000000
+      internalID: -9202643252639839609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_26
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 1392
+        width: 235
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9895fdda20dbc7f0800000000000000
+      internalID: -591150043538024291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_27
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 1750
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1309e1552488ec0800000000000000
+      internalID: -3564526171711327836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_28
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 1397
+        width: 220
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8cba397255231940800000000000000
+      internalID: 5265593425477680267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_29
+      rect:
+        serializedVersion: 2
+        x: 2645
+        y: 1753
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130a011302c5a68a0800000000000000
+      internalID: -6311130634474446799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_30
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1561
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e1c8041494114e0800000000000000
+      internalID: -2012747013853274545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_31
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 1398
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 150663fa4b759fdf0800000000000000
+      internalID: -145989079367524271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_32
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 1396
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba32075262990ba20800000000000000
+      internalID: 3076126934609961899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_33
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 948
+        width: 217
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0975cbec262a45940800000000000000
+      internalID: 5284026808071378832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_34
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1307
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d6c23060266cc60800000000000000
+      internalID: 7838059979447496026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_35
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1310
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a801ebba2fd2a8c40800000000000000
+      internalID: 5515271213955289226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_36
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 945
+        width: 221
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e73a42839104400800000000000000
+      internalID: 306272503584751201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_37
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 1308
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4035bd26ccd573700800000000000000
+      internalID: 519987414397833988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_38
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 1311
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68658c37d07b96a90800000000000000
+      internalID: -7320118450909063546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_39
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 941
+        width: 229
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee533d6195f40000800000000000000
+      internalID: 1395904857988847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_40
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 1310
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c515c377753c95db0800000000000000
+      internalID: -4802592747183910564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_41
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 1312
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2eaeff14ceae59a0800000000000000
+      internalID: -6242359876115321302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_42
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 1311
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e86859d773e0dfa0800000000000000
+      internalID: -5777868218029283101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_43
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 946
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168a6ef0971d250c0800000000000000
+      internalID: -4588374752449091487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_44
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 944
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70ec6bbc29f67de0800000000000000
+      internalID: -1335606268950421378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_45
+      rect:
+        serializedVersion: 2
+        x: 2552
+        y: 940
+        width: 231
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea8bfd8fa1336410800000000000000
+      internalID: 1469072533524024040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_46
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 493
+        width: 226
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74748510c6d42d140800000000000000
+      internalID: 4742938483848922951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_47
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 862
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65ae11c0da76b020800000000000000
+      internalID: 2357206491986830698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_48
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 495
+        width: 225
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b378be49255c860800000000000000
+      internalID: 7549531149916650326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_49
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 860
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c920eedc9dd506690800000000000000
+      internalID: -7610980180211924324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_50
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 860
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59301f57912327b10800000000000000
+      internalID: 1977698271303369621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_51
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 494
+        width: 230
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f5186fa8296f9f0800000000000000
+      internalID: -434999188455858416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_52
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 857
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6418d61a323da0f60800000000000000
+      internalID: 8001439837962731846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_53
+      rect:
+        serializedVersion: 2
+        x: 2574
+        y: 496
+        width: 227
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0cfbcc4bf881b50800000000000000
+      internalID: 6564154463584501984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_54
+      rect:
+        serializedVersion: 2
+        x: 2649
+        y: 855
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d6614f6b959c8340800000000000000
+      internalID: 4867429792099690196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_55
+      rect:
+        serializedVersion: 2
+        x: 2565
+        y: 668
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8a454081437c140800000000000000
+      internalID: 4739814410587252905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_56
+      rect:
+        serializedVersion: 2
+        x: 2573
+        y: 674
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1e7b26a5d8b8bc0800000000000000
+      internalID: -3779772042904608303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_57
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 52
+        width: 225
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c60b3d7c447cede0800000000000000
+      internalID: -1302538320349559102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_58
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 409
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efbcf92cd639bf190800000000000000
+      internalID: -7927580619429655554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carbonpapu_59
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 51
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab245c14ee5a6d280800000000000000
+      internalID: -9018838761038593350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      carbonpapu_0: -2272008646894327435
+      carbonpapu_1: 7858652125290416211
+      carbonpapu_10: -2600532443000952420
+      carbonpapu_11: 4653308128890832574
+      carbonpapu_12: 7924072342117725984
+      carbonpapu_13: 7553776280978875310
+      carbonpapu_14: 8694291245537635897
+      carbonpapu_15: -6295001702857961039
+      carbonpapu_16: -6818596453832023090
+      carbonpapu_17: -6883413381426927647
+      carbonpapu_18: -8635483147902928682
+      carbonpapu_19: -8148196079716094738
+      carbonpapu_2: 7054319558243771141
+      carbonpapu_20: 1500495674345975016
+      carbonpapu_21: -7109860065620458520
+      carbonpapu_22: 189682104139073116
+      carbonpapu_23: 8808787494379143716
+      carbonpapu_24: -3216614631031661281
+      carbonpapu_25: -9202643252639839609
+      carbonpapu_26: -591150043538024291
+      carbonpapu_27: -3564526171711327836
+      carbonpapu_28: 5265593425477680267
+      carbonpapu_29: -6311130634474446799
+      carbonpapu_3: -2489078463174784783
+      carbonpapu_30: -2012747013853274545
+      carbonpapu_31: -145989079367524271
+      carbonpapu_32: 3076126934609961899
+      carbonpapu_33: 5284026808071378832
+      carbonpapu_34: 7838059979447496026
+      carbonpapu_35: 5515271213955289226
+      carbonpapu_36: 306272503584751201
+      carbonpapu_37: 519987414397833988
+      carbonpapu_38: -7320118450909063546
+      carbonpapu_39: 1395904857988847
+      carbonpapu_4: -624912334477394208
+      carbonpapu_40: -4802592747183910564
+      carbonpapu_41: -6242359876115321302
+      carbonpapu_42: -5777868218029283101
+      carbonpapu_43: -4588374752449091487
+      carbonpapu_44: -1335606268950421378
+      carbonpapu_45: 1469072533524024040
+      carbonpapu_46: 4742938483848922951
+      carbonpapu_47: 2357206491986830698
+      carbonpapu_48: 7549531149916650326
+      carbonpapu_49: -7610980180211924324
+      carbonpapu_5: 8312611314921660746
+      carbonpapu_50: 1977698271303369621
+      carbonpapu_51: -434999188455858416
+      carbonpapu_52: 8001439837962731846
+      carbonpapu_53: 6564154463584501984
+      carbonpapu_54: 4867429792099690196
+      carbonpapu_55: 4739814410587252905
+      carbonpapu_56: -3779772042904608303
+      carbonpapu_57: -1302538320349559102
+      carbonpapu_58: -7927580619429655554
+      carbonpapu_59: -9018838761038593350
+      carbonpapu_6: -6444990224223532057
+      carbonpapu_7: -2771478918616935971
+      carbonpapu_8: 4004825335393567440
+      carbonpapu_9: -9001149104410088848
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

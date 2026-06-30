@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: bd407b311c2f091259b61396713ad3c8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5612573746957142864
+    second: spritelutros_0
+  - first:
+      213: -5279687153510128239
+    second: spritelutros_1
+  - first:
+      213: -1549691670991347336
+    second: spritelutros_2
+  - first:
+      213: -4268256658497935296
+    second: spritelutros_3
+  - first:
+      213: 7456042561834403744
+    second: spritelutros_4
+  - first:
+      213: 3789413936932686261
+    second: spritelutros_5
+  - first:
+      213: 5523318545581441048
+    second: spritelutros_6
+  - first:
+      213: -8273280169286331091
+    second: spritelutros_7
+  - first:
+      213: -5268140535955621713
+    second: spritelutros_8
+  - first:
+      213: -7041258601891004159
+    second: spritelutros_9
+  - first:
+      213: 2451388390081604176
+    second: spritelutros_10
+  - first:
+      213: 3147981577427883510
+    second: spritelutros_11
+  - first:
+      213: -3344833531373479117
+    second: spritelutros_12
+  - first:
+      213: 7120755310104450825
+    second: spritelutros_13
+  - first:
+      213: -4908988482186730479
+    second: spritelutros_14
+  - first:
+      213: -2880959224285028651
+    second: spritelutros_15
+  - first:
+      213: 5574527090154205887
+    second: spritelutros_16
+  - first:
+      213: 6587073849923120422
+    second: spritelutros_17
+  - first:
+      213: 7405094808273028684
+    second: spritelutros_18
+  - first:
+      213: 1997865277032510455
+    second: spritelutros_19
+  - first:
+      213: -3291694554738374634
+    second: spritelutros_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritelutros_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 2799
+        width: 349
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4bfe0f9e12c12b0800000000000000
+      internalID: -5612573746957142864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_1
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 2799
+        width: 351
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195e5d1c188cab6b0800000000000000
+      internalID: -5279687153510128239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_2
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 2799
+        width: 360
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 871ed27c2a36e7ae0800000000000000
+      internalID: -1549691670991347336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_3
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 2799
+        width: 355
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048e80cee2b14c4c0800000000000000
+      internalID: -4268256658497935296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 2192
+        width: 354
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a74558c43f297760800000000000000
+      internalID: 7456042561834403744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_5
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 2192
+        width: 353
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b989c106e3b69430800000000000000
+      internalID: 3789413936932686261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_6
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 2192
+        width: 351
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81085b214f4c6ac40800000000000000
+      internalID: 5523318545581441048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_7
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 2194
+        width: 350
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25976e05876f2d80800000000000000
+      internalID: -8273280169286331091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_8
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1650
+        width: 349
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa87787281ec3e6b0800000000000000
+      internalID: -5268140535955621713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_9
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 1650
+        width: 350
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1018f969b9c684e90800000000000000
+      internalID: -7041258601891004159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_10
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 1650
+        width: 352
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05aa455b0c4150220800000000000000
+      internalID: 2451388390081604176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_11
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 1650
+        width: 357
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f51012e090efab20800000000000000
+      internalID: 3147981577427883510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_12
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1110
+        width: 354
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b1ba9ff93c491d0800000000000000
+      internalID: -3344833531373479117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_13
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1110
+        width: 354
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90790472a3102d260800000000000000
+      internalID: 7120755310104450825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_14
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 1110
+        width: 354
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114a6c00cf4cfdbb0800000000000000
+      internalID: -4908988482186730479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_15
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 1110
+        width: 353
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5de1b1879d6c408d0800000000000000
+      internalID: -2880959224285028651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_16
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 576
+        width: 351
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2fe677ad2bc5d40800000000000000
+      internalID: 5574527090154205887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_17
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 575
+        width: 351
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62daee544ccf96b50800000000000000
+      internalID: 6587073849923120422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_18
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 575
+        width: 350
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4604378e7e24c660800000000000000
+      internalID: 7405094808273028684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_19
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 575
+        width: 350
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f33c9262e7d9bb10800000000000000
+      internalID: 1997865277032510455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutros_20
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 35
+        width: 356
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6184bbb1e3d8152d0800000000000000
+      internalID: -3291694554738374634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritelutros_0: -5612573746957142864
+      spritelutros_1: -5279687153510128239
+      spritelutros_10: 2451388390081604176
+      spritelutros_11: 3147981577427883510
+      spritelutros_12: -3344833531373479117
+      spritelutros_13: 7120755310104450825
+      spritelutros_14: -4908988482186730479
+      spritelutros_15: -2880959224285028651
+      spritelutros_16: 5574527090154205887
+      spritelutros_17: 6587073849923120422
+      spritelutros_18: 7405094808273028684
+      spritelutros_19: 1997865277032510455
+      spritelutros_2: -1549691670991347336
+      spritelutros_20: -3291694554738374634
+      spritelutros_3: -4268256658497935296
+      spritelutros_4: 7456042561834403744
+      spritelutros_5: 3789413936932686261
+      spritelutros_6: 5523318545581441048
+      spritelutros_7: -8273280169286331091
+      spritelutros_8: -5268140535955621713
+      spritelutros_9: -7041258601891004159
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

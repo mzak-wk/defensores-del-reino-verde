@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 3ff7f24b862eef4b498a53587704ad3b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 951602227393006131
+    second: "as\xED e como la tenolojia eta abansando_0"
+  - first:
+      213: -1823952042936955976
+    second: "as\xED e como la tenolojia eta abansando_1"
+  - first:
+      213: 8650078489255964214
+    second: "as\xED e como la tenolojia eta abansando_2"
+  - first:
+      213: 2624193710288303234
+    second: "as\xED e como la tenolojia eta abansando_3"
+  - first:
+      213: 7165918920428456444
+    second: "as\xED e como la tenolojia eta abansando_4"
+  - first:
+      213: 4868438933774908312
+    second: "as\xED e como la tenolojia eta abansando_5"
+  - first:
+      213: -768037795319630475
+    second: "as\xED e como la tenolojia eta abansando_6"
+  - first:
+      213: -7330972370080281574
+    second: "as\xED e como la tenolojia eta abansando_7"
+  - first:
+      213: -5148107221429432413
+    second: "as\xED e como la tenolojia eta abansando_8"
+  - first:
+      213: -1872120089651664565
+    second: "as\xED e como la tenolojia eta abansando_9"
+  - first:
+      213: 7865790678029462820
+    second: "as\xED e como la tenolojia eta abansando_10"
+  - first:
+      213: -8280367306041800452
+    second: "as\xED e como la tenolojia eta abansando_11"
+  - first:
+      213: 5463267490254220570
+    second: "as\xED e como la tenolojia eta abansando_12"
+  - first:
+      213: -5406196976507747311
+    second: "as\xED e como la tenolojia eta abansando_13"
+  - first:
+      213: 7851007355653524668
+    second: "as\xED e como la tenolojia eta abansando_14"
+  - first:
+      213: 8647178192310979487
+    second: "as\xED e como la tenolojia eta abansando_15"
+  - first:
+      213: 6384164107339537008
+    second: "as\xED e como la tenolojia eta abansando_16"
+  - first:
+      213: 8102902415867795595
+    second: "as\xED e como la tenolojia eta abansando_17"
+  - first:
+      213: 7526400473820146568
+    second: "as\xED e como la tenolojia eta abansando_18"
+  - first:
+      213: -6771903897517322714
+    second: "as\xED e como la tenolojia eta abansando_19"
+  - first:
+      213: 6727892552856963142
+    second: "as\xED e como la tenolojia eta abansando_20"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_0"
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 2304
+        width: 369
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a0b3b1f25c43d00800000000000000
+      internalID: 951602227393006131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_1"
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 2304
+        width: 368
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb0569d74500b6e0800000000000000
+      internalID: -1823952042936955976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_2"
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 2304
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63e695f4e804b0870800000000000000
+      internalID: 8650078489255964214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_3"
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 2305
+        width: 385
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2847c83a6420b6420800000000000000
+      internalID: 2624193710288303234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_4"
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1857
+        width: 396
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9836d9a45727360800000000000000
+      internalID: 7165918920428456444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_5"
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1856
+        width: 404
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89bb55a8a6b209340800000000000000
+      internalID: 4868438933774908312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_6"
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1856
+        width: 405
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57536e3c1b16755f0800000000000000
+      internalID: -768037795319630475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_7"
+      rect:
+        serializedVersion: 2
+        x: 2483
+        y: 1856
+        width: 401
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1c49277877234a90800000000000000
+      internalID: -7330972370080281574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_8"
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1408
+        width: 390
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af431902cf3e88b0800000000000000
+      internalID: -5148107221429432413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_9"
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1408
+        width: 378
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49a07782b4e406e0800000000000000
+      internalID: -1872120089651664565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_10"
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 1408
+        width: 371
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d668962f6e82d60800000000000000
+      internalID: 7865790678029462820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_11"
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 1408
+        width: 368
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf8ce917ec9361d80800000000000000
+      internalID: -8280367306041800452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_12"
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 961
+        width: 367
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1dea8536dc61db40800000000000000
+      internalID: 5463267490254220570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_13"
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 960
+        width: 373
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114077d3e7459f4b0800000000000000
+      internalID: -5406196976507747311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_14"
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 961
+        width: 386
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc05b2f79164fc60800000000000000
+      internalID: 7851007355653524668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_15"
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 961
+        width: 399
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b433e40c2f00870800000000000000
+      internalID: 8647178192310979487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_16"
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 512
+        width: 404
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a95cd4e6b199850800000000000000
+      internalID: 6384164107339537008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_17"
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 512
+        width: 402
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b885473f0da437070800000000000000
+      internalID: 8102902415867795595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_18"
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 512
+        width: 398
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ba167ba55237860800000000000000
+      internalID: 7526400473820146568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_19"
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 512
+        width: 387
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e8567c84d5502a0800000000000000
+      internalID: -6771903897517322714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "as\xED e como la tenolojia eta abansando_20"
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 64
+        width: 374
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648090481a64e5d50800000000000000
+      internalID: 6727892552856963142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "as\xED e como la tenolojia eta abansando_0": 951602227393006131
+      "as\xED e como la tenolojia eta abansando_1": -1823952042936955976
+      "as\xED e como la tenolojia eta abansando_10": 7865790678029462820
+      "as\xED e como la tenolojia eta abansando_11": -8280367306041800452
+      "as\xED e como la tenolojia eta abansando_12": 5463267490254220570
+      "as\xED e como la tenolojia eta abansando_13": -5406196976507747311
+      "as\xED e como la tenolojia eta abansando_14": 7851007355653524668
+      "as\xED e como la tenolojia eta abansando_15": 8647178192310979487
+      "as\xED e como la tenolojia eta abansando_16": 6384164107339537008
+      "as\xED e como la tenolojia eta abansando_17": 8102902415867795595
+      "as\xED e como la tenolojia eta abansando_18": 7526400473820146568
+      "as\xED e como la tenolojia eta abansando_19": -6771903897517322714
+      "as\xED e como la tenolojia eta abansando_2": 8650078489255964214
+      "as\xED e como la tenolojia eta abansando_20": 6727892552856963142
+      "as\xED e como la tenolojia eta abansando_3": 2624193710288303234
+      "as\xED e como la tenolojia eta abansando_4": 7165918920428456444
+      "as\xED e como la tenolojia eta abansando_5": 4868438933774908312
+      "as\xED e como la tenolojia eta abansando_6": -768037795319630475
+      "as\xED e como la tenolojia eta abansando_7": -7330972370080281574
+      "as\xED e como la tenolojia eta abansando_8": -5148107221429432413
+      "as\xED e como la tenolojia eta abansando_9": -1872120089651664565
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 8a97e01a91dc3ea6d8efefd7670acee1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1333355427319389661
+    second: opinidle_0
+  - first:
+      213: -7895656005202884137
+    second: opinidle_1
+  - first:
+      213: -8046649503199227719
+    second: opinidle_2
+  - first:
+      213: 3920577897399938652
+    second: opinidle_3
+  - first:
+      213: 117623304699832947
+    second: opinidle_4
+  - first:
+      213: 8568601779418167667
+    second: opinidle_5
+  - first:
+      213: 8134390401599909713
+    second: opinidle_6
+  - first:
+      213: 5427154609737379451
+    second: opinidle_7
+  - first:
+      213: 5975077168744928456
+    second: opinidle_8
+  - first:
+      213: 3407986937912917047
+    second: opinidle_9
+  - first:
+      213: -3606059153025712767
+    second: opinidle_10
+  - first:
+      213: -5981139557741801594
+    second: opinidle_11
+  - first:
+      213: -5089494072243702821
+    second: opinidle_12
+  - first:
+      213: 670019062980473793
+    second: opinidle_13
+  - first:
+      213: -6640857120538685527
+    second: opinidle_14
+  - first:
+      213: -5143573659392217738
+    second: opinidle_15
+  - first:
+      213: 6456342074742936897
+    second: opinidle_16
+  - first:
+      213: -4122445017970504399
+    second: opinidle_17
+  - first:
+      213: 6686741926386512777
+    second: opinidle_18
+  - first:
+      213: -4136757708548183383
+    second: opinidle_19
+  - first:
+      213: -1237950151816877816
+    second: opinidle_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: opinidle_0
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 2251
+        width: 187
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322e943ad48fe7de0800000000000000
+      internalID: -1333355427319389661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_1
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 2251
+        width: 189
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9c33d32befc6290800000000000000
+      internalID: -7895656005202884137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_2
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 2251
+        width: 197
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b09cb9e8ee845090800000000000000
+      internalID: -8046649503199227719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_3
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 2252
+        width: 212
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e65c853d0b86630800000000000000
+      internalID: 3920577897399938652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_4
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1804
+        width: 221
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ae0fdb5c1e1a100800000000000000
+      internalID: 117623304699832947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_5
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1804
+        width: 218
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 379fff38be9c9e670800000000000000
+      internalID: 8568601779418167667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_6
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 1804
+        width: 207
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15fa5bfe8f823e070800000000000000
+      internalID: 8134390401599909713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_7
+      rect:
+        serializedVersion: 2
+        x: 2578
+        y: 1804
+        width: 195
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e258efc50215b40800000000000000
+      internalID: 5427154609737379451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_8
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1355
+        width: 187
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c49694170dbbe250800000000000000
+      internalID: 5975077168744928456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_9
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1355
+        width: 186
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c7871501a9b4f20800000000000000
+      internalID: 3407986937912917047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_10
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 1355
+        width: 187
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d3bd85e44b4fdc0800000000000000
+      internalID: -3606059153025712767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_11
+      rect:
+        serializedVersion: 2
+        x: 2579
+        y: 1355
+        width: 194
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f43ccf249befca0800000000000000
+      internalID: -5981139557741801594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_12
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 907
+        width: 206
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd335794b1c7e59b0800000000000000
+      internalID: -5089494072243702821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_13
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 907
+        width: 218
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3f0b1b9c26c4900800000000000000
+      internalID: 670019062980473793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_14
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 907
+        width: 218
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af0b2632afe6d3a0800000000000000
+      internalID: -6640857120538685527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_15
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 907
+        width: 211
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67deed3320b5e98b0800000000000000
+      internalID: -5143573659392217738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_16
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 459
+        width: 197
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1451679e8e8899950800000000000000
+      internalID: 6456342074742936897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_17
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 459
+        width: 190
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d0ac909122ac6c0800000000000000
+      internalID: -4122445017970504399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_18
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 459
+        width: 185
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983bafaaa541ccc50800000000000000
+      internalID: 6686741926386512777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_19
+      rect:
+        serializedVersion: 2
+        x: 2582
+        y: 459
+        width: 187
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa602418c84796c0800000000000000
+      internalID: -4136757708548183383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: opinidle_20
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 11
+        width: 194
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809605755eae1dee0800000000000000
+      internalID: -1237950151816877816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      opinidle_0: -1333355427319389661
+      opinidle_1: -7895656005202884137
+      opinidle_10: -3606059153025712767
+      opinidle_11: -5981139557741801594
+      opinidle_12: -5089494072243702821
+      opinidle_13: 670019062980473793
+      opinidle_14: -6640857120538685527
+      opinidle_15: -5143573659392217738
+      opinidle_16: 6456342074742936897
+      opinidle_17: -4122445017970504399
+      opinidle_18: 6686741926386512777
+      opinidle_19: -4136757708548183383
+      opinidle_2: -8046649503199227719
+      opinidle_20: -1237950151816877816
+      opinidle_3: 3920577897399938652
+      opinidle_4: 117623304699832947
+      opinidle_5: 8568601779418167667
+      opinidle_6: 8134390401599909713
+      opinidle_7: 5427154609737379451
+      opinidle_8: 5975077168744928456
+      opinidle_9: 3407986937912917047
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

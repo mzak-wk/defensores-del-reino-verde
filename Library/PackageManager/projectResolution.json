@@ -1,18 +1,18 @@
 {
   "context": {
-    "projectPath": "D:/unity/defensores del mundo verde/defenders-of-the-kingdom/defenders-of-the-kingdom/Packages",
+    "projectPath": "/home/vance/Proyectos/defensores-del-reino-verde/Packages",
     "unityVersion": "6000.0.56f1"
   },
   "inputs": [
-    "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Packages\\manifest.json",
-    "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Packages\\packages-lock.json",
-    "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
+    "/home/vance/Proyectos/defensores-del-reino-verde/Packages/manifest.json",
+    "/home/vance/Proyectos/defensores-del-reino-verde/Packages/packages-lock.json",
+    "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
     "com.unity.cinemachine@3.1.7": {
       "name": "com.unity.cinemachine",
       "displayName": "Cinemachine",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.cinemachine@f3f96bcb59af",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.cinemachine@f3f96bcb59af",
       "fingerprint": "f3f96bcb59af572d4d28704d53f6388471d7dd21",
       "editorCompatibility": "2022.3.0a1",
       "version": "3.1.7",
@@ -22,7 +22,7 @@
     "com.unity.feature.2d@2.0.1": {
       "name": "com.unity.feature.2d",
       "displayName": "2D",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.feature.2d@dd1ea8910f12",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.feature.2d@dd1ea8910f12",
       "fingerprint": "dd1ea8910f12f021c166e8d0d78de44f1390ff6b",
       "version": "2.0.1",
       "source": "builtin",
@@ -31,7 +31,7 @@
     "com.unity.ide.rider@3.0.36": {
       "name": "com.unity.ide.rider",
       "displayName": "JetBrains Rider Editor",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.ide.rider@4d374c7eb6db",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.ide.rider@4d374c7eb6db",
       "fingerprint": "4d374c7eb6db6907c7e6925e3086c3c73f926e13",
       "editorCompatibility": "2019.4.6f1",
       "version": "3.0.36",
@@ -41,7 +41,7 @@
     "com.unity.ide.visualstudio@2.0.23": {
       "name": "com.unity.ide.visualstudio",
       "displayName": "Visual Studio Editor",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.ide.visualstudio@198cdf337d13",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.ide.visualstudio@198cdf337d13",
       "fingerprint": "198cdf337d13c83ca953581515630d66b779e92b",
       "editorCompatibility": "2019.4.25f1",
       "version": "2.0.23",
@@ -51,7 +51,7 @@
     "com.unity.inputsystem@1.14.2": {
       "name": "com.unity.inputsystem",
       "displayName": "Input System",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.inputsystem@be6c4fd0abf5",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.inputsystem@be6c4fd0abf5",
       "fingerprint": "be6c4fd0abf5b9b45f956b97294032a67f3c2f4d",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.14.2",
@@ -61,8 +61,8 @@
     "com.unity.multiplayer.center@1.0.0": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.multiplayer.center@f3fb577b3546",
-      "fingerprint": "f3fb577b3546594b97b8cc34307cd621f60f1c73",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.multiplayer.center@f5e57a8bed06",
+      "fingerprint": "f5e57a8bed0637672c58142b1bfd7e6fea03746c",
       "editorCompatibility": "6000.0.0a1",
       "version": "1.0.0",
       "source": "builtin",
@@ -71,8 +71,8 @@
     "com.unity.render-pipelines.universal@17.0.4": {
       "name": "com.unity.render-pipelines.universal",
       "displayName": "Universal Render Pipeline",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.render-pipelines.universal@ec146228694a",
-      "fingerprint": "ec146228694adc0b6aed287f58ab791171ba0687",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.render-pipelines.universal@34ca2feb3b62",
+      "fingerprint": "34ca2feb3b62f3ae1ca72aaa9897e2283ab825aa",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.4",
       "source": "builtin",
@@ -81,8 +81,8 @@
     "com.unity.test-framework@1.5.1": {
       "name": "com.unity.test-framework",
       "displayName": "Test Framework",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.test-framework@16d3eb9e8c28",
-      "fingerprint": "16d3eb9e8c282ca13732548b32bbeec6688466b6",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.test-framework@f4d49bd0d832",
+      "fingerprint": "f4d49bd0d832f9ef26d844004e0daa683119ef59",
       "editorCompatibility": "2022.3.0a1",
       "version": "1.5.1",
       "source": "builtin",
@@ -91,7 +91,7 @@
     "com.unity.timeline@1.8.9": {
       "name": "com.unity.timeline",
       "displayName": "Timeline",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.timeline@6b9e48457ddb",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.timeline@6b9e48457ddb",
       "fingerprint": "6b9e48457ddb4f64813d77fd77efc79a8f3102ae",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.8.9",
@@ -101,8 +101,8 @@
     "com.unity.ugui@2.0.0": {
       "name": "com.unity.ugui",
       "displayName": "Unity UI",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.ugui@5c0fb321704a",
-      "fingerprint": "5c0fb321704a4f037a6626a8659e697ed6f54b42",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.ugui@488c81cc5247",
+      "fingerprint": "488c81cc52476505d047c07f35bc52f065f736e6",
       "editorCompatibility": "2019.2.0a1",
       "version": "2.0.0",
       "source": "builtin",
@@ -111,7 +111,7 @@
     "com.unity.visualscripting@1.9.7": {
       "name": "com.unity.visualscripting",
       "displayName": "Visual Scripting",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.visualscripting@6279e2b7c485",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.visualscripting@6279e2b7c485",
       "fingerprint": "6279e2b7c4858e56cca7f367cd38c49ef66778c9",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.9.7",
@@ -121,7 +121,7 @@
     "com.unity.modules.accessibility@1.0.0": {
       "name": "com.unity.modules.accessibility",
       "displayName": "Accessibility",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.accessibility",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.accessibility",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -129,7 +129,7 @@
     "com.unity.modules.ai@1.0.0": {
       "name": "com.unity.modules.ai",
       "displayName": "AI",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.ai",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ai",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -137,7 +137,7 @@
     "com.unity.modules.androidjni@1.0.0": {
       "name": "com.unity.modules.androidjni",
       "displayName": "Android JNI",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.androidjni",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.androidjni",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -145,7 +145,7 @@
     "com.unity.modules.animation@1.0.0": {
       "name": "com.unity.modules.animation",
       "displayName": "Animation",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.animation",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.animation",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -153,7 +153,7 @@
     "com.unity.modules.assetbundle@1.0.0": {
       "name": "com.unity.modules.assetbundle",
       "displayName": "Asset Bundle",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.assetbundle",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.assetbundle",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -161,7 +161,7 @@
     "com.unity.modules.audio@1.0.0": {
       "name": "com.unity.modules.audio",
       "displayName": "Audio",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.audio",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.audio",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -169,7 +169,7 @@
     "com.unity.modules.cloth@1.0.0": {
       "name": "com.unity.modules.cloth",
       "displayName": "Cloth",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.cloth",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.cloth",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -177,7 +177,7 @@
     "com.unity.modules.director@1.0.0": {
       "name": "com.unity.modules.director",
       "displayName": "Director",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.director",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.director",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -185,7 +185,7 @@
     "com.unity.modules.imageconversion@1.0.0": {
       "name": "com.unity.modules.imageconversion",
       "displayName": "Image Conversion",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.imageconversion",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.imageconversion",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -193,7 +193,7 @@
     "com.unity.modules.imgui@1.0.0": {
       "name": "com.unity.modules.imgui",
       "displayName": "IMGUI",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.imgui",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.imgui",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -201,7 +201,7 @@
     "com.unity.modules.jsonserialize@1.0.0": {
       "name": "com.unity.modules.jsonserialize",
       "displayName": "JSONSerialize",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.jsonserialize",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.jsonserialize",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -209,7 +209,7 @@
     "com.unity.modules.particlesystem@1.0.0": {
       "name": "com.unity.modules.particlesystem",
       "displayName": "Particle System",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.particlesystem",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.particlesystem",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -217,7 +217,7 @@
     "com.unity.modules.physics@1.0.0": {
       "name": "com.unity.modules.physics",
       "displayName": "Physics",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.physics",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -225,7 +225,7 @@
     "com.unity.modules.physics2d@1.0.0": {
       "name": "com.unity.modules.physics2d",
       "displayName": "Physics 2D",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.physics2d",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics2d",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -233,7 +233,7 @@
     "com.unity.modules.screencapture@1.0.0": {
       "name": "com.unity.modules.screencapture",
       "displayName": "Screen Capture",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.screencapture",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.screencapture",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -241,7 +241,7 @@
     "com.unity.modules.terrain@1.0.0": {
       "name": "com.unity.modules.terrain",
       "displayName": "Terrain",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.terrain",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrain",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -249,7 +249,7 @@
     "com.unity.modules.terrainphysics@1.0.0": {
       "name": "com.unity.modules.terrainphysics",
       "displayName": "Terrain Physics",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.terrainphysics",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrainphysics",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -257,7 +257,7 @@
     "com.unity.modules.tilemap@1.0.0": {
       "name": "com.unity.modules.tilemap",
       "displayName": "Tilemap",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.tilemap",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.tilemap",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -265,7 +265,7 @@
     "com.unity.modules.ui@1.0.0": {
       "name": "com.unity.modules.ui",
       "displayName": "UI",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.ui",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ui",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -273,7 +273,7 @@
     "com.unity.modules.uielements@1.0.0": {
       "name": "com.unity.modules.uielements",
       "displayName": "UIElements",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.uielements",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.uielements",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -281,7 +281,7 @@
     "com.unity.modules.umbra@1.0.0": {
       "name": "com.unity.modules.umbra",
       "displayName": "Umbra",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.umbra",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.umbra",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -289,7 +289,7 @@
     "com.unity.modules.unityanalytics@1.0.0": {
       "name": "com.unity.modules.unityanalytics",
       "displayName": "Unity Analytics",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.unityanalytics",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unityanalytics",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -297,7 +297,7 @@
     "com.unity.modules.unitywebrequest@1.0.0": {
       "name": "com.unity.modules.unitywebrequest",
       "displayName": "Unity Web Request",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.unitywebrequest",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequest",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -305,7 +305,7 @@
     "com.unity.modules.unitywebrequestassetbundle@1.0.0": {
       "name": "com.unity.modules.unitywebrequestassetbundle",
       "displayName": "Unity Web Request Asset Bundle",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.unitywebrequestassetbundle",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestassetbundle",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -313,7 +313,7 @@
     "com.unity.modules.unitywebrequestaudio@1.0.0": {
       "name": "com.unity.modules.unitywebrequestaudio",
       "displayName": "Unity Web Request Audio",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.unitywebrequestaudio",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestaudio",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -321,7 +321,7 @@
     "com.unity.modules.unitywebrequesttexture@1.0.0": {
       "name": "com.unity.modules.unitywebrequesttexture",
       "displayName": "Unity Web Request Texture",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.unitywebrequesttexture",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequesttexture",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -329,7 +329,7 @@
     "com.unity.modules.unitywebrequestwww@1.0.0": {
       "name": "com.unity.modules.unitywebrequestwww",
       "displayName": "Unity Web Request WWW",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.unitywebrequestwww",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestwww",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -337,7 +337,7 @@
     "com.unity.modules.vehicles@1.0.0": {
       "name": "com.unity.modules.vehicles",
       "displayName": "Vehicles",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.vehicles",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.vehicles",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -345,7 +345,7 @@
     "com.unity.modules.video@1.0.0": {
       "name": "com.unity.modules.video",
       "displayName": "Video",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.video",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.video",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -353,7 +353,7 @@
     "com.unity.modules.vr@1.0.0": {
       "name": "com.unity.modules.vr",
       "displayName": "VR",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.vr",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.vr",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -361,7 +361,7 @@
     "com.unity.modules.wind@1.0.0": {
       "name": "com.unity.modules.wind",
       "displayName": "Wind",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.wind",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.wind",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -369,7 +369,7 @@
     "com.unity.modules.xr@1.0.0": {
       "name": "com.unity.modules.xr",
       "displayName": "XR",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.xr",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.xr",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -377,7 +377,7 @@
     "com.unity.modules.subsystems@1.0.0": {
       "name": "com.unity.modules.subsystems",
       "displayName": "Subsystems",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.subsystems",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.subsystems",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -385,7 +385,7 @@
     "com.unity.modules.hierarchycore@1.0.0": {
       "name": "com.unity.modules.hierarchycore",
       "displayName": "Hierarchy Core",
-      "resolvedPath": "C:\\Program Files\\Unity\\Hub\\Editor\\6000.0.56f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\com.unity.modules.hierarchycore",
+      "resolvedPath": "/home/vance/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.hierarchycore",
       "version": "1.0.0",
       "source": "builtin",
       "testable": false
@@ -393,8 +393,8 @@
     "com.unity.ext.nunit@2.0.5": {
       "name": "com.unity.ext.nunit",
       "displayName": "Custom NUnit",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.ext.nunit@031a54704bff",
-      "fingerprint": "031a54704bffe39e6a0324909f8eaa4565bdebf2",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.ext.nunit@b16e6d09cd93",
+      "fingerprint": "b16e6d09cd93f527249a1f05a86ef45695dc934b",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.0.5",
       "source": "builtin",
@@ -403,8 +403,8 @@
     "com.unity.render-pipelines.core@17.0.4": {
       "name": "com.unity.render-pipelines.core",
       "displayName": "Scriptable Render Pipeline Core",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.render-pipelines.core@7f4c442d4f3e",
-      "fingerprint": "7f4c442d4f3e2dcd30f00d51fb4111a07d6ddcb4",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.render-pipelines.core@018c9f779f2c",
+      "fingerprint": "018c9f779f2c5ceb3eebd717b6d9557cb9d28fc8",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.4",
       "source": "builtin",
@@ -413,8 +413,8 @@
     "com.unity.shadergraph@17.0.4": {
       "name": "com.unity.shadergraph",
       "displayName": "Shader Graph",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.shadergraph@58c763b6444e",
-      "fingerprint": "58c763b6444ecd3e0acae6fb62bb3057541917cd",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.shadergraph@4257405adb6c",
+      "fingerprint": "4257405adb6c015ecfea553578b364384a9773fa",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.4",
       "source": "builtin",
@@ -423,8 +423,8 @@
     "com.unity.render-pipelines.universal-config@17.0.3": {
       "name": "com.unity.render-pipelines.universal-config",
       "displayName": "Universal Render Pipeline Config",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.render-pipelines.universal-config@dd206bf35d04",
-      "fingerprint": "dd206bf35d0451204981fdb31d4c6831a0ee2a7e",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.render-pipelines.universal-config@e48fefd716b5",
+      "fingerprint": "e48fefd716b523a236766d20f1c6bf515aeb2ba2",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.3",
       "source": "builtin",
@@ -433,7 +433,7 @@
     "com.unity.2d.animation@10.2.1": {
       "name": "com.unity.2d.animation",
       "displayName": "2D Animation",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.2d.animation@81ad133dbdf1",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.2d.animation@81ad133dbdf1",
       "fingerprint": "81ad133dbdf13da9a686af329d3a20b84565fd89",
       "editorCompatibility": "6000.0.0a1",
       "version": "10.2.1",
@@ -443,7 +443,7 @@
     "com.unity.2d.pixel-perfect@5.0.3": {
       "name": "com.unity.2d.pixel-perfect",
       "displayName": "2D Pixel Perfect",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.2d.pixel-perfect@e3ae982b672d",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.2d.pixel-perfect@e3ae982b672d",
       "fingerprint": "e3ae982b672dc7cca42a6303bdf53b84c69991da",
       "editorCompatibility": "2021.1.0a1",
       "version": "5.0.3",
@@ -453,7 +453,7 @@
     "com.unity.2d.psdimporter@9.1.0": {
       "name": "com.unity.2d.psdimporter",
       "displayName": "2D PSD Importer",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.2d.psdimporter@e0ffc26deb40",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.2d.psdimporter@e0ffc26deb40",
       "fingerprint": "e0ffc26deb4024d7b96fd4903fd4a89dbce4059c",
       "editorCompatibility": "6000.0.0a1",
       "version": "9.1.0",
@@ -463,8 +463,8 @@
     "com.unity.2d.sprite@1.0.0": {
       "name": "com.unity.2d.sprite",
       "displayName": "2D Sprite",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.2d.sprite@a1146c20a947",
-      "fingerprint": "a1146c20a94767d627b9db262ae136cedef9c2c7",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.2d.sprite@15a3bcc36bee",
+      "fingerprint": "15a3bcc36bee405f5e9386dbfb390bd27c383444",
       "editorCompatibility": "2019.2.0a1",
       "version": "1.0.0",
       "source": "builtin",
@@ -473,7 +473,7 @@
     "com.unity.2d.spriteshape@10.0.7": {
       "name": "com.unity.2d.spriteshape",
       "displayName": "2D SpriteShape",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.2d.spriteshape@9e35352ae135",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.2d.spriteshape@9e35352ae135",
       "fingerprint": "9e35352ae135f602746220e7edc09eb95bbec530",
       "editorCompatibility": "2023.1.0a1",
       "version": "10.0.7",
@@ -483,8 +483,8 @@
     "com.unity.2d.tilemap@1.0.0": {
       "name": "com.unity.2d.tilemap",
       "displayName": "2D Tilemap Editor",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.2d.tilemap@3f6ff602680c",
-      "fingerprint": "3f6ff602680c7be3e17746d20ed91961ccec8b8f",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.2d.tilemap@c562b86c2f68",
+      "fingerprint": "c562b86c2f68c05fb2e38671c4897514663b3f1d",
       "editorCompatibility": "2019.2.0a1",
       "version": "1.0.0",
       "source": "builtin",
@@ -493,7 +493,7 @@
     "com.unity.2d.tilemap.extras@4.1.0": {
       "name": "com.unity.2d.tilemap.extras",
       "displayName": "2D Tilemap Extras",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.2d.tilemap.extras@13634da7dbe0",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.2d.tilemap.extras@13634da7dbe0",
       "fingerprint": "13634da7dbe06c39bac6bbe2d1a166cf91f58ad7",
       "editorCompatibility": "6000.0.0a1",
       "version": "4.1.0",
@@ -503,7 +503,7 @@
     "com.unity.2d.aseprite@1.1.10": {
       "name": "com.unity.2d.aseprite",
       "displayName": "2D Aseprite Importer",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.2d.aseprite@dba7c65ef731",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.2d.aseprite@dba7c65ef731",
       "fingerprint": "dba7c65ef731c2cd2715a1be4eb9353b39eb570c",
       "editorCompatibility": "2021.3.15f1",
       "version": "1.1.10",
@@ -513,7 +513,7 @@
     "com.unity.splines@2.8.1": {
       "name": "com.unity.splines",
       "displayName": "Splines",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.splines@b909627b5095",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.splines@b909627b5095",
       "fingerprint": "b909627b5095061d48761597bbb8384d6f04e510",
       "editorCompatibility": "2022.3.0a1",
       "version": "2.8.1",
@@ -523,7 +523,7 @@
     "com.unity.searcher@4.9.3": {
       "name": "com.unity.searcher",
       "displayName": "Searcher",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.searcher@1e17ce91558d",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.searcher@1e17ce91558d",
       "fingerprint": "1e17ce91558d1d9127554adc03d275f39a7466a2",
       "editorCompatibility": "2019.1.0a1",
       "version": "4.9.3",
@@ -533,7 +533,7 @@
     "com.unity.burst@1.8.24": {
       "name": "com.unity.burst",
       "displayName": "Burst",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.burst@f7a407abf4d5",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.burst@f7a407abf4d5",
       "fingerprint": "f7a407abf4d5abf19ce630824dcde261e02ed97e",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.8.24",
@@ -543,7 +543,7 @@
     "com.unity.mathematics@1.3.2": {
       "name": "com.unity.mathematics",
       "displayName": "Mathematics",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.mathematics@8017b507cc74",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.mathematics@8017b507cc74",
       "fingerprint": "8017b507cc74bf0a1dd14b18aa860569f807314d",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.3.2",
@@ -553,7 +553,7 @@
     "com.unity.collections@2.5.1": {
       "name": "com.unity.collections",
       "displayName": "Collections",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.collections@56bff8827a7e",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.collections@56bff8827a7e",
       "fingerprint": "56bff8827a7ef6d44fcee4f36e558a74da89c1a0",
       "editorCompatibility": "2022.3.11f1",
       "version": "2.5.1",
@@ -563,8 +563,8 @@
     "com.unity.rendering.light-transport@1.0.1": {
       "name": "com.unity.rendering.light-transport",
       "displayName": "Unity Light Transport Library",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.rendering.light-transport@9bd588f963c0",
-      "fingerprint": "9bd588f963c0ca6105f0978f9cfc66444032a804",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.rendering.light-transport@fd597d1a9e15",
+      "fingerprint": "fd597d1a9e151173ab55d89781dc98f19ab01a15",
       "editorCompatibility": "2023.3.0b1",
       "version": "1.0.1",
       "source": "builtin",
@@ -573,7 +573,7 @@
     "com.unity.2d.common@9.1.1": {
       "name": "com.unity.2d.common",
       "displayName": "2D Common",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.2d.common@bc041c6e0d0d",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.2d.common@bc041c6e0d0d",
       "fingerprint": "bc041c6e0d0d69f1195446076eff5ef3189d3e92",
       "editorCompatibility": "6000.0.0a1",
       "version": "9.1.1",
@@ -583,7 +583,7 @@
     "com.unity.settings-manager@2.1.0": {
       "name": "com.unity.settings-manager",
       "displayName": "Settings Manager",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.settings-manager@41738c275190",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.settings-manager@41738c275190",
       "fingerprint": "41738c27519039c335849eb78949382f4d7a3544",
       "editorCompatibility": "2022.3.0a1",
       "version": "2.1.0",
@@ -593,7 +593,7 @@
     "com.unity.nuget.mono-cecil@1.11.4": {
       "name": "com.unity.nuget.mono-cecil",
       "displayName": "Mono Cecil",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.nuget.mono-cecil@d6f9955a5d5f",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.nuget.mono-cecil@d6f9955a5d5f",
       "fingerprint": "d6f9955a5d5f84d45442ff1ad0fb694cc6e2fd62",
       "editorCompatibility": "2018.4.0a1",
       "version": "1.11.4",
@@ -603,7 +603,7 @@
     "com.unity.test-framework.performance@3.1.0": {
       "name": "com.unity.test-framework.performance",
       "displayName": "Performance testing API",
-      "resolvedPath": "D:\\unity\\defensores del mundo verde\\defenders-of-the-kingdom\\defenders-of-the-kingdom\\Library\\PackageCache\\com.unity.test-framework.performance@92d1d09a72ed",
+      "resolvedPath": "/home/vance/Proyectos/defensores-del-reino-verde/Library/PackageCache/com.unity.test-framework.performance@92d1d09a72ed",
       "fingerprint": "92d1d09a72ed696fa23fd76c675b29d211664b50",
       "editorCompatibility": "2020.3.0a1",
       "version": "3.1.0",

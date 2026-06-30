@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: cfc6c969276192a61b8eedf0cdee0f3f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8997882339743090623
+    second: andriusprites_0
+  - first:
+      213: 4042430943072833580
+    second: andriusprites_1
+  - first:
+      213: 5546359753219080245
+    second: andriusprites_2
+  - first:
+      213: -6003852282112438231
+    second: andriusprites_3
+  - first:
+      213: 4964949061946116873
+    second: andriusprites_4
+  - first:
+      213: 7648996248746386578
+    second: andriusprites_5
+  - first:
+      213: 4011054129766208920
+    second: andriusprites_6
+  - first:
+      213: 1619045888064322755
+    second: andriusprites_7
+  - first:
+      213: -2646930579234480813
+    second: andriusprites_8
+  - first:
+      213: 206906812620440328
+    second: andriusprites_9
+  - first:
+      213: -7213692462767890184
+    second: andriusprites_10
+  - first:
+      213: 4515898461350603310
+    second: andriusprites_11
+  - first:
+      213: 3016472905806958027
+    second: andriusprites_12
+  - first:
+      213: -2350532707891245512
+    second: andriusprites_13
+  - first:
+      213: -7289018385685576273
+    second: andriusprites_14
+  - first:
+      213: 6952875373897456572
+    second: andriusprites_15
+  - first:
+      213: -7782858013093830608
+    second: andriusprites_16
+  - first:
+      213: -6182258822691812880
+    second: andriusprites_17
+  - first:
+      213: -5038670875890358629
+    second: andriusprites_18
+  - first:
+      213: 4083168033157266370
+    second: andriusprites_19
+  - first:
+      213: -1105842586689169831
+    second: andriusprites_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: andriusprites_0
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 2252
+        width: 317
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7c52fa056eedc70800000000000000
+      internalID: 8997882339743090623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_1
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 2252
+        width: 316
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2057e66689991830800000000000000
+      internalID: 4042430943072833580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_2
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 2252
+        width: 316
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53085274fc0a8fc40800000000000000
+      internalID: 5546359753219080245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_3
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 2253
+        width: 316
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92015c0c8280eaca0800000000000000
+      internalID: -6003852282112438231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_4
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1803
+        width: 316
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b053dcdda07e440800000000000000
+      internalID: 4964949061946116873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_5
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1802
+        width: 317
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294e2d6ef81b62a60800000000000000
+      internalID: 7648996248746386578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_6
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 1804
+        width: 317
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8951493ca702aa730800000000000000
+      internalID: 4011054129766208920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_7
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 1805
+        width: 316
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc712938a1087610800000000000000
+      internalID: 1619045888064322755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_8
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1356
+        width: 316
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35d1c9789a6344bd0800000000000000
+      internalID: -2646930579234480813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_9
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 909
+        width: 316
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80389db56a41fd200800000000000000
+      internalID: 206906812620440328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_10
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 1356
+        width: 317
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f0aec5cce0d3eb90800000000000000
+      internalID: -7213692462767890184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_11
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 1355
+        width: 316
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a298e69b1bbae30800000000000000
+      internalID: 4515898461350603310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_12
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 1356
+        width: 317
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcdc639302aacd920800000000000000
+      internalID: 3016472905806958027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_13
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 908
+        width: 316
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e8431b4fa316fd0800000000000000
+      internalID: -2350532707891245512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_14
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 460
+        width: 316
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa58be7a56438da90800000000000000
+      internalID: -7289018385685576273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_15
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 907
+        width: 317
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbb18bc80539d7060800000000000000
+      internalID: 6952875373897456572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_16
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 907
+        width: 316
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0306d385fdbbdf390800000000000000
+      internalID: -7782858013093830608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_17
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 459
+        width: 317
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f90ee31b54343aa0800000000000000
+      internalID: -6182258822691812880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_18
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 460
+        width: 317
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b96e27ec88b031ab0800000000000000
+      internalID: -5038670875890358629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_19
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 460
+        width: 317
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cbb19e41b35aa830800000000000000
+      internalID: 4083168033157266370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andriusprites_20
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 11
+        width: 316
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95694e2c60247a0f0800000000000000
+      internalID: -1105842586689169831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      andriusprites_0: 8997882339743090623
+      andriusprites_1: 4042430943072833580
+      andriusprites_10: -7213692462767890184
+      andriusprites_11: 4515898461350603310
+      andriusprites_12: 3016472905806958027
+      andriusprites_13: -2350532707891245512
+      andriusprites_14: -7289018385685576273
+      andriusprites_15: 6952875373897456572
+      andriusprites_16: -7782858013093830608
+      andriusprites_17: -6182258822691812880
+      andriusprites_18: -5038670875890358629
+      andriusprites_19: 4083168033157266370
+      andriusprites_2: 5546359753219080245
+      andriusprites_20: -1105842586689169831
+      andriusprites_3: -6003852282112438231
+      andriusprites_4: 4964949061946116873
+      andriusprites_5: 7648996248746386578
+      andriusprites_6: 4011054129766208920
+      andriusprites_7: 1619045888064322755
+      andriusprites_8: -2646930579234480813
+      andriusprites_9: 206906812620440328
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
