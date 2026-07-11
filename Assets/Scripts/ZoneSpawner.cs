@@ -63,6 +63,10 @@ public class ZoneSpawner : MonoBehaviour
         allZones.Clear();
         foreach (var zi in zones)
         {
+            // Si tiene ZoneCombatController, queda excluida del spawning continuo
+            if (zi.instanceGO.GetComponent<ZoneCombatController>() != null)
+                continue;
+
             SpawnZone sz = zi.instanceGO.GetComponent<SpawnZone>();
             if (sz != null)
             {

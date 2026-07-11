@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a79ce6017bd4d4d8c511992f75ba874, type: 3}
+  m_Name: SO_Crioproyector_Albedo
+  m_EditorClassIdentifier: 
+  weaponId: Crioproyector
+  displayName: 4
+  description: 
+  icon: {fileID: 0}
+  rarity: {fileID: 0}
+  upgradeTags: []
+  weaponPrefab: {fileID: 6643852170876251094, guid: 8ad8394bbc972da409d92567032aa455, type: 3}
+  weaponBehaviourType: 
+  weaponAnimator: {fileID: 0}
+  isRanged: 1
+  attackRange: 2
+  projectilePrefab: {fileID: 6643852170876251094, guid: c60efae79f1dcd241aff4ca87eceb2f1, type: 3}
+  baseStats:
+    damage: 10
+    cooldown: 1
+    projectileCount: 1
+    projectileSpeed: 5
+    areaSize: 1
+    duration: 1
+    pierce: 0
+    knockback: 0
+    criticalChance: 0
+    criticalMultiplier: 1.5
+  damageX: 20
+  cooldownX: 5
+  rangeX: 3
+  prefabX: {fileID: 6643852170876251094, guid: f402f6f8bfc9f4a428b334842830c6fd, type: 3}
+  damageC: 40
+  cooldownC: 10
+  rangeC: 4
+  prefabC: {fileID: 6643852170876251094, guid: e4626e8b235d3954b9d45d89c45e64a4, type: 3}
+  damageV: 100
+  cooldownV: 30
+  rangeV: 6
+  prefabV: {fileID: 6643852170876251094, guid: 721e6ace8d5012e488ef3bfaa9f93591, type: 3}
+  uniqueUpgradePool: []
+  passiveUpgradePool: []
+  maxInternalLevel: 5

@@ -5,15 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IntroScene.unity
     guid: b61b71450bb165f47b2677c4a64d4497
   - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: da1b3e5dc7f92c642812b59f5cfddc9d
   - enabled: 1
+    path: Assets/Scenes/LevelHUB.unity
+    guid: d3fc954de98aadb4f930d44de322684e
+  - enabled: 1
     path: Assets/Scenes/LevelWoods.unity
     guid: d2122fe92362c2d4ab0bcdffdce93df9
+  - enabled: 1
+    path: Assets/Scenes/LevelIce.unity
+    guid: c066ed28d47fa97499f04417a16189fa
+  - enabled: 1
+    path: Assets/Scenes/LevelBeach.unity
+    guid: 514cefac46b060a42bb4def093e697f9
   - enabled: 0
     path: Assets/Scenes/Level0Scene.unity
     guid: 8465c9e0fad5c5b4cb9176dfe54ef2c1
