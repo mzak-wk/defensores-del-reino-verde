@@ -138,6 +138,9 @@ public class LevelLayoutGenerator : MonoBehaviour
                         metadata.spawnAnchors = new Transform[0];
                     }
 
+                    metadata.zoneIndex = c + (r * layoutData.columns);
+                    metadata.isCombatZone = instance.GetComponent<ZoneCombatController>() != null;
+
                     // Recopilar posiciones globales de los anchors
                     Vector3[] anchorPositions = new Vector3[metadata.spawnAnchors.Length];
                     for (int i = 0; i < metadata.spawnAnchors.Length; i++)

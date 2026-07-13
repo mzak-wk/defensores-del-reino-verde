@@ -20,7 +20,7 @@ TagManager:
   - Wall
   - items
   - projectile
-  - 
+  - Muros_Espectrales
   - 
   - 
   - 
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: orbMask
     uniqueID: 3858662919
+    locked: 0
+  - name: Player
+    uniqueID: 3994135037
     locked: 0
   m_RenderingLayers:
   - Default

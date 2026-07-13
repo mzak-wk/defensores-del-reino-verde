@@ -12,6 +12,9 @@ public class ZoneMetadata : MonoBehaviour
     [Header("Identificación")]
     public string zoneName = "Nueva Zona";
     public ZoneType zoneType = ZoneType.Middle;
+    
+    public int zoneIndex = 0;
+    [HideInInspector] public bool isCombatZone = false;
 
     [Header("Puntos de Spawn")]
     [Tooltip("Puntos fijos donde aparecerán los enemigos en esta zona.")]

@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a79ce6017bd4d4d8c511992f75ba874, type: 3}
+  m_Name: SO_Proyector_Reforestacion
+  m_EditorClassIdentifier: 
+  weaponId: 1
+  displayName: "Proyector de Reforestaci\xF3n"
+  description: 
+  icon: {fileID: 0}
+  rarity: {fileID: 0}
+  upgradeTags: []
+  weaponPrefab: {fileID: 5581307770585598529, guid: b5b0456d53d739245a3d64293f5118a8, type: 3}
+  weaponBehaviourType: 
+  weaponAnimator: {fileID: 0}
+  isRanged: 1
+  attackRange: 2
+  projectilePrefab: {fileID: 5581307770585598529, guid: 937e6397fc771d54f99ccd1865ff4ec9, type: 3}
+  baseStats:
+    damage: 10
+    cooldown: 1
+    projectileCount: 1
+    projectileSpeed: 5
+    areaSize: 1
+    duration: 1
+    pierce: 0
+    knockback: 0
+    criticalChance: 0
+    criticalMultiplier: 1.5
+  damageX: 20
+  cooldownX: 5
+  rangeX: 3
+  prefabX: {fileID: 5581307770585598529, guid: 7391c5ee8dfe34148902c5198e8cadb9, type: 3}
+  damageC: 40
+  cooldownC: 10
+  rangeC: 4
+  prefabC: {fileID: 5581307770585598529, guid: b685d4417041aad418737ce870bf81d7, type: 3}
+  damageV: 100
+  cooldownV: 30
+  rangeV: 6
+  prefabV: {fileID: 5581307770585598529, guid: eec0e85b3c8105c438eb06cbfbef8e0a, type: 3}
+  uniqueUpgradePool: []
+  passiveUpgradePool: []
+  maxInternalLevel: 5

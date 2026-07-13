@@ -50,9 +50,31 @@ public class WeaponData : ScriptableObject
     [SerializeField] private GameObject weaponPrefab;
     [Tooltip("Optional identifier for the future runtime behaviour resolver.")]
     [SerializeField] private string weaponBehaviourType;
+    [SerializeField] private RuntimeAnimatorController weaponAnimator;
 
-    [Header("Base Stats")]
+    [Header("Base Attack (Left Click / Auto)")]
+    [SerializeField] private bool isRanged;
+    [SerializeField] private float attackRange = 2f;
+    [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private BaseStats baseStats = BaseStats.Default;
+
+    [Header("Skill X (Unlocks at Player Level 5)")]
+    [SerializeField] private float damageX = 20f;
+    [SerializeField] private float cooldownX = 5f;
+    [SerializeField] private float rangeX = 3f;
+    [SerializeField] private GameObject prefabX;
+
+    [Header("Skill C (Unlocks at Player Level 10)")]
+    [SerializeField] private float damageC = 40f;
+    [SerializeField] private float cooldownC = 10f;
+    [SerializeField] private float rangeC = 4f;
+    [SerializeField] private GameObject prefabC;
+
+    [Header("Ultimate V (Unlocks at Max Weapon Level)")]
+    [SerializeField] private float damageV = 100f;
+    [SerializeField] private float cooldownV = 30f;
+    [SerializeField] private float rangeV = 6f;
+    [SerializeField] private GameObject prefabV;
 
     [Header("Upgrade Pools")]
     [SerializeField] private List<UpgradeData> uniqueUpgradePool = new List<UpgradeData>();
@@ -68,9 +90,31 @@ public class WeaponData : ScriptableObject
     public Sprite Icon => icon;
     public RarityData Rarity => rarity;
     public IReadOnlyList<string> UpgradeTags => upgradeTags;
+    
     public GameObject WeaponPrefab => weaponPrefab;
     public string WeaponBehaviourType => weaponBehaviourType;
+    public RuntimeAnimatorController WeaponAnimator => weaponAnimator;
+
+    public bool IsRanged => isRanged;
+    public float AttackRange => attackRange;
+    public GameObject ProjectilePrefab => projectilePrefab;
     public BaseStats Stats => baseStats;
+
+    public float DamageX => damageX;
+    public float CooldownX => cooldownX;
+    public float RangeX => rangeX;
+    public GameObject PrefabX => prefabX;
+
+    public float DamageC => damageC;
+    public float CooldownC => cooldownC;
+    public float RangeC => rangeC;
+    public GameObject PrefabC => prefabC;
+
+    public float DamageV => damageV;
+    public float CooldownV => cooldownV;
+    public float RangeV => rangeV;
+    public GameObject PrefabV => prefabV;
+
     public IReadOnlyList<UpgradeData> UniqueUpgradePool => uniqueUpgradePool;
     public IReadOnlyList<UpgradeData> PassiveUpgradePool => passiveUpgradePool;
     public int MaxInternalLevel => maxInternalLevel;

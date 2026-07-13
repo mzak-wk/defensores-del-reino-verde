@@ -7,7 +7,7 @@ public struct SpawnEntry
     [Range(0f, 100f)] public float weight;
 }
 
-[RequireComponent(typeof(PolygonCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 public class SpawnZone : MonoBehaviour
 {
     [Header("Identificación")]
@@ -25,14 +25,14 @@ public class SpawnZone : MonoBehaviour
 
     [HideInInspector] public int activeEnemyCount = 0;
     
-    private PolygonCollider2D polyCollider;
+    private Collider2D zoneCollider;
     private Bounds bounds;
 
     private void Awake()
     {
-        polyCollider = GetComponent<PolygonCollider2D>();
-        polyCollider.isTrigger = true;
-        bounds = polyCollider.bounds;
+        zoneCollider = GetComponent<Collider2D>();
+        zoneCollider.isTrigger = true;
+        bounds = zoneCollider.bounds;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -78,7 +78,7 @@ public class SpawnZone : MonoBehaviour
 
     public Vector2 GetRandomPointInZone()
     {
-        if (polyCollider == null) return transform.position;
+        if (zoneCollider == null) return transform.position;
 
         int maxAttempts = 30;
         for (int i = 0; i < maxAttempts; i++)
@@ -87,7 +87,7 @@ public class SpawnZone : MonoBehaviour
             float y = Random.Range(bounds.min.y, bounds.max.y);
             Vector2 point = new Vector2(x, y);
 
-            if (polyCollider.OverlapPoint(point))
+            if (zoneCollider.OverlapPoint(point))
             {
                 return point;
             }
@@ -121,21 +121,31 @@ public class SpawnZone : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (polyCollider == null) polyCollider = GetComponent<PolygonCollider2D>();
-        if (polyCollider != null)
+        if (zoneCollider == null) zoneCollider = GetComponent<Collider2D>();
+        if (zoneCollider != null)
         {
             Gizmos.color = new Color(0, 1, 0, 0.3f);
             
-            // Draw polygon shape
-            for (int i = 0; i < polyCollider.pathCount; i++)
+            if (zoneCollider is PolygonCollider2D poly)
             {
-                Vector2[] path = polyCollider.GetPath(i);
-                for (int j = 0; j < path.Length; j++)
+                for (int i = 0; i < poly.pathCount; i++)
                 {
-                    Vector2 p1 = transform.TransformPoint(path[j]);
-                    Vector2 p2 = transform.TransformPoint(path[(j + 1) % path.Length]);
-                    Gizmos.DrawLine(p1, p2);
+                    Vector2[] path = poly.GetPath(i);
+                    for (int j = 0; j < path.Length; j++)
+                    {
+                        Vector2 p1 = transform.TransformPoint(path[j]);
+                        Vector2 p2 = transform.TransformPoint(path[(j + 1) % path.Length]);
+                        Gizmos.DrawLine(p1, p2);
+                    }
                 }
+            }
+            else if (zoneCollider is BoxCollider2D box)
+            {
+                Gizmos.DrawWireCube(box.bounds.center, box.bounds.size);
+            }
+            else if (zoneCollider is CircleCollider2D circle)
+            {
+                Gizmos.DrawWireSphere(circle.bounds.center, circle.bounds.extents.x);
             }
         }
     }

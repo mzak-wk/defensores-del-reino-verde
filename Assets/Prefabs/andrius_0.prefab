@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1196723299382613064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 238034126109632160}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &238034126109632160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196723299382613064}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.61, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9085043698265461503}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1501606455614522797
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +303,38 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &3304196455742143561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9085043698265461503}
+  m_Layer: 0
+  m_Name: mano
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9085043698265461503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304196455742143561}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.8, y: -0.75, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 238034126109632160}
+  m_Father: {fileID: 7530775722961712680}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3438437559679788654
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,10 +446,9 @@ GameObject:
   - component: {fileID: 3865290744520200950}
   - component: {fileID: 5168207177590385053}
   - component: {fileID: 433232464340143421}
-  - component: {fileID: 6010720980635586892}
   - component: {fileID: 2444502538391678910}
-  - component: {fileID: 4876850863359831164}
   - component: {fileID: 4407393062175152713}
+  - component: {fileID: 3739987521104154260}
   m_Layer: 3
   m_Name: andrius_0
   m_TagString: Player
@@ -408,6 +470,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4285253135817757259}
+  - {fileID: 9085043698265461503}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7729906672121963841
@@ -451,8 +514,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -300832259
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: -2384558487252899887, guid: d193e93a23f44be4a9bb037f330dbd57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -586,21 +649,6 @@ MonoBehaviour:
   playerAttack: {fileID: 0}
   fireMageAttack: {fileID: 0}
   archerAttack: {fileID: 0}
---- !u!114 &6010720980635586892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4930502472480373482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb2044b082828e46b0c07e162504f76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: {fileID: 1026736622846132665}
-  flashTime: 0.1
-  flashes: 2
 --- !u!114 &2444502538391678910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,39 +668,6 @@ MonoBehaviour:
     m_Bits: 512
   playerHealth: {fileID: 1026736622846132665}
   skipChickenWhenFull: 1
---- !u!114 &4876850863359831164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4930502472480373482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544d156e69241cc41a2228ea085b381e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingSprite: {fileID: 7729906672121963841}
-  slashPrefab: {fileID: 6255444547622704660, guid: 85d309659f47aed47911727433c90bdc, type: 3}
-  quakePrefab: {fileID: 6444036381957406254, guid: 8250c85ea2fa4ac4b97802c85b50141b, type: 3}
-  level: 1
-  baseDamage: 100
-  baseScale: 1.2
-  baseForward: 5
-  baseCooldown: 1.3
-  slashDamage: 100
-  slashScale: 1.1
-  slashForward: 3
-  slashCooldown: 1.4
-  slashLifetime: 1
-  standStillVelocityThreshold: 0.05
-  quakeScaleFactor: 2
-  quakeCDMultiplier: 2.8
-  quakeLifeTimeLv10: 6
-  quakeShakeIntensity: 0.2
-  quakeShakeFrequency: 30
-  baseQuakeRadiusMul: 1
-  currentQuakeRadiusMul: 1
 --- !u!95 &4407393062175152713
 Animator:
   serializedVersion: 7
@@ -675,6 +690,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3739987521104154260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4930502472480373482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bbba92f70dbdfb4faa8b067db9baea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equippedWeapons:
+  - {fileID: 11400000, guid: 7c50bdd3036a2cc41b5b34ae3831cfe6, type: 2}
+  - {fileID: 11400000, guid: b75bd9cac0b495d4098a2bbdd69220ea, type: 2}
+  - {fileID: 11400000, guid: cc8be45b66fe5354b8f033fcadcc2327, type: 2}
+  - {fileID: 11400000, guid: de2dbf7abbadca944a7619d2a4249269, type: 2}
+  - {fileID: 11400000, guid: 8b6af63a1ce0b1f45ba09cde73331ce3, type: 2}
+  - {fileID: 11400000, guid: fa4504c904d9e4548992003f7788381e, type: 2}
+  currentSlotIndex: 0
+  weaponHandPoint: {fileID: 9085043698265461503}
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 64
+  weaponLevels: 0100000001000000010000000100000000000000
 --- !u!1 &4976484780309862427
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4023384547844257380
 RectTransform:
   m_ObjectHideFlags: 0
