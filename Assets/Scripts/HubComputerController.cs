@@ -15,6 +15,10 @@ public class HubComputerController : MonoBehaviour
     [SerializeField] private KeyCode interactionKey = KeyCode.E;
     [SerializeField] private bool closeOnExit = false;
 
+    [Header("Physics Interaction Detection")]
+    [SerializeField] private bool useRadiusDetection = true;
+    [SerializeField] private float interactionRadius = 2.5f;
+
     private bool playerInRange;
     private IPlayerMovementLock currentMovementLock;
 
@@ -38,7 +42,15 @@ public class HubComputerController : MonoBehaviour
 
     private void Update()
     {
+        CheckProximityDetection();
+
         if (!playerInRange || hubUIManager == null)
+        {
+            return;
+        }
+
+        // Bloqueo 1.1: Evitar abrir el ordenador si el sistema de diálogos está abierto
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsOpen)
         {
             return;
         }
@@ -49,9 +61,37 @@ public class HubComputerController : MonoBehaviour
         }
     }
 
+    private void CheckProximityDetection()
+    {
+        if (!useRadiusDetection) return;
+
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, interactionRadius);
+        if (hit != null && hit.CompareTag(playerTag))
+        {
+            if (!playerInRange)
+            {
+                playerInRange = true;
+                currentMovementLock = hit.GetComponent<IPlayerMovementLock>();
+            }
+        }
+        else
+        {
+            if (playerInRange && useRadiusDetection)
+            {
+                playerInRange = false;
+                if (closeOnExit && hubUIManager != null && hubUIManager.IsOpen)
+                {
+                    hubUIManager.CloseComputer();
+                }
+                SetPlayerMovementLocked(false);
+                currentMovementLock = null;
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag(playerTag))
+        if (useRadiusDetection || !other.CompareTag(playerTag))
         {
             return;
         }
@@ -62,7 +102,7 @@ public class HubComputerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (!other.CompareTag(playerTag))
+        if (useRadiusDetection || !other.CompareTag(playerTag))
         {
             return;
         }
@@ -76,6 +116,15 @@ public class HubComputerController : MonoBehaviour
 
         SetPlayerMovementLocked(false);
         currentMovementLock = null;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (useRadiusDetection)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, interactionRadius);
+        }
     }
 
     private void OpenComputer()

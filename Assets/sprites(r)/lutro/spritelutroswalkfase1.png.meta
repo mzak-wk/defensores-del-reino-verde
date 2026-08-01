@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: b00b8351fbbc1064192f6f6c60593fe0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8457769883209058072
+    second: spritelutroswalkfase1_0
+  - first:
+      213: 3391477635599880276
+    second: spritelutroswalkfase1_1
+  - first:
+      213: 4124476629961160779
+    second: spritelutroswalkfase1_2
+  - first:
+      213: -4378416392350281745
+    second: spritelutroswalkfase1_3
+  - first:
+      213: -396244664211720542
+    second: spritelutroswalkfase1_4
+  - first:
+      213: -4708382670869460638
+    second: spritelutroswalkfase1_5
+  - first:
+      213: -6086381167798364823
+    second: spritelutroswalkfase1_6
+  - first:
+      213: 4320116212296035090
+    second: spritelutroswalkfase1_7
+  - first:
+      213: -1264776897417543912
+    second: spritelutroswalkfase1_8
+  - first:
+      213: 4355980628544780089
+    second: spritelutroswalkfase1_9
+  - first:
+      213: -2809728720668069882
+    second: spritelutroswalkfase1_10
+  - first:
+      213: 2990678382665746322
+    second: spritelutroswalkfase1_11
+  - first:
+      213: -8217172044607008428
+    second: spritelutroswalkfase1_12
+  - first:
+      213: 1339283089068858382
+    second: spritelutroswalkfase1_13
+  - first:
+      213: 7287688721401634410
+    second: spritelutroswalkfase1_14
+  - first:
+      213: 1795893192907940733
+    second: spritelutroswalkfase1_15
+  - first:
+      213: 7701361475515127768
+    second: spritelutroswalkfase1_16
+  - first:
+      213: 6103421721833274712
+    second: spritelutroswalkfase1_17
+  - first:
+      213: 9160100695012905528
+    second: spritelutroswalkfase1_18
+  - first:
+      213: 5578717729905991789
+    second: spritelutroswalkfase1_19
+  - first:
+      213: -4074220435657998698
+    second: spritelutroswalkfase1_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 2799
+        width: 349
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e8b3573a17ff9a80800000000000000
+      internalID: -8457769883209058072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_1
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 2799
+        width: 351
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 450dc95d0f2f01f20800000000000000
+      internalID: 3391477635599880276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_2
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 2799
+        width: 360
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b483c3d74a51d3930800000000000000
+      internalID: 4124476629961160779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_3
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 2799
+        width: 355
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fefc63f2d7dbc33c0800000000000000
+      internalID: -4378416392350281745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 2192
+        width: 354
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a63489c391408af0800000000000000
+      internalID: -396244664211720542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_5
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 2192
+        width: 353
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 269883c28e678aeb0800000000000000
+      internalID: -4708382670869460638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_6
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 2192
+        width: 351
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96550cd2394d88ba0800000000000000
+      internalID: -6086381167798364823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_7
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 2194
+        width: 350
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21baf4e5ec224fb30800000000000000
+      internalID: 4320116212296035090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_8
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1650
+        width: 349
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f7e45ec1c927ee0800000000000000
+      internalID: -1264776897417543912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_9
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 1650
+        width: 350
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937f4ec7d4d837c30800000000000000
+      internalID: 4355980628544780089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_10
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 1650
+        width: 352
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600fd597d96d109d0800000000000000
+      internalID: -2809728720668069882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_11
+      rect:
+        serializedVersion: 2
+        x: 2375
+        y: 1650
+        width: 357
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2974b3cc426018920800000000000000
+      internalID: 2990678382665746322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_12
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1110
+        width: 354
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451dde6df8db6fd80800000000000000
+      internalID: -8217172044607008428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_13
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1110
+        width: 354
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c13a9afd6169210800000000000000
+      internalID: 1339283089068858382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_14
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 1110
+        width: 354
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ed3c0c742132560800000000000000
+      internalID: 7287688721401634410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_15
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 1110
+        width: 353
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d73e1d9085b4ce810800000000000000
+      internalID: 1795893192907940733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_16
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 576
+        width: 351
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d715fa557bb0ea60800000000000000
+      internalID: 7701361475515127768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_17
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 575
+        width: 351
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85d764cf7b5b3b450800000000000000
+      internalID: 6103421721833274712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_18
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 575
+        width: 350
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8329d01cc073f1f70800000000000000
+      internalID: 9160100695012905528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_19
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 575
+        width: 350
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d606831d7369b6d40800000000000000
+      internalID: 5578717729905991789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritelutroswalkfase1_20
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 35
+        width: 356
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69eb7f399167577c0800000000000000
+      internalID: -4074220435657998698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spritelutroswalkfase1_0: -8457769883209058072
+      spritelutroswalkfase1_1: 3391477635599880276
+      spritelutroswalkfase1_10: -2809728720668069882
+      spritelutroswalkfase1_11: 2990678382665746322
+      spritelutroswalkfase1_12: -8217172044607008428
+      spritelutroswalkfase1_13: 1339283089068858382
+      spritelutroswalkfase1_14: 7287688721401634410
+      spritelutroswalkfase1_15: 1795893192907940733
+      spritelutroswalkfase1_16: 7701361475515127768
+      spritelutroswalkfase1_17: 6103421721833274712
+      spritelutroswalkfase1_18: 9160100695012905528
+      spritelutroswalkfase1_19: 5578717729905991789
+      spritelutroswalkfase1_2: 4124476629961160779
+      spritelutroswalkfase1_20: -4074220435657998698
+      spritelutroswalkfase1_3: -4378416392350281745
+      spritelutroswalkfase1_4: -396244664211720542
+      spritelutroswalkfase1_5: -4708382670869460638
+      spritelutroswalkfase1_6: -6086381167798364823
+      spritelutroswalkfase1_7: 4320116212296035090
+      spritelutroswalkfase1_8: -1264776897417543912
+      spritelutroswalkfase1_9: 4355980628544780089
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

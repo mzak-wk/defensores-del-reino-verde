@@ -4,8 +4,7 @@ public enum WeaponRarityId
 {
     Common,
     Rare,
-    Epic,
-    Legendary
+    Epic
 }
 
 [CreateAssetMenu(fileName = "New Rarity Data", menuName = "Game/Weapons/Rarity Data")]

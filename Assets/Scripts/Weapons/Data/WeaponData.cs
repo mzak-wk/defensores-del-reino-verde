@@ -42,38 +42,42 @@ public class WeaponData : ScriptableObject
     [SerializeField] private Sprite icon;
 
     [Header("Classification")]
+    [SerializeField] private bool isUnlockedByDefault = false;
     [SerializeField] private RarityData rarity;
     [SerializeField] private List<string> upgradeTags = new List<string>();
 
-    [Header("Runtime References")]
-    [Tooltip("Prefab that will contain the future weapon behaviour for this weapon.")]
-    [SerializeField] private GameObject weaponPrefab;
-    [Tooltip("Optional identifier for the future runtime behaviour resolver.")]
-    [SerializeField] private string weaponBehaviourType;
-    [SerializeField] private RuntimeAnimatorController weaponAnimator;
+    [Header("Animator")]
+    [SerializeField] private AnimatorOverrideController weaponAnimator;
 
-    [Header("Base Attack (Left Click / Auto)")]
+    [Header("Base Attack")]
     [SerializeField] private bool isRanged;
     [SerializeField] private float attackRange = 2f;
-    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private GameObject basicAttackPrefab;
     [SerializeField] private BaseStats baseStats = BaseStats.Default;
+    [SerializeField] private float basicCooldown = 0.5f;
 
-    [Header("Skill X (Unlocks at Player Level 5)")]
+    [Header("Skill X")]
+    [SerializeField] private string skillXName = "Skill X";
     [SerializeField] private float damageX = 20f;
     [SerializeField] private float cooldownX = 5f;
     [SerializeField] private float rangeX = 3f;
+    [SerializeField] private int requiredLevelX = 5;
     [SerializeField] private GameObject prefabX;
 
-    [Header("Skill C (Unlocks at Player Level 10)")]
+    [Header("Skill C")]
+    [SerializeField] private string skillCName = "Skill C";
     [SerializeField] private float damageC = 40f;
     [SerializeField] private float cooldownC = 10f;
     [SerializeField] private float rangeC = 4f;
+    [SerializeField] private int requiredLevelC = 10;
     [SerializeField] private GameObject prefabC;
 
-    [Header("Ultimate V (Unlocks at Max Weapon Level)")]
+    [Header("Ultimate V")]
+    [SerializeField] private string skillVName = "Ultimate V";
     [SerializeField] private float damageV = 100f;
     [SerializeField] private float cooldownV = 30f;
     [SerializeField] private float rangeV = 6f;
+    [SerializeField] private int requiredLevelV = 5;
     [SerializeField] private GameObject prefabV;
 
     [Header("Upgrade Pools")]
@@ -88,31 +92,37 @@ public class WeaponData : ScriptableObject
     public string DisplayName => displayName;
     public string Description => description;
     public Sprite Icon => icon;
+    public bool IsUnlockedByDefault => isUnlockedByDefault;
     public RarityData Rarity => rarity;
     public IReadOnlyList<string> UpgradeTags => upgradeTags;
-    
-    public GameObject WeaponPrefab => weaponPrefab;
-    public string WeaponBehaviourType => weaponBehaviourType;
-    public RuntimeAnimatorController WeaponAnimator => weaponAnimator;
+
+    public AnimatorOverrideController WeaponAnimator => weaponAnimator;
 
     public bool IsRanged => isRanged;
     public float AttackRange => attackRange;
-    public GameObject ProjectilePrefab => projectilePrefab;
+    public GameObject BasicAttackPrefab => basicAttackPrefab;
     public BaseStats Stats => baseStats;
+    public float BasicCooldown => basicCooldown;
 
+    public string SkillXName => skillXName;
     public float DamageX => damageX;
     public float CooldownX => cooldownX;
     public float RangeX => rangeX;
+    public int RequiredLevelX => requiredLevelX;
     public GameObject PrefabX => prefabX;
 
+    public string SkillCName => skillCName;
     public float DamageC => damageC;
     public float CooldownC => cooldownC;
     public float RangeC => rangeC;
+    public int RequiredLevelC => requiredLevelC;
     public GameObject PrefabC => prefabC;
 
+    public string SkillVName => skillVName;
     public float DamageV => damageV;
     public float CooldownV => cooldownV;
     public float RangeV => rangeV;
+    public int RequiredLevelV => requiredLevelV;
     public GameObject PrefabV => prefabV;
 
     public IReadOnlyList<UpgradeData> UniqueUpgradePool => uniqueUpgradePool;

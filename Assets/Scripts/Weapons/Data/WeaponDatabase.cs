@@ -4,12 +4,34 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Weapon Database", menuName = "Game/Weapons/Weapon Database")]
 public class WeaponDatabase : ScriptableObject
 {
-    private const int ExpectedTotalWeapons = 8;
+    private const int ExpectedTotalWeapons = 6;
     private const int ExpectedWeaponsPerRarity = 2;
 
     [SerializeField] private List<WeaponData> weapons = new List<WeaponData>();
 
     public IReadOnlyList<WeaponData> Weapons => weapons;
+
+    /// <summary>
+    /// Busca y devuelve el WeaponData correspondiente al ID proporcionado.
+    /// Útil para restaurar el arma equipada desde GameSession al cargar una escena.
+    /// </summary>
+    /// <param name="weaponId">El identificador único del arma (ej. "sword_basic")</param>
+    /// <returns>El WeaponData si se encuentra, o null si no existe.</returns>
+    public WeaponData GetWeaponById(string weaponId)
+    {
+        if (string.IsNullOrEmpty(weaponId)) return null;
+
+        foreach (var weapon in weapons)
+        {
+            if (weapon != null && weapon.WeaponId == weaponId)
+            {
+                return weapon;
+            }
+        }
+        
+        Debug.LogWarning($"[WeaponDatabase] No se encontró ningún arma con el ID: {weaponId}");
+        return null;
+    }
 
     private void OnValidate()
     {
@@ -73,8 +95,7 @@ public class WeaponDatabase : ScriptableObject
         {
             { WeaponRarityId.Common, 0 },
             { WeaponRarityId.Rare, 0 },
-            { WeaponRarityId.Epic, 0 },
-            { WeaponRarityId.Legendary, 0 }
+            { WeaponRarityId.Epic, 0 }
         };
     }
 }

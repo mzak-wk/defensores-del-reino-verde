@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: a321f8c09346acf479a5ebe33c5e9052
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7144526772435824224
+    second: slimesprites_0
+  - first:
+      213: -586356600023561779
+    second: slimesprites_1
+  - first:
+      213: -3865127309751779151
+    second: slimesprites_2
+  - first:
+      213: -3639045790565132278
+    second: slimesprites_3
+  - first:
+      213: -999280403822387787
+    second: slimesprites_4
+  - first:
+      213: 6122631726484293936
+    second: slimesprites_5
+  - first:
+      213: 2618990228846239240
+    second: slimesprites_6
+  - first:
+      213: -1785357976501690458
+    second: slimesprites_7
+  - first:
+      213: 2964536026645237392
+    second: slimesprites_8
+  - first:
+      213: -4995553122100008866
+    second: slimesprites_9
+  - first:
+      213: 5658431546254172461
+    second: slimesprites_10
+  - first:
+      213: -3294074434061303178
+    second: slimesprites_11
+  - first:
+      213: -6208675316836263257
+    second: slimesprites_12
+  - first:
+      213: -7369093142219577720
+    second: slimesprites_13
+  - first:
+      213: 6007384535599697929
+    second: slimesprites_14
+  - first:
+      213: -4609630448429434441
+    second: slimesprites_15
+  - first:
+      213: -8902186940391856613
+    second: slimesprites_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slimesprites_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 83
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e2e470f35762360800000000000000
+      internalID: 7144526772435824224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 4
+        width: 86
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9c3e767c7dcd7f0800000000000000
+      internalID: -586356600023561779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_2
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 5
+        width: 88
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b0859aa03f4c5ac0800000000000000
+      internalID: -3865127309751779151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_3
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 5
+        width: 88
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a081cfb42238f7dc0800000000000000
+      internalID: -3639045790565132278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_4
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 5
+        width: 90
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd582364c7d122f0800000000000000
+      internalID: -999280403822387787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_5
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 5
+        width: 90
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03902abbd15f7f450800000000000000
+      internalID: 6122631726484293936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_6
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 4
+        width: 89
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e5994bcb5885420800000000000000
+      internalID: 2618990228846239240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_7
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 5
+        width: 82
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6afd4bd21622937e0800000000000000
+      internalID: -1785357976501690458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_8
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 5
+        width: 81
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e89083fc5242920800000000000000
+      internalID: 2964536026645237392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_9
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 6
+        width: 81
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58a2ac27ea3caab0800000000000000
+      internalID: -4995553122100008866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_10
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 10
+        width: 84
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d21285cf289c68e40800000000000000
+      internalID: 5658431546254172461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_11
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 13
+        width: 87
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 672841641c81942d0800000000000000
+      internalID: -3294074434061303178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_12
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 15
+        width: 86
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa1d3eb1ba56d9a0800000000000000
+      internalID: -6208675316836263257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_13
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 9
+        width: 89
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8862c3d84d8bbb990800000000000000
+      internalID: -7369093142219577720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_14
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 2
+        width: 85
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900589918648e5350800000000000000
+      internalID: 6007384535599697929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_15
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 4
+        width: 82
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9f98fa78d4700c0800000000000000
+      internalID: -4609630448429434441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slimesprites_16
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 2
+        width: 168
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1662ddb424157480800000000000000
+      internalID: -8902186940391856613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      slimesprites_0: 7144526772435824224
+      slimesprites_1: -586356600023561779
+      slimesprites_10: 5658431546254172461
+      slimesprites_11: -3294074434061303178
+      slimesprites_12: -6208675316836263257
+      slimesprites_13: -7369093142219577720
+      slimesprites_14: 6007384535599697929
+      slimesprites_15: -4609630448429434441
+      slimesprites_16: -8902186940391856613
+      slimesprites_2: -3865127309751779151
+      slimesprites_3: -3639045790565132278
+      slimesprites_4: -999280403822387787
+      slimesprites_5: 6122631726484293936
+      slimesprites_6: 2618990228846239240
+      slimesprites_7: -1785357976501690458
+      slimesprites_8: 2964536026645237392
+      slimesprites_9: -4995553122100008866
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

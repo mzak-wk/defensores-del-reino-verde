@@ -1,41 +1,70 @@
+using System;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Necesario para buscar el Director
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
-public class BossHealth : Enemy // <--- HEREDA DE ENEMY
+public class BossHealth : Enemy
 {
-    // Opcional: Para evitar que el boss dé XP/drops normales al morir
+    [Header("Eventos")]
+    [Tooltip("Evento invocado cuando el jefe es derrotado.")]
+    new public UnityEvent OnDeath;
+
+    public event Action<float> OnDamaged;
+    public event Action OnBossDeath;
+
+    [Header("Configuración de Drops")]
     public bool suppressNormalDropsOnBossDeath = true;
 
-    // Sobrescribimos el método Die() de la clase base (Enemy)
+    public float CurrentHP => currentHP;
+    public float MaxHP => maxHP;
+    public bool IsDead => currentHP <= 0f;
+
+    private float currentHP;
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        currentHP = maxHP;
+    }
+
+    public void SetHP(float newMaxHP)
+    {
+        maxHP = newMaxHP;
+        currentHP = maxHP;
+    }
+
+    public new void TakeDamage(float amount)
+    {
+        if (currentHP <= 0f) return;
+
+        currentHP -= amount;
+        OnDamaged?.Invoke(amount);
+
+        Debug.Log($"[BossHealth] {name} HP = {currentHP} (-{amount})");
+        if (currentHP <= 0f) Die();
+    }
+
     protected override void Die()
     {
-        // 1. Notificar al director de escena ANTES de hacer la limpieza
+        OnDeath?.Invoke();
+        OnBossDeath?.Invoke();
+
         NotifyTutorialDirector();
 
-        // 2. Si configuramos que el boss suprima sus drops normales, lo aplicamos
         if (suppressNormalDropsOnBossDeath)
         {
             suppressDrops = true;
         }
 
-        // 3. Llamamos al método Die() de la clase base (Enemy) para que haga
-        // la limpieza (Invoke OnDeath? / Destroy gameObject)
         base.Die();
     }
 
     void NotifyTutorialDirector()
     {
-        // Buscamos el director de escena.
-        // Nota: Busca el Director solo cuando el jefe muere, no en Start/Awake.
         TutorialDirector director = FindFirstObjectByType<TutorialDirector>();
-
         if (director != null)
         {
             director.OnBossDefeated();
-        }
-        else
-        {
-            Debug.LogError("[BossHealth] No se encontró un TutorialDirector en la escena. ¡El portal no se abrirá!");
         }
     }
 }

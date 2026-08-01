@@ -19,10 +19,11 @@ MonoBehaviour:
   cellWidth: 40
   cellHeight: 25
   gridOrigin: {x: 0, y: 0}
+  fixedZoneSize: {x: 40, y: 25}
   startZonePrefab: {fileID: 526033332859031135, guid: 92e67e8025080574f8d50c7aca656040, type: 3}
   endZonePrefab: {fileID: 526033332859031135, guid: 48b0d3cb767569647bb0752bfb854d0a, type: 3}
   middleZonePrefabs:
   - {fileID: 526033332859031135, guid: 229ad1a135a338942a2b5fd6cb875979, type: 3}
-  - {fileID: 526033332859031135, guid: 60729fd5ab42564439dc93d3d6d03242, type: 3}
-  - {fileID: 526033332859031135, guid: 9e3f39b7f131ded47847daf7a3dad37c, type: 3}
-  - {fileID: 526033332859031135, guid: 535deb4aea9f95b46a008cf2b8daaccc, type: 3}
+  - {fileID: 526033332859031135, guid: 4b1ceab415f15814b9a16ecdaec6a82b, type: 3}
+  - {fileID: 526033332859031135, guid: 0ea36a1241afe3949ad6907a1be0950e, type: 3}
+  - {fileID: 526033332859031135, guid: 7201d6a46fdbd5a49a0779820633e796, type: 3}

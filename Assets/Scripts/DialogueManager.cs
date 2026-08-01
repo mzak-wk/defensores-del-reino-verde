@@ -17,20 +17,32 @@ public class DialogueManager : MonoBehaviour
         TypingTalkLine,
         WaitingTalkAdvance,
         TypingFarewell,
-        WaitingFarewellClose
+        WaitingFarewellClose,
+        TypingBossLine,
+        WaitingBossAdvance
     }
 
     [Header("UI Root")]
     [SerializeField] private GameObject dialogueRoot;
 
     [Header("Text")]
-    [SerializeField] private TMP_Text npcNameText;
+    [SerializeField] private TextMeshProUGUI playerNameText;
+    [SerializeField] private TextMeshProUGUI npcNameText;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private float characterDelay = 0.035f;
 
-    [Header("Portrait Slots")]
-    [SerializeField] private GameObject leftPortraitSlot;
-    [SerializeField] private GameObject rightPortraitSlot;
+    [Header("Portraits")]
+    [SerializeField] private Image playerPortrait;
+    [SerializeField] private Image npcPortrait;
+
+    [Header("Layout")]
+    [Tooltip("RectTransform del panel marco principal del diálogo. Pivot X debe ser 0.5.")]
+    [SerializeField] private RectTransform dialoguePanelRect;
+    [Tooltip("RectTransform del contenedor hijo donde está el textoMeshPro (para corregir el espejo).")]
+    [SerializeField] private RectTransform textContainerRect;
+
+    [Header("Continue Indicator")]
+    [SerializeField] private GameObject continueArrow;
 
     [Header("Choice Buttons")]
     [SerializeField] private Button talkButton;
@@ -45,15 +57,19 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float farewellAutoCloseDelay = 0.8f;
 
     public bool IsOpen => state != DialogueState.Closed;
+    public event System.Action OnDialogueClosed;
 
     private DialogueData currentData;
+    private BossDialogueData currentBossData;
     private IPlayerMovementLock currentMovementLock;
     private Coroutine typewriterCoroutine;
     private Coroutine autoCloseCoroutine;
     private DialogueState state = DialogueState.Closed;
     private string currentFullLine = string.Empty;
     private int talkLineIndex;
+    private int bossLineIndex;
     private int ignoreAdvanceInputFrame = -1;
+    private SpeakerType currentSpeaker = SpeakerType.NPC;
 
     private void Awake()
     {
@@ -68,6 +84,7 @@ public class DialogueManager : MonoBehaviour
         RegisterButtonListeners();
         HideChoiceButtons();
         SetDialogueRootActive(false);
+        HideContinueArrow();
     }
 
     private void OnDestroy()
@@ -96,7 +113,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(DialogueData data, IPlayerMovementLock movementLock = null)
+    private bool _isLinearMode = false;
+
+    public void StartDialogue(DialogueData data, IPlayerMovementLock movementLock = null, bool linearMode = false)
     {
         if (data == null)
         {
@@ -113,7 +132,11 @@ public class DialogueManager : MonoBehaviour
         StopActiveCoroutines();
 
         currentData = data;
+        currentBossData = null;
         currentMovementLock = movementLock;
+        
+        _isLinearMode = linearMode || !data.HasChoices;
+        
         talkLineIndex = 0;
         ignoreAdvanceInputFrame = Time.frameCount;
 
@@ -121,24 +144,67 @@ public class DialogueManager : MonoBehaviour
         SetDialogueRootActive(true);
         HideChoiceButtons();
         SetNpcName(data.NpcName);
-        SetPortraitSlots(data.PortraitId);
 
+        UpdateSpeakerUI(data.GreetingSpeaker);
         StartTyping(GetSafeLine(data.InitialGreeting), DialogueState.TypingGreeting);
+    }
+
+    public void StartBossDialogue(BossDialogueData data, IPlayerMovementLock movementLock = null)
+    {
+        if (data == null || data.DialogueLines == null || data.DialogueLines.Length == 0)
+        {
+            Debug.LogWarning("[DialogueManager] Cannot start boss dialogue without valid BossDialogueData.");
+            OnDialogueClosed?.Invoke();
+            return;
+        }
+
+        if (dialogueText == null)
+        {
+            Debug.LogWarning("[DialogueManager] Cannot start boss dialogue because dialogueText is not assigned.");
+            OnDialogueClosed?.Invoke();
+            return;
+        }
+
+        StopActiveCoroutines();
+
+        currentData = null;
+        currentBossData = data;
+        currentMovementLock = movementLock;
+        bossLineIndex = 0;
+        ignoreAdvanceInputFrame = Time.frameCount;
+
+        SetPlayerMovementLocked(true);
+        SetDialogueRootActive(true);
+        HideChoiceButtons();
+        SetNpcName(data.BossName);
+
+        SpeakerType firstSpeaker = data.GetDialogueLineSpeaker(0);
+        UpdateSpeakerUI(firstSpeaker);
+
+        StartTyping(GetSafeLine(data.DialogueLines[0]), DialogueState.TypingBossLine);
     }
 
     public void CloseDialogue()
     {
         StopActiveCoroutines();
         HideChoiceButtons();
+        HideContinueArrow();
         SetDialogueRootActive(false);
         ClearDialogue();
 
         state = DialogueState.Closed;
         currentData = null;
+        currentBossData = null;
+        _isLinearMode = false;
         talkLineIndex = 0;
+        bossLineIndex = 0;
+
+        ResetPanelRotation();
 
         SetPlayerMovementLocked(false);
         currentMovementLock = null;
+
+        OnDialogueClosed?.Invoke();
     }
 
     private void RegisterButtonListeners()
@@ -181,11 +247,16 @@ public class DialogueManager : MonoBehaviour
             case DialogueState.TypingGreeting:
             case DialogueState.TypingTalkLine:
             case DialogueState.TypingFarewell:
+            case DialogueState.TypingBossLine:
                 CompleteCurrentLine();
                 break;
 
             case DialogueState.WaitingTalkAdvance:
                 AdvanceTalkBranch();
+                break;
+
+            case DialogueState.WaitingBossAdvance:
+                AdvanceBossDialogue();
                 break;
 
             case DialogueState.WaitingFarewellClose:
@@ -234,6 +305,9 @@ public class DialogueManager : MonoBehaviour
 
         HideChoiceButtons();
 
+        SpeakerType farewellSpeaker = currentData != null ? currentData.FarewellSpeaker : SpeakerType.NPC;
+        UpdateSpeakerUI(farewellSpeaker);
+
         string farewellLine = currentData != null && !string.IsNullOrWhiteSpace(currentData.FarewellLine)
             ? currentData.FarewellLine
             : DefaultFarewellLine;
@@ -249,6 +323,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        UpdateSpeakerUI(currentData.GetTalkLineSpeaker(talkLineIndex));
+
         string nextLine = currentData.TalkLines[talkLineIndex];
         talkLineIndex++;
 
@@ -261,12 +337,35 @@ public class DialogueManager : MonoBehaviour
         StartTyping(nextLine, DialogueState.TypingTalkLine);
     }
 
+    private void AdvanceBossDialogue()
+    {
+        if (currentBossData == null || currentBossData.DialogueLines == null || bossLineIndex >= currentBossData.DialogueLines.Length)
+        {
+            CloseDialogue();
+            return;
+        }
+
+        UpdateSpeakerUI(currentBossData.GetDialogueLineSpeaker(bossLineIndex));
+
+        string nextLine = currentBossData.DialogueLines[bossLineIndex];
+        bossLineIndex++;
+
+        if (string.IsNullOrWhiteSpace(nextLine))
+        {
+            AdvanceBossDialogue();
+            return;
+        }
+
+        StartTyping(nextLine, DialogueState.TypingBossLine);
+    }
+
     private void StartTyping(string line, DialogueState typingState)
     {
         StopTypewriter();
 
         currentFullLine = line;
         state = typingState;
+        HideContinueArrow();
         typewriterCoroutine = StartCoroutine(TypeLine(line, typingState));
     }
 
@@ -296,17 +395,33 @@ public class DialogueManager : MonoBehaviour
         switch (typingState)
         {
             case DialogueState.TypingGreeting:
-                state = DialogueState.WaitingChoice;
-                ShowChoiceButtons();
+                ShowContinueArrow();
+                if (_isLinearMode)
+                {
+                    state = DialogueState.WaitingTalkAdvance;
+                    AdvanceTalkBranch();
+                }
+                else
+                {
+                    state = DialogueState.WaitingChoice;
+                    ShowChoiceButtons();
+                }
                 break;
 
             case DialogueState.TypingTalkLine:
                 state = DialogueState.WaitingTalkAdvance;
+                ShowContinueArrow();
                 break;
 
             case DialogueState.TypingFarewell:
                 state = DialogueState.WaitingFarewellClose;
+                ShowContinueArrow();
                 StartFarewellAutoClose();
+                break;
+
+            case DialogueState.TypingBossLine:
+                state = DialogueState.WaitingBossAdvance;
+                ShowContinueArrow();
                 break;
         }
     }
@@ -331,6 +446,12 @@ public class DialogueManager : MonoBehaviour
 
     private void ShowChoiceButtons()
     {
+        if (_isLinearMode)
+        {
+            HideChoiceButtons();
+            return;
+        }
+
         SetButtonActive(talkButton, true);
         SetButtonActive(shopButton, true);
         SetButtonActive(closeButton, true);
@@ -367,17 +488,101 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void SetPortraitSlots(DialoguePortraitId portraitId)
+    private void UpdateSpeakerUI(SpeakerType speaker)
     {
-        if (leftPortraitSlot != null)
+        currentSpeaker = speaker;
+
+        if (speaker == SpeakerType.Player)
         {
-            leftPortraitSlot.SetActive(portraitId != DialoguePortraitId.None);
+            if (playerPortrait != null)
+                playerPortrait.gameObject.SetActive(true);
+            if (playerNameText != null)
+                playerNameText.gameObject.SetActive(true);
+            if (npcPortrait != null)
+                npcPortrait.gameObject.SetActive(false);
+            if (npcNameText != null)
+                npcNameText.gameObject.SetActive(false);
+
+            if (dialoguePanelRect != null)
+                dialoguePanelRect.localRotation = Quaternion.Euler(0f, 180f, 0f);
+            if (textContainerRect != null)
+                textContainerRect.localRotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+        else
+        {
+            if (playerPortrait != null)
+                playerPortrait.gameObject.SetActive(false);
+            if (playerNameText != null)
+                playerNameText.gameObject.SetActive(false);
+            if (npcPortrait != null)
+                npcPortrait.gameObject.SetActive(true);
+            if (npcNameText != null)
+                npcNameText.gameObject.SetActive(true);
+
+            if (dialoguePanelRect != null)
+                dialoguePanelRect.localRotation = Quaternion.identity;
+            if (textContainerRect != null)
+                textContainerRect.localRotation = Quaternion.identity;
         }
 
-        if (rightPortraitSlot != null)
+        UpdateSpeakerVisuals(speaker);
+    }
+
+    private void UpdateSpeakerVisuals(SpeakerType speaker)
+    {
+        if (speaker == SpeakerType.NPC)
         {
-            rightPortraitSlot.SetActive(false);
+            if (currentData != null)
+            {
+                if (npcNameText != null)
+                    npcNameText.text = currentData.NpcName;
+
+                if (npcPortrait != null)
+                {
+                    Sprite npcSprite = GetNpcSpriteFromPortraitId(currentData.PortraitId);
+                    if (npcSprite != null)
+                        npcPortrait.sprite = npcSprite;
+                }
+            }
+            else if (currentBossData != null)
+            {
+                if (npcNameText != null)
+                    npcNameText.text = currentBossData.BossName;
+
+                if (npcPortrait != null && currentBossData.BossPortrait != null)
+                    npcPortrait.sprite = currentBossData.BossPortrait;
+            }
         }
+        else
+        {
+            if (playerNameText != null)
+                playerNameText.text = "Jugador";
+        }
+    }
+
+    private Sprite GetNpcSpriteFromPortraitId(DialoguePortraitId portraitId)
+    {
+        return null;
+    }
+
+    private void ResetPanelRotation()
+    {
+        if (dialoguePanelRect != null)
+            dialoguePanelRect.localRotation = Quaternion.identity;
+        if (textContainerRect != null)
+            textContainerRect.localRotation = Quaternion.identity;
+    }
+
+    private void ShowContinueArrow()
+    {
+        if (continueArrow != null)
+            continueArrow.SetActive(true);
+    }
+
+    private void HideContinueArrow()
+    {
+        if (continueArrow != null)
+            continueArrow.SetActive(false);
     }
 
     private void ClearDialogue()
@@ -385,6 +590,11 @@ public class DialogueManager : MonoBehaviour
         if (npcNameText != null)
         {
             npcNameText.text = string.Empty;
+        }
+
+        if (playerNameText != null)
+        {
+            playerNameText.text = string.Empty;
         }
 
         if (dialogueText != null)

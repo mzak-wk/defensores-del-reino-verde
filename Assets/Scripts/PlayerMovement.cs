@@ -87,13 +87,11 @@ public class PlayerMovement : MonoBehaviour, IPlayerMovementLock
     {
         if (weaponSlotManager == null) return;
 
-        // Switching Weapons (1-4 keys)
         if (Input.GetKeyDown(KeyCode.Alpha1)) weaponSlotManager.SwitchWeapon(0);
         else if (Input.GetKeyDown(KeyCode.Alpha2)) weaponSlotManager.SwitchWeapon(1);
         else if (Input.GetKeyDown(KeyCode.Alpha3)) weaponSlotManager.SwitchWeapon(2);
         else if (Input.GetKeyDown(KeyCode.Alpha4)) weaponSlotManager.SwitchWeapon(3);
 
-        // Mouse Scroll for switching
         float scroll = Input.mouseScrollDelta.y;
         if (scroll > 0f)
         {
@@ -105,30 +103,6 @@ public class PlayerMovement : MonoBehaviour, IPlayerMovementLock
             int prev = weaponSlotManager.currentSlotIndex - 1;
             if (prev < 0) prev = weaponSlotManager.equippedWeapons.Length - 1;
             weaponSlotManager.SwitchWeapon(prev);
-        }
-
-        // Determine aim direction (mouse position vs player position)
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 aimDirection = (mousePos - transform.position).normalized;
-
-        // Base Attack (Left Click)
-        if (Input.GetMouseButton(0))
-        {
-            weaponSlotManager.RequestBaseAttack(aimDirection);
-        }
-
-        // Special Skills (X, C, V)
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            weaponSlotManager.RequestAttackX(aimDirection);
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            weaponSlotManager.RequestAttackC(aimDirection);
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            weaponSlotManager.RequestAttackV(aimDirection);
         }
     }
 
@@ -159,9 +133,18 @@ public class PlayerMovement : MonoBehaviour, IPlayerMovementLock
 
     private void SetMovementAnimation(float movementValue)
     {
-        if (animator != null)
+        if (animator == null) return;
+
+        animator.SetFloat("movement", movementValue);
+
+        // Freeze on current frame when idle, play normally when moving
+        if (movementValue > 0.01f)
         {
-            animator.SetFloat("movement", movementValue);
+            animator.speed = 1f;
+        }
+        else
+        {
+            animator.speed = 0f;
         }
     }
 }

@@ -13,11 +13,11 @@ public class ExperienceSystem : MonoBehaviour
 
     void Awake()
     {
-        // Cargar desde GameSession si existe
+        // Cargar desde GameSession si existe (incluyendo temp)
         if (GameSession.Instance != null)
         {
             level = GameSession.Instance.playerLevel;
-            currentXP = GameSession.Instance.playerXP;
+            currentXP = GameSession.Instance.playerXP + GameSession.Instance.tempXP;
             xpToNext = GameSession.Instance.playerXpToNext;
         }
     }
@@ -27,12 +27,10 @@ public class ExperienceSystem : MonoBehaviour
         currentXP += amount;
         CheckLevelUps();
 
-        // Guardar en GameSession
+        // Guardar en GameSession como temporal (roguelite)
         if (GameSession.Instance != null)
         {
-            GameSession.Instance.playerLevel = level;
-            GameSession.Instance.playerXP = currentXP;
-            GameSession.Instance.playerXpToNext = xpToNext;
+            GameSession.Instance.AddTempXP(amount);
         }
 
         Debug.Log($"XP +{amount} | Nivel {level} ({currentXP:0}/{xpToNext:0})");
@@ -46,14 +44,6 @@ public class ExperienceSystem : MonoBehaviour
             level++;
             xpToNext = Mathf.Ceil(xpToNext * costMultiplier);
             OnLevelUp?.Invoke(level);
-
-            // también guardamos aquí por si acaso
-            if (GameSession.Instance != null)
-            {
-                GameSession.Instance.playerLevel = level;
-                GameSession.Instance.playerXP = currentXP;
-                GameSession.Instance.playerXpToNext = xpToNext;
-            }
         }
     }
 

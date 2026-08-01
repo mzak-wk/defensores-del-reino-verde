@@ -183,6 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossSpeedMultiplier: 3
   applyToBossesAutomatically: 1
+  originZone: {fileID: 0}
+  leashDistance: 15
 --- !u!114 &-3168759195041752413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +224,7 @@ MonoBehaviour:
   attackPrefab: {fileID: 788716211541306020, guid: 9dd1def49c1cc304fb4b3045ee1cb14a, type: 3}
   animator: {fileID: 8489226065566454711}
   animatorCastingBool: isCasting
-  castingSprite: {fileID: -382100838314773577, guid: f37ffac5e1dba544099064a6dfccfe67, type: 3}
+  castingSprite: {fileID: 0}
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 8
@@ -296,6 +298,8 @@ MonoBehaviour:
   xpReward: 5
   contactDamage: 5
   suppressDrops: 0
+  data: {fileID: 0}
+  originZone: {fileID: 0}
   suppressNormalDropsOnBossDeath: 0
 --- !u!114 &-5992722049300564289
 MonoBehaviour:
