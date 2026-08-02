@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: -486463163
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: bd0f5a89cc2620946a8c1e3f06678ba1, type: 3}
+  m_Sprite: {fileID: -7109814731324501511, guid: 8c5c1cc144a730b158e8c85546102d6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -174,6 +174,8 @@ MonoBehaviour:
   xpReward: 0
   contactDamage: 5
   suppressDrops: 0
+  data: {fileID: 0}
+  originZone: {fileID: 0}
 --- !u!114 &6180210781560595412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossSpeedMultiplier: 3
   applyToBossesAutomatically: 0
+  originZone: {fileID: 0}
+  leashDistance: 15
 --- !u!114 &1270611904667133894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +226,7 @@ MonoBehaviour:
     stepB: {fileID: 0}
     spriteMiraADerechaPorDefecto: 1
     useAnimatorVariant: 1
-    animatorController: {fileID: 9100000, guid: ddb2d6f8b802770459cddb345ce5925b, type: 2}
+    animatorController: {fileID: 9100000, guid: 62f4e402703a7904a9f2c88a364ff038, type: 2}
     animatorBoolParameter: 
     walkStateName: 
     idleStateName: 

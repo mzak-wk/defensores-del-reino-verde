@@ -23,7 +23,7 @@ public class GoldManager : MonoBehaviour
         // Cargar oro desde GameSession si existe
         if (GameSession.Instance != null)
         {
-            gold = Mathf.Max(0, GameSession.Instance.gold);
+            gold = Mathf.Max(0, GameSession.Instance.gold + GameSession.Instance.tempGold);
         }
 
         UpdateUI();
@@ -33,9 +33,9 @@ public class GoldManager : MonoBehaviour
     {
         gold = Mathf.Max(0, gold + amount);
 
-        // Guardar en GameSession
+        // Guardar en GameSession como temporal (roguelite)
         if (GameSession.Instance != null)
-            GameSession.Instance.gold = gold;
+            GameSession.Instance.AddTempGold(amount);
 
         UpdateUI();
     }

@@ -11,6 +11,11 @@ public class GameSession : MonoBehaviour
     public float playerCurrentHP = 100f;
     public int gold = 0;
 
+    // -------- Persistencia Roguelite (temporal por nivel) --------
+    [Header("Persistencia Roguelite")]
+    public int tempGold = 0;
+    public float tempXP = 0f;
+
     [Header("Jugador: Regeneración")]
     public float baseRegenPerSecond = 0.1f;
     public float regenPerSecond = 0.1f;
@@ -22,6 +27,14 @@ public class GameSession : MonoBehaviour
     public int   playerLevel    = 1;
     public float playerXP       = 0f;
     public float playerXpToNext = 50f;
+
+    [Header("Arma equipada")]
+    public string equippedWeaponId = ""; // ID del WeaponData equipado
+
+    [Header("Estado del HUB / Intro")]
+    public bool hasCompletedIntro = false;
+    public int highestLevelUnlocked = 1;
+    public System.Collections.Generic.List<string> unlockedWeapons = new System.Collections.Generic.List<string>();
 
     // -------- Tutorial movimiento --------
     [Header("Tutorial movimiento (W/A/S/D)")]
@@ -71,6 +84,8 @@ public class GameSession : MonoBehaviour
     int   _initial_playerLevel;
     float _initial_playerXP, _initial_playerXpToNext;
     float _initial_baseRegen, _initial_regen;
+    string _initial_equippedWeaponId;
+    int _initial_highestLevelUnlocked;
 
     // ==========================
     // Precios tienda
@@ -117,6 +132,50 @@ public class GameSession : MonoBehaviour
     public float GetDamageTakenMultiplier() => damageTakenMul;
     public float GetMagnetRadiusBonus()     => magnetRadiusBonus;
     public float GetMagnetPullBonus()       => magnetPullBonus;
+
+    // ==========================
+    // Persistencia Roguelite
+    // ==========================
+    public void AddTempGold(int amount)
+    {
+        tempGold += amount;
+        Debug.Log($"[GameSession] TempGold +{amount} → {tempGold}");
+    }
+
+    public void AddTempXP(float amount)
+    {
+        tempXP += amount;
+        Debug.Log($"[GameSession] TempXP +{amount} → {tempXP}");
+    }
+
+    public void ConsolidateRunRewards()
+    {
+        gold += tempGold;
+        playerXP += tempXP;
+
+        // Procesar level-ups pendientes
+        while (playerXP >= playerXpToNext)
+        {
+            playerXP -= playerXpToNext;
+            playerLevel++;
+            playerXpToNext = Mathf.Ceil(playerXpToNext * 1.6f);
+        }
+
+        Debug.Log($"[GameSession] Consolidado: gold={gold}, xp={playerXP}, level={playerLevel}");
+        DiscardRunRewards();
+    }
+
+    public void DiscardRunRewards()
+    {
+        tempGold = 0;
+        tempXP = 0f;
+    }
+
+    public void FullHeal()
+    {
+        playerCurrentHP = playerMaxHP;
+        Debug.Log("[GameSession] FullHeal aplicado.");
+    }
 
     // ==========================
     // Gasto / Upgrades
@@ -209,6 +268,8 @@ public class GameSession : MonoBehaviour
         _initial_playerXpToNext    = playerXpToNext;
         _initial_baseRegen         = baseRegenPerSecond;
         _initial_regen             = regenPerSecond;
+        _initial_equippedWeaponId  = equippedWeaponId;
+        _initial_highestLevelUnlocked = highestLevelUnlocked;
 
         RecomputeShopMultipliers();
 
@@ -243,7 +304,16 @@ public class GameSession : MonoBehaviour
         playerXP         = _initial_playerXP;
         playerXpToNext   = _initial_playerXpToNext;
 
+        equippedWeaponId = _initial_equippedWeaponId;
+
+        hasCompletedIntro = false;
+        highestLevelUnlocked = _initial_highestLevelUnlocked;
+        unlockedWeapons.Clear();
+
         movedW = movedA = movedS = movedD = false;
+
+        tempGold = 0;
+        tempXP = 0f;
 
         baseRegenPerSecond = _initial_baseRegen;
         regenPerSecond     = _initial_regen;
@@ -266,6 +336,42 @@ public class GameSession : MonoBehaviour
             ResetAll();
             Debug.Log("[GameSession] MenuScene cargada - valores reiniciados a base.");
         }
+
+        // Si se carga el HUB, curar al máximo
+        if (scene.name == "LevelHUB")
+        {
+            FullHeal();
+            Debug.Log("[GameSession] LevelHUB cargada - FullHeal aplicado.");
+        }
+    }
+
+    // ==========================
+    // Carga de Partida (SaveData)
+    // ==========================
+    public void ImportSaveData(SaveData data)
+    {
+        if (data == null) return;
+
+        playerMaxHP = data.playerMaxHP;
+        playerCurrentHP = data.playerCurrentHP;
+        gold = data.gold;
+        
+        playerLevel = data.playerLevel;
+        playerXP = data.playerXP;
+        playerXpToNext = data.playerXpToNext;
+        
+        equippedWeaponId = data.equippedWeaponId;
+
+        hasCompletedIntro = data.hasCompletedIntro;
+        highestLevelUnlocked = data.highestLevelUnlocked;
+        unlockedWeapons = data.unlockedWeapons != null ? new System.Collections.Generic.List<string>(data.unlockedWeapons) : new System.Collections.Generic.List<string>();
+
+        hpLevel = data.hpLevel;
+        speedLevel = data.speedLevel;
+        resistLevel = data.resistLevel;
+
+        RecomputeShopMultipliers();
+        Debug.Log("[GameSession] Datos importados exitosamente desde SaveData.");
     }
 
     void OnDestroy()

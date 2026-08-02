@@ -14,6 +14,10 @@ public class LevelLayoutData : ScriptableObject
     public float cellHeight = 20f;
     public Vector2 gridOrigin = Vector2.zero;
 
+    [Header("Tamaño Fijo de Zona")]
+    [Tooltip("Dimensiones exactas de cada zona en unidades de mundo. Asume pivot centrado en todos los prefabs.")]
+    public Vector2 fixedZoneSize = new Vector2(30f, 20f);
+
     [Header("Zonas Fijas")]
     [Tooltip("Aparecerá siempre en la columna 0.")]
     public GameObject startZonePrefab;

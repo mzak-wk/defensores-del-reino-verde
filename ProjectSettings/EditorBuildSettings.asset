@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/IntroScene.unity
-    guid: b61b71450bb165f47b2677c4a64d4497
+  - enabled: 1
+    path: Assets/Scenes/BootScene.unity
+    guid: 4c37adf88b083fc47ae73fd09ce9e28f
   - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: da1b3e5dc7f92c642812b59f5cfddc9d
+  - enabled: 1
+    path: Assets/Scenes/CinematicScene.unity
+    guid: bd3c5aa64fb10e34d94a28288220bb0d
   - enabled: 1
     path: Assets/Scenes/LevelHUB.unity
     guid: d3fc954de98aadb4f930d44de322684e
@@ -23,30 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelBeach.unity
     guid: 514cefac46b060a42bb4def093e697f9
-  - enabled: 0
-    path: Assets/Scenes/Level0Scene.unity
-    guid: 8465c9e0fad5c5b4cb9176dfe54ef2c1
-  - enabled: 0
-    path: Assets/Scenes/Level1Scene.unity
-    guid: 2545eca5611f8664f9a8a9c0dd7d9f20
-  - enabled: 0
-    path: Assets/Scenes/Level2Scene.unity
-    guid: 67f048ebfa7eb30488150d3575a49651
-  - enabled: 0
-    path: Assets/Scenes/Level3Scene.unity
-    guid: 6e6c32d1f537a554bbf1c4b11c965de6
-  - enabled: 0
-    path: Assets/Scenes/Level4Scene.unity
-    guid: 31cf210f756e0a4498d5d3515f46dab5
   - enabled: 1
-    path: Assets/Scenes/CinematicScene.unity
-    guid: bd3c5aa64fb10e34d94a28288220bb0d
-  - enabled: 1
-    path: Assets/Scenes/easter_egg.unity
-    guid: b207a981c4ef36b499c8d0f3b322a44c
-  - enabled: 1
-    path: Assets/Scenes/CreditsScene.unity
-    guid: 3a804678f7579a14ea69db5597305b2b
+    path: Assets/Scenes/LevelFinal.unity
+    guid: 9f6de6b33eaabb94caca39f364f6de31
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

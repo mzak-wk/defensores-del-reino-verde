@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,11 +11,14 @@ public class HubUIManager : MonoBehaviour
 
     [Header("Sections")]
     [SerializeField] private GameObject weaponsPanel;
+    [SerializeField] private ComputerWeaponPanel computerWeaponPanel;
     [SerializeField] private GameObject upgradesPanel;
     [SerializeField] private GameObject levelSelectorPanel;
 
     [Header("Level Loading")]
     public string[] levelSceneNames;
+
+    public static HubUIManager Instance { get; private set; }
 
     public event Action OnComputerClosed;
 
@@ -23,12 +26,27 @@ public class HubUIManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+
         if (computerCanvasRoot != null)
         {
             computerCanvasRoot.SetActive(false);
         }
 
         ShowWeaponsSection();
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
 
     public void OpenComputer()
@@ -45,6 +63,7 @@ public class HubUIManager : MonoBehaviour
             computerCanvasRoot.SetActive(true);
         }
 
+        computerWeaponPanel?.Refresh();
         ShowWeaponsSection();
     }
 

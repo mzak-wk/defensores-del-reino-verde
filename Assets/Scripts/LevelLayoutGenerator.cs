@@ -89,44 +89,23 @@ public class LevelLayoutGenerator : MonoBehaviour
                 if (prefabToInstantiate != null)
                 {
                     Vector2 targetWorldPos = GetCellWorldPosition(c, r);
-                    
-                    // Instanciamos en el punto objetivo inicialmente
+
                     GameObject instance = Instantiate(prefabToInstantiate, targetWorldPos, Quaternion.identity, transform);
                     instance.name = $"Zone_{c}_{r}_{expectedType}";
-                    instance.transform.localScale = Vector3.one;
 
-                    // 1. Posicionamiento Inicial y Escala 1:1
                     instance.transform.position = new Vector3(targetWorldPos.x, targetWorldPos.y, instance.transform.position.z);
-                    instance.transform.localScale = Vector3.one;
 
-                    // 2. Escalado Automático Exacto (Grid Fit)
-                    Bounds visualBounds = CalculateVisualBounds(instance);
-                    if (visualBounds.size.x > 0.001f && visualBounds.size.y > 0.001f)
+                    SpriteRenderer sr = instance.GetComponentInChildren<SpriteRenderer>();
+                    if (sr != null && sr.sprite != null)
                     {
-                        float scaleX = layoutData.cellWidth / visualBounds.size.x;
-                        float scaleY = layoutData.cellHeight / visualBounds.size.y;
-                        
+                        Vector2 spriteSize = sr.sprite.bounds.size;
+                        float scaleX = layoutData.fixedZoneSize.x / spriteSize.x;
+                        float scaleY = layoutData.fixedZoneSize.y / spriteSize.y;
                         instance.transform.localScale = new Vector3(scaleX, scaleY, 1f);
                     }
-
-                    // 3. Compensación Fija por Centro Local (Vértices)
-                    PolygonCollider2D polyCol = instance.GetComponentInChildren<PolygonCollider2D>();
-                    if (polyCol != null && polyCol.points.Length > 0)
+                    else
                     {
-                        // Promediar vectores locales
-                        Vector2 sum = Vector2.zero;
-                        foreach (Vector2 point in polyCol.points)
-                        {
-                            sum += point;
-                        }
-                        Vector2 localCenter = sum / polyCol.points.Length;
-
-                        // Convertir a posición global considerando la escala actual
-                        Vector3 globalCenter = polyCol.transform.TransformPoint(localCenter);
-                        
-                        // Aplicar desfase para que el centro geométrico quede en targetWorldPos
-                        Vector3 offset = new Vector3(targetWorldPos.x, targetWorldPos.y, instance.transform.position.z) - globalCenter;
-                        instance.transform.position += offset;
+                        instance.transform.localScale = Vector3.one;
                     }
 
                     ZoneMetadata metadata = instance.GetComponent<ZoneMetadata>();
@@ -216,35 +195,9 @@ public class LevelLayoutGenerator : MonoBehaviour
 
     private Vector2 GetCellWorldPosition(int col, int row)
     {
-        float x = layoutData.gridOrigin.x + (col * layoutData.cellWidth) + (layoutData.cellWidth * 0.5f);
-        float y = layoutData.gridOrigin.y + (row * layoutData.cellHeight) + (layoutData.cellHeight * 0.5f);
+        float x = layoutData.gridOrigin.x + (col * layoutData.fixedZoneSize.x) + (layoutData.fixedZoneSize.x * 0.5f);
+        float y = layoutData.gridOrigin.y + (row * layoutData.fixedZoneSize.y) + (layoutData.fixedZoneSize.y * 0.5f);
         return new Vector2(x, y);
-    }
-
-    private Bounds CalculateVisualBounds(GameObject obj)
-    {
-        Bounds bounds = new Bounds(obj.transform.position, Vector3.zero);
-        bool hasBounds = false;
-
-        // Buscamos componentes visuales (SpriteRenderer o TilemapRenderer)
-        Renderer[] renderers = obj.GetComponentsInChildren<Renderer>();
-        foreach (Renderer r in renderers)
-        {
-            if (r is UnityEngine.Tilemaps.TilemapRenderer || r is SpriteRenderer)
-            {
-                if (!hasBounds)
-                {
-                    bounds = r.bounds;
-                    hasBounds = true;
-                }
-                else
-                {
-                    bounds.Encapsulate(r.bounds);
-                }
-            }
-        }
-        
-        return bounds;
     }
 
     private void OnDrawGizmos()
@@ -258,7 +211,7 @@ public class LevelLayoutGenerator : MonoBehaviour
             for (int c = 0; c < layoutData.columns; c++)
             {
                 Vector2 center = GetCellWorldPosition(c, r);
-                Vector3 size = new Vector3(layoutData.cellWidth, layoutData.cellHeight, 0.1f);
+                Vector3 size = new Vector3(layoutData.fixedZoneSize.x, layoutData.fixedZoneSize.y, 0.1f);
                 Gizmos.DrawWireCube(center, size);
                 
 #if UNITY_EDITOR

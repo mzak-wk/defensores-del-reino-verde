@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Opina
   portraitId: 1
+  hasChoices: 1
   initialGreeting: Que necesitas?
   talkLines:
   - Como etan muchachos?
   farewellLine: Vale, hasta luego.
+  choices:
+  - optionText: 'preguntar '
+    optionType: 0
+  - optionText: tienda
+    optionType: 1
+  - optionText: despedirse
+    optionType: 2

@@ -19,7 +19,10 @@ public class ZoneCombatController : MonoBehaviour
     public float difficultyMultiplier = 0.5f;
 
     // Estado interno
+    public bool IsCleared => isCleared;
     private bool isCleared = false;
+    public event System.Action OnZoneCleared;
+
     private int activeEnemiesCount = 0;
     private bool combatTriggered = false;
     
@@ -129,6 +132,7 @@ public class ZoneCombatController : MonoBehaviour
         if (rightSpectralWall != null) rightSpectralWall.SetActive(false);
         
         isCleared = true;
+        OnZoneCleared?.Invoke();
         Debug.Log($"[ZoneCombatController] Zona {name} completada. Paso liberado.");
     }
 

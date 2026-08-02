@@ -16,7 +16,8 @@ MonoBehaviour:
   displayName: 4
   description: 
   icon: {fileID: 0}
-  rarity: {fileID: 0}
+  isUnlockedByDefault: 1
+  rarity: {fileID: 11400000, guid: b165cb14523611946a910e143ed054f3, type: 2}
   upgradeTags: []
   weaponPrefab: {fileID: 6643852170876251094, guid: 8ad8394bbc972da409d92567032aa455, type: 3}
   weaponBehaviourType: 
@@ -35,14 +36,17 @@ MonoBehaviour:
     knockback: 0
     criticalChance: 0
     criticalMultiplier: 1.5
+  skillXName: Skill X
   damageX: 20
   cooldownX: 5
   rangeX: 3
   prefabX: {fileID: 6643852170876251094, guid: f402f6f8bfc9f4a428b334842830c6fd, type: 3}
+  skillCName: Skill C
   damageC: 40
   cooldownC: 10
   rangeC: 4
   prefabC: {fileID: 6643852170876251094, guid: e4626e8b235d3954b9d45d89c45e64a4, type: 3}
+  skillVName: Ultimate V
   damageV: 100
   cooldownV: 30
   rangeV: 6
