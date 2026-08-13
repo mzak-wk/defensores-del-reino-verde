@@ -15,7 +15,7 @@ public class BossRushDirector : MonoBehaviour
         public Transform bossSpawnPoint;
         public GameObject bossPrefab;
         public BossStatsOverride statsOverride;
-        public BossDialogueData introDialogue;
+        public DialogueData introDialogue;
         public Sprite backgroundSprite;
         public AudioClip zoneMusic;
         public GameObject leftWall;
@@ -147,7 +147,7 @@ public class BossRushDirector : MonoBehaviour
         if (zone.introDialogue != null && DialogueManager.Instance != null)
         {
             DialogueManager.Instance.OnDialogueClosed += OnDialogueFinished;
-            DialogueManager.Instance.StartBossDialogue(zone.introDialogue, playerMovement);
+            DialogueManager.Instance.StartDialogue(zone.introDialogue, playerMovement);
         }
         else
         {

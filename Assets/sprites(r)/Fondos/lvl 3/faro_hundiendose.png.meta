@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: c925c0b21f35a0845bcbecab7d32b64e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2520670797528106941
+    second: faro_hundiendose_0
+  - first:
+      213: -8597082651820048495
+    second: faro_hundiendose_1
+  - first:
+      213: -276526286303956421
+    second: faro_hundiendose_2
+  - first:
+      213: 5123192225475432301
+    second: faro_hundiendose_3
+  - first:
+      213: -6110121091419976869
+    second: faro_hundiendose_4
+  - first:
+      213: 3487496748229850090
+    second: faro_hundiendose_5
+  - first:
+      213: -6827136958878871735
+    second: faro_hundiendose_6
+  - first:
+      213: 343566588871338720
+    second: faro_hundiendose_7
+  - first:
+      213: -4256246115379480102
+    second: faro_hundiendose_8
+  - first:
+      213: 2950433101847507746
+    second: faro_hundiendose_9
+  - first:
+      213: -1808232965247383318
+    second: faro_hundiendose_10
+  - first:
+      213: -4102564288871082605
+    second: faro_hundiendose_11
+  - first:
+      213: -8713977505881268298
+    second: faro_hundiendose_12
+  - first:
+      213: 6555276045754024406
+    second: faro_hundiendose_13
+  - first:
+      213: -3728559741738304155
+    second: faro_hundiendose_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: faro_hundiendose_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 112
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db70d5a3cb83bf220800000000000000
+      internalID: 2520670797528106941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 3
+        width: 111
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19fb791a0e601b880800000000000000
+      internalID: -8597082651820048495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_2
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 3
+        width: 102
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b327bc5cec4992cf0800000000000000
+      internalID: -276526286303956421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_3
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 3
+        width: 99
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f818b6f2c391740800000000000000
+      internalID: 5123192225475432301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_4
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3
+        width: 94
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b4a4b7d3d743ba0800000000000000
+      internalID: -6110121091419976869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_5
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 3
+        width: 91
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3f191a0d3166030800000000000000
+      internalID: 3487496748229850090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_6
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 3
+        width: 88
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f851d8b132141a0800000000000000
+      internalID: -6827136958878871735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_7
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 3
+        width: 99
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea6e560ef794c400800000000000000
+      internalID: 343566588871338720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_8
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 3
+        width: 105
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad97b2865b6cee4c0800000000000000
+      internalID: -4256246115379480102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_9
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 3
+        width: 106
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223bc29264b02f820800000000000000
+      internalID: 2950433101847507746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_10
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 3
+        width: 112
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae84743d2bdd7e6e0800000000000000
+      internalID: -1808232965247383318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_11
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 3
+        width: 117
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395d2adf383c017c0800000000000000
+      internalID: -4102564288871082605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_12
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 3
+        width: 117
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bfd33580abb11780800000000000000
+      internalID: -8713977505881268298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_13
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 3
+        width: 117
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1cbcf05d409fa50800000000000000
+      internalID: 6555276045754024406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: faro_hundiendose_14
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 3
+        width: 117
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56dbddd6bae714cc0800000000000000
+      internalID: -3728559741738304155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      faro_hundiendose_0: 2520670797528106941
+      faro_hundiendose_1: -8597082651820048495
+      faro_hundiendose_10: -1808232965247383318
+      faro_hundiendose_11: -4102564288871082605
+      faro_hundiendose_12: -8713977505881268298
+      faro_hundiendose_13: 6555276045754024406
+      faro_hundiendose_14: -3728559741738304155
+      faro_hundiendose_2: -276526286303956421
+      faro_hundiendose_3: 5123192225475432301
+      faro_hundiendose_4: -6110121091419976869
+      faro_hundiendose_5: 3487496748229850090
+      faro_hundiendose_6: -6827136958878871735
+      faro_hundiendose_7: 343566588871338720
+      faro_hundiendose_8: -4256246115379480102
+      faro_hundiendose_9: 2950433101847507746
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

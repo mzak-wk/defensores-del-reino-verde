@@ -3,109 +3,65 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class ArrowProjectile : MonoBehaviour
 {
-    [Header("Stats")]
-    public float speed = 6f;
-    public float damage = 50f;
-    public float maxLifetime = 5f;
+    [Header("Combat Stats (set via Init)")]
+    [SerializeField] private float speed = 6f;
+    [SerializeField] private float damage = 50f;
+    [SerializeField] private float maxLifetime = 5f;
 
-    [Header("Viento (lvl 5+)")]
-    public bool windTrailEnabled = false;
-    public float windLengthMultiplier = 4f;  // largo del rastro
-    public float windHeightMultiplier = 1f;  // alto del rastro
-    public LayerMask enemyMask;              // capa de enemigos para el rastro
+    [Header("Visual / Behavior (Inspector)")]
+    [SerializeField] private GameObject freezeExplosionPrefab;
+    [SerializeField] private LayerMask enemyMask;
 
-    [Header("Viento visual")]
-    public Transform windVisual;             // hijo con el sprite del viento
-    Vector3 baseWindScale;
+    private Vector2 direction = Vector2.right;
 
-    Vector2 direction = Vector2.right;
-
-    BoxCollider2D boxCol;
-    Vector2 baseSize;
-    Vector2 baseOffset;
-
-    void Awake()
+    private void Awake()
     {
-        // collider principal
         var col = GetComponent<Collider2D>();
-        col.isTrigger = true;
+        if (col != null) col.isTrigger = true;
 
-        boxCol = col as BoxCollider2D;
-        if (boxCol != null)
-        {
-            baseSize = boxCol.size;
-            baseOffset = boxCol.offset;
-        }
-
-        if (windVisual != null)
-            baseWindScale = windVisual.localScale;
-
-        // rigidbody
         var rb = GetComponent<Rigidbody2D>();
         if (!rb) rb = gameObject.AddComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.simulated = true;
         rb.gravityScale = 0f;
+
+        if (enemyMask.value == 0)
+            enemyMask = LayerMask.GetMask("Enemy");
     }
 
-    /// <summary>
-    /// Se llama desde ArcherAutoAttack cuando se instancia la flecha.
-    /// </summary>
-    public void Init(Vector2 dir, float dmg, float spd, bool enableWind)
+    public void Init(Vector2 dir, float dmg, float spd, float maxLifetime)
     {
-        direction = dir.normalized;
         damage = dmg;
         speed = spd;
-        windTrailEnabled = enableWind;
+        this.maxLifetime = maxLifetime;
 
-        SetupWindCollider();
-        SetupWindVisual();
-    }
+        float signX = 1f;
 
-    void SetupWindCollider()
-    {
-        if (boxCol == null) return;
-
-        if (!windTrailEnabled)
+        if (Mathf.Abs(dir.x) > 0.01f)
         {
-            // tamaño original
-            boxCol.size = baseSize;
-            boxCol.offset = baseOffset;
-            return;
+            signX = dir.x > 0f ? 1f : -1f;
+        }
+        else
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                SpriteRenderer sr = player.GetComponentInChildren<SpriteRenderer>();
+                if (sr != null)
+                {
+                    signX = sr.flipX ? -1f : 1f;
+                }
+            }
         }
 
-        // estirar el collider a lo largo
-        Vector2 newSize = baseSize;
-        newSize.x *= windLengthMultiplier;
-        newSize.y *= windHeightMultiplier;
+        direction = new Vector2(signX, 0f);
 
-        float extraLength = newSize.x - baseSize.x;
-        Vector2 newOffset = baseOffset + new Vector2(-extraLength * 0.5f, 0f);
-
-        boxCol.size = newSize;
-        boxCol.offset = newOffset;
+        transform.rotation = signX < 0f
+            ? Quaternion.Euler(0f, 180f, 0f)
+            : Quaternion.identity;
     }
 
-    void SetupWindVisual()
-    {
-        if (windVisual == null) return;
-
-        if (!windTrailEnabled)
-        {
-            windVisual.gameObject.SetActive(false);
-            windVisual.localScale = baseWindScale;
-            return;
-        }
-
-        windVisual.gameObject.SetActive(true);
-
-        Vector3 s = baseWindScale;
-        s.x *= windLengthMultiplier;
-        s.y *= windHeightMultiplier;
-        windVisual.localScale = s;
-    }
-
-    void Update()
+    private void Update()
     {
         transform.position += (Vector3)(direction * speed * Time.deltaTime);
 
@@ -127,9 +83,8 @@ public class ArrowProjectile : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // solo capas de enemigo (para no pegar al player/props)
         if (enemyMask.value != 0 &&
             (enemyMask.value & (1 << other.gameObject.layer)) == 0)
             return;
@@ -139,11 +94,20 @@ public class ArrowProjectile : MonoBehaviour
 
         enemy.TakeDamage(damage);
 
-        // si el viento está activo, la flecha atraviesa y sigue pegando a otros
-        if (windTrailEnabled)
-            return;
+        SpawnFreezeExplosion();
 
-        // si no hay viento, se destruye en el primer impacto
         Destroy(gameObject);
+    }
+
+    private void SpawnFreezeExplosion()
+    {
+        if (freezeExplosionPrefab == null) return;
+
+        GameObject explosion = Instantiate(freezeExplosionPrefab, transform.position, Quaternion.identity);
+        var freeze = explosion.GetComponent<FreezeExplosion>();
+        if (freeze != null)
+        {
+            freeze.damage = damage;
+        }
     }
 }

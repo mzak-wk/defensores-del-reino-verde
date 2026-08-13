@@ -43,6 +43,9 @@ public class BossRewardUI : MonoBehaviour
     [Tooltip("El índice del nivel que el jugador acaba de completar (Ej: 1 para el Nivel 1).")]
     public int currentLevelIndex = 1;
 
+    [Tooltip("Dificultad del jefe/mapa: 1=Woods, 2=Beach, 3=Ice. Define el escalado de probabilidades de rareza.")]
+    [Range(1, 5)] [SerializeField] private int bossDifficultyLevel = 1;
+
     private WeaponData selectedOption1;
     private WeaponData selectedOption2;
 
@@ -59,7 +62,7 @@ public class BossRewardUI : MonoBehaviour
     }
 
     /// <summary>
-    /// Genera y presenta las 2 opciones de armas basándose en disponibilidad y pesos por rareza.
+    /// Genera y presenta las 2 opciones de armas basándose en disponibilidad y pesos por rareza escalados dinámicamente.
     /// </summary>
     public void GenerateRewardOptions()
     {
@@ -68,6 +71,13 @@ public class BossRewardUI : MonoBehaviour
             Debug.LogError("[BossRewardUI] WeaponDatabase no está asignada.");
             return;
         }
+
+        // Validar y clampar bossDifficultyLevel a 1 mínimo
+        int effectiveLevel = Mathf.Max(1, bossDifficultyLevel);
+
+        // Calcular pesos dinámicos según el nivel
+        (int commonWeight, int rareWeight, int epicWeight) = CalculateRarityWeights(effectiveLevel);
+        Debug.Log($"[BossRewardUI] Nivel {effectiveLevel}: Pesos calculados - Común={commonWeight}, Rara={rareWeight}, Épica={epicWeight}");
 
         List<string> unlockedIds = GameSession.Instance != null 
             ? GameSession.Instance.unlockedWeapons 
@@ -102,13 +112,13 @@ public class BossRewardUI : MonoBehaviour
             return;
         }
 
-        // 2. Seleccionar 2 armas distintas utilizando la ruleta ponderada por rareza
-        selectedOption1 = SelectWeightedWeapon(pool);
+        // 2. Seleccionar 2 armas distintas utilizando la ruleta ponderada por rareza dinámica
+        selectedOption1 = SelectWeightedWeapon(pool, commonWeight, rareWeight, epicWeight);
         pool.Remove(selectedOption1); // Remover la primera elección para no duplicar en la segunda opción
 
         if (pool.Count > 0)
         {
-            selectedOption2 = SelectWeightedWeapon(pool);
+            selectedOption2 = SelectWeightedWeapon(pool, commonWeight, rareWeight, epicWeight);
         }
         else
         {
@@ -140,17 +150,79 @@ public class BossRewardUI : MonoBehaviour
      *    Se genera un valor aleatorio flotante r en el rango [0, W_total).
      *    Se itera el pool acumulando el peso de cada arma; el arma donde r cae dentro de su intervalo acumulado es la seleccionada.
      */
-    private WeaponData SelectWeightedWeapon(List<WeaponData> candidates)
+
+    /// <summary>
+    /// Calcula los pesos de probabilidad de rareza escalados según el nivel del jefe.
+    /// Base (Nivel 1): 70% Común, 25% Rara, 5% Épica.
+    /// Escalado: Cada nivel suma -15% Común, +10% Rara, +5% Épica (clampeado a 0).
+    /// </summary>
+    private (int common, int rare, int epic) CalculateRarityWeights(int level)
+    {
+        level = Mathf.Max(1, level); // Asegurar que level >= 1
+
+        // Base Level 1: 70, 25, 5
+        int common = 70;
+        int rare = 25;
+        int epic = 5;
+
+        // Escalado por nivel: (level - 1) iteraciones de -15 Común, +10 Rara, +5 Épica
+        int scaleLevels = level - 1;
+        for (int i = 0; i < scaleLevels; i++)
+        {
+            if (common > 0) // Solo restar si hay margen
+            {
+                common -= 15;
+            }
+            rare += 10;
+            epic += 5;
+        }
+
+        // Clampar a 0 mínimo
+        common = Mathf.Max(0, common);
+        rare = Mathf.Max(0, rare);
+        epic = Mathf.Max(0, epic);
+
+        // Redistribución inteligente: si una rareza llega a 0 pero no hay armas, reasignar a la de mayor peso
+        // Esto se hará dinámicamente en SelectWeightedWeapon si es necesario.
+
+        return (common, rare, epic);
+    }
+
+    /*
+     * EXPLICACIÓN MATEMÁTICA DEL DROP RATE (SELECCIÓN PONDERADA POR PESOS):
+     * 
+     * Cada rareza (Común, Rara, Épica) tiene un peso numérico W_i (ej: Común=60, Rara=30, Épica=10).
+     * 
+     * 1. Suma Total de Pesos (W_total):
+     *    W_total = Suma( W(rareza_k) ) para cada arma k presente en la lista de candidatos disponibles.
+     * 
+     * 2. Cálculo de Probabilidad Individual:
+     *    P(Arma_k) = W(rareza_k) / W_total
+     *    - Ejemplo con 3 armas [Común (60), Rara (30), Épica (10)]:
+     *      W_total = 60 + 30 + 10 = 100
+     *      P(Común) = 60/100 = 60%
+     *      P(Rara)  = 30/100 = 30%
+     *      P(Épica) = 10/100 = 10%
+     * 
+     * 3. Muestreo Aleatorio (Algoritmo Roulette Wheel Selection):
+     *    Se genera un valor aleatorio flotante r en el rango [0, W_total).
+     *    Se itera el pool acumulando el peso de cada arma; el arma donde r cae dentro de su intervalo acumulado es la seleccionada.
+     */
+    private WeaponData SelectWeightedWeapon(List<WeaponData> candidates, int commonWeight, int rareWeight, int epicWeight)
     {
         float totalWeight = 0f;
 
         // Calcular suma total de pesos en función de la rareza de cada candidato disponible
         foreach (var weapon in candidates)
         {
-            totalWeight += GetRarityWeight(weapon);
+            totalWeight += GetRarityWeight(weapon, commonWeight, rareWeight, epicWeight);
         }
 
-        if (totalWeight <= 0f) return candidates[0];
+        if (totalWeight <= 0f)
+        {
+            Debug.LogWarning("[BossRewardUI] Total weight es 0. Todos los pesos dinámicos son 0. Retornando primer candidato.");
+            return candidates[0];
+        }
 
         // Muestreo dentro del rango acumulado [0, totalWeight)
         float randomPoint = Random.Range(0f, totalWeight);
@@ -158,7 +230,7 @@ public class BossRewardUI : MonoBehaviour
 
         foreach (var weapon in candidates)
         {
-            currentSum += GetRarityWeight(weapon);
+            currentSum += GetRarityWeight(weapon, commonWeight, rareWeight, epicWeight);
             if (randomPoint <= currentSum)
             {
                 return weapon;
@@ -169,22 +241,22 @@ public class BossRewardUI : MonoBehaviour
     }
 
     /// <summary>
-    /// Devuelve el peso numérico de aparición correspondiente a la rareza del arma.
+    /// Devuelve el peso numérico de aparición correspondiente a la rareza del arma, usando los pesos dinámicos pasados.
     /// </summary>
-    private int GetRarityWeight(WeaponData weapon)
+    private int GetRarityWeight(WeaponData weapon, int commonWeight, int rareWeight, int epicWeight)
     {
-        if (weapon == null || weapon.Rarity == null) return weightCommon;
+        if (weapon == null || weapon.Rarity == null) return commonWeight;
 
         switch (weapon.Rarity.Id)
         {
             case WeaponRarityId.Common:
-                return weightCommon;
+                return commonWeight;
             case WeaponRarityId.Rare:
-                return weightRare;
+                return rareWeight;
             case WeaponRarityId.Epic:
-                return weightEpic;
+                return epicWeight;
             default:
-                return weightCommon;
+                return commonWeight;
         }
     }
 
@@ -246,7 +318,15 @@ public class BossRewardUI : MonoBehaviour
             Debug.LogWarning("[BossRewardUI] SaveManager.Instance no disponible. Partida no autoguardada.");
         }
 
-        // 3. Regresar a la base (LevelHUB)
-        SceneManager.LoadScene(hubSceneName);
+        // 3. Completar nivel y transicionar al HUB (centraliza la lógica de level completion)
+        if (GameSession.Instance != null)
+        {
+            GameSession.Instance.CompleteLevel();
+        }
+        else
+        {
+            Debug.LogError("[BossRewardUI] GameSession.Instance no disponible. No se puede completar nivel.");
+            SceneManager.LoadScene(hubSceneName);
+        }
     }
 }

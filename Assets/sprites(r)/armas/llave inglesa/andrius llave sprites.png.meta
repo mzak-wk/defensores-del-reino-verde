@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: a7c4fe2a67400314ebf3ebc79ae21234
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5168317330032636381
+    second: andrius llave sprites_0
+  - first:
+      213: 4830272317131887721
+    second: andrius llave sprites_1
+  - first:
+      213: -2612267907275702818
+    second: andrius llave sprites_2
+  - first:
+      213: 2302315589317226646
+    second: andrius llave sprites_3
+  - first:
+      213: -4234187182095492200
+    second: andrius llave sprites_4
+  - first:
+      213: -7209969966193082474
+    second: andrius llave sprites_5
+  - first:
+      213: 3054397098318793955
+    second: andrius llave sprites_6
+  - first:
+      213: -8512315983927105060
+    second: andrius llave sprites_7
+  - first:
+      213: 2024665546171054816
+    second: andrius llave sprites_8
+  - first:
+      213: -7061674006628802677
+    second: andrius llave sprites_9
+  - first:
+      213: 2954810584209163958
+    second: andrius llave sprites_10
+  - first:
+      213: 986429768426534742
+    second: andrius llave sprites_11
+  - first:
+      213: 3739145920024245854
+    second: andrius llave sprites_12
+  - first:
+      213: 7724052241280353460
+    second: andrius llave sprites_13
+  - first:
+      213: -3566684569270931003
+    second: andrius llave sprites_14
+  - first:
+      213: 7291910360471985738
+    second: andrius llave sprites_15
+  - first:
+      213: -1068312193274443491
+    second: andrius llave sprites_16
+  - first:
+      213: 3099658865936237540
+    second: andrius llave sprites_17
+  - first:
+      213: -5353380930101658170
+    second: andrius llave sprites_18
+  - first:
+      213: -2705671993697827718
+    second: andrius llave sprites_19
+  - first:
+      213: -3526992528256037008
+    second: andrius llave sprites_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: andrius llave sprites_0
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 2252
+        width: 317
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1371f8a3d89b740800000000000000
+      internalID: 5168317330032636381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_1
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 2252
+        width: 316
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9649c0f9413980340800000000000000
+      internalID: 4830272317131887721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_2
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 2252
+        width: 316
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eddbda0cd2c5fbbd0800000000000000
+      internalID: -2612267907275702818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_3
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 2253
+        width: 316
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 690f81e84d773ff10800000000000000
+      internalID: 2302315589317226646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_4
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1803
+        width: 316
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b9faa01352d35c0800000000000000
+      internalID: -4234187182095492200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_5
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1802
+        width: 317
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f73db048a01fb90800000000000000
+      internalID: -7209969966193082474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_6
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 1804
+        width: 317
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec86406af5636a20800000000000000
+      internalID: 3054397098318793955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_7
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 1805
+        width: 316
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd9252a76bd2ed980800000000000000
+      internalID: -8512315983927105060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_8
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1356
+        width: 316
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea7f7c469e091c10800000000000000
+      internalID: 2024665546171054816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_9
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 909
+        width: 316
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fd743c7e4effd90800000000000000
+      internalID: -7061674006628802677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_10
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 1356
+        width: 317
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b60a523298910920800000000000000
+      internalID: 2954810584209163958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_11
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 1355
+        width: 316
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6573fe6e5a080bd00800000000000000
+      internalID: 986429768426534742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_12
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 1356
+        width: 317
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e567566476d14e330800000000000000
+      internalID: 3739145920024245854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_13
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 908
+        width: 316
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b44314f698513b60800000000000000
+      internalID: 7724052241280353460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_14
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 460
+        width: 316
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c13db60847908ec0800000000000000
+      internalID: -3566684569270931003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_15
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 907
+        width: 317
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e5ce1b6d1123560800000000000000
+      internalID: 7291910360471985738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_16
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 907
+        width: 316
+        height: 436
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1988aa68b79c21f0800000000000000
+      internalID: -1068312193274443491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_17
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 459
+        width: 317
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3050dd053340b20800000000000000
+      internalID: 3099658865936237540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_18
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 460
+        width: 317
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cdb0f15868f4b5b0800000000000000
+      internalID: -5353380930101658170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_19
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 460
+        width: 317
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a740be038a5837ad0800000000000000
+      internalID: -2705671993697827718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: andrius llave sprites_20
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 11
+        width: 316
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f87db7bfa9d0fc0800000000000000
+      internalID: -3526992528256037008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      andrius llave sprites_0: 5168317330032636381
+      andrius llave sprites_1: 4830272317131887721
+      andrius llave sprites_10: 2954810584209163958
+      andrius llave sprites_11: 986429768426534742
+      andrius llave sprites_12: 3739145920024245854
+      andrius llave sprites_13: 7724052241280353460
+      andrius llave sprites_14: -3566684569270931003
+      andrius llave sprites_15: 7291910360471985738
+      andrius llave sprites_16: -1068312193274443491
+      andrius llave sprites_17: 3099658865936237540
+      andrius llave sprites_18: -5353380930101658170
+      andrius llave sprites_19: -2705671993697827718
+      andrius llave sprites_2: -2612267907275702818
+      andrius llave sprites_20: -3526992528256037008
+      andrius llave sprites_3: 2302315589317226646
+      andrius llave sprites_4: -4234187182095492200
+      andrius llave sprites_5: -7209969966193082474
+      andrius llave sprites_6: 3054397098318793955
+      andrius llave sprites_7: -8512315983927105060
+      andrius llave sprites_8: 2024665546171054816
+      andrius llave sprites_9: -7061674006628802677
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

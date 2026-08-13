@@ -13,14 +13,14 @@ public class PlayerMovement : MonoBehaviour, IPlayerMovementLock
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator animator;
-    private WeaponSlotManager weaponSlotManager;
     private bool movementLocked;
+
+    public Vector2 LastFacingDirection { get; private set; } = Vector2.right;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        weaponSlotManager = GetComponent<WeaponSlotManager>();
     }
 
     private void OnEnable()
@@ -36,6 +36,16 @@ public class PlayerMovement : MonoBehaviour, IPlayerMovementLock
     private void Start()
     {
         moveSpeed = moveSpeedBase * (GameSession.Instance ? GameSession.Instance.GetMoveSpeedMultiplier() : 1f);
+
+        if (GameSession.Instance != null && !GameSession.Instance.hasCompletedIntro)
+        {
+            movementLocked = true;
+
+            if (animator != null)
+            {
+                animator.SetFloat("movement", 0f);
+            }
+        }
     }
 
     private void OnSpawnPointReady(Transform targetSpawnPoint)
@@ -78,32 +88,12 @@ public class PlayerMovement : MonoBehaviour, IPlayerMovementLock
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput = moveInput.normalized;
 
+        if (moveInput.sqrMagnitude > 0.01f)
+        {
+            LastFacingDirection = moveInput;
+        }
+
         SetMovementAnimation(moveInput.magnitude);
-
-        HandleWeaponInputs();
-    }
-
-    private void HandleWeaponInputs()
-    {
-        if (weaponSlotManager == null) return;
-
-        if (Input.GetKeyDown(KeyCode.Alpha1)) weaponSlotManager.SwitchWeapon(0);
-        else if (Input.GetKeyDown(KeyCode.Alpha2)) weaponSlotManager.SwitchWeapon(1);
-        else if (Input.GetKeyDown(KeyCode.Alpha3)) weaponSlotManager.SwitchWeapon(2);
-        else if (Input.GetKeyDown(KeyCode.Alpha4)) weaponSlotManager.SwitchWeapon(3);
-
-        float scroll = Input.mouseScrollDelta.y;
-        if (scroll > 0f)
-        {
-            int next = (weaponSlotManager.currentSlotIndex + 1) % weaponSlotManager.equippedWeapons.Length;
-            weaponSlotManager.SwitchWeapon(next);
-        }
-        else if (scroll < 0f)
-        {
-            int prev = weaponSlotManager.currentSlotIndex - 1;
-            if (prev < 0) prev = weaponSlotManager.equippedWeapons.Length - 1;
-            weaponSlotManager.SwitchWeapon(prev);
-        }
     }
 
     private void FixedUpdate()
@@ -137,8 +127,13 @@ public class PlayerMovement : MonoBehaviour, IPlayerMovementLock
 
         animator.SetFloat("movement", movementValue);
 
-        // Freeze on current frame when idle, play normally when moving
-        if (movementValue > 0.01f)
+        int currentWeaponIndex = animator.GetInteger("WeaponIndex");
+
+        // REGLA DE VELOCIDAD DEL ANIMATOR:
+        // 1. Si el jugador se mueve (movementValue > 0.01f) -> speed = 1f
+        // 2. Si el jugador está desarmado (WeaponIndex == -1) -> speed = 1f (idle continuo)
+        // 3. Si tiene arma equipada y está quieto -> speed = 0f (congela en el fotograma del arma)
+        if (movementValue > 0.01f || currentWeaponIndex == -1)
         {
             animator.speed = 1f;
         }

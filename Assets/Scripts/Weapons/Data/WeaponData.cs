@@ -16,6 +16,29 @@ public struct BaseStats
     [Range(0f, 1f)] public float criticalChance;
     [Min(1f)] public float criticalMultiplier;
 
+    [Header("Slash / Melee")]
+    [Min(0.01f)] public float slashLifetime;
+    [Min(0f)] public float slashForwardDistance;
+    [Min(0f)] public float slashInitialScale;
+    [Min(0f)] public float slashFinalScale;
+    [Range(0f, 1f)] public float slashInitialAlpha;
+    [Range(0f, 1f)] public float slashFinalAlpha;
+    [Min(0)] public int slashMaxHits;
+    public bool slashDestroyOnFirstHit;
+    public bool slashAnimateScaleAndFade;
+    public bool slashUseUnscaledTime;
+    public bool autoSquareHitbox;
+    [Min(0f)] public float slashSquareMultiplier;
+    [Min(0f)] public float slashPadding;
+
+    [Header("Projectile / Ranged")]
+    [Min(0.01f)] public float projectileMaxLifetime;
+    public GameObject freezeExplosionPrefab;
+    public GameObject areaPrefab;
+    [Min(0f)] public float areaDamagePerSecond;
+    [Min(0f)] public float areaDuration;
+    [Min(0f)] public float areaScaleMultiplier;
+
     public static BaseStats Default => new BaseStats
     {
         damage = 10f,
@@ -27,7 +50,26 @@ public struct BaseStats
         pierce = 0,
         knockback = 0f,
         criticalChance = 0f,
-        criticalMultiplier = 1.5f
+        criticalMultiplier = 1.5f,
+        slashLifetime = 0.35f,
+        slashForwardDistance = 1.2f,
+        slashInitialScale = 0.5f,
+        slashFinalScale = 1.2f,
+        slashInitialAlpha = 1f,
+        slashFinalAlpha = 0f,
+        slashMaxHits = 999,
+        slashDestroyOnFirstHit = false,
+        slashAnimateScaleAndFade = true,
+        slashUseUnscaledTime = false,
+        autoSquareHitbox = true,
+        slashSquareMultiplier = 1f,
+        slashPadding = 0.15f,
+        projectileMaxLifetime = 5f,
+        freezeExplosionPrefab = null,
+        areaPrefab = null,
+        areaDamagePerSecond = 0f,
+        areaDuration = 5f,
+        areaScaleMultiplier = 1.5f
     };
 }
 
@@ -42,12 +84,8 @@ public class WeaponData : ScriptableObject
     [SerializeField] private Sprite icon;
 
     [Header("Classification")]
-    [SerializeField] private bool isUnlockedByDefault = false;
     [SerializeField] private RarityData rarity;
     [SerializeField] private List<string> upgradeTags = new List<string>();
-
-    [Header("Animator")]
-    [SerializeField] private AnimatorOverrideController weaponAnimator;
 
     [Header("Base Attack")]
     [SerializeField] private bool isRanged;
@@ -80,23 +118,20 @@ public class WeaponData : ScriptableObject
     [SerializeField] private int requiredLevelV = 5;
     [SerializeField] private GameObject prefabV;
 
-    [Header("Upgrade Pools")]
-    [SerializeField] private List<UpgradeData> uniqueUpgradePool = new List<UpgradeData>();
-    [SerializeField] private List<UpgradeData> passiveUpgradePool = new List<UpgradeData>();
-
     [Header("Progression")]
     [Min(1)]
     [SerializeField] private int maxInternalLevel = 5;
+
+    [Header("Animation")]
+    [SerializeField] private string idleStateName;
+    [SerializeField] private int weaponIndex = 0;
 
     public string WeaponId => weaponId;
     public string DisplayName => displayName;
     public string Description => description;
     public Sprite Icon => icon;
-    public bool IsUnlockedByDefault => isUnlockedByDefault;
     public RarityData Rarity => rarity;
     public IReadOnlyList<string> UpgradeTags => upgradeTags;
-
-    public AnimatorOverrideController WeaponAnimator => weaponAnimator;
 
     public bool IsRanged => isRanged;
     public float AttackRange => attackRange;
@@ -125,9 +160,9 @@ public class WeaponData : ScriptableObject
     public int RequiredLevelV => requiredLevelV;
     public GameObject PrefabV => prefabV;
 
-    public IReadOnlyList<UpgradeData> UniqueUpgradePool => uniqueUpgradePool;
-    public IReadOnlyList<UpgradeData> PassiveUpgradePool => passiveUpgradePool;
     public int MaxInternalLevel => maxInternalLevel;
+    public string IdleStateName => idleStateName;
+    public int WeaponIndex => weaponIndex;
 
     public bool HasUpgradeTag(string tag)
     {

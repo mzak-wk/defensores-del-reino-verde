@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 633d8cfef23d4dd47ac7d040b4797785
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4605603228983419765
+    second: the_stone_animation_sheet_0
+  - first:
+      213: -7715248079579673234
+    second: the_stone_animation_sheet_1
+  - first:
+      213: 54715881091478298
+    second: the_stone_animation_sheet_2
+  - first:
+      213: 3630266804679148243
+    second: the_stone_animation_sheet_3
+  - first:
+      213: -4127344169623515609
+    second: the_stone_animation_sheet_4
+  - first:
+      213: -6699148759259948969
+    second: the_stone_animation_sheet_5
+  - first:
+      213: -3390319810674577274
+    second: the_stone_animation_sheet_6
+  - first:
+      213: -6184001185351528045
+    second: the_stone_animation_sheet_7
+  - first:
+      213: 5611243517444520498
+    second: the_stone_animation_sheet_8
+  - first:
+      213: -137928009103372031
+    second: the_stone_animation_sheet_9
+  - first:
+      213: -2819172376538329492
+    second: the_stone_animation_sheet_10
+  - first:
+      213: 4592210531428797141
+    second: the_stone_animation_sheet_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 112
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 573e2f73cb36aef30800000000000000
+      internalID: 4605603228983419765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 3
+        width: 111
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d83aeafbeede490800000000000000
+      internalID: -7715248079579673234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 3
+        width: 102
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13b700ddc362c000800000000000000
+      internalID: 54715881091478298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 3
+        width: 99
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d20bc4cc6c416230800000000000000
+      internalID: 3630266804679148243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3
+        width: 94
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e8fc7685ab8b6c0800000000000000
+      internalID: -4127344169623515609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 3
+        width: 91
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 758dfc272b7d703a0800000000000000
+      internalID: -6699148759259948969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 3
+        width: 88
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680b5c9481a23f0d0800000000000000
+      internalID: -3390319810674577274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 3
+        width: 99
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3911788afa30e2aa0800000000000000
+      internalID: -6184001185351528045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 3
+        width: 105
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23a7e7ddf342fdd40800000000000000
+      internalID: 5611243517444520498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 3
+        width: 106
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10111dcd43bf51ef0800000000000000
+      internalID: -137928009103372031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 3
+        width: 112
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ec6dff8a940e8d0800000000000000
+      internalID: -2819172376538329492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: the_stone_animation_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 3
+        width: 117
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da0f93d52fcabf30800000000000000
+      internalID: 4592210531428797141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      the_stone_animation_sheet_0: 4605603228983419765
+      the_stone_animation_sheet_1: -7715248079579673234
+      the_stone_animation_sheet_10: -2819172376538329492
+      the_stone_animation_sheet_11: 4592210531428797141
+      the_stone_animation_sheet_2: 54715881091478298
+      the_stone_animation_sheet_3: 3630266804679148243
+      the_stone_animation_sheet_4: -4127344169623515609
+      the_stone_animation_sheet_5: -6699148759259948969
+      the_stone_animation_sheet_6: -3390319810674577274
+      the_stone_animation_sheet_7: -6184001185351528045
+      the_stone_animation_sheet_8: 5611243517444520498
+      the_stone_animation_sheet_9: -137928009103372031
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

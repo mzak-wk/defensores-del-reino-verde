@@ -7,48 +7,147 @@ public struct SpawnEntry
     [Range(0f, 100f)] public float weight;
 }
 
-[RequireComponent(typeof(Collider2D))]
 public class SpawnZone : MonoBehaviour
 {
-    [Header("Identificación")]
+    [Header("Identificacion")]
     public string zoneName = "Nueva Zona";
     public int zoneLevel = 1;
 
-    [Header("Configuración de Spawning")]
+    [Header("Configuracion de Spawning")]
+    [Tooltip("Zona de boss: no genera oleadas comunes ni barreras; la orquesta BossEncounterManager.")]
+    [SerializeField] private bool isBossZone;
     public SpawnEntry[] enemyTable;
     public int maxActiveEnemies = 10;
     public float spawnInterval = 2f;
-    
+
+    [Header("Configuracion de Oleadas")]
+    public int minEnemiesPerWave = 3;
+    public int maxEnemiesPerWave = 6;
+    public float waveInterval = 3f;
+    public float firstWaveChaseDelay = 1.5f;
+    [SerializeField] private int maxWaves = 4;
+
+    [Header("Aumento de Stats por Oleada")]
+    public float hpBonusPerWave = 5f;
+    public float damageBonusPerWave = 5f;
+    public int xpBonusPerWave = 5;
+    public float speedBonusPerWave = 0.2f;
+
+    [Header("Bloqueo de Transicion")]
+    [SerializeField] private Collider2D cameraTriggerCollider;
+    [SerializeField] private GameObject leftSpectralWall;
+    [SerializeField] private GameObject rightSpectralWall;
+
+    [Header("Márgenes de Aparición (Padding)")]
+    [SerializeField] private float spawnMarginX = 3.5f;
+    [SerializeField] private float spawnMarginY = 2.0f;
+
     [Header("Comportamiento")]
     public float despawnDelay = 7f;
     public float leashDistance = 15f;
 
     [HideInInspector] public int activeEnemyCount = 0;
-    
+
+    public int CurrentWave => currentWave;
+    public int MaxWaves => maxWaves;
+    public bool IsCleared => isCleared;
+    public bool IsEncounterActive => encounterStarted && !isCleared;
+    public bool IsBossZone => isBossZone;
+    public event System.Action OnZoneCleared;
+
+    private int currentWave;
+    private bool isCleared;
+    private bool encounterStarted;
     private Collider2D zoneCollider;
     private Bounds bounds;
 
     private void Awake()
     {
         zoneCollider = GetComponent<Collider2D>();
-        zoneCollider.isTrigger = true;
-        bounds = zoneCollider.bounds;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && ZoneSpawner.Instance != null)
+        if (zoneCollider != null)
         {
-            ZoneSpawner.Instance.OnPlayerEnteredZone(this);
+            zoneCollider.isTrigger = true;
+            bounds = zoneCollider.bounds;
+        }
+        else
+        {
+            Debug.LogWarning($"[SpawnZone] {name} no tiene un Collider2D adjunto.");
+        }
+
+        maxWaves = Mathf.Max(1, maxWaves);
+        SetCombatBarriers(false);
+        SetCameraTransitionEnabled(true);
+        OnZoneCleared?.Invoke();
+
+        // Zona de jefe (EndZone): queda despejada por diseño y sin barreras; no
+        // procesa oleadas comunes (la batalla la orquesta BossEncounterManager).
+        if (isBossZone || GetComponent<ZoneMetadata>()?.zoneType == ZoneType.End)
+        {
+            isBossZone = true;
+            isCleared = true;
+            encounterStarted = false;
+            SetCombatBarriers(false);
+            SetCameraTransitionEnabled(true);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    public bool BeginEncounter()
     {
-        if (other.CompareTag("Player") && ZoneSpawner.Instance != null)
+        if (isCleared || encounterStarted)
         {
-            ZoneSpawner.Instance.OnPlayerExitedZone(this);
+            return false;
         }
+
+        encounterStarted = true;
+        SetCameraTransitionEnabled(false);
+        SetCombatBarriers(true);
+        return true;
+    }
+
+    public bool BeginNextWave()
+    {
+        if (!IsEncounterActive || activeEnemyCount > 0 || currentWave >= maxWaves)
+        {
+            return false;
+        }
+
+        currentWave++;
+        return true;
+    }
+
+    public void RegisterEnemySpawned()
+    {
+        activeEnemyCount++;
+    }
+
+    public void RegisterEnemyRemoved()
+    {
+        activeEnemyCount = Mathf.Max(0, activeEnemyCount - 1);
+    }
+
+    public void CompleteEncounter()
+    {
+        if (isCleared)
+        {
+            return;
+        }
+
+        isCleared = true;
+        encounterStarted = false;
+        activeEnemyCount = 0;
+        SetCombatBarriers(false);
+        SetCameraTransitionEnabled(true);
+    }
+
+    /// <summary>
+    /// Red de seguridad para cerrar la zona de forma forzada y segura desde
+    /// cualquier director (ej. BossEncounterManager). Idempotente: si la zona
+    /// ya está despejada no hace nada. Desactiva las Paredes Espectrales y
+    /// re-habilita la transición de cámara aunque el contador esté desincronizado.
+    /// </summary>
+    public void ForceComplete()
+    {
+        CompleteEncounter();
     }
 
     public EnemyData GetRandomEnemyData()
@@ -56,15 +155,16 @@ public class SpawnZone : MonoBehaviour
         if (enemyTable == null || enemyTable.Length == 0) return null;
 
         float totalWeight = 0f;
-        foreach (var entry in enemyTable)
+        foreach (SpawnEntry entry in enemyTable)
         {
             totalWeight += entry.weight;
         }
 
+        if (totalWeight <= 0f) return null;
+
         float randomVal = Random.Range(0f, totalWeight);
         float currentSum = 0f;
-
-        foreach (var entry in enemyTable)
+        foreach (SpawnEntry entry in enemyTable)
         {
             currentSum += entry.weight;
             if (randomVal <= currentSum)
@@ -73,27 +173,30 @@ public class SpawnZone : MonoBehaviour
             }
         }
 
-        return enemyTable[0].enemyData; // fallback
+        return enemyTable[enemyTable.Length - 1].enemyData;
     }
 
     public Vector2 GetRandomPointInZone()
     {
+        if (zoneCollider == null) zoneCollider = GetComponent<Collider2D>();
         if (zoneCollider == null) return transform.position;
 
-        int maxAttempts = 30;
-        for (int i = 0; i < maxAttempts; i++)
-        {
-            float x = Random.Range(bounds.min.x, bounds.max.x);
-            float y = Random.Range(bounds.min.y, bounds.max.y);
-            Vector2 point = new Vector2(x, y);
+        bounds = zoneCollider.bounds;
+        float minX = bounds.min.x + spawnMarginX;
+        float maxX = bounds.max.x - spawnMarginX;
+        float minY = bounds.min.y + spawnMarginY;
+        float maxY = bounds.max.y - spawnMarginY;
 
-            if (zoneCollider.OverlapPoint(point))
-            {
-                return point;
-            }
+        if (minX >= maxX) { minX = bounds.center.x; maxX = bounds.center.x; }
+        if (minY >= maxY) { minY = bounds.center.y; maxY = bounds.center.y; }
+
+        for (int i = 0; i < 30; i++)
+        {
+            Vector2 point = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+            if (zoneCollider.OverlapPoint(point)) return point;
         }
 
-        return bounds.center; // Fallback
+        return bounds.center;
     }
 
     public Vector2 GetRandomOffscreenPoint(Camera cam, float padding = 2f)
@@ -101,52 +204,38 @@ public class SpawnZone : MonoBehaviour
         if (cam == null) return GetRandomPointInZone();
 
         float height = cam.orthographicSize * 2f;
-        float width = height * cam.aspect;
-        Vector3 camCenter = cam.transform.position;
-        Bounds camBounds = new Bounds(camCenter, new Vector3(width, height, 0f));
+        Bounds camBounds = new Bounds(cam.transform.position, new Vector3(height * cam.aspect, height, 0f));
         camBounds.Expand(new Vector3(padding * 2f, padding * 2f, 0f));
 
-        int maxAttempts = 30;
-        for (int i = 0; i < maxAttempts; i++)
+        for (int i = 0; i < 30; i++)
         {
             Vector2 point = GetRandomPointInZone();
-            if (!camBounds.Contains(point))
-            {
-                return point;
-            }
+            if (!camBounds.Contains(point)) return point;
         }
 
-        return GetRandomPointInZone(); // Fallback si no hay punto offscreen posible
+        return GetRandomPointInZone();
+    }
+
+    private void SetCameraTransitionEnabled(bool enabled)
+    {
+        if (cameraTriggerCollider != null)
+        {
+            cameraTriggerCollider.enabled = enabled;
+        }
+    }
+
+    public void SetCombatBarriers(bool enabled)
+    {
+        if (leftSpectralWall != null) leftSpectralWall.SetActive(enabled);
+        if (rightSpectralWall != null) rightSpectralWall.SetActive(enabled);
     }
 
     private void OnDrawGizmos()
     {
-        if (zoneCollider == null) zoneCollider = GetComponent<Collider2D>();
-        if (zoneCollider != null)
-        {
-            Gizmos.color = new Color(0, 1, 0, 0.3f);
-            
-            if (zoneCollider is PolygonCollider2D poly)
-            {
-                for (int i = 0; i < poly.pathCount; i++)
-                {
-                    Vector2[] path = poly.GetPath(i);
-                    for (int j = 0; j < path.Length; j++)
-                    {
-                        Vector2 p1 = transform.TransformPoint(path[j]);
-                        Vector2 p2 = transform.TransformPoint(path[(j + 1) % path.Length]);
-                        Gizmos.DrawLine(p1, p2);
-                    }
-                }
-            }
-            else if (zoneCollider is BoxCollider2D box)
-            {
-                Gizmos.DrawWireCube(box.bounds.center, box.bounds.size);
-            }
-            else if (zoneCollider is CircleCollider2D circle)
-            {
-                Gizmos.DrawWireSphere(circle.bounds.center, circle.bounds.extents.x);
-            }
-        }
+        Collider2D collider = zoneCollider != null ? zoneCollider : GetComponent<Collider2D>();
+        if (collider == null) return;
+
+        Gizmos.color = new Color(0f, 1f, 0f, 0.3f);
+        Gizmos.DrawWireCube(collider.bounds.center, collider.bounds.size);
     }
 }

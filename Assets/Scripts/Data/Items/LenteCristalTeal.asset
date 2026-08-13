@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b503c644a691174b8bf66da38e0ca8e, type: 3}
+  m_Name: LenteCristalTeal
+  m_EditorClassIdentifier: 
+  itemId: Lente-Cristal-Teal
+  itemName: Lente de Cristal Teal
+  icon: {fileID: 3941392943508395818, guid: 3511653d2ba0d6b43b0222a099fc67a0, type: 3}
+  rarity: 0
+  description: 
+  passiveConcept: 
+  maxHpBonusPercent: 0
+  autoAttackCooldownReduction: 0
+  damageBonusPercent: 0
+  projectileSizeBonusPercent: 10
+  defenseBonusPercent: 0
+  lutroCoinBonusPercent: 0
+  activeSkillCooldownReduction: 0
+  pickupRangeBonusPercent: 0
+  dashDamageBonusNextAttack: 0
+  extraDashes: 0
+  leavesDashTrail: 0
+  specialHitsTwice: 0
+  isUniquePurchase: 0
+  isExclusiveGroup: 0
+  activeAbilityKey: 0
+  activeAbilityDuration: 0

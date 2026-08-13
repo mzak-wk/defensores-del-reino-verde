@@ -14,6 +14,10 @@ public class LevelLayoutGenerator : MonoBehaviour
     [Header("UI")]
     public LoadingScreenUI loadingScreen;
 
+    [Header("Configuración de Escala de Zonas")]
+    [SerializeField] private bool overrideZoneScale = true;
+    [SerializeField] private Vector3 zoneScale = new Vector3(7.115089f, 5.373294f, 1f);
+
     [Header("Depuración")]
     public bool drawGizmos = true;
 
@@ -95,17 +99,9 @@ public class LevelLayoutGenerator : MonoBehaviour
 
                     instance.transform.position = new Vector3(targetWorldPos.x, targetWorldPos.y, instance.transform.position.z);
 
-                    SpriteRenderer sr = instance.GetComponentInChildren<SpriteRenderer>();
-                    if (sr != null && sr.sprite != null)
+                    if (overrideZoneScale)
                     {
-                        Vector2 spriteSize = sr.sprite.bounds.size;
-                        float scaleX = layoutData.fixedZoneSize.x / spriteSize.x;
-                        float scaleY = layoutData.fixedZoneSize.y / spriteSize.y;
-                        instance.transform.localScale = new Vector3(scaleX, scaleY, 1f);
-                    }
-                    else
-                    {
-                        instance.transform.localScale = Vector3.one;
+                        instance.transform.localScale = zoneScale;
                     }
 
                     ZoneMetadata metadata = instance.GetComponent<ZoneMetadata>();
@@ -195,8 +191,10 @@ public class LevelLayoutGenerator : MonoBehaviour
 
     private Vector2 GetCellWorldPosition(int col, int row)
     {
-        float x = layoutData.gridOrigin.x + (col * layoutData.fixedZoneSize.x) + (layoutData.fixedZoneSize.x * 0.5f);
-        float y = layoutData.gridOrigin.y + (row * layoutData.fixedZoneSize.y) + (layoutData.fixedZoneSize.y * 0.5f);
+        // fixedZoneSize is already the final world-space size configured for each zone.
+        Vector2 finalCellSize = layoutData.fixedZoneSize;
+        float x = layoutData.gridOrigin.x + (col * finalCellSize.x) + (finalCellSize.x * 0.5f);
+        float y = layoutData.gridOrigin.y + (row * finalCellSize.y) + (finalCellSize.y * 0.5f);
         return new Vector2(x, y);
     }
 
@@ -211,7 +209,8 @@ public class LevelLayoutGenerator : MonoBehaviour
             for (int c = 0; c < layoutData.columns; c++)
             {
                 Vector2 center = GetCellWorldPosition(c, r);
-                Vector3 size = new Vector3(layoutData.fixedZoneSize.x, layoutData.fixedZoneSize.y, 0.1f);
+                Vector2 finalCellSize = layoutData.fixedZoneSize;
+                Vector3 size = new Vector3(finalCellSize.x, finalCellSize.y, 0.1f);
                 Gizmos.DrawWireCube(center, size);
                 
 #if UNITY_EDITOR

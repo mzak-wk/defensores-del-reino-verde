@@ -1,39 +1,70 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// DialogueManager universal para el sistema de diálogos desacoplado y extensible.
+/// Maneja cualquier DialogueData con líneas, opciones dinámicas y saltos entre bloques.
+/// </summary>
 public class DialogueManager : MonoBehaviour
 {
-    private const string DefaultFarewellLine = "Vale, hasta luego.";
+    private static DialogueManager _instance;
+    private static bool isQuitting = false;
 
-    public static DialogueManager Instance { get; private set; }
+    public static DialogueManager Instance
+    {
+        get
+        {
+            if (isQuitting)
+                return null;
+
+            if (_instance == null)
+            {
+                DialogueManager[] found = FindObjectsByType<DialogueManager>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+                _instance = found != null && found.Length > 0 ? found[0] : null;
+                if (_instance != null)
+                    _instance.gameObject.SetActive(true); // Garantiza el Canvas de diálogo activo
+            }
+            return _instance;
+        }
+    }
+
+    /// <summary>
+    /// Mapeo dinámico de retrato por Hablante y Emoción.
+    /// Permite configurar en el Inspector un sprite diferente para cada combinación.
+    /// </summary>
+    [System.Serializable]
+    public struct PortraitMapping
+    {
+        public SpeakerType speaker;
+        public EmotionType emotion;
+        public Sprite portraitSprite;
+    }
 
     private enum DialogueState
     {
         Closed,
-        TypingGreeting,
-        WaitingChoice,
-        TypingTalkLine,
-        WaitingTalkAdvance,
-        TypingFarewell,
-        WaitingFarewellClose,
-        TypingBossLine,
-        WaitingBossAdvance
+        Typing,
+        WaitingInput
     }
 
     [Header("UI Root")]
     [SerializeField] private GameObject dialogueRoot;
 
     [Header("Text")]
-    [SerializeField] private TextMeshProUGUI playerNameText;
-    [SerializeField] private TextMeshProUGUI npcNameText;
+    [SerializeField] private TextMeshProUGUI speakerNameText;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private float characterDelay = 0.035f;
 
     [Header("Portraits")]
+    [Tooltip("Imagen del retrato del jugador.")]
     [SerializeField] private Image playerPortrait;
+    [Tooltip("Imagen del retrato del NPC / Boss.")]
     [SerializeField] private Image npcPortrait;
+    [Tooltip("Lista de retratos mapeados por Hablante + Emoción. Si no hay coincidencia, se oculta el retrato.")]
+    [SerializeField] private List<PortraitMapping> portraitMappings = new List<PortraitMapping>();
 
     [Header("Layout")]
     [Tooltip("RectTransform del panel marco principal del diálogo. Pivot X debe ser 0.5.")]
@@ -45,59 +76,69 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject continueArrow;
 
     [Header("Choice Buttons")]
-    [SerializeField] private Button talkButton;
-    [SerializeField] private Button shopButton;
-    [SerializeField] private Button closeButton;
-
-    [Header("Shop")]
-    [SerializeField] private ShopUIController shopUIController;
+    [Tooltip("Prefab del botón de opción. Debe tener TextMeshProUGUI como hijo.")]
+    [SerializeField] private Button choiceButtonPrefab;
+    [Tooltip("Contenedor donde se instanciarán los botones de opción dinámicamente.")]
+    [SerializeField] private Transform choiceButtonContainer;
 
     [Header("Close Option")]
-    [SerializeField] private bool autoCloseAfterFarewell = true;
-    [SerializeField] private float farewellAutoCloseDelay = 0.8f;
+    [SerializeField] private bool autoCloseAfterLastLine = true;
+    [SerializeField] private float autoCloseDelay = 0.8f;
 
     public bool IsOpen => state != DialogueState.Closed;
     public event System.Action OnDialogueClosed;
+    public event System.Action<string> OnCustomEvent;
 
+    private DialogueState state = DialogueState.Closed;
     private DialogueData currentData;
-    private BossDialogueData currentBossData;
     private IPlayerMovementLock currentMovementLock;
     private Coroutine typewriterCoroutine;
     private Coroutine autoCloseCoroutine;
-    private DialogueState state = DialogueState.Closed;
     private string currentFullLine = string.Empty;
-    private int talkLineIndex;
-    private int bossLineIndex;
+    private int currentLineIndex;
     private int ignoreAdvanceInputFrame = -1;
     private SpeakerType currentSpeaker = SpeakerType.NPC;
+    private readonly List<Button> spawnedChoiceButtons = new List<Button>();
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (_instance != null && _instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
-        Instance = this;
+        // Auto-curar la bandera: la escena anterior pudo marcar isQuitting al
+        // destruirse. Un nuevo Canvas de diálogo reinicia el sistema.
+        isQuitting = false;
 
-        RegisterButtonListeners();
-        HideChoiceButtons();
+        _instance = this;
         SetDialogueRootActive(false);
         HideContinueArrow();
     }
 
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
     private void OnDestroy()
     {
-        if (Instance == this)
+        if (_instance == this)
         {
-            Instance = null;
+            isQuitting = true;
+            _instance = null;
         }
     }
 
     private void Update()
     {
-        if (!IsOpen || state == DialogueState.WaitingChoice)
+        if (!IsOpen || state == DialogueState.Closed)
+        {
+            return;
+        }
+
+        if (spawnedChoiceButtons.Count > 0)
         {
             return;
         }
@@ -107,97 +148,75 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
         {
             HandleAdvanceInput();
         }
     }
 
-    private bool _isLinearMode = false;
-
-    public void StartDialogue(DialogueData data, IPlayerMovementLock movementLock = null, bool linearMode = false)
+    /// <summary>
+    /// Inicia un diálogo con los datos proporcionados.
+    /// </summary>
+    /// <param name="data">Datos del diálogo a reproducir.</param>
+    /// <param name="movementLock">Referencia opcional para bloquear el movimiento del jugador.</param>
+    public void StartDialogue(DialogueData data, IPlayerMovementLock movementLock = null)
     {
-        if (data == null)
+        if (data == null || data.Lines == null || data.Lines.Count == 0)
         {
-            Debug.LogWarning("[DialogueManager] Cannot start dialogue without DialogueData.");
+            Debug.LogWarning("[DialogueManager] Cannot start dialogue with null or empty DialogueData.");
             return;
         }
 
         if (dialogueText == null)
         {
-            Debug.LogWarning("[DialogueManager] Cannot start dialogue because dialogueText is not assigned.");
+            Debug.LogWarning("[DialogueManager] dialogueText is not assigned.");
             return;
         }
 
         StopActiveCoroutines();
+        DestroyChoiceButtons();
 
         currentData = data;
-        currentBossData = null;
         currentMovementLock = movementLock;
-        
-        _isLinearMode = linearMode || !data.HasChoices;
-        
-        talkLineIndex = 0;
+        currentLineIndex = 0;
         ignoreAdvanceInputFrame = Time.frameCount;
+
+        // Asegurar que el Canvas/GameObject del diálogo esté activo antes de mostrarlo.
+        if (!gameObject.activeSelf)
+        {
+            gameObject.SetActive(true);
+        }
 
         SetPlayerMovementLocked(true);
         SetDialogueRootActive(true);
-        HideChoiceButtons();
-        SetNpcName(data.NpcName);
+        HideContinueArrow();
 
-        UpdateSpeakerUI(data.GreetingSpeaker);
-        StartTyping(GetSafeLine(data.InitialGreeting), DialogueState.TypingGreeting);
+        DialogueLine firstLine = currentData.Lines[currentLineIndex];
+        UpdateSpeakerUI(firstLine.speaker, firstLine.emotion);
+        if (firstLine.choices != null && firstLine.choices.Count > 0)
+        {
+            StartTypingWithOptions(firstLine.text, firstLine.choices);
+        }
+        else
+        {
+            StartTyping(firstLine.text);
+        }
     }
 
-    public void StartBossDialogue(BossDialogueData data, IPlayerMovementLock movementLock = null)
-    {
-        if (data == null || data.DialogueLines == null || data.DialogueLines.Length == 0)
-        {
-            Debug.LogWarning("[DialogueManager] Cannot start boss dialogue without valid BossDialogueData.");
-            OnDialogueClosed?.Invoke();
-            return;
-        }
-
-        if (dialogueText == null)
-        {
-            Debug.LogWarning("[DialogueManager] Cannot start boss dialogue because dialogueText is not assigned.");
-            OnDialogueClosed?.Invoke();
-            return;
-        }
-
-        StopActiveCoroutines();
-
-        currentData = null;
-        currentBossData = data;
-        currentMovementLock = movementLock;
-        bossLineIndex = 0;
-        ignoreAdvanceInputFrame = Time.frameCount;
-
-        SetPlayerMovementLocked(true);
-        SetDialogueRootActive(true);
-        HideChoiceButtons();
-        SetNpcName(data.BossName);
-
-        SpeakerType firstSpeaker = data.GetDialogueLineSpeaker(0);
-        UpdateSpeakerUI(firstSpeaker);
-
-        StartTyping(GetSafeLine(data.DialogueLines[0]), DialogueState.TypingBossLine);
-    }
-
+    /// <summary>
+    /// Cierra el diálogo actual y limpia el estado.
+    /// </summary>
     public void CloseDialogue()
     {
         StopActiveCoroutines();
-        HideChoiceButtons();
+        DestroyChoiceButtons();
         HideContinueArrow();
         SetDialogueRootActive(false);
-        ClearDialogue();
+        ClearDialogueText();
 
         state = DialogueState.Closed;
         currentData = null;
-        currentBossData = null;
-        _isLinearMode = false;
-        talkLineIndex = 0;
-        bossLineIndex = 0;
+        currentLineIndex = 0;
 
         ResetPanelRotation();
 
@@ -205,171 +224,78 @@ public class DialogueManager : MonoBehaviour
         currentMovementLock = null;
 
         OnDialogueClosed?.Invoke();
-    }
 
-    private void RegisterButtonListeners()
-    {
-        if (talkButton != null)
-        {
-            talkButton.onClick.RemoveListener(HandleTalkSelected);
-            talkButton.onClick.AddListener(HandleTalkSelected);
-        }
-        else
-        {
-            Debug.LogWarning("[DialogueManager] talkButton is not assigned.");
-        }
-
-        if (shopButton != null)
-        {
-            shopButton.onClick.RemoveListener(HandleShopSelected);
-            shopButton.onClick.AddListener(HandleShopSelected);
-        }
-        else
-        {
-            Debug.LogWarning("[DialogueManager] shopButton is not assigned.");
-        }
-
-        if (closeButton != null)
-        {
-            closeButton.onClick.RemoveListener(HandleCloseSelected);
-            closeButton.onClick.AddListener(HandleCloseSelected);
-        }
-        else
-        {
-            Debug.LogWarning("[DialogueManager] closeButton is not assigned.");
-        }
+        // Apagar el Canvas del diálogo al concluir la conversación.
+        gameObject.SetActive(false);
     }
 
     private void HandleAdvanceInput()
     {
         switch (state)
         {
-            case DialogueState.TypingGreeting:
-            case DialogueState.TypingTalkLine:
-            case DialogueState.TypingFarewell:
-            case DialogueState.TypingBossLine:
+            case DialogueState.Typing:
                 CompleteCurrentLine();
                 break;
 
-            case DialogueState.WaitingTalkAdvance:
-                AdvanceTalkBranch();
+            case DialogueState.WaitingInput:
+                AdvanceLine();
                 break;
+        }
+    }
 
-            case DialogueState.WaitingBossAdvance:
-                AdvanceBossDialogue();
-                break;
+    private void AdvanceLine()
+    {
+        currentLineIndex++;
 
-            case DialogueState.WaitingFarewellClose:
+        if (currentData == null || currentLineIndex >= currentData.Lines.Count)
+        {
+            if (autoCloseAfterLastLine)
+            {
+                StartCoroutine(CloseAfterDelay(autoCloseDelay));
+            }
+            else
+            {
                 CloseDialogue();
-                break;
-        }
-    }
-
-    private void HandleTalkSelected()
-    {
-        if (state != DialogueState.WaitingChoice)
-        {
+            }
             return;
         }
 
-        HideChoiceButtons();
-        talkLineIndex = 0;
-        AdvanceTalkBranch();
-    }
+        DialogueLine line = currentData.Lines[currentLineIndex];
+        UpdateSpeakerUI(line.speaker, line.emotion);
 
-    private void HandleShopSelected()
-    {
-        if (state != DialogueState.WaitingChoice)
+        if (line.choices != null && line.choices.Count > 0)
         {
-            return;
-        }
-
-        CloseDialogue();
-
-        if (shopUIController != null)
-        {
-            shopUIController.OpenShop();
+            StartTypingWithOptions(line.text, line.choices);
         }
         else
         {
-            Debug.LogWarning("[DialogueManager] shopUIController is not assigned. Shop cannot be opened.");
+            StartTyping(line.text);
         }
     }
 
-    private void HandleCloseSelected()
-    {
-        if (state != DialogueState.WaitingChoice)
-        {
-            return;
-        }
-
-        HideChoiceButtons();
-
-        SpeakerType farewellSpeaker = currentData != null ? currentData.FarewellSpeaker : SpeakerType.NPC;
-        UpdateSpeakerUI(farewellSpeaker);
-
-        string farewellLine = currentData != null && !string.IsNullOrWhiteSpace(currentData.FarewellLine)
-            ? currentData.FarewellLine
-            : DefaultFarewellLine;
-
-        StartTyping(farewellLine, DialogueState.TypingFarewell);
-    }
-
-    private void AdvanceTalkBranch()
-    {
-        if (currentData == null || currentData.TalkLines == null || talkLineIndex >= currentData.TalkLines.Length)
-        {
-            CloseDialogue();
-            return;
-        }
-
-        UpdateSpeakerUI(currentData.GetTalkLineSpeaker(talkLineIndex));
-
-        string nextLine = currentData.TalkLines[talkLineIndex];
-        talkLineIndex++;
-
-        if (string.IsNullOrWhiteSpace(nextLine))
-        {
-            AdvanceTalkBranch();
-            return;
-        }
-
-        StartTyping(nextLine, DialogueState.TypingTalkLine);
-    }
-
-    private void AdvanceBossDialogue()
-    {
-        if (currentBossData == null || currentBossData.DialogueLines == null || bossLineIndex >= currentBossData.DialogueLines.Length)
-        {
-            CloseDialogue();
-            return;
-        }
-
-        UpdateSpeakerUI(currentBossData.GetDialogueLineSpeaker(bossLineIndex));
-
-        string nextLine = currentBossData.DialogueLines[bossLineIndex];
-        bossLineIndex++;
-
-        if (string.IsNullOrWhiteSpace(nextLine))
-        {
-            AdvanceBossDialogue();
-            return;
-        }
-
-        StartTyping(nextLine, DialogueState.TypingBossLine);
-    }
-
-    private void StartTyping(string line, DialogueState typingState)
+    private void StartTyping(string line)
     {
         StopTypewriter();
+        DestroyChoiceButtons();
 
         currentFullLine = line;
-        state = typingState;
+        state = DialogueState.Typing;
         HideContinueArrow();
-        typewriterCoroutine = StartCoroutine(TypeLine(line, typingState));
+        typewriterCoroutine = StartCoroutine(TypeLine(line));
     }
 
-    private IEnumerator TypeLine(string line, DialogueState typingState)
+    private void StartTypingWithOptions(string line, List<DialogueChoice> choices)
+    {
+        StopTypewriter();
+        DestroyChoiceButtons();
+
+        currentFullLine = line;
+        state = DialogueState.Typing;
+        HideContinueArrow();
+        typewriterCoroutine = StartCoroutine(TypeLineWithOptions(line, choices));
+    }
+
+    private IEnumerator TypeLine(string line)
     {
         dialogueText.text = string.Empty;
 
@@ -380,96 +306,231 @@ public class DialogueManager : MonoBehaviour
         }
 
         typewriterCoroutine = null;
-        FinishTypingState(typingState);
+        FinishTyping();
+    }
+
+    private IEnumerator TypeLineWithOptions(string line, List<DialogueChoice> choices)
+    {
+        dialogueText.text = string.Empty;
+
+        for (int i = 0; i < line.Length; i++)
+        {
+            dialogueText.text += line[i];
+            yield return new WaitForSecondsRealtime(characterDelay);
+        }
+
+        typewriterCoroutine = null;
+        FinishTypingWithOptions(choices);
     }
 
     private void CompleteCurrentLine()
     {
         StopTypewriter();
         dialogueText.text = currentFullLine;
-        FinishTypingState(state);
+        state = DialogueState.WaitingInput;
+        ignoreAdvanceInputFrame = Time.frameCount;
+
+        DialogueLine line = currentData.Lines[currentLineIndex];
+        if (line.choices != null && line.choices.Count > 0)
+        {
+            ShowChoiceButtons(line.choices);
+        }
+        else
+        {
+            ShowContinueArrow();
+        }
     }
 
-    private void FinishTypingState(DialogueState typingState)
+    private void FinishTyping()
     {
-        switch (typingState)
+        ShowContinueArrow();
+        state = DialogueState.WaitingInput;
+    }
+
+    private void FinishTypingWithOptions(List<DialogueChoice> choices)
+    {
+        ShowChoiceButtons(choices);
+    }
+
+    private void ShowChoiceButtons(List<DialogueChoice> choices)
+    {
+        if (choiceButtonPrefab == null || choiceButtonContainer == null)
         {
-            case DialogueState.TypingGreeting:
-                ShowContinueArrow();
-                if (_isLinearMode)
+            Debug.LogWarning("[DialogueManager] Choice button prefab or container not assigned. Falling back to continue.");
+            ShowContinueArrow();
+            state = DialogueState.WaitingInput;
+            return;
+        }
+
+        state = DialogueState.WaitingInput;
+
+        for (int i = 0; i < choices.Count; i++)
+        {
+            DialogueChoice choice = choices[i];
+            int capturedIndex = i;
+
+            Button button = Instantiate(choiceButtonPrefab, choiceButtonContainer);
+            button.gameObject.SetActive(true);
+
+            TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
+            if (buttonText != null)
+            {
+                buttonText.text = choice.optionText;
+            }
+
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(() => OnChoiceSelected(choice));
+
+            spawnedChoiceButtons.Add(button);
+        }
+    }
+
+    private void OnChoiceSelected(DialogueChoice choice)
+    {
+        DestroyChoiceButtons();
+        HideContinueArrow();
+
+        bool dialogueClosed = ExecuteAction(choice.actionType, choice.customEventKey);
+        if (dialogueClosed) return;
+
+        if (choice.fullResponseText != null && choice.fullResponseText.Length > 0)
+        {
+            StartTyping(choice.fullResponseText);
+        }
+        else if (choice.nextDialogueBlock != null)
+        {
+            DialogueData nextData = choice.nextDialogueBlock;
+            CloseDialogue();
+            StartDialogue(nextData, currentMovementLock);
+        }
+        else
+        {
+            AdvanceLine();
+        }
+    }
+
+    private bool ExecuteAction(DialogueActionType actionType, string customEventKey)
+    {
+        switch (actionType)
+        {
+            case DialogueActionType.None:
+                return false;
+
+            case DialogueActionType.OpenShop:
+                ShopUIController shop = FindFirstObjectByType<ShopUIController>();
+                if (shop != null)
                 {
-                    state = DialogueState.WaitingTalkAdvance;
-                    AdvanceTalkBranch();
+                    shop.OpenShop();
                 }
                 else
                 {
-                    state = DialogueState.WaitingChoice;
-                    ShowChoiceButtons();
+                    Debug.LogWarning("[DialogueManager] ShopUIController not found in scene.");
                 }
-                break;
+                return false;
 
-            case DialogueState.TypingTalkLine:
-                state = DialogueState.WaitingTalkAdvance;
-                ShowContinueArrow();
-                break;
+            case DialogueActionType.OpenWeaponChoice:
+                InitialWeaponChoiceUI weaponUI = FindFirstObjectByType<InitialWeaponChoiceUI>();
+                if (weaponUI != null)
+                {
+                    weaponUI.OpenPanelFromDialogue();
+                }
+                else
+                {
+                    Debug.LogWarning("[DialogueManager] InitialWeaponChoiceUI not found in scene.");
+                }
+                return true;
 
-            case DialogueState.TypingFarewell:
-                state = DialogueState.WaitingFarewellClose;
-                ShowContinueArrow();
-                StartFarewellAutoClose();
-                break;
+            case DialogueActionType.CloseDialogue:
+                CloseDialogue();
+                return true;
 
-            case DialogueState.TypingBossLine:
-                state = DialogueState.WaitingBossAdvance;
-                ShowContinueArrow();
-                break;
+            case DialogueActionType.CustomEvent:
+                if (!string.IsNullOrEmpty(customEventKey))
+                {
+                    OnCustomEvent?.Invoke(customEventKey);
+                }
+                return false;
         }
+        return false;
     }
 
-    private void StartFarewellAutoClose()
+    private void DestroyChoiceButtons()
     {
-        if (!autoCloseAfterFarewell)
+        for (int i = 0; i < spawnedChoiceButtons.Count; i++)
         {
-            return;
+            if (spawnedChoiceButtons[i] != null)
+            {
+                Destroy(spawnedChoiceButtons[i].gameObject);
+            }
         }
-
-        StopAutoClose();
-        autoCloseCoroutine = StartCoroutine(CloseAfterDelay());
+        spawnedChoiceButtons.Clear();
     }
 
-    private IEnumerator CloseAfterDelay()
+    private IEnumerator CloseAfterDelay(float delay)
     {
-        yield return new WaitForSecondsRealtime(farewellAutoCloseDelay);
-        autoCloseCoroutine = null;
+        yield return new WaitForSecondsRealtime(delay);
         CloseDialogue();
     }
 
-    private void ShowChoiceButtons()
+    private void UpdateSpeakerUI(SpeakerType speaker, EmotionType emotion)
     {
-        if (_isLinearMode)
+        currentSpeaker = speaker;
+
+        bool isPlayer = speaker == SpeakerType.Jugador;
+
+        if (speakerNameText != null)
         {
-            HideChoiceButtons();
-            return;
+            speakerNameText.text = isPlayer ? "Jugador" : speaker.ToString();
         }
 
-        SetButtonActive(talkButton, true);
-        SetButtonActive(shopButton, true);
-        SetButtonActive(closeButton, true);
-    }
+        Sprite portrait = GetPortrait(speaker, emotion);
 
-    private void HideChoiceButtons()
-    {
-        SetButtonActive(talkButton, false);
-        SetButtonActive(shopButton, false);
-        SetButtonActive(closeButton, false);
-    }
-
-    private void SetButtonActive(Button button, bool active)
-    {
-        if (button != null)
+        if (playerPortrait != null)
         {
-            button.gameObject.SetActive(active);
+            playerPortrait.gameObject.SetActive(isPlayer && portrait != null);
+            if (isPlayer && portrait != null) playerPortrait.sprite = portrait;
         }
+
+        if (npcPortrait != null)
+        {
+            npcPortrait.gameObject.SetActive(!isPlayer && portrait != null);
+            if (!isPlayer && portrait != null) npcPortrait.sprite = portrait;
+        }
+
+        if (dialoguePanelRect != null)
+        {
+            dialoguePanelRect.localRotation = isPlayer
+                ? Quaternion.Euler(0f, 180f, 0f)
+                : Quaternion.identity;
+        }
+
+        if (textContainerRect != null)
+        {
+            textContainerRect.localRotation = isPlayer
+                ? Quaternion.Euler(0f, 180f, 0f)
+                : Quaternion.identity;
+        }
+    }
+
+    private Sprite GetPortrait(SpeakerType speaker, EmotionType emotion)
+    {
+        for (int i = 0; i < portraitMappings.Count; i++)
+        {
+            if (portraitMappings[i].speaker == speaker && portraitMappings[i].emotion == emotion)
+            {
+                return portraitMappings[i].portraitSprite;
+            }
+        }
+
+        for (int i = 0; i < portraitMappings.Count; i++)
+        {
+            if (portraitMappings[i].speaker == speaker)
+            {
+                return portraitMappings[i].portraitSprite;
+            }
+        }
+
+        return null;
     }
 
     private void SetDialogueRootActive(bool active)
@@ -480,134 +541,58 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void SetNpcName(string npcName)
-    {
-        if (npcNameText != null)
-        {
-            npcNameText.text = npcName;
-        }
-    }
-
-    private void UpdateSpeakerUI(SpeakerType speaker)
-    {
-        currentSpeaker = speaker;
-
-        if (speaker == SpeakerType.Player)
-        {
-            if (playerPortrait != null)
-                playerPortrait.gameObject.SetActive(true);
-            if (playerNameText != null)
-                playerNameText.gameObject.SetActive(true);
-            if (npcPortrait != null)
-                npcPortrait.gameObject.SetActive(false);
-            if (npcNameText != null)
-                npcNameText.gameObject.SetActive(false);
-
-            if (dialoguePanelRect != null)
-                dialoguePanelRect.localRotation = Quaternion.Euler(0f, 180f, 0f);
-            if (textContainerRect != null)
-                textContainerRect.localRotation = Quaternion.Euler(0f, 180f, 0f);
-        }
-        else
-        {
-            if (playerPortrait != null)
-                playerPortrait.gameObject.SetActive(false);
-            if (playerNameText != null)
-                playerNameText.gameObject.SetActive(false);
-            if (npcPortrait != null)
-                npcPortrait.gameObject.SetActive(true);
-            if (npcNameText != null)
-                npcNameText.gameObject.SetActive(true);
-
-            if (dialoguePanelRect != null)
-                dialoguePanelRect.localRotation = Quaternion.identity;
-            if (textContainerRect != null)
-                textContainerRect.localRotation = Quaternion.identity;
-        }
-
-        UpdateSpeakerVisuals(speaker);
-    }
-
-    private void UpdateSpeakerVisuals(SpeakerType speaker)
-    {
-        if (speaker == SpeakerType.NPC)
-        {
-            if (currentData != null)
-            {
-                if (npcNameText != null)
-                    npcNameText.text = currentData.NpcName;
-
-                if (npcPortrait != null)
-                {
-                    Sprite npcSprite = GetNpcSpriteFromPortraitId(currentData.PortraitId);
-                    if (npcSprite != null)
-                        npcPortrait.sprite = npcSprite;
-                }
-            }
-            else if (currentBossData != null)
-            {
-                if (npcNameText != null)
-                    npcNameText.text = currentBossData.BossName;
-
-                if (npcPortrait != null && currentBossData.BossPortrait != null)
-                    npcPortrait.sprite = currentBossData.BossPortrait;
-            }
-        }
-        else
-        {
-            if (playerNameText != null)
-                playerNameText.text = "Jugador";
-        }
-    }
-
-    private Sprite GetNpcSpriteFromPortraitId(DialoguePortraitId portraitId)
-    {
-        return null;
-    }
-
-    private void ResetPanelRotation()
-    {
-        if (dialoguePanelRect != null)
-            dialoguePanelRect.localRotation = Quaternion.identity;
-        if (textContainerRect != null)
-            textContainerRect.localRotation = Quaternion.identity;
-    }
-
     private void ShowContinueArrow()
     {
         if (continueArrow != null)
+        {
             continueArrow.SetActive(true);
+        }
     }
 
     private void HideContinueArrow()
     {
         if (continueArrow != null)
+        {
             continueArrow.SetActive(false);
+        }
     }
 
-    private void ClearDialogue()
+    private void ClearDialogueText()
     {
-        if (npcNameText != null)
-        {
-            npcNameText.text = string.Empty;
-        }
-
-        if (playerNameText != null)
-        {
-            playerNameText.text = string.Empty;
-        }
-
         if (dialogueText != null)
         {
             dialogueText.text = string.Empty;
         }
 
+        if (speakerNameText != null)
+        {
+            speakerNameText.text = string.Empty;
+        }
+
+        if (playerPortrait != null)
+        {
+            playerPortrait.gameObject.SetActive(false);
+        }
+
+        if (npcPortrait != null)
+        {
+            npcPortrait.gameObject.SetActive(false);
+        }
+
         currentFullLine = string.Empty;
     }
 
-    private string GetSafeLine(string line)
+    private void ResetPanelRotation()
     {
-        return string.IsNullOrWhiteSpace(line) ? "Que necesitas?" : line;
+        if (dialoguePanelRect != null)
+        {
+            dialoguePanelRect.localRotation = Quaternion.identity;
+        }
+
+        if (textContainerRect != null)
+        {
+            textContainerRect.localRotation = Quaternion.identity;
+        }
     }
 
     private void SetPlayerMovementLocked(bool locked)

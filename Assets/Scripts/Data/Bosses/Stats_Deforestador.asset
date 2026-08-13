@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Stats_Deforestador
   m_EditorClassIdentifier: 
   bossName: Deforestador
-  maxHP: 500
+  maxHP: 1500
   contactDamage: 10
   moveSpeed: 3
-  bossPortrait: {fileID: 0}
+  bossPortrait: {fileID: -1736586813512069693, guid: 1ca0e10b785a1a244a75b78cbf0b62da, type: 3}
   bossMusic: {fileID: 0}
   attacks: []

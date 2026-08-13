@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HubUIManager : MonoBehaviour
 {
@@ -9,14 +9,20 @@ public class HubUIManager : MonoBehaviour
     [Header("Canvas Root")]
     [SerializeField] private GameObject computerCanvasRoot;
 
-    [Header("Sections")]
+    [Header("Panel Principal (Menú Base)")]
+    [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private Button btnGoToWeapons;
+    [SerializeField] private Button btnGoToLevels;
+    [SerializeField] private Button btnGoToItems;
+    [SerializeField] private Button btnCloseComputer;
+
+    [Header("Sub-Paneles")]
     [SerializeField] private GameObject weaponsPanel;
     [SerializeField] private ComputerWeaponPanel computerWeaponPanel;
-    [SerializeField] private GameObject upgradesPanel;
     [SerializeField] private GameObject levelSelectorPanel;
-
-    [Header("Level Loading")]
-    public string[] levelSceneNames;
+    [SerializeField] private ComputerLevelPanel computerLevelPanel;
+    [SerializeField] private GameObject itemsPanel;
+    [SerializeField] private ComputerItemPanel computerItemPanel;
 
     public static HubUIManager Instance { get; private set; }
 
@@ -38,7 +44,8 @@ public class HubUIManager : MonoBehaviour
             computerCanvasRoot.SetActive(false);
         }
 
-        ShowWeaponsSection();
+        SetupButtons();
+        ShowMainMenu();
     }
 
     private void OnDestroy()
@@ -49,12 +56,32 @@ public class HubUIManager : MonoBehaviour
         }
     }
 
+    private void SetupButtons()
+    {
+        if (btnGoToWeapons != null)
+        {
+            btnGoToWeapons.onClick.AddListener(OnGoToWeaponsClicked);
+        }
+
+        if (btnGoToLevels != null)
+        {
+            btnGoToLevels.onClick.AddListener(OnGoToLevelsClicked);
+        }
+
+        if (btnGoToItems != null)
+        {
+            btnGoToItems.onClick.AddListener(OnGoToItemsClicked);
+        }
+
+        if (btnCloseComputer != null)
+        {
+            btnCloseComputer.onClick.AddListener(CloseComputer);
+        }
+    }
+
     public void OpenComputer()
     {
-        if (IsOpen)
-        {
-            return;
-        }
+        if (IsOpen) return;
 
         IsOpen = true;
 
@@ -63,16 +90,12 @@ public class HubUIManager : MonoBehaviour
             computerCanvasRoot.SetActive(true);
         }
 
-        computerWeaponPanel?.Refresh();
-        ShowWeaponsSection();
+        ShowMainMenu();
     }
 
     public void CloseComputer()
     {
-        if (!IsOpen)
-        {
-            return;
-        }
+        if (!IsOpen) return;
 
         IsOpen = false;
 
@@ -84,58 +107,60 @@ public class HubUIManager : MonoBehaviour
         OnComputerClosed?.Invoke();
     }
 
-    public void ShowWeaponsSection()
+    public void ShowMainMenu()
     {
-        ShowOnlyPanel(weaponsPanel);
-    }
+        HideAllSubPanels();
 
-    public void ShowUpgradesSection()
-    {
-        ShowOnlyPanel(upgradesPanel);
-    }
-
-    public void ShowLevelSelectorSection()
-    {
-        ShowOnlyPanel(levelSelectorPanel);
-    }
-
-    public void SelectLevel(int levelIndex)
-    {
-        int sceneIndex = levelIndex - 1;
-
-        if (levelSceneNames == null || sceneIndex < 0 || sceneIndex >= levelSceneNames.Length)
+        if (mainMenuPanel != null)
         {
-            Debug.LogError($"[HubUIManager] Level {levelIndex} has not been configured in the inspector.");
-            return;
+            mainMenuPanel.SetActive(true);
+        }
+    }
+
+    public void ShowSubPanel(GameObject subPanel)
+    {
+        if (mainMenuPanel != null)
+        {
+            mainMenuPanel.SetActive(false);
         }
 
-        string sceneName = levelSceneNames[sceneIndex];
+        HideAllSubPanels();
 
-        if (string.IsNullOrWhiteSpace(sceneName))
+        if (subPanel != null)
         {
-            Debug.LogError($"[HubUIManager] Level {levelIndex} has an empty scene name in the inspector.");
-            return;
+            subPanel.SetActive(true);
         }
-
-        PlayerPrefs.SetInt(SelectedHubLevelKey, levelIndex);
-        PlayerPrefs.Save();
-
-        SceneManager.LoadScene(sceneName);
     }
 
-    private void ShowOnlyPanel(GameObject targetPanel)
+    private void HideAllSubPanels()
     {
-        SetPanelActive(weaponsPanel, targetPanel);
-        SetPanelActive(upgradesPanel, targetPanel);
-        SetPanelActive(levelSelectorPanel, targetPanel);
+        SetPanelActive(weaponsPanel, false);
+        SetPanelActive(levelSelectorPanel, false);
+        SetPanelActive(itemsPanel, false);
     }
 
-    private void SetPanelActive(GameObject panel, GameObject targetPanel)
+    private void SetPanelActive(GameObject panel, bool active)
     {
         if (panel != null)
         {
-            panel.SetActive(panel == targetPanel);
+            panel.SetActive(active);
         }
     }
-}
 
+    private void OnGoToWeaponsClicked()
+    {
+        ShowSubPanel(weaponsPanel);
+        computerWeaponPanel?.Refresh();
+    }
+
+    private void OnGoToLevelsClicked()
+    {
+        ShowSubPanel(levelSelectorPanel);
+    }
+
+    private void OnGoToItemsClicked()
+    {
+        ShowSubPanel(itemsPanel);
+        computerItemPanel?.RefreshPanel();
+    }
+}

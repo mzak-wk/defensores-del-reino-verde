@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ad54231483e6e4bb28c7041f186d09, type: 3}
+  m_Name: Level3_Layout
+  m_EditorClassIdentifier: 
+  levelName: beach
+  levelIndex: 2
+  columns: 6
+  rows: 1
+  cellWidth: 53
+  cellHeight: 25
+  gridOrigin: {x: 0, y: 0}
+  fixedZoneSize: {x: 53, y: 25}
+  startZonePrefab: {fileID: 1823257621239327261, guid: 672e8ac8a225a4a4993bb001f3001095, type: 3}
+  endZonePrefab: {fileID: 1823257621239327261, guid: b612661f6d2b4014bb872048ac4ce7f4, type: 3}
+  middleZonePrefabs:
+  - {fileID: 8242680220492142346, guid: 12f319aba2a94924fbe4a014740d24ec, type: 3}
+  - {fileID: 8242680220492142346, guid: 666f9057d878367468bd9f133f7d929b, type: 3}
+  - {fileID: 8242680220492142346, guid: 3c82688deebd8e04e81041c2335ef426, type: 3}
+  - {fileID: 8242680220492142346, guid: 9b9595323e2c2844bb433d9a8ff231f8, type: 3}

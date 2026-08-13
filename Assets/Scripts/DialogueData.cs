@@ -2,76 +2,59 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum DialoguePortraitId
-{
-    None,
-    Van,
-    Player
-}
-
-public enum DialogueOptionType
-{
-    Talk,
-    Shop,
-    Close,
-    Custom
-}
-
-public enum SpeakerType
-{
-    NPC,
-    Player
-}
-
+/// <summary>
+/// Opción de diálogo que el jugador puede seleccionar.
+/// Cada opción puede ejecutar una acción y/o saltar a otro bloque de diálogo.
+/// </summary>
 [Serializable]
-public struct DialogueChoiceData
+public class DialogueChoice
 {
+    [Tooltip("Texto corto que aparece en el botón de opción.")]
     public string optionText;
-    public DialogueOptionType optionType;
+
+    [Tooltip("Texto extendido que dirá el personaje al seleccionar esta opción.")]
+    [TextArea(2, 5)]
+    public string fullResponseText;
+
+    [Tooltip("Acción a ejecutar cuando el jugador selecciona esta opción.")]
+    public DialogueActionType actionType = DialogueActionType.None;
+
+    [Tooltip("Clave identificadora para CustomEvent. Permite al DialogueManager o consumidores reaccionar.")]
+    public string customEventKey;
+
+    [Tooltip("Salto a otro bloque de diálogo (opcional). Si se asigna, continúa con ese bloque después de la respuesta.")]
+    public DialogueData nextDialogueBlock;
 }
 
-[CreateAssetMenu(menuName = "Dialogue/NPC Dialogue Data", fileName = "New NPC Dialogue Data")]
+/// <summary>
+/// Línea individual de diálogo con hablante, emoción, texto y opciones opcionales.
+/// </summary>
+[Serializable]
+public class DialogueLine
+{
+    [Tooltip("Quién habla en esta línea.")]
+    public SpeakerType speaker;
+
+    [Tooltip("Emoción/expressión del hablante.")]
+    public EmotionType emotion;
+
+    [Tooltip("Contenido del diálogo.")]
+    [TextArea(2, 5)]
+    public string text;
+
+    [Tooltip("Opciones opcionales que el jugador puede seleccionar después de esta línea. Si está vacío, se avanza con click/tecla.")]
+    public List<DialogueChoice> choices = new List<DialogueChoice>();
+}
+
+/// <summary>
+/// ScriptableObject universal para cualquier tipo de conversación.
+/// Reemplaza DialogueData y BossDialogueData con una estructura unificada y extensible.
+/// </summary>
+[CreateAssetMenu(menuName = "Dialogue/Universal Dialogue Data", fileName = "New Dialogue Data")]
 public class DialogueData : ScriptableObject
 {
-    [Header("NPC")]
-    [SerializeField] private string npcName = "NPC";
-    [SerializeField] private DialoguePortraitId portraitId = DialoguePortraitId.None;
-
-    [Header("Dialogue Type")]
-    [Tooltip("Si es false, el diálogo será lineal (sin botones de opciones). Si es true, mostrará los botones de opciones configurados.")]
-    [SerializeField] private bool hasChoices = true;
-
     [Header("Dialogue Content")]
-    [TextArea(2, 4)]
-    [SerializeField] private string initialGreeting = "Que necesitas?";
-    [SerializeField] private SpeakerType greetingSpeaker = SpeakerType.NPC;
+    [SerializeField] private List<DialogueLine> lines = new List<DialogueLine>();
 
-    [TextArea(2, 4)]
-    [SerializeField] private string[] talkLines;
-    [SerializeField] private SpeakerType[] talkLineSpeakers;
-
-    [TextArea(2, 4)]
-    [SerializeField] private string farewellLine = "Vale, hasta luego.";
-    [SerializeField] private SpeakerType farewellSpeaker = SpeakerType.NPC;
-
-    [Header("Custom Choices (Si hasChoices = true)")]
-    [SerializeField] private List<DialogueChoiceData> choices = new List<DialogueChoiceData>();
-
-    public string NpcName => npcName;
-    public DialoguePortraitId PortraitId => portraitId;
-    public bool HasChoices => hasChoices;
-    public string InitialGreeting => initialGreeting;
-    public SpeakerType GreetingSpeaker => greetingSpeaker;
-    public string[] TalkLines => talkLines;
-    public SpeakerType[] TalkLineSpeakers => talkLineSpeakers;
-    public string FarewellLine => farewellLine;
-    public SpeakerType FarewellSpeaker => farewellSpeaker;
-    public IReadOnlyList<DialogueChoiceData> Choices => choices;
-
-    public SpeakerType GetTalkLineSpeaker(int index)
-    {
-        if (talkLineSpeakers != null && index >= 0 && index < talkLineSpeakers.Length)
-            return talkLineSpeakers[index];
-        return SpeakerType.NPC;
-    }
+    public IReadOnlyList<DialogueLine> Lines => lines;
 }

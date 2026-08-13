@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2112910200384613012}
   - component: {fileID: 60297278984562951}
-  - component: {fileID: 5733767218119102539}
   - component: {fileID: 4999998982592662831}
   m_Layer: 0
   m_Name: EnemySpawn
@@ -89,57 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5733767218119102539
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8719289725325065566}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
-  m_UseDelaunayMesh: 0
 --- !u!114 &4999998982592662831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +107,14 @@ MonoBehaviour:
     weight: 0
   maxActiveEnemies: 10
   spawnInterval: 2
+  minEnemiesPerWave: 3
+  maxEnemiesPerWave: 6
+  waveInterval: 3
+  firstWaveChaseDelay: 1.5
+  hpBonusPerWave: 5
+  damageBonusPerWave: 5
+  xpBonusPerWave: 5
+  speedBonusPerWave: 0.2
   despawnDelay: 7
   leashDistance: 15
   activeEnemyCount: 0

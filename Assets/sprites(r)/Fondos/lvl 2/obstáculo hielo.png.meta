@@ -118,59 +118,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "obst\xE1culo hielo_0"
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 25
-        width: 8
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df2a95215f6db0e90800000000000000
-      internalID: -7058311642909924611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "obst\xE1culo hielo_1"
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 29
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: af9a09a03143453b0800000000000000
-      internalID: -5524733586490480134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: "obst\xE1culo hielo_2"
       rect:
         serializedVersion: 2
-        x: 17
+        x: 19
         y: 12
-        width: 237
+        width: 234
         height: 184
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -183,99 +139,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: "obst\xE1culo hielo_3"
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 10
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3db630821b499fe10800000000000000
-      internalID: 2231978578940226515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "obst\xE1culo hielo_4"
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 11
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 229bed41b5ea42710800000000000000
-      internalID: 1667649468249323810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "obst\xE1culo hielo_5"
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 10
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf36ea83f6102c0e0800000000000000
-      internalID: -2251235286527876101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "obst\xE1culo hielo_6"
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 7
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ea6ad923d87dc2f20800000000000000
-      internalID: 3399328820197435054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5a8bc5386a7440f448b5ad0b1ae430e0
     internalID: 0
     vertices: []
     indices: 

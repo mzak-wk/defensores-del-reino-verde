@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c25081ec2689542ada454de66e66ff, type: 3}
+  m_Name: Npc_Commun_Lines
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: 1
+    emotion: 0
+    text: que necesita muchacho
+    choices:
+    - optionText: hablar
+      fullResponseText: 
+      actionType: 0
+      customEventKey: 
+      nextDialogueBlock: {fileID: 11400000, guid: d1cfb20fbcca111408142635ad3c9c8f, type: 2}
+    - optionText: tienda
+      fullResponseText: 
+      actionType: 1
+      customEventKey: 
+      nextDialogueBlock: {fileID: 0}
+    - optionText: salir
+      fullResponseText: No nada gracias
+      actionType: 3
+      customEventKey: 
+      nextDialogueBlock: {fileID: 0}

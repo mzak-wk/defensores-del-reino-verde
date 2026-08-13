@@ -19,4 +19,4 @@ MonoBehaviour:
   contactDamage: 5
   xpReward: 5
   coinReward: 1
-  icon: {fileID: 8348586016019132685, guid: 0efd7cca77238a649b4b68ab9c8fd158, type: 3}
+  icon: {fileID: -7109814731324501511, guid: 8c5c1cc144a730b158e8c85546102d6a, type: 3}

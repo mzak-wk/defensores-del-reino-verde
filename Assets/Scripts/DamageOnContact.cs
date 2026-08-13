@@ -23,8 +23,9 @@ public class DamageOnContact : MonoBehaviour
         myCollider = GetComponent<Collider2D>();
         if (myCollider == null)
             Debug.LogWarning("[DamageOnContact] Necesita un Collider2D en el mismo objeto.", this);
-        else
-            myCollider.isTrigger = true;   // importante: que sea trigger
+        // NO forzar myCollider.isTrigger = true aquí.
+        // Este script debe ir en un hijo "Hitbox" con su propio CircleCollider2D (IsTrigger=true).
+        // El collider principal del enemigo DEBE tener IsTrigger=false para física sólida.
     }
 
     void Update()

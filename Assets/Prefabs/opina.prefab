@@ -105,6 +105,12 @@ MonoBehaviour:
   playerTag: Player
   interactionKey: 101
   closeOnExit: 0
+  useRadiusDetection: 1
+  interactionRadius: 2.5
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 4095
+  enableDebugLogs: 0
 --- !u!60 &2179595542136362662
 PolygonCollider2D:
   m_ObjectHideFlags: 0

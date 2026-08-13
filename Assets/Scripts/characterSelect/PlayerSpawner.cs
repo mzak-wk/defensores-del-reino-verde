@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[DefaultExecutionOrder(-100)]
 public class PlayerSpawner : MonoBehaviour
 {
     [Header("Prefabs de los personajes (mismo orden que en el menú)")]
@@ -26,6 +27,16 @@ public class PlayerSpawner : MonoBehaviour
             );
         }
 
+        // Punto 3: Eliminar objetos Player prefijados o duplicados en la jerarquía de la escena
+        GameObject[] existingPlayers = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject existing in existingPlayers)
+        {
+            if (existing != null)
+            {
+                Destroy(existing);
+            }
+        }
+
         var prefab = playerPrefabs[idx];
         if (!prefab)
         {
@@ -36,16 +47,29 @@ public class PlayerSpawner : MonoBehaviour
         Vector3 pos = spawnPoint ? spawnPoint.position : transform.position;
         var player = Instantiate(prefab, pos, Quaternion.identity);
 
-        // (más abajo le enchufamos la cámara)
-        SetupCameraFollow(player.transform);
-    }
+        if (player != null)
+        {
+            player.tag = "Player";
 
-    void SetupCameraFollow(Transform player)
-    {
-        var cam = Camera.main;
-        if (!cam) return;
+            // Forzar transformación nativa sin volteo previo
+            player.transform.localScale = Vector3.one;
+            player.transform.rotation = Quaternion.identity;
 
-        var follow = cam.GetComponent<CameraFollow>();
-        if (follow) follow.target = player;
+            var weaponSlot = player.GetComponent<WeaponSlotManager>();
+            if (weaponSlot != null)
+            {
+                weaponSlot.RefreshWeaponAnimation();
+            }
+            else
+            {
+                var anim = player.GetComponent<Animator>();
+                if (anim != null)
+                {
+                    anim.enabled = true;
+                    anim.SetInteger("WeaponIndex", -1);
+                    anim.Update(0f);
+                }
+            }
+        }
     }
 }

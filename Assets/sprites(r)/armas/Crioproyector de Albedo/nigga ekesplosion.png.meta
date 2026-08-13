@@ -1,0 +1,873 @@
+fileFormatVersion: 2
+guid: dedbaf32b3e0b2e44a53280a5080c582
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2321540514843751243
+    second: nigga ekesplosion_0
+  - first:
+      213: -226913168237423182
+    second: nigga ekesplosion_1
+  - first:
+      213: 1906794945965800329
+    second: nigga ekesplosion_2
+  - first:
+      213: 4412241454866511234
+    second: nigga ekesplosion_3
+  - first:
+      213: 7023214337708990436
+    second: nigga ekesplosion_4
+  - first:
+      213: 3627782938341593398
+    second: nigga ekesplosion_5
+  - first:
+      213: 907121639838355972
+    second: nigga ekesplosion_6
+  - first:
+      213: 342615858042999634
+    second: nigga ekesplosion_7
+  - first:
+      213: -172024702818226573
+    second: nigga ekesplosion_8
+  - first:
+      213: -6959186522497298488
+    second: nigga ekesplosion_9
+  - first:
+      213: -1296380358743338590
+    second: nigga ekesplosion_10
+  - first:
+      213: -4286258115928337469
+    second: nigga ekesplosion_11
+  - first:
+      213: -2551209279620282057
+    second: nigga ekesplosion_12
+  - first:
+      213: -5161618565022803687
+    second: nigga ekesplosion_13
+  - first:
+      213: 8019538311273249489
+    second: nigga ekesplosion_14
+  - first:
+      213: 4771815339045478414
+    second: nigga ekesplosion_15
+  - first:
+      213: 4714192606704316205
+    second: nigga ekesplosion_16
+  - first:
+      213: 129536257837715398
+    second: nigga ekesplosion_17
+  - first:
+      213: 7705637329753543159
+    second: nigga ekesplosion_18
+  - first:
+      213: -6726884058083166103
+    second: nigga ekesplosion_19
+  - first:
+      213: -3474016624688097997
+    second: nigga ekesplosion_20
+  - first:
+      213: -8728057649255079834
+    second: nigga ekesplosion_21
+  - first:
+      213: -736344952567496116
+    second: nigga ekesplosion_22
+  - first:
+      213: -3530020977917698946
+    second: nigga ekesplosion_23
+  - first:
+      213: -5643923689434234256
+    second: nigga ekesplosion_24
+  - first:
+      213: 4524330437477898791
+    second: nigga ekesplosion_25
+  - first:
+      213: -794504284946231988
+    second: nigga ekesplosion_26
+  - first:
+      213: 6677566138284950828
+    second: nigga ekesplosion_27
+  - first:
+      213: -3518790095597177867
+    second: nigga ekesplosion_28
+  - first:
+      213: 5815529697829624381
+    second: nigga ekesplosion_29
+  - first:
+      213: -834023724117277774
+    second: nigga ekesplosion_30
+  - first:
+      213: 4559746825731770965
+    second: nigga ekesplosion_31
+  - first:
+      213: 3202035315930008688
+    second: nigga ekesplosion_32
+  - first:
+      213: -3432084037926831433
+    second: nigga ekesplosion_33
+  - first:
+      213: -3876487347216810007
+    second: nigga ekesplosion_34
+  - first:
+      213: -2466815645176484094
+    second: nigga ekesplosion_35
+  - first:
+      213: -5093056819625096400
+    second: nigga ekesplosion_36
+  - first:
+      213: 8304243301743255080
+    second: nigga ekesplosion_37
+  - first:
+      213: 6292728591491727573
+    second: nigga ekesplosion_38
+  - first:
+      213: 4305553333741007664
+    second: nigga ekesplosion_39
+  - first:
+      213: 1067973812330187471
+    second: nigga ekesplosion_40
+  - first:
+      213: -8291477671855214242
+    second: nigga ekesplosion_41
+  - first:
+      213: -5553838578011629966
+    second: nigga ekesplosion_42
+  - first:
+      213: 6942659869649737033
+    second: nigga ekesplosion_43
+  - first:
+      213: -8756867035996267389
+    second: nigga ekesplosion_44
+  - first:
+      213: 149480046515163168
+    second: nigga ekesplosion_45
+  - first:
+      213: 324992179832913058
+    second: nigga ekesplosion_46
+  - first:
+      213: 3660343699237823606
+    second: nigga ekesplosion_47
+  - first:
+      213: -7187499270127325026
+    second: nigga ekesplosion_48
+  - first:
+      213: 6891498658658296446
+    second: nigga ekesplosion_49
+  - first:
+      213: 9129524399415374401
+    second: nigga ekesplosion_50
+  - first:
+      213: 5460238416418335490
+    second: nigga ekesplosion_51
+  - first:
+      213: -6218390084208671239
+    second: nigga ekesplosion_52
+  - first:
+      213: 6452310359995040426
+    second: nigga ekesplosion_53
+  - first:
+      213: -1475160613684257992
+    second: nigga ekesplosion_54
+  - first:
+      213: -1572272681563205103
+    second: nigga ekesplosion_55
+  - first:
+      213: -3514317843864364664
+    second: nigga ekesplosion_56
+  - first:
+      213: -2956277190068298624
+    second: nigga ekesplosion_57
+  - first:
+      213: -3374355785380988709
+    second: nigga ekesplosion_58
+  - first:
+      213: 8562986060494778526
+    second: nigga ekesplosion_59
+  - first:
+      213: -6173275946143350138
+    second: nigga ekesplosion_60
+  - first:
+      213: 5592181357738163432
+    second: nigga ekesplosion_61
+  - first:
+      213: -8769581817825239676
+    second: nigga ekesplosion_62
+  - first:
+      213: -5341310048613083395
+    second: nigga ekesplosion_63
+  - first:
+      213: -1763083448541788473
+    second: nigga ekesplosion_64
+  - first:
+      213: 4445670395378344490
+    second: nigga ekesplosion_65
+  - first:
+      213: 2714985120336935071
+    second: nigga ekesplosion_66
+  - first:
+      213: 6902125396708218322
+    second: nigga ekesplosion_67
+  - first:
+      213: 2770131399157587229
+    second: nigga ekesplosion_68
+  - first:
+      213: -2867593652171817254
+    second: nigga ekesplosion_69
+  - first:
+      213: 3007710147077200520
+    second: nigga ekesplosion_70
+  - first:
+      213: 1604498566395859233
+    second: nigga ekesplosion_71
+  - first:
+      213: -7129189864693766712
+    second: nigga ekesplosion_72
+  - first:
+      213: -4474510466625422769
+    second: nigga ekesplosion_73
+  - first:
+      213: 4656244313523195618
+    second: nigga ekesplosion_74
+  - first:
+      213: -8178747108170754467
+    second: nigga ekesplosion_75
+  - first:
+      213: -6044921407872783856
+    second: nigga ekesplosion_76
+  - first:
+      213: 6929163481093990563
+    second: nigga ekesplosion_77
+  - first:
+      213: -331145505577132667
+    second: nigga ekesplosion_78
+  - first:
+      213: -8415637675429520796
+    second: nigga ekesplosion_79
+  - first:
+      213: 8520204495777981196
+    second: nigga ekesplosion_80
+  - first:
+      213: 1935617157611798194
+    second: nigga ekesplosion_81
+  - first:
+      213: -3296109326342377884
+    second: nigga ekesplosion_82
+  - first:
+      213: 3634987487552803851
+    second: nigga ekesplosion_83
+  - first:
+      213: -7543689112213202360
+    second: nigga ekesplosion_84
+  - first:
+      213: 3110457824646060333
+    second: nigga ekesplosion_85
+  - first:
+      213: -960940126404883733
+    second: nigga ekesplosion_86
+  - first:
+      213: 654797490656754834
+    second: nigga ekesplosion_87
+  - first:
+      213: -3768161302541368623
+    second: nigga ekesplosion_88
+  - first:
+      213: 73097759587910853
+    second: nigga ekesplosion_89
+  - first:
+      213: -7363817023320688258
+    second: nigga ekesplosion_90
+  - first:
+      213: 9190672778631143558
+    second: nigga ekesplosion_91
+  - first:
+      213: -4450365322270028736
+    second: nigga ekesplosion_92
+  - first:
+      213: -4107855471293255082
+    second: nigga ekesplosion_93
+  - first:
+      213: 7691247360752797692
+    second: nigga ekesplosion_94
+  - first:
+      213: -8607515276571190478
+    second: nigga ekesplosion_95
+  - first:
+      213: -4673713949062382422
+    second: nigga ekesplosion_96
+  - first:
+      213: 3556448989796140025
+    second: nigga ekesplosion_97
+  - first:
+      213: 1844593052397822892
+    second: nigga ekesplosion_98
+  - first:
+      213: 2742374460603261472
+    second: nigga ekesplosion_99
+  - first:
+      213: -10846001793757156
+    second: nigga ekesplosion_100
+  - first:
+      213: -814323055680799390
+    second: nigga ekesplosion_101
+  - first:
+      213: -2581933524658892615
+    second: nigga ekesplosion_102
+  - first:
+      213: 6550375589406708979
+    second: nigga ekesplosion_103
+  - first:
+      213: -8614914738054408262
+    second: nigga ekesplosion_104
+  - first:
+      213: -2646672534577143718
+    second: nigga ekesplosion_105
+  - first:
+      213: -3649362988297252390
+    second: nigga ekesplosion_106
+  - first:
+      213: 5602813888078831306
+    second: nigga ekesplosion_107
+  - first:
+      213: 1494814481487868537
+    second: nigga ekesplosion_108
+  - first:
+      213: -700885615847001555
+    second: nigga ekesplosion_109
+  - first:
+      213: -7765107232263281170
+    second: nigga ekesplosion_110
+  - first:
+      213: -1956622333261058931
+    second: nigga ekesplosion_111
+  - first:
+      213: -6405132308042005632
+    second: nigga ekesplosion_112
+  - first:
+      213: -3606693971486443636
+    second: nigga ekesplosion_113
+  - first:
+      213: 1328848474275439551
+    second: nigga ekesplosion_114
+  - first:
+      213: -1442755572857124592
+    second: nigga ekesplosion_115
+  - first:
+      213: 2754918321202485743
+    second: nigga ekesplosion_116
+  - first:
+      213: 7574512226027729516
+    second: nigga ekesplosion_117
+  - first:
+      213: -578446428344984949
+    second: nigga ekesplosion_118
+  - first:
+      213: 570685247509659653
+    second: nigga ekesplosion_119
+  - first:
+      213: 8582069270489591276
+    second: nigga ekesplosion_120
+  - first:
+      213: 1935315382200465047
+    second: nigga ekesplosion_121
+  - first:
+      213: 882698809081447491
+    second: nigga ekesplosion_122
+  - first:
+      213: -1891970027844403886
+    second: nigga ekesplosion_123
+  - first:
+      213: -7665918744970695233
+    second: nigga ekesplosion_124
+  - first:
+      213: 3562467075197494648
+    second: nigga ekesplosion_125
+  - first:
+      213: 8542326792249269158
+    second: nigga ekesplosion_126
+  - first:
+      213: -3132318413067268785
+    second: nigga ekesplosion_127
+  - first:
+      213: -3452235506427188876
+    second: nigga ekesplosion_128
+  - first:
+      213: -3424974135867892902
+    second: nigga ekesplosion_129
+  - first:
+      213: -5478758852714551538
+    second: nigga ekesplosion_130
+  - first:
+      213: -2211988820569553093
+    second: nigga ekesplosion_131
+  - first:
+      213: 3308111511519837503
+    second: nigga ekesplosion_132
+  - first:
+      213: 5101093294405292475
+    second: nigga ekesplosion_133
+  - first:
+      213: -2232619116546469163
+    second: nigga ekesplosion_134
+  - first:
+      213: 1364280809577207021
+    second: nigga ekesplosion_135
+  - first:
+      213: 4997754756205741738
+    second: nigga ekesplosion_136
+  - first:
+      213: 4424622183337322522
+    second: nigga ekesplosion_137
+  - first:
+      213: -3914056877660251017
+    second: nigga ekesplosion_138
+  - first:
+      213: 736023796041389239
+    second: nigga ekesplosion_139
+  - first:
+      213: -2694390291422713204
+    second: nigga ekesplosion_140
+  - first:
+      213: -6865919634120656276
+    second: nigga ekesplosion_141
+  - first:
+      213: -2370068592391375945
+    second: nigga ekesplosion_142
+  - first:
+      213: -1097111556830745979
+    second: nigga ekesplosion_143
+  - first:
+      213: -4459836152593836144
+    second: nigga ekesplosion_144
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nigga ekesplosion_0
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 315
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc8f09a33b38cfd0800000000000000
+      internalID: -2321540514843751243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nigga ekesplosion_1
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 308
+        width: 217
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5995cfca7d9dcf0800000000000000
+      internalID: -226913168237423182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nigga ekesplosion_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 26
+        width: 227
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b3dc596eb467a10800000000000000
+      internalID: 1906794945965800329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nigga ekesplosion_
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 324
+        width: 193
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2853294e93e6b3d30800000000000000
+      internalID: 4412241454866511234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nigga ekesplosion_3
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 296
+        width: 228
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef1394ca38777160800000000000000
+      internalID: 7023214337708990436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nigga ekesplosion_5
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 28
+        width: 233
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631d2129c59785230800000000000000
+      internalID: 3627782938341593398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nigga ekesplosion_6
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 32
+        width: 226
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40292a6435eb69c00800000000000000
+      internalID: 907121639838355972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nigga ekesplosion_7
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 36
+        width: 216
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2539111ce4731c400800000000000000
+      internalID: 342615858042999634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nigga ekesplosion_: 4412241454866511234
+      nigga ekesplosion_0: -2321540514843751243
+      nigga ekesplosion_1: -226913168237423182
+      nigga ekesplosion_10: -1296380358743338590
+      nigga ekesplosion_100: -10846001793757156
+      nigga ekesplosion_101: -814323055680799390
+      nigga ekesplosion_102: -2581933524658892615
+      nigga ekesplosion_103: 6550375589406708979
+      nigga ekesplosion_104: -8614914738054408262
+      nigga ekesplosion_105: -2646672534577143718
+      nigga ekesplosion_106: -3649362988297252390
+      nigga ekesplosion_107: 5602813888078831306
+      nigga ekesplosion_108: 1494814481487868537
+      nigga ekesplosion_109: -700885615847001555
+      nigga ekesplosion_11: -4286258115928337469
+      nigga ekesplosion_110: -7765107232263281170
+      nigga ekesplosion_111: -1956622333261058931
+      nigga ekesplosion_112: -6405132308042005632
+      nigga ekesplosion_113: -3606693971486443636
+      nigga ekesplosion_114: 1328848474275439551
+      nigga ekesplosion_115: -1442755572857124592
+      nigga ekesplosion_116: 2754918321202485743
+      nigga ekesplosion_117: 7574512226027729516
+      nigga ekesplosion_118: -578446428344984949
+      nigga ekesplosion_119: 570685247509659653
+      nigga ekesplosion_12: -2551209279620282057
+      nigga ekesplosion_120: 8582069270489591276
+      nigga ekesplosion_121: 1935315382200465047
+      nigga ekesplosion_122: 882698809081447491
+      nigga ekesplosion_123: -1891970027844403886
+      nigga ekesplosion_124: -7665918744970695233
+      nigga ekesplosion_125: 3562467075197494648
+      nigga ekesplosion_126: 8542326792249269158
+      nigga ekesplosion_127: -3132318413067268785
+      nigga ekesplosion_128: -3452235506427188876
+      nigga ekesplosion_129: -3424974135867892902
+      nigga ekesplosion_13: -5161618565022803687
+      nigga ekesplosion_130: -5478758852714551538
+      nigga ekesplosion_131: -2211988820569553093
+      nigga ekesplosion_132: 3308111511519837503
+      nigga ekesplosion_133: 5101093294405292475
+      nigga ekesplosion_134: -2232619116546469163
+      nigga ekesplosion_135: 1364280809577207021
+      nigga ekesplosion_136: 4997754756205741738
+      nigga ekesplosion_137: 4424622183337322522
+      nigga ekesplosion_138: -3914056877660251017
+      nigga ekesplosion_139: 736023796041389239
+      nigga ekesplosion_14: 8019538311273249489
+      nigga ekesplosion_140: -2694390291422713204
+      nigga ekesplosion_141: -6865919634120656276
+      nigga ekesplosion_142: -2370068592391375945
+      nigga ekesplosion_143: -1097111556830745979
+      nigga ekesplosion_144: -4459836152593836144
+      nigga ekesplosion_15: 4771815339045478414
+      nigga ekesplosion_16: 4714192606704316205
+      nigga ekesplosion_17: 129536257837715398
+      nigga ekesplosion_18: 7705637329753543159
+      nigga ekesplosion_19: -6726884058083166103
+      nigga ekesplosion_20: -3474016624688097997
+      nigga ekesplosion_21: -8728057649255079834
+      nigga ekesplosion_22: -736344952567496116
+      nigga ekesplosion_23: -3530020977917698946
+      nigga ekesplosion_24: -5643923689434234256
+      nigga ekesplosion_25: 4524330437477898791
+      nigga ekesplosion_26: -794504284946231988
+      nigga ekesplosion_27: 6677566138284950828
+      nigga ekesplosion_28: -3518790095597177867
+      nigga ekesplosion_29: 5815529697829624381
+      nigga ekesplosion_3: 7023214337708990436
+      nigga ekesplosion_30: -834023724117277774
+      nigga ekesplosion_31: 4559746825731770965
+      nigga ekesplosion_32: 3202035315930008688
+      nigga ekesplosion_33: -3432084037926831433
+      nigga ekesplosion_34: -3876487347216810007
+      nigga ekesplosion_35: -2466815645176484094
+      nigga ekesplosion_36: -5093056819625096400
+      nigga ekesplosion_37: 8304243301743255080
+      nigga ekesplosion_38: 6292728591491727573
+      nigga ekesplosion_39: 4305553333741007664
+      nigga ekesplosion_4: 1906794945965800329
+      nigga ekesplosion_40: 1067973812330187471
+      nigga ekesplosion_41: -8291477671855214242
+      nigga ekesplosion_42: -5553838578011629966
+      nigga ekesplosion_43: 6942659869649737033
+      nigga ekesplosion_44: -8756867035996267389
+      nigga ekesplosion_45: 149480046515163168
+      nigga ekesplosion_46: 324992179832913058
+      nigga ekesplosion_47: 3660343699237823606
+      nigga ekesplosion_48: -7187499270127325026
+      nigga ekesplosion_49: 6891498658658296446
+      nigga ekesplosion_5: 3627782938341593398
+      nigga ekesplosion_50: 9129524399415374401
+      nigga ekesplosion_51: 5460238416418335490
+      nigga ekesplosion_52: -6218390084208671239
+      nigga ekesplosion_53: 6452310359995040426
+      nigga ekesplosion_54: -1475160613684257992
+      nigga ekesplosion_55: -1572272681563205103
+      nigga ekesplosion_56: -3514317843864364664
+      nigga ekesplosion_57: -2956277190068298624
+      nigga ekesplosion_58: -3374355785380988709
+      nigga ekesplosion_59: 8562986060494778526
+      nigga ekesplosion_6: 907121639838355972
+      nigga ekesplosion_60: -6173275946143350138
+      nigga ekesplosion_61: 5592181357738163432
+      nigga ekesplosion_62: -8769581817825239676
+      nigga ekesplosion_63: -5341310048613083395
+      nigga ekesplosion_64: -1763083448541788473
+      nigga ekesplosion_65: 4445670395378344490
+      nigga ekesplosion_66: 2714985120336935071
+      nigga ekesplosion_67: 6902125396708218322
+      nigga ekesplosion_68: 2770131399157587229
+      nigga ekesplosion_69: -2867593652171817254
+      nigga ekesplosion_7: 342615858042999634
+      nigga ekesplosion_70: 3007710147077200520
+      nigga ekesplosion_71: 1604498566395859233
+      nigga ekesplosion_72: -7129189864693766712
+      nigga ekesplosion_73: -4474510466625422769
+      nigga ekesplosion_74: 4656244313523195618
+      nigga ekesplosion_75: -8178747108170754467
+      nigga ekesplosion_76: -6044921407872783856
+      nigga ekesplosion_77: 6929163481093990563
+      nigga ekesplosion_78: -331145505577132667
+      nigga ekesplosion_79: -8415637675429520796
+      nigga ekesplosion_8: -172024702818226573
+      nigga ekesplosion_80: 8520204495777981196
+      nigga ekesplosion_81: 1935617157611798194
+      nigga ekesplosion_82: -3296109326342377884
+      nigga ekesplosion_83: 3634987487552803851
+      nigga ekesplosion_84: -7543689112213202360
+      nigga ekesplosion_85: 3110457824646060333
+      nigga ekesplosion_86: -960940126404883733
+      nigga ekesplosion_87: 654797490656754834
+      nigga ekesplosion_88: -3768161302541368623
+      nigga ekesplosion_89: 73097759587910853
+      nigga ekesplosion_9: -6959186522497298488
+      nigga ekesplosion_90: -7363817023320688258
+      nigga ekesplosion_91: 9190672778631143558
+      nigga ekesplosion_92: -4450365322270028736
+      nigga ekesplosion_93: -4107855471293255082
+      nigga ekesplosion_94: 7691247360752797692
+      nigga ekesplosion_95: -8607515276571190478
+      nigga ekesplosion_96: -4673713949062382422
+      nigga ekesplosion_97: 3556448989796140025
+      nigga ekesplosion_98: 1844593052397822892
+      nigga ekesplosion_99: 2742374460603261472
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

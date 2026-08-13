@@ -1,29 +1,21 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
 public class ZoneCameraTrigger : MonoBehaviour
 {
     [Header("Zona")]
-    [Tooltip("Ancla visual colocada en el centro exacto de la sala (hijo vacío del prefab).")]
     public Transform cameraAnchor;
-
-    [Tooltip("Centro de la zona para la cámara. Se auto-calcula desde el anchor o la posición del objeto.")]
     public Vector3 zoneCenter;
+    public bool isStartZone;
 
-    [Tooltip("Duración del paneo suave (0 = snap instantáneo).")]
-    public float panDuration = 0.3f;
+    [Header("Transicion")]
+    [SerializeField] private bool isTransitionTrigger;
+    [SerializeField] private string playerTag = "Player";
 
-    [Tooltip("Si es true, la cámara hace snap inmediato al centro en Start(), sin esperar trigger.")]
-    public bool isStartZone = false;
-
-    [Header("Tags")]
-    public string playerTag = "Player";
-
-    private bool triggered = false;
-
+    private SpawnZone targetZone;
     private void Awake()
     {
         zoneCenter = cameraAnchor != null ? cameraAnchor.position : transform.position;
+        targetZone = GetComponentInParent<SpawnZone>();
     }
 
     private void Start()
@@ -37,18 +29,29 @@ public class ZoneCameraTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (triggered) return;
-        if (!other.CompareTag(playerTag)) return;
+        TryEnterZone(other);
+    }
 
-        triggered = true;
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        TryEnterZone(other);
+    }
 
+    private void TryEnterZone(Collider2D other)
+    {
+        if (!isTransitionTrigger || !other.CompareTag(playerTag) || ZoneSpawner.Instance == null)
+        {
+            return;
+        }
+
+        ZoneSpawner.Instance.TryEnterZone(targetZone, this);
+    }
+
+    public void ActivateCamera()
+    {
         if (CameraFollow.Instance != null)
         {
             CameraFollow.Instance.SetTargetZone(zoneCenter);
-            if (panDuration > 0f)
-                CameraFollow.Instance.PanToZone(panDuration);
-            else
-                CameraFollow.Instance.SnapToZone();
         }
     }
 

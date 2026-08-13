@@ -6,6 +6,9 @@ using TMPro;
 
 public class ComputerWeaponPanel : MonoBehaviour
 {
+    [Header("Navegación")]
+    [SerializeField] private Button btnBackToMainPanel;
+
     [Header("Referencias - Base de Datos & Manager")]
     [SerializeField] private WeaponDatabase weaponDatabase;
     [SerializeField] private WeaponSlotManager weaponSlotManager;
@@ -27,6 +30,11 @@ public class ComputerWeaponPanel : MonoBehaviour
 
     private void Awake()
     {
+        if (btnBackToMainPanel != null)
+        {
+            btnBackToMainPanel.onClick.AddListener(OnBackToMainClicked);
+        }
+
         if (btnPrevious != null)
         {
             btnPrevious.onClick.AddListener(OnPreviousClicked);
@@ -100,8 +108,8 @@ public class ComputerWeaponPanel : MonoBehaviour
         {
             if (weapon == null) continue;
 
-            // Filtro: Desbloqueadas por defecto O presentes en GameSession.unlockedWeapons
-            if (weapon.IsUnlockedByDefault || unlockedIds.Contains(weapon.WeaponId))
+            // Filtro: Solo armas desbloqueadas en GameSession
+            if (unlockedIds.Contains(weapon.WeaponId))
             {
                 unlockedWeapons.Add(weapon);
             }
@@ -211,11 +219,11 @@ public class ComputerWeaponPanel : MonoBehaviour
 
         if (weaponSlotManager != null)
         {
-            weaponSlotManager.EquipWeaponAtSlot(0, selectedWeapon);
+            weaponSlotManager.EquipWeapon(selectedWeapon);
         }
         else if (GameSession.Instance != null)
         {
-            GameSession.Instance.equippedWeaponId = selectedWeapon.WeaponId;
+            GameSession.Instance.EquipWeapon(selectedWeapon);
         }
 
         UpdateEquippedStatus(selectedWeapon);
@@ -240,6 +248,15 @@ public class ComputerWeaponPanel : MonoBehaviour
         {
             currentEquippedLabel.text = "No Equipada";
             if (equipButton != null) equipButton.interactable = true;
+        }
+    }
+
+    private void OnBackToMainClicked()
+    {
+        gameObject.SetActive(false);
+        if (HubUIManager.Instance != null)
+        {
+            HubUIManager.Instance.ShowMainMenu();
         }
     }
 }

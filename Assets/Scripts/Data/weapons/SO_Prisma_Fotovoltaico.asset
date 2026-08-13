@@ -15,42 +15,61 @@ MonoBehaviour:
   weaponId: 2
   displayName: Prisma Fotovoltaico
   description: 
-  icon: {fileID: 0}
-  isUnlockedByDefault: 1
-  rarity: {fileID: 11400000, guid: c785a4f6cb466ee4da37286c934c582b, type: 2}
+  icon: {fileID: -8641717035135396843, guid: e7d9979c32cbc0c47bab8d8ddccb6b5e, type: 3}
+  rarity: {fileID: 11400000, guid: 8e6296d4e57cb2f4a92bbbce3ffb095f, type: 2}
   upgradeTags: []
-  weaponPrefab: {fileID: 2596501575136268228, guid: 04c850eb459d16945bd9d8a5f9c9d875, type: 3}
-  weaponBehaviourType: 
-  weaponAnimator: {fileID: 0}
   isRanged: 1
-  attackRange: 2
-  projectilePrefab: {fileID: 2596501575136268228, guid: aee1428b43099434cbbe5a8ce98b67dd, type: 3}
+  attackRange: 10
+  basicAttackPrefab: {fileID: 808745102785148685, guid: 787dc4fefa690604786cc70527180305, type: 3}
   baseStats:
     damage: 10
     cooldown: 1
     projectileCount: 1
     projectileSpeed: 5
     areaSize: 1
-    duration: 1
+    duration: 5
     pierce: 0
     knockback: 0
     criticalChance: 0
     criticalMultiplier: 1.5
+    slashLifetime: 0.35
+    slashForwardDistance: 1.2
+    slashInitialScale: 0.5
+    slashFinalScale: 1.2
+    slashInitialAlpha: 1
+    slashFinalAlpha: 0
+    slashMaxHits: 999
+    slashDestroyOnFirstHit: 0
+    slashAnimateScaleAndFade: 1
+    slashUseUnscaledTime: 0
+    autoSquareHitbox: 1
+    slashSquareMultiplier: 1
+    slashPadding: 0.15
+    projectileMaxLifetime: 5
+    freezeExplosionPrefab: {fileID: 0}
+    areaPrefab: {fileID: 0}
+    areaDamagePerSecond: 0
+    areaDuration: 5
+    areaScaleMultiplier: 1.5
+  basicCooldown: 0.5
   skillXName: Skill X
   damageX: 20
   cooldownX: 5
   rangeX: 3
+  requiredLevelX: 5
   prefabX: {fileID: 2596501575136268228, guid: fca4ff3b8ea1f38428a84e15f485d36c, type: 3}
   skillCName: Skill C
   damageC: 40
   cooldownC: 10
   rangeC: 4
+  requiredLevelC: 10
   prefabC: {fileID: 2596501575136268228, guid: 0c6fcea99224663449049550357dea45, type: 3}
   skillVName: Ultimate V
   damageV: 100
   cooldownV: 30
   rangeV: 6
+  requiredLevelV: 5
   prefabV: {fileID: 2596501575136268228, guid: 260722ad2e463954aa46b50d52b8bfbe, type: 3}
-  uniqueUpgradePool: []
-  passiveUpgradePool: []
   maxInternalLevel: 5
+  idleStateName: 
+  weaponIndex: 2

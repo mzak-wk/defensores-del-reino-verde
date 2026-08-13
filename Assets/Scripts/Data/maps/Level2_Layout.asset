@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ad54231483e6e4bb28c7041f186d09, type: 3}
+  m_Name: Level2_Layout
+  m_EditorClassIdentifier: 
+  levelName: Ice
+  levelIndex: 1
+  columns: 6
+  rows: 1
+  cellWidth: 53
+  cellHeight: 23
+  gridOrigin: {x: 0, y: 0}
+  fixedZoneSize: {x: 48, y: 25}
+  startZonePrefab: {fileID: 1823257621239327261, guid: 415bceec0fe580c43bd74dfbc28acd46, type: 3}
+  endZonePrefab: {fileID: 1823257621239327261, guid: faffcdce84369d34d9a4f8b16786aa4f, type: 3}
+  middleZonePrefabs:
+  - {fileID: 8242680220492142346, guid: 397a1d5f48cfb6746ae4a8f4791bd339, type: 3}
+  - {fileID: 8242680220492142346, guid: 24aa0cc155c128e468ec0b271c957d0b, type: 3}
+  - {fileID: 8242680220492142346, guid: cd9a4b1cc5c36c54d84de213eb4f219a, type: 3}
+  - {fileID: 8242680220492142346, guid: 0147c92f623eb3c40911d1894a694ae1, type: 3}
