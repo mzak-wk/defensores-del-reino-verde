@@ -257,4 +257,6 @@ MonoBehaviour:
   chickenChance: 0.05
   chickenPrefab: {fileID: 0}
   chickenHeal: 30
+  sootChance: 1
+  sootPrefab: {fileID: 1887136247743303457, guid: cf07dcf8c0ee2da4a8af580984da9bf4, type: 3}
   scatterRadius: 0.6

@@ -136,6 +136,37 @@ public class GameSession : MonoBehaviour
     System.Collections.Generic.List<string> _initial_itemLevelKeys;
     System.Collections.Generic.List<int> _initial_itemLevelValues;
 
+    // Snapshot temporal que representa el estado exacto con el que se entró al nivel.
+    // No se serializa ni se guarda en disco: solo sirve para un reintento justo.
+    private LevelCheckpoint _levelCheckpoint;
+
+    private class LevelCheckpoint
+    {
+        public float playerMaxHP;
+        public float playerCurrentHP;
+        public int gold;
+        public int tempGold;
+        public float tempXP;
+        public float baseRegenPerSecond;
+        public float regenPerSecond;
+        public float totalMinutesPlayed;
+        public int playerLevel;
+        public float playerXP;
+        public float playerXpToNext;
+        public string equippedWeaponId;
+        public int equippedWeaponIndex;
+        public bool hasCompletedIntro;
+        public int highestLevelUnlocked;
+        public System.Collections.Generic.List<string> unlockedWeapons;
+        public System.Collections.Generic.List<string> unlockedItems;
+        public string[] equippedItems;
+        public System.Collections.Generic.List<string> itemLevelKeys;
+        public System.Collections.Generic.List<int> itemLevelValues;
+        public int hpLevel;
+        public int speedLevel;
+        public int resistLevel;
+    }
+
     // ==========================
     // Precios tienda
     // ==========================
@@ -608,6 +639,87 @@ public class GameSession : MonoBehaviour
 
     public void ResetToDefaults() => ResetAll();
 
+    /// <summary>
+    /// Guarda en memoria el estado con el que el jugador entra al nivel actual.
+    /// Las colecciones se copian para impedir que el progreso del intento modifique el checkpoint.
+    /// </summary>
+    public void CaptureLevelCheckpoint()
+    {
+        _levelCheckpoint = new LevelCheckpoint
+        {
+            playerMaxHP = playerMaxHP,
+            playerCurrentHP = playerCurrentHP,
+            gold = gold,
+            tempGold = tempGold,
+            tempXP = tempXP,
+            baseRegenPerSecond = baseRegenPerSecond,
+            regenPerSecond = regenPerSecond,
+            totalMinutesPlayed = totalMinutesPlayed,
+            playerLevel = playerLevel,
+            playerXP = playerXP,
+            playerXpToNext = playerXpToNext,
+            equippedWeaponId = equippedWeaponId,
+            equippedWeaponIndex = equippedWeaponIndex,
+            hasCompletedIntro = hasCompletedIntro,
+            highestLevelUnlocked = highestLevelUnlocked,
+            unlockedWeapons = new System.Collections.Generic.List<string>(unlockedWeapons),
+            unlockedItems = new System.Collections.Generic.List<string>(unlockedItems),
+            equippedItems = equippedItems != null ? (string[])equippedItems.Clone() : new string[3],
+            itemLevelKeys = new System.Collections.Generic.List<string>(itemLevelKeys),
+            itemLevelValues = new System.Collections.Generic.List<int>(itemLevelValues),
+            hpLevel = hpLevel,
+            speedLevel = speedLevel,
+            resistLevel = resistLevel
+        };
+
+        Debug.Log("[GameSession] Checkpoint de entrada al nivel capturado.");
+    }
+
+    /// <summary>Restaura el checkpoint de entrada al nivel. Devuelve false si no existe.</summary>
+    public bool RestoreLevelCheckpoint()
+    {
+        if (_levelCheckpoint == null)
+        {
+            Debug.LogWarning("[GameSession] No existe un checkpoint de nivel para restaurar.");
+            return false;
+        }
+
+        playerMaxHP = _levelCheckpoint.playerMaxHP;
+        playerCurrentHP = _levelCheckpoint.playerCurrentHP;
+        gold = _levelCheckpoint.gold;
+        tempGold = _levelCheckpoint.tempGold;
+        tempXP = _levelCheckpoint.tempXP;
+        baseRegenPerSecond = _levelCheckpoint.baseRegenPerSecond;
+        regenPerSecond = _levelCheckpoint.regenPerSecond;
+        totalMinutesPlayed = _levelCheckpoint.totalMinutesPlayed;
+        playerLevel = _levelCheckpoint.playerLevel;
+        playerXP = _levelCheckpoint.playerXP;
+        playerXpToNext = _levelCheckpoint.playerXpToNext;
+        equippedWeaponId = _levelCheckpoint.equippedWeaponId;
+        equippedWeaponIndex = _levelCheckpoint.equippedWeaponIndex;
+        equippedWeapon = null;
+        hasCompletedIntro = _levelCheckpoint.hasCompletedIntro;
+        highestLevelUnlocked = _levelCheckpoint.highestLevelUnlocked;
+        unlockedWeapons = new System.Collections.Generic.List<string>(_levelCheckpoint.unlockedWeapons);
+        unlockedItems = new System.Collections.Generic.List<string>(_levelCheckpoint.unlockedItems);
+        equippedItems = (string[])_levelCheckpoint.equippedItems.Clone();
+        itemLevelKeys = new System.Collections.Generic.List<string>(_levelCheckpoint.itemLevelKeys);
+        itemLevelValues = new System.Collections.Generic.List<int>(_levelCheckpoint.itemLevelValues);
+        hpLevel = _levelCheckpoint.hpLevel;
+        speedLevel = _levelCheckpoint.speedLevel;
+        resistLevel = _levelCheckpoint.resistLevel;
+
+        RecomputeShopMultipliers();
+        Debug.Log("[GameSession] Checkpoint de nivel restaurado para reintentar.");
+        return true;
+    }
+
+    /// <summary>Descarta el checkpoint temporal al abandonar o completar un nivel.</summary>
+    public void ClearLevelCheckpoint()
+    {
+        _levelCheckpoint = null;
+    }
+
     // ==========================
     // Detección de cambio de escena
     // ==========================
@@ -617,12 +729,14 @@ public class GameSession : MonoBehaviour
         if (scene.name == "MenuScene")
         {
             ResetAll();
+            ClearLevelCheckpoint();
             Debug.Log("[GameSession] MenuScene cargada - valores reiniciados a base.");
         }
 
         // Si se carga el HUB, curar al máximo
         if (scene.name == "LevelHUB")
         {
+            ClearLevelCheckpoint();
             FullHeal();
             var shop = FindFirstObjectByType<ShopController>();
             if (shop != null) shop.ResetRerollCost();
@@ -636,6 +750,9 @@ public class GameSession : MonoBehaviour
             slotManager.SetWeaponIndex(equippedWeaponIndex);
             Debug.Log($"[GameSession] OnSceneLoaded → WeaponSlotManager.SetWeaponIndex({equippedWeaponIndex})");
         }
+
+        if (scene.name == "LevelWoods")
+            CaptureLevelCheckpoint();
     }
 
     // ==========================

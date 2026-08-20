@@ -42,6 +42,19 @@ public class SpawnZone : MonoBehaviour
     [SerializeField] private float spawnMarginX = 3.5f;
     [SerializeField] private float spawnMarginY = 2.0f;
 
+    [Header("Dispersión de Enemigos")]
+    [Tooltip("Distancia mínima entre enemigos al spawnear. Evita apilamiento visual.")]
+    [SerializeField] private float minEnemySeparation = 1.8f;
+
+    [Tooltip("Radio de dispersión mínima alrededor de un Spawn Anchor.")]
+    [SerializeField] private float anchorMinDispersion = 1.0f;
+
+    [Tooltip("Radio de dispersión máxima alrededor de un Spawn Anchor.")]
+    [SerializeField] private float anchorMaxDispersion = 2.5f;
+
+    [Tooltip("LayerMask de obstáculos y enemigos para verificar solapamiento al spawnear.")]
+    [SerializeField] private LayerMask obstacleAndEnemyLayers;
+
     [Header("Comportamiento")]
     public float despawnDelay = 7f;
     public float leashDistance = 15f;
@@ -54,12 +67,14 @@ public class SpawnZone : MonoBehaviour
     public bool IsEncounterActive => encounterStarted && !isCleared;
     public bool IsBossZone => isBossZone;
     public event System.Action OnZoneCleared;
+    public event System.Action<SpawnZone> OnEncounterCompleted;
 
     private int currentWave;
     private bool isCleared;
     private bool encounterStarted;
     private Collider2D zoneCollider;
     private Bounds bounds;
+    private ZoneMetadata metadata;
 
     private void Awake()
     {
@@ -74,7 +89,20 @@ public class SpawnZone : MonoBehaviour
             Debug.LogWarning($"[SpawnZone] {name} no tiene un Collider2D adjunto.");
         }
 
+        metadata = GetComponent<ZoneMetadata>();
+
         maxWaves = Mathf.Max(1, maxWaves);
+
+        // Auto-inicializar la LayerMask si no fue configurada en el Inspector
+        if (obstacleAndEnemyLayers.value == 0)
+        {
+            obstacleAndEnemyLayers = LayerMask.GetMask("Enemy", "Wall", "Default");
+            if (obstacleAndEnemyLayers.value == 0)
+            {
+                obstacleAndEnemyLayers = LayerMask.GetMask("Enemy");
+            }
+        }
+
         SetCombatBarriers(false);
         SetCameraTransitionEnabled(true);
         OnZoneCleared?.Invoke();
@@ -137,6 +165,7 @@ public class SpawnZone : MonoBehaviour
         activeEnemyCount = 0;
         SetCombatBarriers(false);
         SetCameraTransitionEnabled(true);
+        OnEncounterCompleted?.Invoke(this);
     }
 
     /// <summary>
@@ -176,44 +205,171 @@ public class SpawnZone : MonoBehaviour
         return enemyTable[enemyTable.Length - 1].enemyData;
     }
 
-    public Vector2 GetRandomPointInZone()
+    /// <summary>
+    /// Calcula una posición de spawn única e independiente para un enemigo de la oleada.
+    /// Soporta Spawn Anchors con dispersión radial y fallback a Bounds de la zona,
+    /// validando distancia en memoria contra la oleada actual y detección de obstáculos mediante Physics2D.
+    /// </summary>
+    public Vector2 GetEnemySpawnPoint(int enemyIndexInWave, System.Collections.Generic.List<Vector2> waveAssignedPositions, Camera cam = null)
     {
         if (zoneCollider == null) zoneCollider = GetComponent<Collider2D>();
-        if (zoneCollider == null) return transform.position;
+        if (metadata == null) metadata = GetComponent<ZoneMetadata>();
 
-        bounds = zoneCollider.bounds;
-        float minX = bounds.min.x + spawnMarginX;
-        float maxX = bounds.max.x - spawnMarginX;
-        float minY = bounds.min.y + spawnMarginY;
-        float maxY = bounds.max.y - spawnMarginY;
-
-        if (minX >= maxX) { minX = bounds.center.x; maxX = bounds.center.x; }
-        if (minY >= maxY) { minY = bounds.center.y; maxY = bounds.center.y; }
-
-        for (int i = 0; i < 30; i++)
+        // 1. Filtrar anchors válidos configurados en ZoneMetadata
+        System.Collections.Generic.List<Transform> validAnchors = new System.Collections.Generic.List<Transform>();
+        if (metadata != null && metadata.spawnAnchors != null)
         {
-            Vector2 point = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-            if (zoneCollider.OverlapPoint(point)) return point;
+            for (int a = 0; a < metadata.spawnAnchors.Length; a++)
+            {
+                if (metadata.spawnAnchors[a] != null)
+                {
+                    validAnchors.Add(metadata.spawnAnchors[a]);
+                }
+            }
         }
 
-        return bounds.center;
+        // ====================================================
+        // MODO A: Spawn basado en Spawn Anchors con Dispersión
+        // ====================================================
+        if (validAnchors.Count > 0)
+        {
+            // Distribuir de forma balanceada o round-robin entre los anchors disponibles
+            Transform anchor = validAnchors[enemyIndexInWave % validAnchors.Count];
+            Vector2 anchorPos = anchor.position;
+
+            for (int attempt = 0; attempt < 15; attempt++)
+            {
+                // Dispersión obligatoria radial alrededor del anchor
+                float distance = Random.Range(anchorMinDispersion, anchorMaxDispersion);
+                Vector2 offset = Random.insideUnitCircle.normalized * distance;
+                Vector2 candidate = anchorPos + offset;
+
+                // Confinamiento dentro de los bounds del collider de la zona
+                if (zoneCollider != null)
+                {
+                    Bounds b = zoneCollider.bounds;
+                    candidate.x = Mathf.Clamp(candidate.x, b.min.x + 0.5f, b.max.x - 0.5f);
+                    candidate.y = Mathf.Clamp(candidate.y, b.min.y + 0.5f, b.max.y - 0.5f);
+                }
+
+                // Validación 1: Distancia mínima en memoria contra las posiciones ya asignadas en esta oleada
+                if (!IsSeparatedFromWave(candidate, waveAssignedPositions))
+                    continue;
+
+                // Validación 2: Chequeo de colisión física (muros, obstáculos u otros enemigos)
+                if (IsCollidingWithObstacle(candidate))
+                    continue;
+
+                waveAssignedPositions?.Add(candidate);
+                return candidate;
+            }
+
+            // Fallback con jitter angular si se agotaron los intentos para evitar el mismo punto exacto
+            float fallbackAngle = (enemyIndexInWave * 45f) * Mathf.Deg2Rad;
+            Vector2 fallbackOffset = new Vector2(Mathf.Cos(fallbackAngle), Mathf.Sin(fallbackAngle)) * anchorMinDispersion;
+            Vector2 fallbackPoint = anchorPos + fallbackOffset;
+            if (zoneCollider != null)
+            {
+                Bounds b = zoneCollider.bounds;
+                fallbackPoint.x = Mathf.Clamp(fallbackPoint.x, b.min.x + 0.5f, b.max.x - 0.5f);
+                fallbackPoint.y = Mathf.Clamp(fallbackPoint.y, b.min.y + 0.5f, b.max.y - 0.5f);
+            }
+            waveAssignedPositions?.Add(fallbackPoint);
+            return fallbackPoint;
+        }
+
+        // ====================================================
+        // MODO B: Spawn basado en Bounds del Collider de la Zona
+        // ====================================================
+        if (zoneCollider != null)
+        {
+            bounds = zoneCollider.bounds;
+            float minX = bounds.min.x + spawnMarginX;
+            float maxX = bounds.max.x - spawnMarginX;
+            float minY = bounds.min.y + spawnMarginY;
+            float maxY = bounds.max.y - spawnMarginY;
+
+            if (minX >= maxX) { minX = bounds.center.x - 1f; maxX = bounds.center.x + 1f; }
+            if (minY >= maxY) { minY = bounds.center.y - 1f; maxY = bounds.center.y + 1f; }
+
+            Bounds camBounds = default;
+            bool checkCamera = false;
+            if (cam != null)
+            {
+                float height = cam.orthographicSize * 2f;
+                camBounds = new Bounds(cam.transform.position, new Vector3(height * cam.aspect, height, 0f));
+                camBounds.Expand(new Vector3(4f, 4f, 0f));
+                checkCamera = true;
+            }
+
+            Vector2 bestCandidate = bounds.center;
+
+            for (int attempt = 0; attempt < 20; attempt++)
+            {
+                Vector2 candidate = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+
+                // Preferir puntos fuera de la cámara si la cámara está activa
+                if (checkCamera && camBounds.Contains(candidate))
+                    continue;
+
+                // Validación 1: Distancia en memoria contra la oleada
+                if (!IsSeparatedFromWave(candidate, waveAssignedPositions))
+                    continue;
+
+                // Validación 2: Chequeo de colisión física
+                if (IsCollidingWithObstacle(candidate))
+                    continue;
+
+                waveAssignedPositions?.Add(candidate);
+                return candidate;
+            }
+
+            // Fallback en bounds con offset por índice
+            float fallbackAngle = (enemyIndexInWave * 60f) * Mathf.Deg2Rad;
+            Vector2 finalPoint = bestCandidate + new Vector2(Mathf.Cos(fallbackAngle), Mathf.Sin(fallbackAngle)) * minEnemySeparation;
+            waveAssignedPositions?.Add(finalPoint);
+            return finalPoint;
+        }
+
+        Vector2 transformFallback = (Vector2)transform.position + Random.insideUnitCircle * minEnemySeparation;
+        waveAssignedPositions?.Add(transformFallback);
+        return transformFallback;
+    }
+
+    private bool IsSeparatedFromWave(Vector2 candidate, System.Collections.Generic.List<Vector2> waveAssignedPositions)
+    {
+        if (waveAssignedPositions == null || waveAssignedPositions.Count == 0 || minEnemySeparation <= 0f)
+            return true;
+
+        float minSqr = minEnemySeparation * minEnemySeparation;
+        for (int i = 0; i < waveAssignedPositions.Count; i++)
+        {
+            if ((candidate - waveAssignedPositions[i]).sqrMagnitude < minSqr)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private bool IsCollidingWithObstacle(Vector2 position)
+    {
+        if (obstacleAndEnemyLayers.value == 0)
+            return false;
+
+        Collider2D hit = Physics2D.OverlapCircle(position, 0.6f, obstacleAndEnemyLayers);
+        return hit != null;
+    }
+
+    public Vector2 GetRandomPointInZone()
+    {
+        return GetEnemySpawnPoint(0, null, null);
     }
 
     public Vector2 GetRandomOffscreenPoint(Camera cam, float padding = 2f)
     {
-        if (cam == null) return GetRandomPointInZone();
-
-        float height = cam.orthographicSize * 2f;
-        Bounds camBounds = new Bounds(cam.transform.position, new Vector3(height * cam.aspect, height, 0f));
-        camBounds.Expand(new Vector3(padding * 2f, padding * 2f, 0f));
-
-        for (int i = 0; i < 30; i++)
-        {
-            Vector2 point = GetRandomPointInZone();
-            if (!camBounds.Contains(point)) return point;
-        }
-
-        return GetRandomPointInZone();
+        return GetEnemySpawnPoint(0, null, cam);
     }
 
     private void SetCameraTransitionEnabled(bool enabled)
