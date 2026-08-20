@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: db4e74490524d0343b50375fb84b793a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 328999555886472369
+    second: Pausa globo_0
+  - first:
+      213: -5345482460339627034
+    second: Pausa globo_1
+  - first:
+      213: -215186728244045211
+    second: Pausa globo_2
+  - first:
+      213: -4526676089569787795
+    second: Pausa globo_3
+  - first:
+      213: -1561535367315838361
+    second: Pausa globo_4
+  - first:
+      213: -2988227742324064926
+    second: Pausa globo_5
+  - first:
+      213: 9014534655240529759
+    second: Pausa globo_6
+  - first:
+      213: 2222127734256156970
+    second: Pausa globo_7
+  - first:
+      213: 487762456546284518
+    second: Pausa globo_8
+  - first:
+      213: -5371033940899335955
+    second: Pausa globo_9
+  - first:
+      213: 4684334355902164298
+    second: Pausa globo_10
+  - first:
+      213: 625219328073578388
+    second: Pausa globo_11
+  - first:
+      213: 4183636596609096641
+    second: Pausa globo_12
+  - first:
+      213: -6820135863634305190
+    second: Pausa globo_13
+  - first:
+      213: 8488271111645043152
+    second: Pausa globo_14
+  - first:
+      213: 343400086954556994
+    second: Pausa globo_15
+  - first:
+      213: 5714468073033401893
+    second: Pausa globo_16
+  - first:
+      213: 4954559824974208077
+    second: Pausa globo_17
+  - first:
+      213: -7936038389570088072
+    second: Pausa globo_18
+  - first:
+      213: -444362767285289269
+    second: Pausa globo_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pausa globo_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 296
+        width: 212
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bcdfdb5a57d09400800000000000000
+      internalID: 328999555886472369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_1
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 296
+        width: 213
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb106e160801d5b0800000000000000
+      internalID: -5345482460339627034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_2
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 507
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a92ae8fc0830df0800000000000000
+      internalID: -215186728244045211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_3
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 297
+        width: 213
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6040f374140e21c0800000000000000
+      internalID: -4526676089569787795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_4
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 296
+        width: 212
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a2ee65bdf445ae0800000000000000
+      internalID: -1561535367315838361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_5
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 507
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d7ece53bea786d0800000000000000
+      internalID: -2988227742324064926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_6
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 455
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f576f05028f0a1d70800000000000000
+      internalID: 9014534655240529759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_7
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 432
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21c1e5a66596de10800000000000000
+      internalID: 2222127734256156970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_8
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 362
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e39635be51e4c600800000000000000
+      internalID: 487762456546284518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_9
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 358
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0f02476114675b0800000000000000
+      internalID: -5371033940899335955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_10
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 358
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4de4bc2749120140800000000000000
+      internalID: 4684334355902164298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_11
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 359
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497b8849aa93da800800000000000000
+      internalID: 625219328073578388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_12
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 347
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb953a91534f0a30800000000000000
+      internalID: 4183636596609096641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_13
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 30
+        width: 212
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5fdc2011920a51a0800000000000000
+      internalID: -6820135863634305190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_14
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 31
+        width: 212
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d910de6a956cc570800000000000000
+      internalID: 8488271111645043152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_15
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 32
+        width: 212
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24eb3c64f8004c400800000000000000
+      internalID: 343400086954556994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_16
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52687759f6edd4f40800000000000000
+      internalID: 5714468073033401893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_17
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 30
+        width: 213
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c520219e122c440800000000000000
+      internalID: 4954559824974208077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_18
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 89
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873dfc1b1278dd190800000000000000
+      internalID: -7936038389570088072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pausa globo_19
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 94
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcefc80ea6e45d9f0800000000000000
+      internalID: -444362767285289269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Pausa globo_0: 328999555886472369
+      Pausa globo_1: -5345482460339627034
+      Pausa globo_10: 4684334355902164298
+      Pausa globo_11: 625219328073578388
+      Pausa globo_12: 4183636596609096641
+      Pausa globo_13: -6820135863634305190
+      Pausa globo_14: 8488271111645043152
+      Pausa globo_15: 343400086954556994
+      Pausa globo_16: 5714468073033401893
+      Pausa globo_17: 4954559824974208077
+      Pausa globo_18: -7936038389570088072
+      Pausa globo_19: -444362767285289269
+      Pausa globo_2: -215186728244045211
+      Pausa globo_3: -4526676089569787795
+      Pausa globo_4: -1561535367315838361
+      Pausa globo_5: -2988227742324064926
+      Pausa globo_6: 9014534655240529759
+      Pausa globo_7: 2222127734256156970
+      Pausa globo_8: 487762456546284518
+      Pausa globo_9: -5371033940899335955
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

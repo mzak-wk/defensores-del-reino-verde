@@ -1,0 +1,1573 @@
+fileFormatVersion: 2
+guid: 79c317da8588cba40b5cd0651f09ff10
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5891077241605318107
+    second: muerte texto_0
+  - first:
+      213: -3105548903563692574
+    second: muerte texto_1
+  - first:
+      213: 3363315753411970641
+    second: muerte texto_2
+  - first:
+      213: 6479837637152386765
+    second: muerte texto_3
+  - first:
+      213: 4368626673791032120
+    second: muerte texto_4
+  - first:
+      213: 4378043925889172828
+    second: muerte texto_5
+  - first:
+      213: 4128819126470113386
+    second: muerte texto_6
+  - first:
+      213: -3235824966945346416
+    second: muerte texto_7
+  - first:
+      213: -1659484225288564003
+    second: muerte texto_8
+  - first:
+      213: -590981944721635527
+    second: muerte texto_9
+  - first:
+      213: 5153644665378759422
+    second: muerte texto_10
+  - first:
+      213: -4366186547737032864
+    second: muerte texto_11
+  - first:
+      213: -8095454031716311506
+    second: muerte texto_12
+  - first:
+      213: -7009261951252664253
+    second: muerte texto_13
+  - first:
+      213: 3191451236377026054
+    second: muerte texto_14
+  - first:
+      213: 6722725115286637002
+    second: muerte texto_15
+  - first:
+      213: 5000302362755804834
+    second: muerte texto_16
+  - first:
+      213: -4714171178887038714
+    second: muerte texto_17
+  - first:
+      213: -8449512442429558454
+    second: muerte texto_18
+  - first:
+      213: -1296674020152091759
+    second: muerte texto_19
+  - first:
+      213: 9209803454521229796
+    second: muerte texto_20
+  - first:
+      213: 8213898769827581533
+    second: muerte texto_21
+  - first:
+      213: -9170659670534451080
+    second: muerte texto_22
+  - first:
+      213: 4830726554481905927
+    second: muerte texto_23
+  - first:
+      213: 2304486119196893604
+    second: muerte texto_24
+  - first:
+      213: 1707258689691923822
+    second: muerte texto_25
+  - first:
+      213: -2916531986286474845
+    second: muerte texto_26
+  - first:
+      213: 8389786271833288660
+    second: muerte texto_27
+  - first:
+      213: -7367680775127106060
+    second: muerte texto_28
+  - first:
+      213: 6273742131800129458
+    second: muerte texto_29
+  - first:
+      213: 947330150143941754
+    second: muerte texto_30
+  - first:
+      213: -6731511271363315032
+    second: muerte texto_31
+  - first:
+      213: -7040988656952096037
+    second: muerte texto_32
+  - first:
+      213: -3437042879986580666
+    second: muerte texto_33
+  - first:
+      213: -5313542112269123450
+    second: muerte texto_34
+  - first:
+      213: -7172647579417862818
+    second: muerte texto_35
+  - first:
+      213: 141578015883308452
+    second: muerte texto_36
+  - first:
+      213: 4409145106957863801
+    second: muerte texto_37
+  - first:
+      213: 7276893649414132986
+    second: muerte texto_38
+  - first:
+      213: 3023713663639818479
+    second: muerte texto_39
+  - first:
+      213: 544027102562426052
+    second: muerte texto_40
+  - first:
+      213: -7637121820728238435
+    second: muerte texto_41
+  - first:
+      213: 1961925795783910693
+    second: muerte texto_42
+  - first:
+      213: -101434316732323723
+    second: muerte texto_43
+  - first:
+      213: -3068480656881895158
+    second: muerte texto_44
+  - first:
+      213: -7249436465012162218
+    second: muerte texto_45
+  - first:
+      213: -4376171412972409807
+    second: muerte texto_46
+  - first:
+      213: -695461543796307603
+    second: muerte texto_47
+  - first:
+      213: 6409835870957953219
+    second: muerte texto_48
+  - first:
+      213: -6323521710607706164
+    second: muerte texto_49
+  - first:
+      213: -8592650698344722449
+    second: muerte texto_50
+  - first:
+      213: 8941178407705544935
+    second: muerte texto_51
+  - first:
+      213: -2397473811229672522
+    second: muerte texto_52
+  - first:
+      213: 5257190274078650580
+    second: muerte texto_53
+  - first:
+      213: -6991181240526688100
+    second: muerte texto_54
+  - first:
+      213: -5687829423123391928
+    second: muerte texto_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: muerte texto_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1687
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a1ab50670be3ea0800000000000000
+      internalID: -5891077241605318107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1582
+        width: 1002
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e57b72e9bfd6e4d0800000000000000
+      internalID: -3105548903563692574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_2
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1695
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156889dabd5ecae20800000000000000
+      internalID: 3363315753411970641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_3
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1360
+        width: 529
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dceaca4dff10de950800000000000000
+      internalID: 6479837637152386765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_4
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 1530
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b5c9750da70ac30800000000000000
+      internalID: 4368626673791032120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_5
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 1522
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c554ea531cfe1cc30800000000000000
+      internalID: 4378043925889172828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_6
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1530
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68f61fbe138c4930800000000000000
+      internalID: 4128819126470113386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_7
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1493
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ce1e1365a0813d0800000000000000
+      internalID: -3235824966945346416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_8
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 1361
+        width: 455
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd29f41b3e358f8e0800000000000000
+      internalID: -1659484225288564003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_9
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1480
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937823c6d096cc7f0800000000000000
+      internalID: -590981944721635527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_10
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1483
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2ec7a948c658740800000000000000
+      internalID: 5153644665378759422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_11
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1481
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0678b07c7703863c0800000000000000
+      internalID: -4366186547737032864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_12
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1474
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e9b00237b27af80800000000000000
+      internalID: -8095454031716311506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_13
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1433
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3407ce954691abe90800000000000000
+      internalID: -7009261951252664253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_14
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1417
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60edb3e8dff4a4c20800000000000000
+      internalID: 3191451236377026054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_15
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1401
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9c143bfdaeb4d50800000000000000
+      internalID: 6722725115286637002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_16
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1140
+        width: 525
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae2b959184a46540800000000000000
+      internalID: 5000302362755804834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_17
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1310
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 609bd002a46e39eb0800000000000000
+      internalID: -4714171178887038714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_18
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 1302
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a413eb7733d4dba80800000000000000
+      internalID: -8449512442429558454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_19
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1310
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b5b5749d9410ee0800000000000000
+      internalID: -1296674020152091759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_20
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1273
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e147ed327bcfcf70800000000000000
+      internalID: 9209803454521229796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_21
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 1141
+        width: 450
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e479c7961adf170800000000000000
+      internalID: 8213898769827581533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_22
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1260
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8701bcd2e954bb080800000000000000
+      internalID: -9170659670534451080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_23
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1263
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701d0fef4303a0340800000000000000
+      internalID: 4830726554481905927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_24
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 1261
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1ac8c6aed2bff10800000000000000
+      internalID: 2304486119196893604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_25
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1254
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6539ca9bb661b710800000000000000
+      internalID: 1707258689691923822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_26
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1213
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a984556c956687d0800000000000000
+      internalID: -2916531986286474845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_27
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 1213
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df621ac9228e6470800000000000000
+      internalID: 8389786271833288660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_28
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1197
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fdf214ee5db0c990800000000000000
+      internalID: -7367680775127106060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_29
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 1190
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf395aaa3fc01750800000000000000
+      internalID: 6273742131800129458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_30
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1181
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cd85c90c7952d00800000000000000
+      internalID: 947330150143941754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_31
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1017
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aaf9dce92ed492a0800000000000000
+      internalID: -6731511271363315032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_32
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 912
+        width: 1004
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdac0da0f12694e90800000000000000
+      internalID: -7040988656952096037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_33
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1025
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6434d9cf5bb2d40d0800000000000000
+      internalID: -3437042879986580666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_34
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 787
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680ce1be9918246b0800000000000000
+      internalID: -5313542112269123450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_35
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 682
+        width: 1004
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5d9bb16703a57c90800000000000000
+      internalID: -7172647579417862818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_36
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 795
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4adaab0947cf6f100800000000000000
+      internalID: 141578015883308452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_37
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 464
+        width: 529
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b00673d1e603d30800000000000000
+      internalID: 4409145106957863801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_38
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 634
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af410a13838bcf460800000000000000
+      internalID: 7276893649414132986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_39
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 626
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe01fb78e8366f920800000000000000
+      internalID: 3023713663639818479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_40
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 634
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc1b6474c5cc8700800000000000000
+      internalID: 544027102562426052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_41
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 597
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9edb11da2e730690800000000000000
+      internalID: -7637121820728238435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_42
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 465
+        width: 455
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5252065dd192a3b10800000000000000
+      internalID: 1961925795783910693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_43
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 584
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578a22fb602a79ef0800000000000000
+      internalID: -101434316732323723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_44
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 587
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09b56e99119a65d0800000000000000
+      internalID: -3068480656881895158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_45
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 585
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651cf29b1f3d46b90800000000000000
+      internalID: -7249436465012162218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_46
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 578
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c6f8d2947b443c0800000000000000
+      internalID: -4376171412972409807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_47
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 537
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69831f19693956f0800000000000000
+      internalID: -695461543796307603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_48
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 521
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0610d83cf44f850800000000000000
+      internalID: 6409835870957953219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_49
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 505
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7d1c5f1865e38a0800000000000000
+      internalID: -6323521710607706164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_50
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 345
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef862637b5c0c880800000000000000
+      internalID: -8592650698344722449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_51
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 1002
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e88ea0b362751c70800000000000000
+      internalID: 8941178407705544935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_52
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 353
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb7a5365467abed0800000000000000
+      internalID: -2397473811229672522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_53
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 140
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0b81353ba45f840800000000000000
+      internalID: 5257190274078650580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_54
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 35
+        width: 1004
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90380ed3b55afe90800000000000000
+      internalID: -6991181240526688100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte texto_55
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 148
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a17bb6645c011b0800000000000000
+      internalID: -5687829423123391928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      muerte texto_0: -5891077241605318107
+      muerte texto_1: -3105548903563692574
+      muerte texto_10: 5153644665378759422
+      muerte texto_11: -4366186547737032864
+      muerte texto_12: -8095454031716311506
+      muerte texto_13: -7009261951252664253
+      muerte texto_14: 3191451236377026054
+      muerte texto_15: 6722725115286637002
+      muerte texto_16: 5000302362755804834
+      muerte texto_17: -4714171178887038714
+      muerte texto_18: -8449512442429558454
+      muerte texto_19: -1296674020152091759
+      muerte texto_2: 3363315753411970641
+      muerte texto_20: 9209803454521229796
+      muerte texto_21: 8213898769827581533
+      muerte texto_22: -9170659670534451080
+      muerte texto_23: 4830726554481905927
+      muerte texto_24: 2304486119196893604
+      muerte texto_25: 1707258689691923822
+      muerte texto_26: -2916531986286474845
+      muerte texto_27: 8389786271833288660
+      muerte texto_28: -7367680775127106060
+      muerte texto_29: 6273742131800129458
+      muerte texto_3: 6479837637152386765
+      muerte texto_30: 947330150143941754
+      muerte texto_31: -6731511271363315032
+      muerte texto_32: -7040988656952096037
+      muerte texto_33: -3437042879986580666
+      muerte texto_34: -5313542112269123450
+      muerte texto_35: -7172647579417862818
+      muerte texto_36: 141578015883308452
+      muerte texto_37: 4409145106957863801
+      muerte texto_38: 7276893649414132986
+      muerte texto_39: 3023713663639818479
+      muerte texto_4: 4368626673791032120
+      muerte texto_40: 544027102562426052
+      muerte texto_41: -7637121820728238435
+      muerte texto_42: 1961925795783910693
+      muerte texto_43: -101434316732323723
+      muerte texto_44: -3068480656881895158
+      muerte texto_45: -7249436465012162218
+      muerte texto_46: -4376171412972409807
+      muerte texto_47: -695461543796307603
+      muerte texto_48: 6409835870957953219
+      muerte texto_49: -6323521710607706164
+      muerte texto_5: 4378043925889172828
+      muerte texto_50: -8592650698344722449
+      muerte texto_51: 8941178407705544935
+      muerte texto_52: -2397473811229672522
+      muerte texto_53: 5257190274078650580
+      muerte texto_54: -6991181240526688100
+      muerte texto_55: -5687829423123391928
+      muerte texto_6: 4128819126470113386
+      muerte texto_7: -3235824966945346416
+      muerte texto_8: -1659484225288564003
+      muerte texto_9: -590981944721635527
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

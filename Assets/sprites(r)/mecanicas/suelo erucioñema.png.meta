@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: abc3e97580051404abbebc2c9db75e4f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3282535262786701739
+    second: "suelo erucio\xF1ema_0"
+  - first:
+      213: -991396875322854094
+    second: "suelo erucio\xF1ema_1"
+  - first:
+      213: -4594431448499584348
+    second: "suelo erucio\xF1ema_2"
+  - first:
+      213: 5495368900004819520
+    second: "suelo erucio\xF1ema_3"
+  - first:
+      213: 4587803748125476666
+    second: "suelo erucio\xF1ema_4"
+  - first:
+      213: -5995763550877266944
+    second: "suelo erucio\xF1ema_5"
+  - first:
+      213: -2719815668248649835
+    second: "suelo erucio\xF1ema_6"
+  - first:
+      213: -5543170567966231471
+    second: "suelo erucio\xF1ema_7"
+  - first:
+      213: 7874345788856662922
+    second: "suelo erucio\xF1ema_8"
+  - first:
+      213: 2829682433903312936
+    second: "suelo erucio\xF1ema_9"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "suelo erucio\xF1ema_0"
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 177
+        width: 305
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556b7e2f1971272d0800000000000000
+      internalID: -3282535262786701739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "suelo erucio\xF1ema_1"
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 309
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235f2f66bc9dd32f0800000000000000
+      internalID: -991396875322854094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "suelo erucio\xF1ema_2"
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 169
+        width: 308
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a28c4f90fc4d30c0800000000000000
+      internalID: -4594431448499584348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "suelo erucio\xF1ema_3"
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 178
+        width: 305
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042348a16e8734c40800000000000000
+      internalID: 5495368900004819520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "suelo erucio\xF1ema_4"
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 288
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a378932a3372baf30800000000000000
+      internalID: 4587803748125476666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "suelo erucio\xF1ema_5"
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 275
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00cc9b041d4cacca0800000000000000
+      internalID: -5995763550877266944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "suelo erucio\xF1ema_6"
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 9
+        width: 313
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59f5f775f06414ad0800000000000000
+      internalID: -2719815668248649835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "suelo erucio\xF1ema_7"
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 156
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 154f8f6ccb3b213b0800000000000000
+      internalID: -5543170567966231471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "suelo erucio\xF1ema_8"
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 9
+        width: 306
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8bf46f56cb474d60800000000000000
+      internalID: 7874345788856662922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "suelo erucio\xF1ema_9"
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 9
+        width: 312
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82048fb6e2d054720800000000000000
+      internalID: 2829682433903312936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "suelo erucio\xF1ema_0": -3282535262786701739
+      "suelo erucio\xF1ema_1": -991396875322854094
+      "suelo erucio\xF1ema_2": -4594431448499584348
+      "suelo erucio\xF1ema_3": 5495368900004819520
+      "suelo erucio\xF1ema_4": 4587803748125476666
+      "suelo erucio\xF1ema_5": -5995763550877266944
+      "suelo erucio\xF1ema_6": -2719815668248649835
+      "suelo erucio\xF1ema_7": -5543170567966231471
+      "suelo erucio\xF1ema_8": 7874345788856662922
+      "suelo erucio\xF1ema_9": 2829682433903312936
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: 040e02ddb51ea0645910bb51f8efef81
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8988879180213754143
+    second: Vortice walk_0
+  - first:
+      213: 4906992230394138535
+    second: Vortice walk_1
+  - first:
+      213: 5856669134255610770
+    second: Vortice walk_2
+  - first:
+      213: -5110819250537747212
+    second: Vortice walk_3
+  - first:
+      213: -4658800987817278113
+    second: Vortice walk_4
+  - first:
+      213: -3382298938486570807
+    second: Vortice walk_5
+  - first:
+      213: 5304056297462241528
+    second: Vortice walk_6
+  - first:
+      213: 213416289486656877
+    second: Vortice walk_7
+  - first:
+      213: -8254751382995864294
+    second: Vortice walk_8
+  - first:
+      213: 3289349572783839451
+    second: Vortice walk_9
+  - first:
+      213: -6258499062953412450
+    second: Vortice walk_10
+  - first:
+      213: -7696825126040705391
+    second: Vortice walk_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Vortice walk_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 456
+        height: 510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6647eb206114380800000000000000
+      internalID: -8988879180213754143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice walk_1
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 0
+        width: 456
+        height: 508
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af8e386f63291440800000000000000
+      internalID: 4906992230394138535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice walk_2
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 0
+        width: 448
+        height: 508
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29bdc423c81174150800000000000000
+      internalID: 5856669134255610770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice walk_3
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 0
+        width: 428
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fc287c48f8b219b0800000000000000
+      internalID: -5110819250537747212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice walk_4
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 0
+        width: 412
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5589e95f2d985fb0800000000000000
+      internalID: -4658800987817278113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice walk_5
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 0
+        width: 398
+        height: 508
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c0c35f1909af01d0800000000000000
+      internalID: -3382298938486570807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice walk_7
+      rect:
+        serializedVersion: 2
+        x: 3097
+        y: 2
+        width: 417
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65522c0cf436f200800000000000000
+      internalID: 213416289486656877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice walk_8
+      rect:
+        serializedVersion: 2
+        x: 3628
+        y: 0
+        width: 408
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15fd5b4a5b317d80800000000000000
+      internalID: -8254751382995864294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0a50fdfa784b0634d8dc0c7325d789c0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Vortice walk_0: -8988879180213754143
+      Vortice walk_1: 4906992230394138535
+      Vortice walk_10: -6258499062953412450
+      Vortice walk_11: -7696825126040705391
+      Vortice walk_2: 5856669134255610770
+      Vortice walk_3: -5110819250537747212
+      Vortice walk_4: -4658800987817278113
+      Vortice walk_5: -3382298938486570807
+      Vortice walk_6: 5304056297462241528
+      Vortice walk_7: 213416289486656877
+      Vortice walk_8: -8254751382995864294
+      Vortice walk_9: 3289349572783839451
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 729c46270cc8efd4aa76d09d0d0d7a02
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6135137482280123779
+    second: niggarayodelanasa_0
+  - first:
+      213: -3013709710387117443
+    second: niggarayodelanasa_1
+  - first:
+      213: -7598297108441463135
+    second: niggarayodelanasa_2
+  - first:
+      213: -6859832413181078140
+    second: niggarayodelanasa_3
+  - first:
+      213: -3091127375303738801
+    second: niggarayodelanasa_4
+  - first:
+      213: -5141043745616500230
+    second: niggarayodelanasa_5
+  - first:
+      213: 8975478952751005944
+    second: niggarayodelanasa_6
+  - first:
+      213: -565497731677982314
+    second: niggarayodelanasa_7
+  - first:
+      213: -2589572877091943339
+    second: niggarayodelanasa_8
+  - first:
+      213: 4774685014609052464
+    second: niggarayodelanasa_9
+  - first:
+      213: 4167616304746535889
+    second: niggarayodelanasa_10
+  - first:
+      213: -6511857257392738931
+    second: niggarayodelanasa_11
+  - first:
+      213: -148722224893002155
+    second: niggarayodelanasa_12
+  - first:
+      213: 2107788290698743829
+    second: niggarayodelanasa_13
+  - first:
+      213: -5598878840341008846
+    second: niggarayodelanasa_14
+  - first:
+      213: 7238561389364296121
+    second: niggarayodelanasa_15
+  - first:
+      213: -676790684202210030
+    second: niggarayodelanasa_16
+  - first:
+      213: -3865903405304194224
+    second: niggarayodelanasa_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: niggarayodelanasa_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 59
+        width: 12
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38dbd77e803642550800000000000000
+      internalID: 6135137482280123779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 0
+        width: 28
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d720b385cf62d26d0800000000000000
+      internalID: -3013709710387117443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_2
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 78
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a60871990d6d8690800000000000000
+      internalID: -7598297108441463135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_3
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 0
+        width: 69
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48591a1e3cafcc0a0800000000000000
+      internalID: -6859832413181078140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 0
+        width: 72
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4af887970c1a15d0800000000000000
+      internalID: -3091127375303738801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_5
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 0
+        width: 52
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9e8c7a3f757a8b0800000000000000
+      internalID: -5141043745616500230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_6
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 93
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f008bbad8e4f8c70800000000000000
+      internalID: 8975478952751005944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_7
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 0
+        width: 29
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6917b062fc2f628f0800000000000000
+      internalID: -565497731677982314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_8
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 86
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55cc2fc303dff0cd0800000000000000
+      internalID: -2589572877091943339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_9
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 104
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033472239b6134240800000000000000
+      internalID: 4774685014609052464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_10
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 0
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db1b8cb2f856d930800000000000000
+      internalID: 4167616304746535889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_11
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 30
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d6e01635c31a5a0800000000000000
+      internalID: -6511857257392738931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_12
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 29
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55efb07ace1afedf0800000000000000
+      internalID: -148722224893002155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_13
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 16
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51093d8684e504d10800000000000000
+      internalID: 2107788290698743829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_14
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 0
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ee50ddb59cc42b0800000000000000
+      internalID: -5598878840341008846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_15
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 10
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9bae96b39847460800000000000000
+      internalID: 7238561389364296121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_16
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d65d0657e8b96f0800000000000000
+      internalID: -676790684202210030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niggarayodelanasa_17
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 0
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05bded6d55d895ac0800000000000000
+      internalID: -3865903405304194224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      niggarayodelanasa_0: 6135137482280123779
+      niggarayodelanasa_1: -3013709710387117443
+      niggarayodelanasa_10: 4167616304746535889
+      niggarayodelanasa_11: -6511857257392738931
+      niggarayodelanasa_12: -148722224893002155
+      niggarayodelanasa_13: 2107788290698743829
+      niggarayodelanasa_14: -5598878840341008846
+      niggarayodelanasa_15: 7238561389364296121
+      niggarayodelanasa_16: -676790684202210030
+      niggarayodelanasa_17: -3865903405304194224
+      niggarayodelanasa_2: -7598297108441463135
+      niggarayodelanasa_3: -6859832413181078140
+      niggarayodelanasa_4: -3091127375303738801
+      niggarayodelanasa_5: -5141043745616500230
+      niggarayodelanasa_6: 8975478952751005944
+      niggarayodelanasa_7: -565497731677982314
+      niggarayodelanasa_8: -2589572877091943339
+      niggarayodelanasa_9: 4774685014609052464
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
