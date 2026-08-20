@@ -77,6 +77,10 @@ public class PlayerMovement : MonoBehaviour, IPlayerMovementLock
 
     private void Update()
     {
+        // Bloquear lectura de input, desplazamiento, giros y animaciones durante la pausa
+        if (Mathf.Approximately(Time.timeScale, 0f))
+            return;
+
         if (movementLocked)
         {
             moveInput = Vector2.zero;

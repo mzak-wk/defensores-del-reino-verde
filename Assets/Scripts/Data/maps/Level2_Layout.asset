@@ -16,10 +16,10 @@ MonoBehaviour:
   levelIndex: 1
   columns: 6
   rows: 1
-  cellWidth: 53
+  cellWidth: 56
   cellHeight: 23
   gridOrigin: {x: 0, y: 0}
-  fixedZoneSize: {x: 48, y: 25}
+  fixedZoneSize: {x: 53, y: 25}
   startZonePrefab: {fileID: 1823257621239327261, guid: 415bceec0fe580c43bd74dfbc28acd46, type: 3}
   endZonePrefab: {fileID: 1823257621239327261, guid: faffcdce84369d34d9a4f8b16786aa4f, type: 3}
   middleZonePrefabs:

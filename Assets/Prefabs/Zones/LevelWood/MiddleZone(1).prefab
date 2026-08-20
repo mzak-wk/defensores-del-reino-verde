@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 1303280817465797880}
   - component: {fileID: 6830420239809283783}
   - component: {fileID: 7112981904560433790}
+  - component: {fileID: 8327268921508211670}
   m_Layer: 0
   m_Name: MiddleZone(1)
   m_TagString: Untagged
@@ -272,6 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: middlezone1
   zoneLevel: 1
+  isBossZone: 0
   enemyTable:
   - enemyData: {fileID: 11400000, guid: 2c9f24ea8c071e14799116547533397f, type: 2}
     weight: 1
@@ -326,6 +328,29 @@ MonoBehaviour:
   arrowObject: {fileID: 850264272206174551}
   hideOnPlayerEnter: 1
   playerTag: Player
+--- !u!114 &8327268921508211670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526033332859031135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba4ba6bf5acbb14caf531ffe30b45bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  erodedSoilPrefab: {fileID: 2045975633054931724, guid: 43e72fcf23c8f1e4786d8d71ef955ef6, type: 3}
+  maxZonesPerEncounter: 2
+  maxActiveZones: 1
+  spawnInterval: 12
+  gameplayCamera: {fileID: 0}
+  blockingLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  clearanceRadius: 0.75
+  maxPlacementAttempts: 30
+  viewportPadding: 0.5
 --- !u!1 &850264272206174551
 GameObject:
   m_ObjectHideFlags: 0

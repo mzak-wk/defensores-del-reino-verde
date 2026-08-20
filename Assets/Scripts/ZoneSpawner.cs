@@ -17,6 +17,8 @@ public class ZoneSpawner : MonoBehaviour
     private bool isSpawningPaused;
 
     public event Action<SpawnZone> OnPlayerZoneChanged;
+    public event Action<SpawnZone, int> OnWaveStarted;
+    public event Action<SpawnZone, int> OnWaveEnded;
 
     private void Awake()
     {
@@ -114,12 +116,20 @@ public class ZoneSpawner : MonoBehaviour
 
         int failedWaveAttempts = 0;
         const int maxFailedWaveAttempts = 3;
+        bool waveCompletionPending = false;
+        int pendingWaveNumber = 0;
 
         while (zone != null && zone.IsEncounterActive)
         {
             while (isSpawningPaused || zone.activeEnemyCount > 0)
             {
                 yield return null;
+            }
+
+            if (waveCompletionPending)
+            {
+                OnWaveEnded?.Invoke(zone, pendingWaveNumber);
+                waveCompletionPending = false;
             }
 
             // Watchdog: si ya se lanzaron todas las oleadas y no quedan enemigos,
@@ -153,6 +163,7 @@ public class ZoneSpawner : MonoBehaviour
             }
 
             failedWaveAttempts = 0;
+            OnWaveStarted?.Invoke(zone, zone.CurrentWave);
 
             int spawnedEnemies = SpawnWave(zone);
             if (spawnedEnemies == 0)
@@ -161,6 +172,9 @@ public class ZoneSpawner : MonoBehaviour
                 zone.CompleteEncounter();
                 break;
             }
+
+            waveCompletionPending = true;
+            pendingWaveNumber = zone.CurrentWave;
         }
 
         if (zone != null) spawnCoroutines.Remove(zone);
@@ -172,12 +186,15 @@ public class ZoneSpawner : MonoBehaviour
         int spawnedCount = 0;
         int waveIndex = zone.CurrentWave - 1;
 
+        List<Vector2> waveAssignedPositions = new List<Vector2>();
+
         for (int i = 0; i < waveCount && zone.activeEnemyCount < zone.maxActiveEnemies; i++)
         {
             EnemyData data = zone.GetRandomEnemyData();
             if (data == null || data.prefab == null || EnemyPool.Instance == null) continue;
 
-            GameObject enemyObject = EnemyPool.Instance.Get(data.prefab, zone.GetRandomOffscreenPoint(mainCamera));
+            Vector2 spawnPos = zone.GetEnemySpawnPoint(i, waveAssignedPositions, mainCamera);
+            GameObject enemyObject = EnemyPool.Instance.Get(data.prefab, spawnPos);
             if (enemyObject == null) continue;
 
             Enemy enemy = enemyObject.GetComponent<Enemy>();
@@ -212,6 +229,12 @@ public class ZoneSpawner : MonoBehaviour
                     chase.SetTarget(player);
                 }
             }
+        }
+
+        // Sincronizar el árbol de físicas 2D tras colocar el lote de enemigos
+        if (spawnedCount > 0)
+        {
+            Physics2D.SyncTransforms();
         }
 
         return spawnedCount;

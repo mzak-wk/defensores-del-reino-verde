@@ -84,10 +84,15 @@ public class ZoneCombatController : MonoBehaviour
         
         activeEnemiesCount = totalCount;
         
+        SpawnZone spawnZone = GetComponent<SpawnZone>();
+        List<Vector2> wavePositions = new List<Vector2>();
+
         for (int i = 0; i < totalCount; i++)
         {
             GameObject prefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-            Vector2 spawnPos = GetRandomPointInBounds(zoneCollider);
+            Vector2 spawnPos = spawnZone != null 
+                ? spawnZone.GetEnemySpawnPoint(i, wavePositions, null)
+                : GetRandomPointInBounds(zoneCollider);
             
             // Instanciar usando el pool
             GameObject enemyGO = EnemyPool.Instance.Get(prefab, spawnPos);
@@ -113,6 +118,11 @@ public class ZoneCombatController : MonoBehaviour
             }
         }
         
+        if (totalCount > 0)
+        {
+            Physics2D.SyncTransforms();
+        }
+
         // Prevención: si no se instanció ninguno (por algún error)
         if (activeEnemiesCount <= 0)
         {

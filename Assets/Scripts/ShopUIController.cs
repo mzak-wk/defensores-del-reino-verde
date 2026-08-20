@@ -33,11 +33,22 @@ public class ShopUIController : MonoBehaviour
         shopPanel.SetActive(true);
         Time.timeScale = 0f;
         IsOpen = true;
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.RegisterOverlay("Shop", () => CloseShop());
+        }
     }
 
     public void CloseShop()
     {
         if (!IsOpen) return;
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UnregisterOverlay("Shop");
+        }
+
         shopPanel.SetActive(false);
         Time.timeScale = 1f;
         IsOpen = false;

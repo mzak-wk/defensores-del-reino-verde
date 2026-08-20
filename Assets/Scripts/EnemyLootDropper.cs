@@ -19,6 +19,10 @@ public class EnemyLootDropper : MonoBehaviour
     public GameObject chickenPrefab;
     public float chickenHeal = 30f;
 
+    [Header("Hollín (Nivel de Hielo)")]
+    [Range(0f, 1f)] public float sootChance = 0f;
+    public GameObject sootPrefab;
+
     [Header("Dispersión")]
     public float scatterRadius = 0.6f;
 
@@ -68,6 +72,12 @@ public class EnemyLootDropper : MonoBehaviour
             var go = Instantiate(chickenPrefab, RandPos(), Quaternion.identity);
             var pick = go.GetComponent<ChickenPickup>();
             if (pick) pick.healAmount = chickenHeal;
+        }
+
+        // ===== Hollín =====
+        if (sootPrefab && UnityEngine.Random.value <= sootChance)
+        {
+            Instantiate(sootPrefab, transform.position, Quaternion.identity);
         }
     }
 

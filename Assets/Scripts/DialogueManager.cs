@@ -191,6 +191,11 @@ public class DialogueManager : MonoBehaviour
         SetDialogueRootActive(true);
         HideContinueArrow();
 
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.RegisterOverlay("Dialogue", () => CloseDialogue());
+        }
+
         DialogueLine firstLine = currentData.Lines[currentLineIndex];
         UpdateSpeakerUI(firstLine.speaker, firstLine.emotion);
         if (firstLine.choices != null && firstLine.choices.Count > 0)
@@ -208,6 +213,11 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void CloseDialogue()
     {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.UnregisterOverlay("Dialogue");
+        }
+
         StopActiveCoroutines();
         DestroyChoiceButtons();
         HideContinueArrow();

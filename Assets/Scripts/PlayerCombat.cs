@@ -45,6 +45,10 @@ public class PlayerCombat : MonoBehaviour
 
     private void Update()
     {
+        // Bloquear lectura de inputs de combate, ataques y habilidades durante la pausa
+        if (Mathf.Approximately(Time.timeScale, 0f))
+            return;
+
         // Cinemáticas (ej. intro de boss): se congelan TODOS los ataques.
         if (combatLocked) return;
 
