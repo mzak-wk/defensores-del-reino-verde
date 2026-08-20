@@ -12,19 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a79ce6017bd4d4d8c511992f75ba874, type: 3}
   m_Name: SO_Satelite_Nasa
   m_EditorClassIdentifier: 
-  weaponId: Satelite Nasa
-  displayName: 5
+  weaponId: 6
+  displayName: Satelite Nasa
   description: 
-  icon: {fileID: 0}
-  isUnlockedByDefault: 1
+  icon: {fileID: 1121544766085992487, guid: e5715dc306c5f1849893f436bc8d36c6, type: 3}
   rarity: {fileID: 11400000, guid: b165cb14523611946a910e143ed054f3, type: 2}
   upgradeTags: []
-  weaponPrefab: {fileID: 2643060505416374509, guid: 0486f7b6d3422ca4fa2933aaa16f9acc, type: 3}
-  weaponBehaviourType: 
-  weaponAnimator: {fileID: 0}
   isRanged: 0
   attackRange: 2
-  projectilePrefab: {fileID: 2643060505416374509, guid: b45143c4e5ab09d4b8a23600450f5e01, type: 3}
+  basicAttackPrefab: {fileID: 1891753597797502666, guid: e465ae2b107d6174e95a10ed02e95360, type: 3}
   baseStats:
     damage: 10
     cooldown: 1
@@ -36,21 +32,44 @@ MonoBehaviour:
     knockback: 0
     criticalChance: 0
     criticalMultiplier: 1.5
+    slashLifetime: 0.35
+    slashForwardDistance: 1.2
+    slashInitialScale: 0.5
+    slashFinalScale: 1.2
+    slashInitialAlpha: 1
+    slashFinalAlpha: 0
+    slashMaxHits: 999
+    slashDestroyOnFirstHit: 0
+    slashAnimateScaleAndFade: 1
+    slashUseUnscaledTime: 0
+    autoSquareHitbox: 1
+    slashSquareMultiplier: 1
+    slashPadding: 0.15
+    projectileMaxLifetime: 5
+    freezeExplosionPrefab: {fileID: 0}
+    areaPrefab: {fileID: 0}
+    areaDamagePerSecond: 0
+    areaDuration: 5
+    areaScaleMultiplier: 1.5
+  basicCooldown: 0.5
   skillXName: Skill X
   damageX: 20
   cooldownX: 5
   rangeX: 3
+  requiredLevelX: 5
   prefabX: {fileID: 2643060505416374509, guid: 7af34235664f5604b852cf20915be715, type: 3}
   skillCName: Skill C
   damageC: 40
   cooldownC: 10
   rangeC: 4
+  requiredLevelC: 10
   prefabC: {fileID: 2643060505416374509, guid: 9d494be0045d54d42a7192c21d7dc0e2, type: 3}
   skillVName: Ultimate V
   damageV: 100
   cooldownV: 30
   rangeV: 6
+  requiredLevelV: 5
   prefabV: {fileID: 2643060505416374509, guid: 3d3bb64de21ac3b499e15c78811e608c, type: 3}
-  uniqueUpgradePool: []
-  passiveUpgradePool: []
   maxInternalLevel: 5
+  idleStateName: 
+  weaponIndex: 6

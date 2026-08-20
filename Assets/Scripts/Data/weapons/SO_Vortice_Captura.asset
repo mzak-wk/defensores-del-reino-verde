@@ -12,19 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a79ce6017bd4d4d8c511992f75ba874, type: 3}
   m_Name: SO_Vortice_Captura
   m_EditorClassIdentifier: 
-  weaponId: Vortice de Captura
-  displayName: 3
+  weaponId: 3
+  displayName: Vortice de Captura
   description: 
-  icon: {fileID: 0}
-  isUnlockedByDefault: 1
+  icon: {fileID: -4245524649779155961, guid: b18ddb7da9afb7f40a88d18b9cdc0966, type: 3}
   rarity: {fileID: 11400000, guid: c785a4f6cb466ee4da37286c934c582b, type: 2}
   upgradeTags: []
-  weaponPrefab: {fileID: 7975668196522477315, guid: 0eadb1bc1c8eb2b449b6bb55d5d995f2, type: 3}
-  weaponBehaviourType: 
-  weaponAnimator: {fileID: 0}
   isRanged: 0
   attackRange: 2
-  projectilePrefab: {fileID: 7975668196522477315, guid: ae0cc22dfafd4bf46be0cf4595e3652f, type: 3}
+  basicAttackPrefab: {fileID: 6255444547622704660, guid: 7aa3400e25e7bc445a26cc1e2a22ae62, type: 3}
   baseStats:
     damage: 10
     cooldown: 1
@@ -36,21 +32,44 @@ MonoBehaviour:
     knockback: 0
     criticalChance: 0
     criticalMultiplier: 1.5
+    slashLifetime: 0.35
+    slashForwardDistance: 1.2
+    slashInitialScale: 0.5
+    slashFinalScale: 1.2
+    slashInitialAlpha: 1
+    slashFinalAlpha: 0
+    slashMaxHits: 999
+    slashDestroyOnFirstHit: 0
+    slashAnimateScaleAndFade: 1
+    slashUseUnscaledTime: 0
+    autoSquareHitbox: 1
+    slashSquareMultiplier: 1
+    slashPadding: 0.15
+    projectileMaxLifetime: 5
+    freezeExplosionPrefab: {fileID: 0}
+    areaPrefab: {fileID: 0}
+    areaDamagePerSecond: 0
+    areaDuration: 5
+    areaScaleMultiplier: 1.5
+  basicCooldown: 0.5
   skillXName: Skill X
   damageX: 20
   cooldownX: 5
   rangeX: 3
-  prefabX: {fileID: 7975668196522477315, guid: d6e84d6f12885514ba891f28eb19caf9, type: 3}
+  requiredLevelX: 5
+  prefabX: {fileID: 0}
   skillCName: Skill C
   damageC: 40
   cooldownC: 10
   rangeC: 4
-  prefabC: {fileID: 7975668196522477315, guid: 12cf878ea5f95aa449d87a5cf4e20fdd, type: 3}
+  requiredLevelC: 10
+  prefabC: {fileID: 0}
   skillVName: Ultimate V
   damageV: 100
   cooldownV: 30
   rangeV: 6
-  prefabV: {fileID: 7975668196522477315, guid: 86633ad48e9f619459dcee083146aa87, type: 3}
-  uniqueUpgradePool: []
-  passiveUpgradePool: []
+  requiredLevelV: 5
+  prefabV: {fileID: 0}
   maxInternalLevel: 5
+  idleStateName: 
+  weaponIndex: 3

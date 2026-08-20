@@ -61,6 +61,12 @@ public class ZoneCombatController : MonoBehaviour
             Transform playerTransform = other.transform;
             
             SpawnEnemies(playerTransform);
+
+            ZoneCameraTrigger cameraTrigger = GetComponentInChildren<ZoneCameraTrigger>(true);
+            if (cameraTrigger != null)
+            {
+                cameraTrigger.ActivateCamera();
+            }
         }
     }
 
@@ -102,7 +108,6 @@ public class ZoneCombatController : MonoBehaviour
                 EnemyChase chaseComp = enemyGO.GetComponent<EnemyChase>();
                 if (chaseComp != null)
                 {
-                    chaseComp.ResetChaseState();
                     chaseComp.SetTarget(playerTransform);
                 }
             }

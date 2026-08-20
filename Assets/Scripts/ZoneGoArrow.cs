@@ -12,11 +12,11 @@ public class ZoneGoArrow : MonoBehaviour
 
     public string playerTag = "Player";
 
-    private ZoneCombatController combatController;
+    private SpawnZone spawnZone;
 
     private void Awake()
     {
-        combatController = GetComponent<ZoneCombatController>();
+        spawnZone = GetComponent<SpawnZone>();
 
         if (arrowObject != null)
             arrowObject.SetActive(false);
@@ -24,14 +24,14 @@ public class ZoneGoArrow : MonoBehaviour
 
     private void OnEnable()
     {
-        if (combatController != null)
-            combatController.OnZoneCleared += ShowArrow;
+        if (spawnZone != null)
+            spawnZone.OnZoneCleared += ShowArrow;
     }
 
     private void OnDisable()
     {
-        if (combatController != null)
-            combatController.OnZoneCleared -= ShowArrow;
+        if (spawnZone != null)
+            spawnZone.OnZoneCleared -= ShowArrow;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

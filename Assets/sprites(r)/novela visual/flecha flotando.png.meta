@@ -106,12 +106,12 @@ TextureImporter:
       name: flecha flotando_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 344
-        height: 342
+        x: 0
+        y: 171
+        width: 172
+        height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -128,12 +128,12 @@ TextureImporter:
       name: flecha flotando_1
       rect:
         serializedVersion: 2
-        x: 393
-        y: 230
-        width: 75
-        height: 76
+        x: 345
+        y: 171
+        width: 172
+        height: 171
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -146,11 +146,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: flecha flotando_2
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 171
+        width: 172
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e329bf03fc6fa8245a60400430d76cdb
+      internalID: 1676588595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flecha flotando_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 173
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7362874f4d666554e8d3e86ca970160a
+      internalID: -1233876637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flecha flotando_4
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 172
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c93bf05b53a63d4b92dbbfb0ed42296
+      internalID: -719843329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flecha flotando_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 41
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa2cfb7c262e114d96a4e92e03a2429
+      internalID: -428097199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 40d1685f94ab47049b896f4c418ab44f
     internalID: 0
     vertices: []
     indices: 
@@ -162,6 +250,10 @@ TextureImporter:
     nameFileIdTable:
       flecha flotando_0: -2525019766283386854
       flecha flotando_1: -714093325096045203
+      flecha flotando_2: 1676588595
+      flecha flotando_3: -1233876637
+      flecha flotando_4: -719843329
+      flecha flotando_5: -428097199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

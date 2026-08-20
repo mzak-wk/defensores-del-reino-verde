@@ -4,21 +4,24 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class FireballProjectile : MonoBehaviour
 {
-    [Header("Ajustes generales")]
-    public float maxLifeTime = 5f;
+    [Header("Combat Stats (set via Init)")]
+    [SerializeField] private float maxLifeTime = 5f;
+    [SerializeField] private float damage = 75f;
+    [SerializeField] private float speed = 10f;
+
+    [Header("Area Config (Inspector)")]
+    [SerializeField] private bool spawnAreaOnHit;
+    [SerializeField] private GameObject areaPrefab;
+    [SerializeField] private float areaDamagePerSecond;
+    [SerializeField] private float areaDuration;
+    [SerializeField] private float areaScaleMultiplier;
+
+    [Header("Visuals (Inspector)")]
+    [SerializeField] private Color projectileColor = Color.white;
+    [SerializeField] private Color areaColor = Color.white;
+    [SerializeField] private LayerMask enemyMask;
 
     Transform target;
-    float damage;
-    float speed;
-
-    bool spawnAreaOnHit;
-    GameObject areaPrefab;
-    float areaDamagePerSecond;
-    float areaDuration;
-    float areaScaleMultiplier;
-    Color projectileColor = Color.white;
-    Color areaColor = Color.white;
-
     SpriteRenderer sr;
 
     void Awake()
@@ -26,30 +29,21 @@ public class FireballProjectile : MonoBehaviour
         var col = GetComponent<Collider2D>();
         col.isTrigger = true;
         sr = GetComponentInChildren<SpriteRenderer>();
+
+        if (enemyMask.value == 0)
+            enemyMask = LayerMask.GetMask("Enemy");
     }
 
     public void Init(
         Transform target,
         float damage,
         float speed,
-        bool spawnAreaOnHit,
-        GameObject areaPrefab,
-        float areaDamagePerSecond,
-        float areaDuration,
-        float areaScaleMultiplier,
-        Color projectileColor,
-        Color areaColor)
+        float maxLifeTime)
     {
         this.target = target;
         this.damage = damage;
         this.speed = speed;
-        this.spawnAreaOnHit = spawnAreaOnHit;
-        this.areaPrefab = areaPrefab;
-        this.areaDamagePerSecond = areaDamagePerSecond;
-        this.areaDuration = areaDuration;
-        this.areaScaleMultiplier = areaScaleMultiplier;
-        this.areaColor = areaColor;
-        this.projectileColor = projectileColor;
+        this.maxLifeTime = maxLifeTime;
 
         if (sr != null)
             sr.color = projectileColor;
@@ -68,7 +62,6 @@ public class FireballProjectile : MonoBehaviour
         Vector3 dir = (target.position - transform.position).normalized;
         transform.position += dir * speed * Time.deltaTime;
 
-        // Si está muy cerca del objetivo, consideramos impacto
         if ((target.position - transform.position).sqrMagnitude < 0.05f)
         {
             Hit(target.position, target);
@@ -98,7 +91,6 @@ public class FireballProjectile : MonoBehaviour
         {
             GameObject areaGO = Instantiate(areaPrefab, hitPos, Quaternion.identity);
 
-            // Escala de área según el nivel
             areaGO.transform.localScale *= areaScaleMultiplier;
 
             var area = areaGO.GetComponent<FireAreaDamage>();

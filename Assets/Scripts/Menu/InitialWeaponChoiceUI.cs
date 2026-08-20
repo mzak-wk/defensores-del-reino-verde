@@ -11,6 +11,10 @@ public class InitialWeaponChoiceUI : MonoBehaviour
     [Tooltip("Referencia a la base de datos de armas del juego.")]
     [SerializeField] private WeaponDatabase weaponDatabase;
 
+    [Header("Referencias")]
+    [SerializeField] private WeaponSlotManager weaponSlotManager;
+    [SerializeField] private PlayerMovement playerRef;
+
     [Header("Referencias de UI - Botón A")]
     [SerializeField] private Button buttonA;
     [SerializeField] private Image iconA;
@@ -23,14 +27,9 @@ public class InitialWeaponChoiceUI : MonoBehaviour
 
     private WeaponData weaponA;
     private WeaponData weaponB;
-    private PlayerMovement player;
 
-    private void Start()
+    private void Awake()
     {
-        // Ocultar el panel al arrancar por si acaso
-        gameObject.SetActive(false);
-
-        // Registrar los listeners de los botones
         if (buttonA != null) buttonA.onClick.AddListener(() => ChooseWeapon(weaponA));
         if (buttonB != null) buttonB.onClick.AddListener(() => ChooseWeapon(weaponB));
     }
@@ -41,9 +40,6 @@ public class InitialWeaponChoiceUI : MonoBehaviour
     public void OpenPanel()
     {
         gameObject.SetActive(true);
-
-        // Buscar al jugador para desbloquearlo al finalizar
-        player = FindFirstObjectByType<PlayerMovement>();
 
         if (weaponDatabase == null)
         {
@@ -58,23 +54,33 @@ public class InitialWeaponChoiceUI : MonoBehaviour
             return;
         }
 
-        // Asignar los datos del Index 0 y Index 1
         weaponA = weapons[0];
         weaponB = weapons[1];
 
-        // Configurar UI del Botón A
         if (weaponA != null)
         {
             if (iconA != null) iconA.sprite = weaponA.Icon;
             if (nameA != null) nameA.text = weaponA.DisplayName;
         }
 
-        // Configurar UI del Botón B
         if (weaponB != null)
         {
             if (iconB != null) iconB.sprite = weaponB.Icon;
             if (nameB != null) nameB.text = weaponB.DisplayName;
         }
+    }
+
+    /// <summary>
+    /// Abre el panel de elección de arma inicial.
+    /// Puede ser llamado desde una opción de diálogo o desde HubIntroSequenceManager.
+    /// </summary>
+    public void OpenPanelFromDialogue()
+    {
+        if (DialogueManager.Instance != null)
+        {
+            DialogueManager.Instance.CloseDialogue();
+        }
+        OpenPanel();
     }
 
     /// <summary>
@@ -86,40 +92,29 @@ public class InitialWeaponChoiceUI : MonoBehaviour
 
         if (GameSession.Instance != null)
         {
-            // 1. Añadir el WeaponId a las armas desbloqueadas
-            if (!GameSession.Instance.unlockedWeapons.Contains(chosenWeapon.WeaponId))
-            {
-                GameSession.Instance.unlockedWeapons.Add(chosenWeapon.WeaponId);
-            }
-
-            // 2. Equipar el arma en el slot 0 del jugador
-            WeaponSlotManager slotManager = FindFirstObjectByType<WeaponSlotManager>();
-            if (slotManager != null)
-            {
-                slotManager.EquipWeaponAtSlot(0, chosenWeapon);
-            }
-            else
-            {
-                Debug.LogWarning("[InitialWeaponChoiceUI] No se encontró WeaponSlotManager en el jugador.");
-            }
-
-            // 3. Marcar la intro como completada
-            GameSession.Instance.hasCompletedIntro = true;
+            GameSession.Instance.UnlockWeapon(chosenWeapon);
+            GameSession.Instance.EquipWeapon(chosenWeapon);
         }
 
-        // 4. Desbloquear el movimiento del jugador
-        if (player != null)
+        if (weaponSlotManager != null)
         {
-            player.SetMovementLocked(false);
+            weaponSlotManager.EquipWeapon(chosenWeapon);
         }
         else
         {
-            // Fallback en caso de que PlayerMovement no esté o use IPlayerMovementLock
-            var lockObj = FindFirstObjectByType<MonoBehaviour>() as IPlayerMovementLock;
-            lockObj?.SetMovementLocked(false);
+            Debug.LogWarning("[InitialWeaponChoiceUI] WeaponSlotManager no asignado.");
         }
 
-        // 5. Guardar la partida inmediatamente (con protección contra nulos)
+        if (GameSession.Instance != null)
+        {
+            GameSession.Instance.hasCompletedIntro = true;
+        }
+
+        if (playerRef != null)
+        {
+            playerRef.SetMovementLocked(false);
+        }
+
         try
         {
             if (SaveManager.Instance != null)
@@ -128,7 +123,7 @@ public class InitialWeaponChoiceUI : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("[InitialWeaponChoiceUI] SaveManager no disponible en la escena actual. La partida continuará sin autoguardado.");
+                Debug.LogWarning("[InitialWeaponChoiceUI] SaveManager no disponible. La partida continuará sin autoguardado.");
             }
         }
         catch (System.Exception ex)
@@ -136,7 +131,6 @@ public class InitialWeaponChoiceUI : MonoBehaviour
             Debug.LogWarning($"[InitialWeaponChoiceUI] Error al intentar guardar partida: {ex.Message}");
         }
 
-        // 6. Ocultar el panel de forma limpia
         gameObject.SetActive(false);
     }
 }

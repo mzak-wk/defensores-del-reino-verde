@@ -20,6 +20,7 @@ public class BossDefeatManager : MonoBehaviour
     [SerializeField] private bool cleanEnemiesAndProjectiles = true;
 
     private PlayerMovement playerMovement;
+    private BossHealth bossHealth;
 
     private void Start()
     {
@@ -27,6 +28,22 @@ public class BossDefeatManager : MonoBehaviour
         if (rewardPanel != null)
         {
             rewardPanel.SetActive(false);
+        }
+
+        // Encontrar y subscribirse al evento de muerte del jefe
+        if (bossHealth == null)
+        {
+            bossHealth = FindFirstObjectByType<BossHealth>();
+        }
+
+        if (bossHealth != null)
+        {
+            bossHealth.OnBossDeath += OnBossHealthDefeated;
+            Debug.Log("[BossDefeatManager] Suscrito al evento OnBossDeath del BossHealth.");
+        }
+        else
+        {
+            Debug.LogWarning("[BossDefeatManager] BossHealth no encontrado en la escena.");
         }
     }
 
@@ -75,6 +92,14 @@ public class BossDefeatManager : MonoBehaviour
     {
         // Desuscribir para prevenir memory leaks
         UnsubscribeFromCinematic();
+
+        // Liberar paredes de combate para desencerrar la arena
+        SpawnZone spawnZone = FindBossSpawnZone();
+        if (spawnZone != null)
+        {
+            spawnZone.SetCombatBarriers(false);
+            Debug.Log("[BossDefeatManager] Paredes de combate desactivadas.");
+        }
 
         // 1. Activar el panel de recompensas
         if (rewardPanel != null)
@@ -125,9 +150,32 @@ public class BossDefeatManager : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    private static SpawnZone FindBossSpawnZone()
     {
+        foreach (SpawnZone zone in FindObjectsByType<SpawnZone>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+        {
+            if (zone.IsBossZone)
+                return zone;
+        }
+
+        return null;
+    }
+
+    private void OnDisable()
+    {
+        // Desuscribirse del evento de muerte del jefe para evitar memory leaks
+        if (bossHealth != null)
+        {
+            bossHealth.OnBossDeath -= OnBossHealthDefeated;
+        }
+
         // Desuscripción de seguridad ante destrucción del objeto
         UnsubscribeFromCinematic();
+    }
+
+    private void OnBossHealthDefeated()
+    {
+        Debug.Log("[BossDefeatManager] Evento OnBossDeath recibido. Iniciando secuencia de victoria.");
+        StartDefeatSequence();
     }
 }

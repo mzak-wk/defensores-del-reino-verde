@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2826915621812387838}
   - component: {fileID: 1338735391115026880}
   - component: {fileID: 5168207177590385053}
-  - component: {fileID: 433232464340143421}
   - component: {fileID: 2444502538391678910}
   - component: {fileID: 4407393062175152713}
   - component: {fileID: 3739987521104154260}
@@ -34,9 +33,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4930502472480373482}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 546, y: 245.6, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4501851179369384893}
@@ -123,7 +122,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -155,23 +154,7 @@ MonoBehaviour:
   stepB: {fileID: 0}
   framesPerSecond: 6
   inputThreshold: 0.001
-  spriteMiraADerechaPorDefecto: 0
---- !u!114 &433232464340143421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4930502472480373482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af87846886eab1c4c81219a8918be217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xpSystem: {fileID: 0}
-  playerAttack: {fileID: 0}
-  fireMageAttack: {fileID: 0}
-  archerAttack: {fileID: 0}
+  spriteMiraADerechaPorDefecto: 1
 --- !u!114 &2444502538391678910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,16 +208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbba92f70dbdfb4faa8b067db9baea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equippedWeapons:
-  - {fileID: 11400000, guid: 7c50bdd3036a2cc41b5b34ae3831cfe6, type: 2}
-  - {fileID: 11400000, guid: b75bd9cac0b495d4098a2bbdd69220ea, type: 2}
-  - {fileID: 11400000, guid: cc8be45b66fe5354b8f033fcadcc2327, type: 2}
-  - {fileID: 11400000, guid: de2dbf7abbadca944a7619d2a4249269, type: 2}
-  - {fileID: 11400000, guid: 8b6af63a1ce0b1f45ba09cde73331ce3, type: 2}
-  - {fileID: 11400000, guid: fa4504c904d9e4548992003f7788381e, type: 2}
-  currentSlotIndex: 0
   weaponDatabase: {fileID: 11400000, guid: 970d136673cea2e43bcb6ce41be7271a, type: 2}
-  weaponLevels: 0100000001000000010000000100000000000000
+  weaponIndex: -1
 --- !u!114 &7062996210111443676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 6636581693952009317}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6, y: 0.06, z: 0}
+  m_LocalPosition: {x: 2.29, y: 0.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

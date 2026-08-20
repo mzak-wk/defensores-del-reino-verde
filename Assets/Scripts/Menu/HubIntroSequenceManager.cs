@@ -45,7 +45,7 @@ public class HubIntroSequenceManager : MonoBehaviour
         if (DialogueManager.Instance != null && introDialogueData != null)
         {
             DialogueManager.Instance.OnDialogueClosed += OnIntroDialogueEnded;
-            DialogueManager.Instance.StartDialogue(introDialogueData, player, linearMode: true);
+            DialogueManager.Instance.StartDialogue(introDialogueData, player);
         }
         else
         {
@@ -76,6 +76,8 @@ public class HubIntroSequenceManager : MonoBehaviour
     {
         if (weaponChoiceUI != null)
         {
+            if (weaponChoiceUI.gameObject.activeSelf) return;
+
             if (player != null)
             {
                 player.SetMovementLocked(true);

@@ -2,53 +2,173 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+public enum LevelState { Locked, Unlocked, Selected }
+
+[System.Serializable]
+public class LevelCard
+{
+    public Button button;
+    public Image stateImage;
+    public Sprite spriteLocked;
+    public Sprite spriteUnlocked;
+    public Sprite spriteSelected;
+    public int levelIndex;
+    public string sceneName;
+    [HideInInspector] public LevelState currentState;
+}
+
 public class ComputerLevelPanel : MonoBehaviour
 {
-    [Header("UI References")]
-    [Tooltip("Botones de los niveles. Índice 0 = Nivel 1, Índice 1 = Nivel 2, etc.")]
-    public Button[] levelButtons;
+    [Header("Navegación")]
+    [SerializeField] private Button btnBackToMainPanel;
 
-    [Header("Configuración de Escenas")]
-    [Tooltip("Nombres exactos de las escenas por cada nivel (ej: 'Level1', 'Bosque Oscuro'). Debe coincidir en tamaño con levelButtons.")]
-    public string[] levelSceneNames;
+    [Header("Tarjetas de Nivel")]
+    [SerializeField] private LevelCard[] levelCards;
 
-    private void OnEnable()
+    [Header("Botón Iniciar Nivel")]
+    [SerializeField] private Button btnStartLevel;
+
+    private LevelCard selectedCard;
+
+    private void Awake()
     {
-        if (GameSession.Instance == null) return;
-
-        int highestUnlocked = GameSession.Instance.highestLevelUnlocked;
-
-        for (int i = 0; i < levelButtons.Length; i++)
+        if (btnBackToMainPanel != null)
         {
-            if (levelButtons[i] != null)
-            {
-                // El nivel 1 corresponde al índice 0 (1 = 0 + 1)
-                if ((i + 1) <= highestUnlocked)
-                {
-                    levelButtons[i].interactable = true;
-                }
-                else
-                {
-                    levelButtons[i].interactable = false;
-                }
-            }
+            btnBackToMainPanel.onClick.AddListener(OnBackToMainClicked);
+        }
+
+        if (btnStartLevel != null)
+        {
+            btnStartLevel.onClick.AddListener(OnStartLevelClicked);
+            btnStartLevel.interactable = false;
         }
     }
 
-    /// <summary>
-    /// Evento asignable en el OnClick de la UI de cada botón.
-    /// Pasa el índice (0 para Nivel 1, 1 para Nivel 2...)
-    /// </summary>
-    public void LoadLevel(int levelIndex)
+    private void OnEnable()
     {
-        if (levelSceneNames == null || levelIndex < 0 || levelIndex >= levelSceneNames.Length)
+        InitializeLevelStates();
+    }
+
+    private void OnDisable()
+    {
+        ClearSelection();
+    }
+
+    private void InitializeLevelStates()
+    {
+        if (levelCards == null) return;
+
+        int highestUnlocked = GameSession.Instance.highestLevelUnlocked;
+
+        for (int i = 0; i < levelCards.Length; i++)
         {
-            Debug.LogError($"[ComputerLevelPanel] Índice de nivel ({levelIndex}) fuera de rango o levelSceneNames no configurado.");
+            LevelCard card = levelCards[i];
+            if (card.button == null) continue;
+
+            if (card.levelIndex == 0)
+            {
+                card.currentState = LevelState.Unlocked;
+            }
+            else if ((card.levelIndex + 1) <= highestUnlocked)
+            {
+                card.currentState = LevelState.Unlocked;
+            }
+            else
+            {
+                card.currentState = LevelState.Locked;
+            }
+
+            UpdateCardVisual(card);
+            RegisterCardListener(card);
+        }
+    }
+
+    private void RegisterCardListener(LevelCard card)
+    {
+        card.button.onClick.RemoveAllListeners();
+        card.button.onClick.AddListener(() => SelectLevelCard(card));
+    }
+
+    private void SelectLevelCard(LevelCard card)
+    {
+        if (card.currentState == LevelState.Locked) return;
+        if (card.currentState == LevelState.Selected) return;
+
+        if (selectedCard != null)
+        {
+            selectedCard.currentState = LevelState.Unlocked;
+            UpdateCardVisual(selectedCard);
+        }
+
+        card.currentState = LevelState.Selected;
+        UpdateCardVisual(card);
+        selectedCard = card;
+
+        if (btnStartLevel != null)
+        {
+            btnStartLevel.interactable = true;
+        }
+    }
+
+    private void UpdateCardVisual(LevelCard card)
+    {
+        if (card.stateImage == null) return;
+
+        switch (card.currentState)
+        {
+            case LevelState.Locked:
+                card.stateImage.sprite = card.spriteLocked;
+                card.button.interactable = false;
+                break;
+            case LevelState.Unlocked:
+                card.stateImage.sprite = card.spriteUnlocked;
+                card.button.interactable = true;
+                break;
+            case LevelState.Selected:
+                card.stateImage.sprite = card.spriteSelected;
+                card.button.interactable = true;
+                break;
+        }
+    }
+
+    private void ClearSelection()
+    {
+        if (selectedCard != null)
+        {
+            selectedCard.currentState = LevelState.Unlocked;
+            UpdateCardVisual(selectedCard);
+            selectedCard = null;
+        }
+
+        if (btnStartLevel != null)
+        {
+            btnStartLevel.interactable = false;
+        }
+    }
+
+    private void OnStartLevelClicked()
+    {
+        if (selectedCard == null) return;
+        if (string.IsNullOrEmpty(selectedCard.sceneName))
+        {
+            Debug.LogError($"[ComputerLevelPanel] El nivel {selectedCard.levelIndex} no tiene nombre de escena configurado.");
             return;
         }
 
-        string sceneToLoad = levelSceneNames[levelIndex];
-        Debug.Log($"[ComputerLevelPanel] Cargando nivel: {sceneToLoad}");
-        SceneManager.LoadScene(sceneToLoad);
+        int levelNumber = selectedCard.levelIndex + 1;
+        PlayerPrefs.SetInt("SelectedHubLevel", levelNumber);
+        PlayerPrefs.Save();
+
+        Debug.Log($"[ComputerLevelPanel] Cargando nivel {levelNumber}: {selectedCard.sceneName}");
+        SceneManager.LoadScene(selectedCard.sceneName);
+    }
+
+    private void OnBackToMainClicked()
+    {
+        gameObject.SetActive(false);
+        if (HubUIManager.Instance != null)
+        {
+            HubUIManager.Instance.ShowMainMenu();
+        }
     }
 }

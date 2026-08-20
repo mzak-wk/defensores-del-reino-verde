@@ -107,7 +107,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 6
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -155,8 +155,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: 0.30059814}
+  m_Radius: 0.6182251
 --- !u!114 &5584192319026460444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903e9082ae48cf499c3920d173dd414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 50
+  maxHP: 500
   moveSpeed: 1.5
   xpReward: 0
   contactDamage: 5
@@ -188,10 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f13fdf85db7a44d9b084085441329e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   bossSpeedMultiplier: 3
   applyToBossesAutomatically: 0
-  originZone: {fileID: 0}
-  leashDistance: 15
 --- !u!114 &1270611904667133894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,12 +246,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xpChance: 0.9
-  xpOrbPrefab: {fileID: 335853357770785259, guid: 9139add903fb3754991011d8d38b228b, type: 3}
+  xpOrbPrefab: {fileID: 0}
   xpPerOrb: 15
   coinChance: 0.6
   coinPrefab: {fileID: 2208837453031680370, guid: 625cd32898cbb344981cd19acf5fdf12, type: 3}
   coinValue: 1
   chickenChance: 0.05
-  chickenPrefab: {fileID: 8291378955158031080, guid: 23772d2499c67714b9c4f5c10de7e7e2, type: 3}
+  chickenPrefab: {fileID: 0}
   chickenHeal: 30
   scatterRadius: 0.6

@@ -10,20 +10,12 @@ public class ZoneSpawner : MonoBehaviour
     [Header("Referencias")]
     public Transform player;
     public Camera mainCamera;
-    
-    [Header("Configuración")]
-    public float cameraZoneCheckInterval = 0.5f;
 
-    // Estado interno
-    private HashSet<SpawnZone> allZones = new HashSet<SpawnZone>();
-    private HashSet<SpawnZone> activeZones = new HashSet<SpawnZone>();
+    private readonly HashSet<SpawnZone> allZones = new HashSet<SpawnZone>();
+    private readonly Dictionary<SpawnZone, Coroutine> spawnCoroutines = new Dictionary<SpawnZone, Coroutine>();
     private SpawnZone playerCurrentZone;
-    
-    private Dictionary<SpawnZone, Coroutine> spawnCoroutines = new Dictionary<SpawnZone, Coroutine>();
-    private Dictionary<SpawnZone, Coroutine> despawnCoroutines = new Dictionary<SpawnZone, Coroutine>();
+    private bool isSpawningPaused;
 
-    private bool isSpawningPaused = false;
-    
     public event Action<SpawnZone> OnPlayerZoneChanged;
 
     private void Awake()
@@ -33,6 +25,7 @@ public class ZoneSpawner : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
     }
 
@@ -40,14 +33,11 @@ public class ZoneSpawner : MonoBehaviour
     {
         if (player == null)
         {
-            GameObject pGO = GameObject.FindGameObjectWithTag("Player");
-            if (pGO != null) player = pGO.transform;
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            if (playerObject != null) player = playerObject.transform;
         }
 
-        if (mainCamera == null)
-        {
-            mainCamera = Camera.main;
-        }
+        if (mainCamera == null) mainCamera = Camera.main;
 
         LevelLayoutGenerator.OnLayoutGenerated -= OnLayoutReady;
         LevelLayoutGenerator.OnLayoutGenerated += OnLayoutReady;
@@ -56,220 +46,190 @@ public class ZoneSpawner : MonoBehaviour
     private void OnDestroy()
     {
         LevelLayoutGenerator.OnLayoutGenerated -= OnLayoutReady;
+        if (Instance == this) Instance = null;
     }
 
     public void OnLayoutReady(List<ZoneInstance> zones)
     {
         allZones.Clear();
-        foreach (var zi in zones)
+        foreach (ZoneInstance zoneInstance in zones)
         {
-            // Si tiene ZoneCombatController, queda excluida del spawning continuo
-            if (zi.instanceGO.GetComponent<ZoneCombatController>() != null)
-                continue;
-
-            SpawnZone sz = zi.instanceGO.GetComponent<SpawnZone>();
-            if (sz != null)
-            {
-                allZones.Add(sz);
-            }
-        }
-        
-        StartCoroutine(UpdateActiveZonesRoutine());
-    }
-
-    private IEnumerator UpdateActiveZonesRoutine()
-    {
-        while (true)
-        {
-            if (!isSpawningPaused)
-            {
-                UpdateActiveZones();
-            }
-            yield return new WaitForSeconds(cameraZoneCheckInterval);
+            SpawnZone spawnZone = zoneInstance.instanceGO.GetComponent<SpawnZone>();
+            if (spawnZone != null) allZones.Add(spawnZone);
         }
     }
 
-    private void UpdateActiveZones()
+    public bool TryEnterZone(SpawnZone destination, ZoneCameraTrigger cameraTrigger)
     {
-        if (mainCamera == null) return;
+        if (destination == null) return false;
+        if (destination == playerCurrentZone) return true;
 
-        float height = mainCamera.orthographicSize * 2f;
-        float width = height * mainCamera.aspect;
-        Vector3 camCenter = mainCamera.transform.position;
-        Bounds camBounds = new Bounds(camCenter, new Vector3(width, height, 0f));
-        
-        // Agregar un pequeño padding para no despawnear cosas en el borde
-        camBounds.Expand(new Vector3(4f, 4f, 0f)); 
-
-        HashSet<SpawnZone> currentlyActive = new HashSet<SpawnZone>();
-
-        foreach (var zone in allZones)
+        if (playerCurrentZone != null && !playerCurrentZone.IsCleared)
         {
-            Collider2D col = zone.GetComponent<Collider2D>();
-            if (col == null) continue;
-
-            // La zona está activa si el jugador está en ella O si la cámara la ve
-            bool playerInZone = (zone == playerCurrentZone);
-            bool cameraSeesZone = col.bounds.Intersects(camBounds); // Aproximación con AABB bounds
-
-            if (playerInZone || cameraSeesZone)
-            {
-                currentlyActive.Add(zone);
-            }
+            return false;
         }
 
-        // Zonas que se acaban de desactivar
-        foreach (var zone in activeZones)
+        playerCurrentZone = destination;
+        cameraTrigger?.ActivateCamera();
+        OnPlayerZoneChanged?.Invoke(destination);
+
+        // La EndZone / zona de boss NO procesa oleadas de enemigos comunes:
+        // su orquestación (diálogo, spawn del jefe, barreras) la gestiona
+        // BossEncounterManager. Se detecta por el flag IsBossZone, por
+        // ZoneMetadata.ZoneType == End o por la presencia del manager.
+        bool isBossZone = destination.IsBossZone
+            || destination.GetComponent<ZoneMetadata>()?.zoneType == ZoneType.End
+            || destination.GetComponentInChildren<BossEncounterManager>() != null;
+
+        if (!destination.IsCleared && !isBossZone && destination.BeginEncounter())
         {
-            if (!currentlyActive.Contains(zone))
-            {
-                DeactivateZone(zone);
-            }
+            StartZoneWaves(destination);
         }
 
-        // Zonas que se acaban de activar
-        foreach (var zone in currentlyActive)
-        {
-            if (!activeZones.Contains(zone))
-            {
-                ActivateZone(zone);
-            }
-        }
-
-        activeZones = currentlyActive;
+        return true;
     }
 
-    private void ActivateZone(SpawnZone zone)
+    private void StartZoneWaves(SpawnZone zone)
     {
-        // Cancelar despawn pendiente si lo hubiera
-        if (despawnCoroutines.ContainsKey(zone) && despawnCoroutines[zone] != null)
+        if (spawnCoroutines.TryGetValue(zone, out Coroutine existing) && existing != null)
         {
-            StopCoroutine(despawnCoroutines[zone]);
-            despawnCoroutines.Remove(zone);
+            StopCoroutine(existing);
         }
 
-        // Iniciar spawning
-        if (!spawnCoroutines.ContainsKey(zone) || spawnCoroutines[zone] == null)
-        {
-            spawnCoroutines[zone] = StartCoroutine(SpawnLoopForZone(zone));
-        }
+        spawnCoroutines[zone] = StartCoroutine(SpawnWavesForZone(zone));
     }
 
-    private void DeactivateZone(SpawnZone zone)
+    private IEnumerator SpawnWavesForZone(SpawnZone zone)
     {
-        // Detener spawning
-        if (spawnCoroutines.ContainsKey(zone) && spawnCoroutines[zone] != null)
+        // Las zonas de jefe jamás generan oleadas comunes (ni LogError): el
+        // combate lo orquesta BossEncounterManager.
+        if (zone == null
+            || zone.IsBossZone
+            || zone.GetComponent<ZoneMetadata>()?.zoneType == ZoneType.End)
         {
-            StopCoroutine(spawnCoroutines[zone]);
-            spawnCoroutines.Remove(zone);
+            if (zone != null) spawnCoroutines.Remove(zone);
+            Debug.Log($"[ZoneSpawner] {zone?.name ?? "Zona"} es de jefe; no se generan oleadas comunes.");
+            yield break;
         }
 
-        // Iniciar despawn con delay
-        if (!despawnCoroutines.ContainsKey(zone) || despawnCoroutines[zone] == null)
-        {
-            despawnCoroutines[zone] = StartCoroutine(DespawnZoneRoutine(zone, zone.despawnDelay));
-        }
-    }
+        int failedWaveAttempts = 0;
+        const int maxFailedWaveAttempts = 3;
 
-    private IEnumerator SpawnLoopForZone(SpawnZone zone)
-    {
-        while (true)
+        while (zone != null && zone.IsEncounterActive)
         {
-            if (isSpawningPaused)
+            while (isSpawningPaused || zone.activeEnemyCount > 0)
             {
                 yield return null;
-                continue;
             }
 
-            if (zone.activeEnemyCount >= zone.maxActiveEnemies)
+            // Watchdog: si ya se lanzaron todas las oleadas y no quedan enemigos,
+            // la zona DEBE cerrarse siempre. Algunas rutas (suppressDrops, pool)
+            // podían dejar el contador pegado y bloquear las Paredes Espectrales.
+            if (zone.CurrentWave >= zone.MaxWaves)
             {
-                yield return new WaitForSeconds(0.5f);
-                continue;
+                zone.CompleteEncounter();
+                break;
             }
 
-            EnemyData dataToSpawn = zone.GetRandomEnemyData();
-            if (dataToSpawn != null && dataToSpawn.prefab != null && EnemyPool.Instance != null)
+            if (zone.CurrentWave > 0 && zone.waveInterval > 0f)
             {
-                Vector2 spawnPos = zone.GetRandomOffscreenPoint(mainCamera);
-                GameObject enemyGO = EnemyPool.Instance.Get(dataToSpawn.prefab, spawnPos);
-                
-                Enemy enemyComp = enemyGO.GetComponent<Enemy>();
-                if (enemyComp != null)
+                yield return new WaitForSeconds(zone.waveInterval);
+                if (isSpawningPaused || zone.activeEnemyCount > 0) continue;
+            }
+
+            if (!zone.BeginNextWave())
+            {
+                // Anti-bucle infinito: si BeginNextWave no puede avanzar de forma
+                // repetida (estado desincronizado), forzamos el cierre en lugar de
+                // quedarnos atascados con las barreras activas.
+                failedWaveAttempts++;
+                if (failedWaveAttempts >= maxFailedWaveAttempts)
                 {
-                    enemyComp.ResetForPool();
-                    enemyComp.originZone = zone;
-                    enemyComp.Init(dataToSpawn);
-                    
-                    zone.activeEnemyCount++;
+                    Debug.LogError($"[ZoneSpawner] La oleada {zone.CurrentWave} de {zone.name} no pudo iniciarse tras {maxFailedWaveAttempts} intentos. Forzando cierre de la zona.", zone);
+                    zone.ForceComplete();
+                    break;
+                }
+                continue;
+            }
 
-                    // Limpiar suscripciones previas para evitar duplicados al reciclar
-                    enemyComp.OnDeath -= HandleEnemyDeath;
-                    enemyComp.OnDeath += HandleEnemyDeath;
+            failedWaveAttempts = 0;
 
-                    EnemyChase chase = enemyGO.GetComponent<EnemyChase>();
-                    if (chase != null)
-                    {
-                        chase.ResetChaseState();
-                        chase.originZone = zone;
-                        chase.leashDistance = zone.leashDistance;
-                        chase.SetTarget(player);
-                    }
+            int spawnedEnemies = SpawnWave(zone);
+            if (spawnedEnemies == 0)
+            {
+                Debug.LogError($"[ZoneSpawner] La oleada {zone.CurrentWave} de {zone.name} no pudo generar enemigos. La zona se abre para evitar un bloqueo.", zone);
+                zone.CompleteEncounter();
+                break;
+            }
+        }
+
+        if (zone != null) spawnCoroutines.Remove(zone);
+    }
+
+    private int SpawnWave(SpawnZone zone)
+    {
+        int waveCount = UnityEngine.Random.Range(zone.minEnemiesPerWave, zone.maxEnemiesPerWave + 1);
+        int spawnedCount = 0;
+        int waveIndex = zone.CurrentWave - 1;
+
+        for (int i = 0; i < waveCount && zone.activeEnemyCount < zone.maxActiveEnemies; i++)
+        {
+            EnemyData data = zone.GetRandomEnemyData();
+            if (data == null || data.prefab == null || EnemyPool.Instance == null) continue;
+
+            GameObject enemyObject = EnemyPool.Instance.Get(data.prefab, zone.GetRandomOffscreenPoint(mainCamera));
+            if (enemyObject == null) continue;
+
+            Enemy enemy = enemyObject.GetComponent<Enemy>();
+            if (enemy == null)
+            {
+                Debug.LogWarning($"[ZoneSpawner] {enemyObject.name} no tiene Enemy; no cuenta para la oleada.", enemyObject);
+                continue;
+            }
+
+            enemy.ResetForPool();
+            enemy.originZone = zone;
+            enemy.Init(
+                data.maxHP + (waveIndex * zone.hpBonusPerWave),
+                data.moveSpeed + (waveIndex * zone.speedBonusPerWave),
+                data.xpReward + Mathf.RoundToInt(waveIndex * zone.xpBonusPerWave),
+                data.contactDamage + (waveIndex * zone.damageBonusPerWave));
+            enemy.data = data;
+            enemy.OnDeath -= HandleEnemyDeath;
+            enemy.OnDeath += HandleEnemyDeath;
+            zone.RegisterEnemySpawned();
+            spawnedCount++;
+
+            EnemyChase chase = enemyObject.GetComponent<EnemyChase>();
+            if (chase != null)
+            {
+                if (waveIndex == 0 && zone.firstWaveChaseDelay > 0f)
+                {
+                    StartCoroutine(DelayedChaseRoutine(chase, zone.firstWaveChaseDelay));
+                }
+                else
+                {
+                    chase.SetTarget(player);
                 }
             }
-
-            yield return new WaitForSeconds(zone.spawnInterval);
         }
+
+        return spawnedCount;
+    }
+
+    private IEnumerator DelayedChaseRoutine(EnemyChase chase, float delay)
+    {
+        chase.SetTarget(null);
+        yield return new WaitForSeconds(delay);
+        if (chase != null) chase.SetTarget(player);
     }
 
     private void HandleEnemyDeath(Enemy enemy)
     {
         enemy.OnDeath -= HandleEnemyDeath;
-        if (enemy.originZone != null)
-        {
-            enemy.originZone.activeEnemyCount = Mathf.Max(0, enemy.originZone.activeEnemyCount - 1);
-        }
-    }
-
-    private IEnumerator DespawnZoneRoutine(SpawnZone zone, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        // Encontrar todos los enemigos que pertenecen a esta zona y devolverlos al pool
-        // (Podríamos llevar una lista por zona para optimizar, pero usar FindObjectsByType es aceptable 
-        // dado que no se llama cada frame, sino tras un delay al salir de una zona)
-        
-        Enemy[] allEnemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
-        foreach (var enemy in allEnemies)
-        {
-            if (enemy.originZone == zone && enemy.gameObject.activeInHierarchy)
-            {
-                // Devolver al pool sin disparar muerte/drops
-                enemy.SuppressDropsAndDestroy(); 
-                zone.activeEnemyCount = Mathf.Max(0, zone.activeEnemyCount - 1);
-            }
-        }
-
-        despawnCoroutines.Remove(zone);
-    }
-
-    // --- API Pública ---
-
-    public void OnPlayerEnteredZone(SpawnZone zone)
-    {
-        if (playerCurrentZone != zone)
-        {
-            playerCurrentZone = zone;
-            OnPlayerZoneChanged?.Invoke(zone);
-        }
-    }
-
-    public void OnPlayerExitedZone(SpawnZone zone)
-    {
-        if (playerCurrentZone == zone)
-        {
-            playerCurrentZone = null;
-            // No disparamos evento de 'salida', asumimos que entrará a otra pronto
-        }
+        // La notificación es idempotente (flag en Enemy); el OnDisable posterior
+        // del pool no descuenta dos veces.
+        enemy.NotifyZoneRemoval();
     }
 
     public SpawnZone GetPlayerZone()
@@ -289,17 +249,13 @@ public class ZoneSpawner : MonoBehaviour
 
     public void ClearAllEnemies()
     {
-        Enemy[] allEnemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
-        foreach (var enemy in allEnemies)
+        Enemy[] enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
+        foreach (Enemy enemy in enemies)
         {
-            if (enemy.gameObject.activeInHierarchy)
-            {
-                if (enemy.originZone != null)
-                {
-                    enemy.originZone.activeEnemyCount = Mathf.Max(0, enemy.originZone.activeEnemyCount - 1);
-                }
-                enemy.SuppressDropsAndDestroy();
-            }
+            if (!enemy.gameObject.activeInHierarchy) continue;
+            // Idempotente: no doble descuenta aunque OnDisable vuelva a dispararse.
+            enemy.NotifyZoneRemoval();
+            enemy.SuppressDropsAndDestroy();
         }
     }
 }

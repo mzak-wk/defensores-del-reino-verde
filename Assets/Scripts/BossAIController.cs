@@ -32,14 +32,34 @@ public class BossAIController : MonoBehaviour
         if (player == null) player = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
 
+    void Start()
+    {
+        // Congelar IA desde el frame 0 del nivel
+        Deactivate();
+        Debug.Log("[BossAIController] IA congelada desde el inicio del nivel.");
+    }
+
     public void Activate()
     {
         isActive = true;
         isCasting = false;
 
+        if (enemyChase != null)
+            enemyChase.SetMovementSuspended(false);
+
         if (statsOverride != null)
         {
             ApplyStatsOverride();
+        }
+
+        // Configurar física para combate: detección de colisiones continua y rotación bloqueada
+        if (bossRb != null)
+        {
+            bossRb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+            bossRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            bossRb.mass = 100000f;
+            bossRb.simulated = true;
+            bossRb.linearVelocity = Vector2.zero;
         }
 
         if (statsOverride != null && statsOverride.attacks != null)
@@ -48,6 +68,18 @@ public class BossAIController : MonoBehaviour
         }
 
         attackLoopCoroutine = StartCoroutine(AttackLoop());
+    }
+
+    /// <summary>
+    /// Inicio oficial de la batalla: reactiva el GameObject (el boss se guarda
+    /// inactivo como placeholder durante la cinemática) y arranca el ciclo de IA.
+    /// Activar el objeto ANTES de Activate() es obligatorio, porque StartCoroutine
+    /// falla en GameObjects inactivos.
+    /// </summary>
+    public void StartBattle()
+    {
+        gameObject.SetActive(true);
+        Activate();
     }
 
     public void Deactivate()
@@ -60,7 +92,14 @@ public class BossAIController : MonoBehaviour
             attackLoopCoroutine = null;
         }
 
-        RestoreMovement();
+        if (enemyChase != null)
+            enemyChase.enabled = false;
+
+        if (bossRb != null)
+        {
+            bossRb.simulated = true;
+            bossRb.linearVelocity = Vector2.zero;
+        }
     }
 
     public void SetStatsOverride(BossStatsOverride newStats)
@@ -225,18 +264,17 @@ public class BossAIController : MonoBehaviour
 
     private void FreezeMovement()
     {
-        if (enemyChase != null) enemyChase.enabled = false;
+        if (enemyChase != null) enemyChase.SetMovementSuspended(true);
 
         if (bossRb != null)
         {
-            bossRb.simulated = false;
             bossRb.linearVelocity = Vector2.zero;
         }
     }
 
     private void RestoreMovement()
     {
-        if (enemyChase != null) enemyChase.enabled = true;
+        if (enemyChase != null) enemyChase.SetMovementSuspended(false);
 
         if (bossRb != null)
         {

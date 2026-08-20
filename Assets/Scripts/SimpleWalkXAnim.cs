@@ -27,7 +27,21 @@ public class SimpleWalkXAnim : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         if (!idleSprite) idleSprite = stepA;
-        if (sr) sr.sprite = idleSprite;
+        if (sr)
+        {
+            if (sr.sprite == null) sr.sprite = idleSprite;
+
+            // Leer la orientación inicial por defecto del sprite/prefab
+            bool initialFlip = sr.flipX;
+            if (spriteMiraADerechaPorDefecto)
+            {
+                ultimaDirX = initialFlip ? -1f : 1f;
+            }
+            else
+            {
+                ultimaDirX = initialFlip ? 1f : -1f;
+            }
+        }
     }
 
     void Update()
@@ -39,13 +53,16 @@ public class SimpleWalkXAnim : MonoBehaviour
         // ¿Se está pulsando algo de movimiento?
         bool hayMovimiento = Mathf.Abs(x) > inputThreshold || Mathf.Abs(y) > inputThreshold;
 
-        // Solo A/D deciden la orientación. Si x ≠ 0, actualizamos ultimaDirX.
+        // Solo A/D deciden la orientación. Si x ≠ 0, actualizamos ultimaDirX y aplicamos flip.
         if (Mathf.Abs(x) > inputThreshold)
+        {
             ultimaDirX = Mathf.Sign(x);
-
-        // Flip según la última dirección elegida por A/D
-        bool mirarIzquierda = ultimaDirX < 0f;
-        sr.flipX = spriteMiraADerechaPorDefecto ? mirarIzquierda : !mirarIzquierda;
+            bool mirarIzquierda = ultimaDirX < 0f;
+            if (sr != null)
+            {
+                sr.flipX = spriteMiraADerechaPorDefecto ? mirarIzquierda : !mirarIzquierda;
+            }
+        }
 
         if (hayMovimiento && (stepA || stepB))
         {

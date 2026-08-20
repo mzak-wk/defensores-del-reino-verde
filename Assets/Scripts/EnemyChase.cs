@@ -5,101 +5,141 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyChase : MonoBehaviour
 {
-    Transform target;
-    Enemy enemy;
-    Rigidbody2D rb;
+    [Header("Debug")]
+    [SerializeField] private Transform target;
 
     [Header("Multiplicadores de velocidad")]
-    [Tooltip("Multiplicador que se aplica automáticamente a jefes (p. ej. 3 => x3).")]
     public float bossSpeedMultiplier = 3f;
-
-    [Tooltip("Si está activo intentará detectar componentes con 'Boss' en su nombre y aplicar el multiplicador.")]
     public bool applyToBossesAutomatically = true;
 
-    // multiplicador activo (1 = normal)
-    float currentMultiplier = 1f;
+    [Header("Pausa táctica del jefe")]
+    [SerializeField] private float bossContactRange = 2f;
+    [SerializeField] private float bossPauseDuration = 1.75f;
+    [SerializeField] private float bossPauseRearmDistance = 2.5f;
 
-    [HideInInspector] public SpawnZone originZone;
-    [HideInInspector] public float leashDistance = 15f;
-    bool isReturning = false;
-    Vector2 returnTarget;
+    Enemy enemy;
+    Rigidbody2D rb;
+    float currentMultiplier = 1f;
+    bool isBoss;
+    bool movementSuspended;
+    bool bossPauseArmed = true;
+    float bossPauseUntil;
 
     void Awake()
     {
         enemy = GetComponent<Enemy>();
         rb = GetComponent<Rigidbody2D>();
 
-        if (enemy == null) Debug.LogError($"[EnemyChase] Falta componente Enemy en {name}.");
+        if (enemy == null) Debug.LogError($"[EnemyChase] Falta Enemy en {name}.");
         if (rb == null) Debug.LogError($"[EnemyChase] Falta Rigidbody2D en {name}.");
 
-        // Si queremos detectar jefes automáticamente, comprobar componentes cuyo nombre contenga "Boss"
-        if (applyToBossesAutomatically && IsLikelyBoss())
+        isBoss = IsLikelyBoss();
+        if (isBoss)
         {
-            currentMultiplier = Mathf.Max(0f, bossSpeedMultiplier);
-            if (currentMultiplier <= 1f)
-                currentMultiplier = 1f; // asegurar mínimo 1
+            if (applyToBossesAutomatically)
+                currentMultiplier = Mathf.Max(1f, bossSpeedMultiplier);
+
+            if (rb != null)
+                rb.linearVelocity = Vector2.zero;
+            enabled = false;
         }
     }
 
-    // Setea la target desde otros scripts
     public void SetTarget(Transform t) => target = t;
 
     void FixedUpdate()
     {
-        if (!target || enemy == null || rb == null) return;
+        if (rb == null)
+            return;
 
-        if (originZone != null && leashDistance > 0)
+        if (!enabled || movementSuspended || rb.bodyType == RigidbodyType2D.Kinematic)
         {
-            Collider2D col = originZone.GetComponent<Collider2D>();
-            if (col != null)
-            {
-                Vector2 closestPoint = col.ClosestPoint(rb.position);
-                float distToZone = Vector2.Distance(rb.position, closestPoint);
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
 
-                if (distToZone > leashDistance)
-                {
-                    if (!isReturning)
-                    {
-                        isReturning = true;
-                        returnTarget = originZone.GetRandomPointInZone();
-                    }
-                }
+        if (target == null)
+        {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) target = p.transform;
+        }
+
+        if (target == null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
+        if (enemy == null) return;
+
+        // IA suspendida por el Vórtice de Captura: no perseguir al jugador.
+        // Doble seguro (además del Kinematic en SetTrapped) para que la IA
+        // nunca vuelva a escribir velocidad en el Rigidbody mientras esté atrapado.
+        if (enemy.IsTrapped)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
+        float distanceToTarget = Vector2.Distance(rb.position, target.position);
+        if (isBoss)
+        {
+            if (!bossPauseArmed && distanceToTarget >= bossPauseRearmDistance)
+                bossPauseArmed = true;
+
+            if (Time.time < bossPauseUntil)
+            {
+                rb.linearVelocity = Vector2.zero;
+                return;
+            }
+
+            if (bossPauseArmed && distanceToTarget <= bossContactRange)
+            {
+                bossPauseArmed = false;
+                bossPauseUntil = Time.time + bossPauseDuration;
+                rb.linearVelocity = Vector2.zero;
+                return;
             }
         }
 
-        Vector2 moveTarget = isReturning ? returnTarget : (Vector2)target.position;
-        Vector2 dir = (moveTarget - rb.position).normalized;
+        Vector2 direction = ((Vector2)target.position - rb.position).normalized;
         float speed = enemy.moveSpeed * currentMultiplier;
-        Vector2 next = rb.position + dir * speed * Time.fixedDeltaTime;
-        rb.MovePosition(next);
-
-        if (isReturning && Vector2.Distance(rb.position, returnTarget) < 0.5f)
-        {
-            isReturning = false;
-        }
+        rb.linearVelocity = direction * speed;
     }
 
-    // Devuelve true si el GameObject tiene algún componente cuyo tipo contiene "Boss" (case-insensitive)
     bool IsLikelyBoss()
     {
-        var mbs = GetComponents<MonoBehaviour>();
-        foreach (var mb in mbs)
+        if (GetComponent<BossAIController>() != null || GetComponent<BossHealth>() != null
+            || GetComponentInParent<BossAIController>() != null || GetComponentInParent<BossHealth>() != null
+            || GetComponentInChildren<BossAIController>() != null || GetComponentInChildren<BossHealth>() != null)
+            return true;
+
+        foreach (var mb in GetComponents<MonoBehaviour>())
         {
-            if (mb == null) continue;
-            string tname = mb.GetType().Name.ToLowerInvariant();
-            if (tname.Contains("boss")) return true;
+            if (mb != null && mb.GetType().Name.ToLowerInvariant().Contains("boss"))
+                return true;
         }
         return false;
     }
 
-    // API pública: setear multiplicador permanente
-    public void SetSpeedMultiplier(float multiplier)
+    void OnDisable()
     {
-        currentMultiplier = Mathf.Max(0f, multiplier);
-        if (currentMultiplier == 0f) currentMultiplier = 1f;
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
     }
 
-    // API pública: setear multiplicador temporal (vuelve al anterior)
+    public void SetMovementSuspended(bool suspended)
+    {
+        movementSuspended = suspended;
+        if (suspended && rb != null)
+            rb.linearVelocity = Vector2.zero;
+    }
+
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        currentMultiplier = Mathf.Max(1f, multiplier);
+    }
+
     public void SetTemporarySpeedMultiplier(float multiplier, float duration)
     {
         StopAllCoroutines();
@@ -109,16 +149,8 @@ public class EnemyChase : MonoBehaviour
     IEnumerator TemporaryMultiplierCoroutine(float multiplier, float duration)
     {
         float previous = currentMultiplier;
-        currentMultiplier = Mathf.Max(0f, multiplier);
-        if (currentMultiplier == 0f) currentMultiplier = 1f;
+        currentMultiplier = Mathf.Max(1f, multiplier);
         yield return new WaitForSeconds(duration);
         currentMultiplier = previous;
-    }
-
-    public void ResetChaseState()
-    {
-        isReturning = false;
-        originZone = null;
-        leashDistance = 15f;
     }
 }
