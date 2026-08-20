@@ -204,7 +204,7 @@ MonoBehaviour:
   destroyOnHit: 0
   targetMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4095
 --- !u!114 &-387241864103090918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   damage: 50
   targetMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4095
   targetTag: Player
   singleHit: 1
   tickMode: 0

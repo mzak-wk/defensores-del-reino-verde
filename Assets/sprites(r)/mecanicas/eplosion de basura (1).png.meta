@@ -1,0 +1,1105 @@
+fileFormatVersion: 2
+guid: 98e1b0e64719ad04c85f9f35fbeaa4d5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -281736350549617530
+    second: eplosion de basura (1)_0
+  - first:
+      213: 8624499279531938863
+    second: eplosion de basura (1)_1
+  - first:
+      213: -2352889335115467003
+    second: eplosion de basura (1)_2
+  - first:
+      213: 5857438502025510124
+    second: eplosion de basura (1)_3
+  - first:
+      213: 5915199953186530792
+    second: eplosion de basura (1)_4
+  - first:
+      213: -8175026741733486900
+    second: eplosion de basura (1)_5
+  - first:
+      213: -7002725628553092437
+    second: eplosion de basura (1)_6
+  - first:
+      213: 1796113619880302205
+    second: eplosion de basura (1)_7
+  - first:
+      213: -1237990621264286995
+    second: eplosion de basura (1)_8
+  - first:
+      213: -4656158989991358679
+    second: eplosion de basura (1)_9
+  - first:
+      213: 2887937783756759296
+    second: eplosion de basura (1)_10
+  - first:
+      213: -7515632123513072318
+    second: eplosion de basura (1)_11
+  - first:
+      213: 1134371954697888455
+    second: eplosion de basura (1)_12
+  - first:
+      213: 6471912885821605328
+    second: eplosion de basura (1)_13
+  - first:
+      213: 8493433359077611923
+    second: eplosion de basura (1)_14
+  - first:
+      213: 1424846674157213897
+    second: eplosion de basura (1)_15
+  - first:
+      213: -2199929314023323463
+    second: eplosion de basura (1)_16
+  - first:
+      213: 8515261494486686720
+    second: eplosion de basura (1)_17
+  - first:
+      213: 4436803537580072743
+    second: eplosion de basura (1)_18
+  - first:
+      213: 2761606607835668172
+    second: eplosion de basura (1)_19
+  - first:
+      213: -353182011207240017
+    second: eplosion de basura (1)_20
+  - first:
+      213: 7974807218928591659
+    second: eplosion de basura (1)_21
+  - first:
+      213: -7307957863919605689
+    second: eplosion de basura (1)_22
+  - first:
+      213: -5939987500896277411
+    second: eplosion de basura (1)_23
+  - first:
+      213: 6690427632137143989
+    second: eplosion de basura (1)_24
+  - first:
+      213: 6962658826661697398
+    second: eplosion de basura (1)_25
+  - first:
+      213: -4459141518119615363
+    second: eplosion de basura (1)_26
+  - first:
+      213: 7045820697100272693
+    second: eplosion de basura (1)_27
+  - first:
+      213: 7273488736809243559
+    second: eplosion de basura (1)_28
+  - first:
+      213: 8849079472402012999
+    second: eplosion de basura (1)_29
+  - first:
+      213: 5154865771506403969
+    second: eplosion de basura (1)_30
+  - first:
+      213: -6254692771816527256
+    second: eplosion de basura (1)_31
+  - first:
+      213: -2985454396087683293
+    second: eplosion de basura (1)_32
+  - first:
+      213: -5450165773420021037
+    second: eplosion de basura (1)_33
+  - first:
+      213: -1954968793143179744
+    second: eplosion de basura (1)_34
+  - first:
+      213: -8198406112773896805
+    second: eplosion de basura (1)_35
+  - first:
+      213: 4557340018961133989
+    second: eplosion de basura (1)_36
+  - first:
+      213: -2239495455913635391
+    second: eplosion de basura (1)_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: eplosion de basura (1)_0
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 306
+        width: 321
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684dc292842171cf0800000000000000
+      internalID: -281736350549617530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_1
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 610
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f241d12766060b770800000000000000
+      internalID: 8624499279531938863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_2
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 587
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50733a8ad9bd85fd0800000000000000
+      internalID: -2352889335115467003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_3
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 592
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec3de6984dc94150800000000000000
+      internalID: 5857438502025510124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_4
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 308
+        width: 320
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e527117403071250800000000000000
+      internalID: 5915199953186530792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_5
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 330
+        width: 269
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce08a5dd787c8e80800000000000000
+      internalID: -8175026741733486900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_6
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 548
+        width: 54
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba2a192942251de90800000000000000
+      internalID: -7002725628553092437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_7
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 564
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76d43132d31de810800000000000000
+      internalID: 1796113619880302205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_8
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 561
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deae640d616c1dee0800000000000000
+      internalID: -1237990621264286995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_9
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 565
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92fc2d76110026fb0800000000000000
+      internalID: -4656158989991358679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_10
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 569
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00120460d14041820800000000000000
+      internalID: 2887937783756759296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_11
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 500
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2451d77376c13b790800000000000000
+      internalID: -7515632123513072318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_12
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 506
+        width: 59
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c2eeea58491ebf00800000000000000
+      internalID: 1134371954697888455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_13
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 450
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d58ba0ea7ad0d950800000000000000
+      internalID: 6471912885821605328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_14
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 404
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3991643d3acbed570800000000000000
+      internalID: 8493433359077611923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_15
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 427
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c89980408216c310800000000000000
+      internalID: 1424846674157213897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_16
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 386
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b8cba2d1f74871e0800000000000000
+      internalID: -2199929314023323463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_17
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 363
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00cd074a6394c2670800000000000000
+      internalID: 8515261494486686720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_18
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 342
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f18ab6f41b29d30800000000000000
+      internalID: 4436803537580072743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_19
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 329
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce9a650492335620800000000000000
+      internalID: 2761606607835668172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_20
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 321
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa63fe005de391bf0800000000000000
+      internalID: -353182011207240017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_21
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 306
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b23a57cc9e43cae60800000000000000
+      internalID: 7974807218928591659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_22
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 273
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748ac8fba0be49a90800000000000000
+      internalID: -7307957863919605689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_23
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 236
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c21ded6dce09da0800000000000000
+      internalID: -5939987500896277411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_24
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 252
+        width: 16
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b60ef8eb7c29dc50800000000000000
+      internalID: 6690427632137143989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_25
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 315
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6779867205550a060800000000000000
+      internalID: 6962658826661697398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_26
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 159
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d74c8413a62fd12c0800000000000000
+      internalID: -4459141518119615363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_27
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 184
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534c1c9f798c7c160800000000000000
+      internalID: 7045820697100272693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_28
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 158
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3d153387f90f460800000000000000
+      internalID: 7273488736809243559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_29
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 194
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74b19bd45ee3eca70800000000000000
+      internalID: 8849079472402012999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_30
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 19
+        width: 314
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a85778b13c98740800000000000000
+      internalID: 5154865771506403969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_31
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 175
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a2ca4101ed239a0800000000000000
+      internalID: -6254692771816527256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_32
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 21
+        width: 313
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 327b01c5b098196d0800000000000000
+      internalID: -2985454396087683293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_33
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 90
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dabe44fa1f1d54b0800000000000000
+      internalID: -5450165773420021037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_34
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 70
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0260ab19d3e8ed4e0800000000000000
+      internalID: -1954968793143179744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_35
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 13
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9588b3d319693e80800000000000000
+      internalID: -8198406112773896805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_36
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 15
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1b9d6f99cee3f30800000000000000
+      internalID: 4557340018961133989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eplosion de basura (1)_37
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 17
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c19a2a8fb6bbe0e0800000000000000
+      internalID: -2239495455913635391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      eplosion de basura (1)_0: -281736350549617530
+      eplosion de basura (1)_1: 8624499279531938863
+      eplosion de basura (1)_10: 2887937783756759296
+      eplosion de basura (1)_11: -7515632123513072318
+      eplosion de basura (1)_12: 1134371954697888455
+      eplosion de basura (1)_13: 6471912885821605328
+      eplosion de basura (1)_14: 8493433359077611923
+      eplosion de basura (1)_15: 1424846674157213897
+      eplosion de basura (1)_16: -2199929314023323463
+      eplosion de basura (1)_17: 8515261494486686720
+      eplosion de basura (1)_18: 4436803537580072743
+      eplosion de basura (1)_19: 2761606607835668172
+      eplosion de basura (1)_2: -2352889335115467003
+      eplosion de basura (1)_20: -353182011207240017
+      eplosion de basura (1)_21: 7974807218928591659
+      eplosion de basura (1)_22: -7307957863919605689
+      eplosion de basura (1)_23: -5939987500896277411
+      eplosion de basura (1)_24: 6690427632137143989
+      eplosion de basura (1)_25: 6962658826661697398
+      eplosion de basura (1)_26: -4459141518119615363
+      eplosion de basura (1)_27: 7045820697100272693
+      eplosion de basura (1)_28: 7273488736809243559
+      eplosion de basura (1)_29: 8849079472402012999
+      eplosion de basura (1)_3: 5857438502025510124
+      eplosion de basura (1)_30: 5154865771506403969
+      eplosion de basura (1)_31: -6254692771816527256
+      eplosion de basura (1)_32: -2985454396087683293
+      eplosion de basura (1)_33: -5450165773420021037
+      eplosion de basura (1)_34: -1954968793143179744
+      eplosion de basura (1)_35: -8198406112773896805
+      eplosion de basura (1)_36: 4557340018961133989
+      eplosion de basura (1)_37: -2239495455913635391
+      eplosion de basura (1)_4: 5915199953186530792
+      eplosion de basura (1)_5: -8175026741733486900
+      eplosion de basura (1)_6: -7002725628553092437
+      eplosion de basura (1)_7: 1796113619880302205
+      eplosion de basura (1)_8: -1237990621264286995
+      eplosion de basura (1)_9: -4656158989991358679
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

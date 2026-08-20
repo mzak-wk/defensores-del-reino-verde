@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 761b42dada2dd5747865b07860238b22
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 611700689224168526
+    second: sobrecalentamiento_0
+  - first:
+      213: 756633730511862332
+    second: sobrecalentamiento_1
+  - first:
+      213: -1692466139666452374
+    second: sobrecalentamiento_2
+  - first:
+      213: -1843358903810854419
+    second: sobrecalentamiento_3
+  - first:
+      213: -6822106213660509844
+    second: sobrecalentamiento_4
+  - first:
+      213: -1488632119272137630
+    second: sobrecalentamiento_5
+  - first:
+      213: -9222437731887472579
+    second: sobrecalentamiento_6
+  - first:
+      213: -581263636693829543
+    second: sobrecalentamiento_7
+  - first:
+      213: 1117057591322841261
+    second: sobrecalentamiento_8
+  - first:
+      213: 5281630350801165159
+    second: sobrecalentamiento_9
+  - first:
+      213: -7534807637330388538
+    second: sobrecalentamiento_10
+  - first:
+      213: 1952809015012481237
+    second: sobrecalentamiento_11
+  - first:
+      213: 3972179948854633359
+    second: sobrecalentamiento_12
+  - first:
+      213: -7087541758333576531
+    second: sobrecalentamiento_13
+  - first:
+      213: -9154206476543920083
+    second: sobrecalentamiento_14
+  - first:
+      213: 3290667710542452379
+    second: sobrecalentamiento_15
+  - first:
+      213: 5759448414231985391
+    second: sobrecalentamiento_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sobrecalentamiento_0
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 16
+        width: 94
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44711239823d7800800000000000000
+      internalID: 611700689224168526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_1
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 78
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3afc3c7e5a108a00800000000000000
+      internalID: 756633730511862332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_2
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 82
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a60fdc653072388e0800000000000000
+      internalID: -1692466139666452374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_3
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 94
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de1fcc0f7d21b66e0800000000000000
+      internalID: -1843358903810854419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_4
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 94
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69b7c23b820351a0800000000000000
+      internalID: -6822106213660509844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_5
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 28
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c1c8189f0575be0800000000000000
+      internalID: -1488632119272137630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_6
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 20
+        width: 75
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3020b3deb1530080800000000000000
+      internalID: -9222437731887472579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_7
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 43
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95833065dcfeee7f0800000000000000
+      internalID: -581263636693829543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_8
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 40
+        width: 17
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da0937cf5f5908f00800000000000000
+      internalID: 1117057591322841261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_9
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 63
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76bdc6e12de1c4940800000000000000
+      internalID: 5281630350801165159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_10
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 70
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9950eff5cfe6790800000000000000
+      internalID: -7534807637330388538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_11
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 47
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8dff5e375c91b10800000000000000
+      internalID: 1952809015012481237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_12
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 32
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83e8633e94002730800000000000000
+      internalID: 3972179948854633359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_13
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 16
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa97cb725ef3ad90800000000000000
+      internalID: -7087541758333576531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_14
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 20
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d28f40de5b9b5f080800000000000000
+      internalID: -9154206476543920083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_15
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 16
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b961bb819dccaad20800000000000000
+      internalID: 3290667710542452379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sobrecalentamiento_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 13
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fecfb7061dbadef40800000000000000
+      internalID: 5759448414231985391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sobrecalentamiento_0: 611700689224168526
+      sobrecalentamiento_1: 756633730511862332
+      sobrecalentamiento_10: -7534807637330388538
+      sobrecalentamiento_11: 1952809015012481237
+      sobrecalentamiento_12: 3972179948854633359
+      sobrecalentamiento_13: -7087541758333576531
+      sobrecalentamiento_14: -9154206476543920083
+      sobrecalentamiento_15: 3290667710542452379
+      sobrecalentamiento_16: 5759448414231985391
+      sobrecalentamiento_2: -1692466139666452374
+      sobrecalentamiento_3: -1843358903810854419
+      sobrecalentamiento_4: -6822106213660509844
+      sobrecalentamiento_5: -1488632119272137630
+      sobrecalentamiento_6: -9222437731887472579
+      sobrecalentamiento_7: -581263636693829543
+      sobrecalentamiento_8: 1117057591322841261
+      sobrecalentamiento_9: 5281630350801165159
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,3367 @@
+fileFormatVersion: 2
+guid: ae450689e8ae16747aa282511b32afd5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8154202534316135774
+    second: Vortice ulti_0
+  - first:
+      213: -2546814901196402541
+    second: Vortice ulti_1
+  - first:
+      213: 5119324468750691474
+    second: Vortice ulti_2
+  - first:
+      213: -3561243180654950014
+    second: Vortice ulti_3
+  - first:
+      213: 4479492292339717514
+    second: Vortice ulti_4
+  - first:
+      213: -4143106361300528905
+    second: Vortice ulti_5
+  - first:
+      213: -2813055596507487414
+    second: Vortice ulti_6
+  - first:
+      213: 7639832206314612256
+    second: Vortice ulti_7
+  - first:
+      213: -4603394068068766850
+    second: Vortice ulti_8
+  - first:
+      213: -8148490518087260950
+    second: Vortice ulti_9
+  - first:
+      213: -9042239725729754627
+    second: Vortice ulti_10
+  - first:
+      213: 5731271097739828844
+    second: Vortice ulti_11
+  - first:
+      213: 4341511015375847002
+    second: Vortice ulti_12
+  - first:
+      213: -518476041280864298
+    second: Vortice ulti_13
+  - first:
+      213: -996545509137329842
+    second: Vortice ulti_14
+  - first:
+      213: 5733975234795693677
+    second: Vortice ulti_15
+  - first:
+      213: 503675628113689445
+    second: Vortice ulti_16
+  - first:
+      213: -3435971138741730798
+    second: Vortice ulti_17
+  - first:
+      213: -5045280925102238814
+    second: Vortice ulti_18
+  - first:
+      213: -3481302711619492481
+    second: Vortice ulti_19
+  - first:
+      213: -4678921835643325696
+    second: Vortice ulti_20
+  - first:
+      213: 87154060389941016
+    second: Vortice ulti_21
+  - first:
+      213: -7941060755113102897
+    second: Vortice ulti_22
+  - first:
+      213: 7900288956590198655
+    second: Vortice ulti_23
+  - first:
+      213: 1459638556851765738
+    second: Vortice ulti_24
+  - first:
+      213: 9182203347297426966
+    second: Vortice ulti_25
+  - first:
+      213: 563520141220234872
+    second: Vortice ulti_26
+  - first:
+      213: -9173460987621997946
+    second: Vortice ulti_27
+  - first:
+      213: -3861707947615038437
+    second: Vortice ulti_28
+  - first:
+      213: 746873324713000009
+    second: Vortice ulti_29
+  - first:
+      213: -2505685172059364215
+    second: Vortice ulti_30
+  - first:
+      213: -821508757188718730
+    second: Vortice ulti_31
+  - first:
+      213: 5730417040203100494
+    second: Vortice ulti_32
+  - first:
+      213: -6820272725577634387
+    second: Vortice ulti_33
+  - first:
+      213: 8136735151570407622
+    second: Vortice ulti_34
+  - first:
+      213: 7806811496292550083
+    second: Vortice ulti_35
+  - first:
+      213: -8144095009029359872
+    second: Vortice ulti_36
+  - first:
+      213: -5837753493896184966
+    second: Vortice ulti_37
+  - first:
+      213: 5994530743046596080
+    second: Vortice ulti_38
+  - first:
+      213: -7099297833742725545
+    second: Vortice ulti_39
+  - first:
+      213: 2024080071861288887
+    second: Vortice ulti_40
+  - first:
+      213: -1343733068057037709
+    second: Vortice ulti_41
+  - first:
+      213: 4213974613470999834
+    second: Vortice ulti_42
+  - first:
+      213: 258457867363586929
+    second: Vortice ulti_43
+  - first:
+      213: 6198721047868572386
+    second: Vortice ulti_44
+  - first:
+      213: 3891624152134074863
+    second: Vortice ulti_45
+  - first:
+      213: -8104288991598116229
+    second: Vortice ulti_46
+  - first:
+      213: -3618764254449779629
+    second: Vortice ulti_47
+  - first:
+      213: 6909272029177981085
+    second: Vortice ulti_48
+  - first:
+      213: -5192910806029472807
+    second: Vortice ulti_49
+  - first:
+      213: 475049369762275685
+    second: Vortice ulti_50
+  - first:
+      213: 4641430019543007060
+    second: Vortice ulti_51
+  - first:
+      213: -4049459340177375842
+    second: Vortice ulti_52
+  - first:
+      213: 4763632328996040
+    second: Vortice ulti_53
+  - first:
+      213: 6445265197835931034
+    second: Vortice ulti_54
+  - first:
+      213: -7528538355691316120
+    second: Vortice ulti_55
+  - first:
+      213: 2770659691360947409
+    second: Vortice ulti_56
+  - first:
+      213: -8456610278721494904
+    second: Vortice ulti_57
+  - first:
+      213: 3621634705722118118
+    second: Vortice ulti_58
+  - first:
+      213: -3153597804816207955
+    second: Vortice ulti_59
+  - first:
+      213: -1189901180479259761
+    second: Vortice ulti_60
+  - first:
+      213: -1384668910136439979
+    second: Vortice ulti_61
+  - first:
+      213: 402006601923576934
+    second: Vortice ulti_62
+  - first:
+      213: -1604847616562693771
+    second: Vortice ulti_63
+  - first:
+      213: -6070517883387237932
+    second: Vortice ulti_64
+  - first:
+      213: -8980992434698207737
+    second: Vortice ulti_65
+  - first:
+      213: 8360001538409958940
+    second: Vortice ulti_66
+  - first:
+      213: -2875748890708692635
+    second: Vortice ulti_67
+  - first:
+      213: 4179939418317330371
+    second: Vortice ulti_68
+  - first:
+      213: -1921602886411256611
+    second: Vortice ulti_69
+  - first:
+      213: 8351152854511152225
+    second: Vortice ulti_70
+  - first:
+      213: 1341306303413665729
+    second: Vortice ulti_71
+  - first:
+      213: -3322225255368273505
+    second: Vortice ulti_72
+  - first:
+      213: 1813456442740355494
+    second: Vortice ulti_73
+  - first:
+      213: 8690617170513149170
+    second: Vortice ulti_74
+  - first:
+      213: -5405524303963881784
+    second: Vortice ulti_75
+  - first:
+      213: 5367914166730712733
+    second: Vortice ulti_76
+  - first:
+      213: -5843306779390046149
+    second: Vortice ulti_77
+  - first:
+      213: 9182474175072581769
+    second: Vortice ulti_78
+  - first:
+      213: -1764170868138784569
+    second: Vortice ulti_79
+  - first:
+      213: 4220676294986304223
+    second: Vortice ulti_80
+  - first:
+      213: 8962302371908337528
+    second: Vortice ulti_81
+  - first:
+      213: 7691019589085529438
+    second: Vortice ulti_82
+  - first:
+      213: -6419393651728762714
+    second: Vortice ulti_83
+  - first:
+      213: -2949405506320729042
+    second: Vortice ulti_84
+  - first:
+      213: 8161963771785592446
+    second: Vortice ulti_85
+  - first:
+      213: -7050713612731112821
+    second: Vortice ulti_86
+  - first:
+      213: -2132272456066976818
+    second: Vortice ulti_87
+  - first:
+      213: -5244960359718888087
+    second: Vortice ulti_88
+  - first:
+      213: 8028488322314094286
+    second: Vortice ulti_89
+  - first:
+      213: 4876514794372201898
+    second: Vortice ulti_90
+  - first:
+      213: -6215796197744206655
+    second: Vortice ulti_91
+  - first:
+      213: -4521056608402416264
+    second: Vortice ulti_92
+  - first:
+      213: -8385336124565560257
+    second: Vortice ulti_93
+  - first:
+      213: 4274930935977142161
+    second: Vortice ulti_94
+  - first:
+      213: 5851478651841604217
+    second: Vortice ulti_95
+  - first:
+      213: -202738482216069485
+    second: Vortice ulti_96
+  - first:
+      213: 5243691507213168836
+    second: Vortice ulti_97
+  - first:
+      213: -2358862001549827154
+    second: Vortice ulti_98
+  - first:
+      213: 5673917753280251432
+    second: Vortice ulti_99
+  - first:
+      213: 895380456608523001
+    second: Vortice ulti_100
+  - first:
+      213: 7688897994374452820
+    second: Vortice ulti_101
+  - first:
+      213: 4927290047338050619
+    second: Vortice ulti_102
+  - first:
+      213: 7138574611261248796
+    second: Vortice ulti_103
+  - first:
+      213: -3675094521593466564
+    second: Vortice ulti_104
+  - first:
+      213: 7337240019750216208
+    second: Vortice ulti_105
+  - first:
+      213: -3182353956865517860
+    second: Vortice ulti_106
+  - first:
+      213: -514542570333734347
+    second: Vortice ulti_107
+  - first:
+      213: -5442998160484237046
+    second: Vortice ulti_108
+  - first:
+      213: 3776876667521749375
+    second: Vortice ulti_109
+  - first:
+      213: -7080867956553396137
+    second: Vortice ulti_110
+  - first:
+      213: 6161631245177887082
+    second: Vortice ulti_111
+  - first:
+      213: -5931164619823936415
+    second: Vortice ulti_112
+  - first:
+      213: 1225456794212947553
+    second: Vortice ulti_113
+  - first:
+      213: 99927460816271861
+    second: Vortice ulti_114
+  - first:
+      213: -8488817714508530632
+    second: Vortice ulti_115
+  - first:
+      213: 4564577555550421966
+    second: Vortice ulti_116
+  - first:
+      213: -8143414857916536458
+    second: Vortice ulti_117
+  - first:
+      213: 6432627792429348897
+    second: Vortice ulti_118
+  - first:
+      213: -6840386564486135950
+    second: Vortice ulti_119
+  - first:
+      213: 5060609450562431291
+    second: Vortice ulti_120
+  - first:
+      213: -8264025155671141733
+    second: Vortice ulti_121
+  - first:
+      213: 8423755369044121526
+    second: Vortice ulti_122
+  - first:
+      213: 8981121996315810467
+    second: Vortice ulti_123
+  - first:
+      213: -7548179885132995998
+    second: Vortice ulti_124
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Vortice ulti_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 709
+        width: 69
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa2f737ff376de80800000000000000
+      internalID: -8154202534316135774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 709
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39054894755e7acd0800000000000000
+      internalID: -2546814901196402541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 703
+        width: 72
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ca9d12b7e7b0740800000000000000
+      internalID: 5119324468750691474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 721
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 289874a023ce39ec0800000000000000
+      internalID: -3561243180654950014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_4
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 704
+        width: 72
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85520ba18a5a2e30800000000000000
+      internalID: 4479492292339717514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_5
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 705
+        width: 87
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0550c27bab086c0800000000000000
+      internalID: -4143106361300528905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_6
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 760
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a432fb4d6d406f8d0800000000000000
+      internalID: -2813055596507487414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_7
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 707
+        width: 88
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 026a8f00ae2260a60800000000000000
+      internalID: 7639832206314612256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_8
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 761
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7bee932c757d10c0800000000000000
+      internalID: -4603394068068766850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_9
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 707
+        width: 75
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae425cddb0fbaee80800000000000000
+      internalID: -8148490518087260950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_10
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 763
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1d3f590e2838280800000000000000
+      internalID: -9042239725729754627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_11
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 706
+        width: 82
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ede34a2b0998f40800000000000000
+      internalID: 5731271097739828844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 740
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5e3ce32445204c30800000000000000
+      internalID: 4341511015375847002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_13
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 746
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df37e699c00ec8f0800000000000000
+      internalID: -518476041280864298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_14
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 748
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e41db5da32f8b22f0800000000000000
+      internalID: -996545509137329842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_15
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 740
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6662ec981c239f40800000000000000
+      internalID: 5733975234795693677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_16
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 742
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56bfcbfa05a6df600800000000000000
+      internalID: 503675628113689445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_17
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 738
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2120ec0347af050d0800000000000000
+      internalID: -3435971138741730798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_18
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 738
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a31a3bcabf8bf9b0800000000000000
+      internalID: -5045280925102238814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_19
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 734
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75e056e0adefafc0800000000000000
+      internalID: -3481302711619492481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_20
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 729
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00339a66161211fb0800000000000000
+      internalID: -4678921835643325696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_21
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 607
+        width: 71
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f764af722a53100800000000000000
+      internalID: 87154060389941016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_22
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 607
+        width: 73
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc130b7115fabc190800000000000000
+      internalID: -7941060755113102897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_23
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 607
+        width: 83
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f0080d2f673ad60800000000000000
+      internalID: 7900288956590198655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_24
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 607
+        width: 75
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae10d91b88da14410800000000000000
+      internalID: 1459638556851765738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_25
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 671
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ed0138b4dbd6f70800000000000000
+      internalID: 9182203347297426966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_26
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 607
+        width: 75
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876c531359602d700800000000000000
+      internalID: 563520141220234872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_27
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 672
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68203e7b5d151b080800000000000000
+      internalID: -9173460987621997946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_28
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 608
+        width: 75
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b145a14f415786ac0800000000000000
+      internalID: -3861707947615038437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_29
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 672
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94cbbbbe45d6d5a00800000000000000
+      internalID: 746873324713000009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_30
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 608
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98420789c940a3dd0800000000000000
+      internalID: -2505685172059364215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_31
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 608
+        width: 75
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67fc4eb432a6994f0800000000000000
+      internalID: -821508757188718730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_32
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 673
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e41b620efe7868f40800000000000000
+      internalID: 5730417040203100494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_33
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 630
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dade8a867168951a0800000000000000
+      internalID: -6820272725577634387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_34
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 507
+        width: 82
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0d9c4928d7be070800000000000000
+      internalID: 8136735151570407622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_35
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 573
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c504f091bd575c60800000000000000
+      internalID: 7806811496292550083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_36
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 504
+        width: 90
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 007f5c11dbc5afe80800000000000000
+      internalID: -8144095009029359872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_37
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 505
+        width: 94
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7bb50680222cfea0800000000000000
+      internalID: -5837753493896184966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_38
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 573
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f5637e43f9d03350800000000000000
+      internalID: 5994530743046596080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_39
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 507
+        width: 84
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75e8011eb3a3a7d90800000000000000
+      internalID: -7099297833742725545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_40
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 507
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf3d30f91af61c10800000000000000
+      internalID: 2024080071861288887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_41
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 506
+        width: 82
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374b38dd4e91a5de0800000000000000
+      internalID: -1343733068057037709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_42
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 507
+        width: 76
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15f378959b0b7a30800000000000000
+      internalID: 4213974613470999834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_43
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 507
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1739c9d9f0a369300800000000000000
+      internalID: 258457867363586929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_44
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 560
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e281f763f7460650800000000000000
+      internalID: 6198721047868572386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_45
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 561
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe148433c83d10630800000000000000
+      internalID: 3891624152134074863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_46
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 563
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b728faab918c78f80800000000000000
+      internalID: -8104288991598116229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_47
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 540
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35cb3a7651197cdc0800000000000000
+      internalID: -3618764254449779629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_48
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 546
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9822bbbd4aa2ef50800000000000000
+      internalID: 6909272029177981085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_49
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 548
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db635892231fe7b0800000000000000
+      internalID: -5192910806029472807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_50
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 539
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561247782e6b79600800000000000000
+      internalID: 475049369762275685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_51
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 538
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ff1bce20ca96040800000000000000
+      internalID: 4641430019543007060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_52
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 534
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9df6506f2e6dc7c0800000000000000
+      internalID: -4049459340177375842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_53
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 503
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c47fc49f7ce01000800000000000000
+      internalID: 4763632328996040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_54
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 408
+        width: 83
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9dc2388c8e227950800000000000000
+      internalID: 6445265197835931034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_55
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 409
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c9d1fd042458790800000000000000
+      internalID: -7528538355691316120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_56
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 408
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc00194f4c537620800000000000000
+      internalID: 2770659691360947409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_57
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 408
+        width: 73
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88063eca1c514aa80800000000000000
+      internalID: -8456610278721494904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_58
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 408
+        width: 74
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef0bcc9391a24230800000000000000
+      internalID: 3621634705722118118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_59
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 407
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf6a77418b2c34d0800000000000000
+      internalID: -3153597804816207955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_60
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 441
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8b37b34e2f9c7fe0800000000000000
+      internalID: -1189901180479259761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_61
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 407
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b4ac766faa8cce0800000000000000
+      internalID: -1384668910136439979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_62
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 422
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6644401efd6349500800000000000000
+      internalID: 402006601923576934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_63
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 405
+        width: 73
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579f528789f6ab9e0800000000000000
+      internalID: -1604847616562693771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_64
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 439
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d92c06e52031cba0800000000000000
+      internalID: -6070517883387237932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_65
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 404
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70eb757c6fa1d5380800000000000000
+      internalID: -8980992434698207737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 349
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e05a22b11b40470800000000000000
+      internalID: 8360001538409958940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_67
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 306
+        width: 79
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561b51ace994718d0800000000000000
+      internalID: -2875748890708692635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_68
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 361
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7157331c0220a30800000000000000
+      internalID: 4179939418317330371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_69
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 305
+        width: 89
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc771c1b581555e0800000000000000
+      internalID: -1921602886411256611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_70
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 362
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c602e564145e370800000000000000
+      internalID: 8351152854511152225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_71
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 305
+        width: 88
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cfb6f5f9f64d9210800000000000000
+      internalID: 1341306303413665729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_72
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 306
+        width: 82
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9151fd6bb515e1d0800000000000000
+      internalID: -3322225255368273505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_73
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 306
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1be2dc601ba2910800000000000000
+      internalID: 1813456442740355494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_74
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 306
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fcb85f85464b9870800000000000000
+      internalID: 8690617170513149170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_75
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 306
+        width: 83
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cefd750948bbf4b0800000000000000
+      internalID: -5405524303963881784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_76
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 306
+        width: 75
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9665c48e79ae7a40800000000000000
+      internalID: 5367914166730712733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_77
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 331
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3013dc717768eea0800000000000000
+      internalID: -5843306779390046149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_78
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 335
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98836648c93be6f70800000000000000
+      internalID: 9182474175072581769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_79
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 343
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8ce7141f76487e0800000000000000
+      internalID: -1764170868138784569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_80
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 206
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fda029a6abad29a30800000000000000
+      internalID: 4220676294986304223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_81
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 207
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87fbc3fd58e706c70800000000000000
+      internalID: 8962302371908337528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_82
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 207
+        width: 73
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e558308419dfbba60800000000000000
+      internalID: 7691019589085529438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_83
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 208
+        width: 72
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a83f433c7bb9e6a0800000000000000
+      internalID: -6419393651728762714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_84
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 203
+        width: 77
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cfb21915b9117d0800000000000000
+      internalID: -2949405506320729042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_85
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 272
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e33e67ece154170800000000000000
+      internalID: 8161963771785592446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_86
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 204
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b82a6245355d62e90800000000000000
+      internalID: -7050713612731112821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_87
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 273
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec337cb9f75a862e0800000000000000
+      internalID: -2132272456066976818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_88
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 204
+        width: 94
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d53f187582637b0800000000000000
+      internalID: -5244960359718888087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_89
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 272
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec647e6a79bea6f60800000000000000
+      internalID: 8028488322314094286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_90
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 206
+        width: 79
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aadfd7c5e5cdca340800000000000000
+      internalID: 4876514794372201898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_91
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 273
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc9b357a4e0db9a0800000000000000
+      internalID: -6215796197744206655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_92
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 221
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87dddbed7faf141c0800000000000000
+      internalID: -4521056608402416264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_93
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 247
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34e40dd83d41ab80800000000000000
+      internalID: -8385336124565560257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_94
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 259
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197ee36690b935b30800000000000000
+      internalID: 4274930935977142161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_95
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 260
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97aecc5d4d0a43150800000000000000
+      internalID: 5851478651841604217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_96
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 240
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3969531bc6abf2df0800000000000000
+      internalID: -202738482216069485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_97
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 238
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c07c2fb4a555c840800000000000000
+      internalID: 5243691507213168836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_98
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 248
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3a473e183a34fd0800000000000000
+      internalID: -2358862001549827154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_99
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 233
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8264d09822ecdbe40800000000000000
+      internalID: 5673917753280251432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_100
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 106
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f26af608c70d6c00800000000000000
+      internalID: 895380456608523001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_101
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 173
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45617e40df374ba60800000000000000
+      internalID: 7688897994374452820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_102
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 105
+        width: 77
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b34f6e03130416440800000000000000
+      internalID: 4927290047338050619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_103
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 172
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1559d289cf411360800000000000000
+      internalID: 7138574611261248796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_104
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 168
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31ff6c01017ffcc0800000000000000
+      internalID: -3675094521593466564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_105
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 105
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012edf07cec13d560800000000000000
+      internalID: 7337240019750216208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_106
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 106
+        width: 74
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd6d873efe106d3d0800000000000000
+      internalID: -3182353956865517860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_107
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 106
+        width: 83
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53af079224afbd8f0800000000000000
+      internalID: -514542570333734347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_108
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 107
+        width: 78
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a018b33e2069674b0800000000000000
+      internalID: -5442998160484237046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_109
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 108
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71581081592a6430800000000000000
+      internalID: 3776876667521749375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_110
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 109
+        width: 70
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750503c0c14bbbd90800000000000000
+      internalID: -7080867956553396137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_111
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 170
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6996c5c8f2828550800000000000000
+      internalID: 6161631245177887082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_112
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 163
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c8703f33540bda0800000000000000
+      internalID: -5931164619823936415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_113
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 138
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166d6aa2672b10110800000000000000
+      internalID: 1225456794212947553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_114
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 145
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f9b2450f73036100800000000000000
+      internalID: 99927460816271861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_115
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 136
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83cfcaba349a13a80800000000000000
+      internalID: -8488817714508530632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_116
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 10
+        width: 70
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3cd444a13a85f30800000000000000
+      internalID: 4564577555550421966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_117
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 70
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6792f371557ccfe80800000000000000
+      internalID: -8143414857916536458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_118
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 11
+        width: 69
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1287e0c45e8454950800000000000000
+      internalID: 6432627792429348897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_119
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 70
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ff27959a01211a0800000000000000
+      internalID: -6840386564486135950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_120
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 11
+        width: 69
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3922c7ab75ea3640800000000000000
+      internalID: 5060609450562431291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_121
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 70
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b925455d7e8405d80800000000000000
+      internalID: -8264025155671141733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_122
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 10
+        width: 69
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b71aae80e037e470800000000000000
+      internalID: 8423755369044121526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_123
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 70
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aad9d22fda53ac70800000000000000
+      internalID: 8981121996315810467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vortice ulti_124
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 9
+        width: 69
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26226ede26a7f3790800000000000000
+      internalID: -7548179885132995998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Vortice ulti_0: -8154202534316135774
+      Vortice ulti_1: -2546814901196402541
+      Vortice ulti_10: -9042239725729754627
+      Vortice ulti_100: 895380456608523001
+      Vortice ulti_101: 7688897994374452820
+      Vortice ulti_102: 4927290047338050619
+      Vortice ulti_103: 7138574611261248796
+      Vortice ulti_104: -3675094521593466564
+      Vortice ulti_105: 7337240019750216208
+      Vortice ulti_106: -3182353956865517860
+      Vortice ulti_107: -514542570333734347
+      Vortice ulti_108: -5442998160484237046
+      Vortice ulti_109: 3776876667521749375
+      Vortice ulti_11: 5731271097739828844
+      Vortice ulti_110: -7080867956553396137
+      Vortice ulti_111: 6161631245177887082
+      Vortice ulti_112: -5931164619823936415
+      Vortice ulti_113: 1225456794212947553
+      Vortice ulti_114: 99927460816271861
+      Vortice ulti_115: -8488817714508530632
+      Vortice ulti_116: 4564577555550421966
+      Vortice ulti_117: -8143414857916536458
+      Vortice ulti_118: 6432627792429348897
+      Vortice ulti_119: -6840386564486135950
+      Vortice ulti_12: 4341511015375847002
+      Vortice ulti_120: 5060609450562431291
+      Vortice ulti_121: -8264025155671141733
+      Vortice ulti_122: 8423755369044121526
+      Vortice ulti_123: 8981121996315810467
+      Vortice ulti_124: -7548179885132995998
+      Vortice ulti_13: -518476041280864298
+      Vortice ulti_14: -996545509137329842
+      Vortice ulti_15: 5733975234795693677
+      Vortice ulti_16: 503675628113689445
+      Vortice ulti_17: -3435971138741730798
+      Vortice ulti_18: -5045280925102238814
+      Vortice ulti_19: -3481302711619492481
+      Vortice ulti_2: 5119324468750691474
+      Vortice ulti_20: -4678921835643325696
+      Vortice ulti_21: 87154060389941016
+      Vortice ulti_22: -7941060755113102897
+      Vortice ulti_23: 7900288956590198655
+      Vortice ulti_24: 1459638556851765738
+      Vortice ulti_25: 9182203347297426966
+      Vortice ulti_26: 563520141220234872
+      Vortice ulti_27: -9173460987621997946
+      Vortice ulti_28: -3861707947615038437
+      Vortice ulti_29: 746873324713000009
+      Vortice ulti_3: -3561243180654950014
+      Vortice ulti_30: -2505685172059364215
+      Vortice ulti_31: -821508757188718730
+      Vortice ulti_32: 5730417040203100494
+      Vortice ulti_33: -6820272725577634387
+      Vortice ulti_34: 8136735151570407622
+      Vortice ulti_35: 7806811496292550083
+      Vortice ulti_36: -8144095009029359872
+      Vortice ulti_37: -5837753493896184966
+      Vortice ulti_38: 5994530743046596080
+      Vortice ulti_39: -7099297833742725545
+      Vortice ulti_4: 4479492292339717514
+      Vortice ulti_40: 2024080071861288887
+      Vortice ulti_41: -1343733068057037709
+      Vortice ulti_42: 4213974613470999834
+      Vortice ulti_43: 258457867363586929
+      Vortice ulti_44: 6198721047868572386
+      Vortice ulti_45: 3891624152134074863
+      Vortice ulti_46: -8104288991598116229
+      Vortice ulti_47: -3618764254449779629
+      Vortice ulti_48: 6909272029177981085
+      Vortice ulti_49: -5192910806029472807
+      Vortice ulti_5: -4143106361300528905
+      Vortice ulti_50: 475049369762275685
+      Vortice ulti_51: 4641430019543007060
+      Vortice ulti_52: -4049459340177375842
+      Vortice ulti_53: 4763632328996040
+      Vortice ulti_54: 6445265197835931034
+      Vortice ulti_55: -7528538355691316120
+      Vortice ulti_56: 2770659691360947409
+      Vortice ulti_57: -8456610278721494904
+      Vortice ulti_58: 3621634705722118118
+      Vortice ulti_59: -3153597804816207955
+      Vortice ulti_6: -2813055596507487414
+      Vortice ulti_60: -1189901180479259761
+      Vortice ulti_61: -1384668910136439979
+      Vortice ulti_62: 402006601923576934
+      Vortice ulti_63: -1604847616562693771
+      Vortice ulti_64: -6070517883387237932
+      Vortice ulti_65: -8980992434698207737
+      Vortice ulti_66: 8360001538409958940
+      Vortice ulti_67: -2875748890708692635
+      Vortice ulti_68: 4179939418317330371
+      Vortice ulti_69: -1921602886411256611
+      Vortice ulti_7: 7639832206314612256
+      Vortice ulti_70: 8351152854511152225
+      Vortice ulti_71: 1341306303413665729
+      Vortice ulti_72: -3322225255368273505
+      Vortice ulti_73: 1813456442740355494
+      Vortice ulti_74: 8690617170513149170
+      Vortice ulti_75: -5405524303963881784
+      Vortice ulti_76: 5367914166730712733
+      Vortice ulti_77: -5843306779390046149
+      Vortice ulti_78: 9182474175072581769
+      Vortice ulti_79: -1764170868138784569
+      Vortice ulti_8: -4603394068068766850
+      Vortice ulti_80: 4220676294986304223
+      Vortice ulti_81: 8962302371908337528
+      Vortice ulti_82: 7691019589085529438
+      Vortice ulti_83: -6419393651728762714
+      Vortice ulti_84: -2949405506320729042
+      Vortice ulti_85: 8161963771785592446
+      Vortice ulti_86: -7050713612731112821
+      Vortice ulti_87: -2132272456066976818
+      Vortice ulti_88: -5244960359718888087
+      Vortice ulti_89: 8028488322314094286
+      Vortice ulti_9: -8148490518087260950
+      Vortice ulti_90: 4876514794372201898
+      Vortice ulti_91: -6215796197744206655
+      Vortice ulti_92: -4521056608402416264
+      Vortice ulti_93: -8385336124565560257
+      Vortice ulti_94: 4274930935977142161
+      Vortice ulti_95: 5851478651841604217
+      Vortice ulti_96: -202738482216069485
+      Vortice ulti_97: 5243691507213168836
+      Vortice ulti_98: -2358862001549827154
+      Vortice ulti_99: 5673917753280251432
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1885 @@
+fileFormatVersion: 2
+guid: da3898e7fe2c96c4b8266a4c6ddda92c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 775291439237776941
+    second: ULTI prisma_0
+  - first:
+      213: -5316073875286048231
+    second: ULTI prisma_1
+  - first:
+      213: 5707887015098291144
+    second: ULTI prisma_2
+  - first:
+      213: 3520292344759728161
+    second: ULTI prisma_3
+  - first:
+      213: 1238145423937023384
+    second: ULTI prisma_4
+  - first:
+      213: -4802546965578234717
+    second: ULTI prisma_5
+  - first:
+      213: -5264180868845498629
+    second: ULTI prisma_6
+  - first:
+      213: -5568344408626780651
+    second: ULTI prisma_7
+  - first:
+      213: -7429392529452056036
+    second: ULTI prisma_8
+  - first:
+      213: 8242565945833886092
+    second: ULTI prisma_9
+  - first:
+      213: -1898673551806258945
+    second: ULTI prisma_10
+  - first:
+      213: -6308605744215669487
+    second: ULTI prisma_11
+  - first:
+      213: -4535856998383000571
+    second: ULTI prisma_12
+  - first:
+      213: -3163704495201332982
+    second: ULTI prisma_13
+  - first:
+      213: 47709017752068361
+    second: ULTI prisma_14
+  - first:
+      213: -8329570257343743696
+    second: ULTI prisma_15
+  - first:
+      213: 3232007281862029989
+    second: ULTI prisma_16
+  - first:
+      213: -7590046641132768795
+    second: ULTI prisma_17
+  - first:
+      213: 2312057914186150103
+    second: ULTI prisma_18
+  - first:
+      213: 233322895359876359
+    second: ULTI prisma_19
+  - first:
+      213: -7274938487073783001
+    second: ULTI prisma_20
+  - first:
+      213: 8760347736123611427
+    second: ULTI prisma_21
+  - first:
+      213: -9155155360239985506
+    second: ULTI prisma_22
+  - first:
+      213: 1869270387208000648
+    second: ULTI prisma_23
+  - first:
+      213: 8666766724496608908
+    second: ULTI prisma_24
+  - first:
+      213: 6720673982353787970
+    second: ULTI prisma_25
+  - first:
+      213: -6448808995791777098
+    second: ULTI prisma_26
+  - first:
+      213: -7073004157770534509
+    second: ULTI prisma_27
+  - first:
+      213: -2483072466193557357
+    second: ULTI prisma_28
+  - first:
+      213: 1756492846349742163
+    second: ULTI prisma_29
+  - first:
+      213: -7842684132778225855
+    second: ULTI prisma_30
+  - first:
+      213: 3500434614275753232
+    second: ULTI prisma_31
+  - first:
+      213: 391828289061642348
+    second: ULTI prisma_32
+  - first:
+      213: 8711230202277997007
+    second: ULTI prisma_33
+  - first:
+      213: 1144358280309729239
+    second: ULTI prisma_34
+  - first:
+      213: 7327075023860947306
+    second: ULTI prisma_35
+  - first:
+      213: -6513222276356059648
+    second: ULTI prisma_36
+  - first:
+      213: -4501234454117515349
+    second: ULTI prisma_37
+  - first:
+      213: 3802926298792619485
+    second: ULTI prisma_38
+  - first:
+      213: 3014223946127062503
+    second: ULTI prisma_39
+  - first:
+      213: -1215941505862452841
+    second: ULTI prisma_40
+  - first:
+      213: -3906662344963612372
+    second: ULTI prisma_41
+  - first:
+      213: -5128581765208276931
+    second: ULTI prisma_42
+  - first:
+      213: 6679146047053869507
+    second: ULTI prisma_43
+  - first:
+      213: 978305451134369817
+    second: ULTI prisma_44
+  - first:
+      213: -5169335785550806321
+    second: ULTI prisma_45
+  - first:
+      213: 8419548179767360186
+    second: ULTI prisma_46
+  - first:
+      213: -7432747192999173766
+    second: ULTI prisma_47
+  - first:
+      213: 2325666762994658272
+    second: ULTI prisma_48
+  - first:
+      213: -4174634891843590020
+    second: ULTI prisma_49
+  - first:
+      213: 1123719347839906341
+    second: ULTI prisma_50
+  - first:
+      213: -854648643240066680
+    second: ULTI prisma_51
+  - first:
+      213: 6754751808805622340
+    second: ULTI prisma_52
+  - first:
+      213: -6639099706394992551
+    second: ULTI prisma_53
+  - first:
+      213: 4589101342786478772
+    second: ULTI prisma_54
+  - first:
+      213: 8825405536001329083
+    second: ULTI prisma_55
+  - first:
+      213: -7635898467349435942
+    second: ULTI prisma_56
+  - first:
+      213: -181226756472329628
+    second: ULTI prisma_57
+  - first:
+      213: -1494352035847763999
+    second: ULTI prisma_58
+  - first:
+      213: 2616788902642301695
+    second: ULTI prisma_59
+  - first:
+      213: 531798673369930365
+    second: ULTI prisma_60
+  - first:
+      213: -1774032776142224109
+    second: ULTI prisma_61
+  - first:
+      213: 1130664100128606880
+    second: ULTI prisma_62
+  - first:
+      213: 2309284727631852637
+    second: ULTI prisma_63
+  - first:
+      213: -6663290128587849495
+    second: ULTI prisma_64
+  - first:
+      213: -2468255675594235605
+    second: ULTI prisma_65
+  - first:
+      213: 7296420560766031059
+    second: ULTI prisma_66
+  - first:
+      213: -4172715956383182199
+    second: ULTI prisma_67
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ULTI prisma_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 167
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d264b21d47362ca00800000000000000
+      internalID: 775291439237776941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 185
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91247d7e9f28936b0800000000000000
+      internalID: -5316073875286048231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_2
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 182
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c39ff0affc763f40800000000000000
+      internalID: 5707887015098291144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_3
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 103
+        width: 118
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1283eea7c379ad030800000000000000
+      internalID: 3520292344759728161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_4
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 182
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89daa0ef3b6ce2110800000000000000
+      internalID: 1238145423937023384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_5
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 42
+        width: 198
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a44493dafce95db0800000000000000
+      internalID: -4802546965578234717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_6
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 42
+        width: 198
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe8e0ff36fd1f6b0800000000000000
+      internalID: -5264180868845498629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_7
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 46
+        width: 190
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516a4c0434449b2b0800000000000000
+      internalID: -5568344408626780651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 167
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c12c1196bde75e890800000000000000
+      internalID: -7429392529452056036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_9
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 170
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8119278e0a736270800000000000000
+      internalID: 8242565945833886092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_10
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 167
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0a828d67e86a5e0800000000000000
+      internalID: -1898673551806258945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_11
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 148
+        width: 55
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 115490400845378a0800000000000000
+      internalID: -6308605744215669487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_12
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 50
+        width: 179
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504696b87166d01c0800000000000000
+      internalID: -4535856998383000571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_13
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 151
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a01d73d06834814d0800000000000000
+      internalID: -3163704495201332982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_14
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 151
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901e1bf491f79a000800000000000000
+      internalID: 47709017752068361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_15
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 159
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039fd5f9bfb676c80800000000000000
+      internalID: -8329570257343743696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_16
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 155
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2bcdabf756adc20800000000000000
+      internalID: 3232007281862029989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_17
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 50
+        width: 164
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e172ae2bccbaa690800000000000000
+      internalID: -7590046641132768795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_18
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 140
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d032335c64161020800000000000000
+      internalID: 2312057914186150103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_19
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 144
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d14e7efedec3300800000000000000
+      internalID: 233322895359876359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_20
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 114
+        width: 51
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72346238df93a0b90800000000000000
+      internalID: -7274938487073783001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_21
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 136
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3299b880ad1039970800000000000000
+      internalID: 8760347736123611427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_22
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 65
+        width: 149
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9cd169b4ba52f080800000000000000
+      internalID: -9155155360239985506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_23
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 125
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88490ba638bf0f910800000000000000
+      internalID: 1869270387208000648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_24
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 125
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ecbccda6a864870800000000000000
+      internalID: 8666766724496608908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_25
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 125
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c48691161a44d50800000000000000
+      internalID: 6720673982353787970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_26
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 125
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2dc75b26a3186a0800000000000000
+      internalID: -6448808995791777098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_27
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 129
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391f9316134a7dd90800000000000000
+      internalID: -7073004157770534509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_28
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 121
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398daf47fba5a8dd0800000000000000
+      internalID: -2483072466193557357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_29
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 118
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350f03dffe0506810800000000000000
+      internalID: 1756492846349742163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_30
+      rect:
+        serializedVersion: 2
+        x: 2535
+        y: 76
+        width: 299
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f49246550392390800000000000000
+      internalID: -7842684132778225855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_31
+      rect:
+        serializedVersion: 2
+        x: 3461
+        y: 76
+        width: 296
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 015436f4cba049030800000000000000
+      internalID: 3500434614275753232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_32
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 103
+        width: 40
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60e77eb0cd007500800000000000000
+      internalID: 391828289061642348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_33
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 87
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc92f6307b184e870800000000000000
+      internalID: 8711230202277997007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_34
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 91
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d763a9fac391ef00800000000000000
+      internalID: 1144358280309729239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_35
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 84
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a695ed7e9effea560800000000000000
+      internalID: 7327075023860947306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_36
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 80
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ec2a229d26c95a0800000000000000
+      internalID: -6513222276356059648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_37
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 99
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf739fcc176881c0800000000000000
+      internalID: -4501234454117515349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_38
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 103
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd668ae155b6c430800000000000000
+      internalID: 3802926298792619485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_39
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 87
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e5316e75bca4d920800000000000000
+      internalID: 3014223946127062503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_40
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 95
+        width: 292
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7993a6b84ab102fe0800000000000000
+      internalID: -1215941505862452841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_41
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 87
+        width: 299
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21ac0fab4fb8c9c0800000000000000
+      internalID: -3906662344963612372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_42
+      rect:
+        serializedVersion: 2
+        x: 2855
+        y: 95
+        width: 292
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3007339e0e93d8b0800000000000000
+      internalID: -5128581765208276931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_43
+      rect:
+        serializedVersion: 2
+        x: 3156
+        y: 87
+        width: 296
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1b99131f711bc50800000000000000
+      internalID: 6679146047053869507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_44
+      rect:
+        serializedVersion: 2
+        x: 3777
+        y: 91
+        width: 299
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91041b0ef93a39d00800000000000000
+      internalID: 978305451134369817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_45
+      rect:
+        serializedVersion: 2
+        x: 4082
+        y: 84
+        width: 299
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc28789cd74d248b0800000000000000
+      internalID: -5169335785550806321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_46
+      rect:
+        serializedVersion: 2
+        x: 4387
+        y: 72
+        width: 299
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abaf158f57e38d470800000000000000
+      internalID: 8419548179767360186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_47
+      rect:
+        serializedVersion: 2
+        x: 4707
+        y: 84
+        width: 292
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71a000fec399d890800000000000000
+      internalID: -7432747192999173766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_48
+      rect:
+        serializedVersion: 2
+        x: 5027
+        y: 91
+        width: 293
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebaa3a599d664020800000000000000
+      internalID: 2325666762994658272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_49
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 87
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7826bc1fa7b016c0800000000000000
+      internalID: -4174634891843590020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_50
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 80
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5223b3b0bc0489f00800000000000000
+      internalID: 1123719347839906341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_51
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 65
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88108eb469da324f0800000000000000
+      internalID: -854648643240066680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_52
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 91
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44259cd5bf2bdbd50800000000000000
+      internalID: 6754751808805622340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_53
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 87
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9502de31efd2dd3a0800000000000000
+      internalID: -6639099706394992551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_54
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 87
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b26e0f6b53cfaf30800000000000000
+      internalID: 4589101342786478772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_55
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 84
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7002473932a7a70800000000000000
+      internalID: 8825405536001329083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_56
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 57
+        width: 59
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9efa8fcc6d70690800000000000000
+      internalID: -7635898467349435942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_57
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 65
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46aaba4a9372c7df0800000000000000
+      internalID: -181226756472329628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_58
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 80
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e789e5adbef24be0800000000000000
+      internalID: -1494352035847763999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_59
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 72
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffabd2284a3b05420800000000000000
+      internalID: 2616788902642301695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_60
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 69
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a1d3a6314516700800000000000000
+      internalID: 531798673369930365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_61
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 69
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 315842ed69e5167e0800000000000000
+      internalID: -1774032776142224109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_62
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 54
+        width: 36
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aac370320de0bf00800000000000000
+      internalID: 1130664100128606880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_63
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 72
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d543bb3893a3c0020800000000000000
+      internalID: 2309284727631852637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_64
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 57
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e087228eec3783a0800000000000000
+      internalID: -6663290128587849495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_65
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 57
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b212d595a8efebdd0800000000000000
+      internalID: -2468255675594235605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_66
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 50
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4d05887d7124560800000000000000
+      internalID: 7296420560766031059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ULTI prisma_67
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 42
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9821d2712f88716c0800000000000000
+      internalID: -4172715956383182199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ULTI prisma_0: 775291439237776941
+      ULTI prisma_1: -5316073875286048231
+      ULTI prisma_10: -1898673551806258945
+      ULTI prisma_11: -6308605744215669487
+      ULTI prisma_12: -4535856998383000571
+      ULTI prisma_13: -3163704495201332982
+      ULTI prisma_14: 47709017752068361
+      ULTI prisma_15: -8329570257343743696
+      ULTI prisma_16: 3232007281862029989
+      ULTI prisma_17: -7590046641132768795
+      ULTI prisma_18: 2312057914186150103
+      ULTI prisma_19: 233322895359876359
+      ULTI prisma_2: 5707887015098291144
+      ULTI prisma_20: -7274938487073783001
+      ULTI prisma_21: 8760347736123611427
+      ULTI prisma_22: -9155155360239985506
+      ULTI prisma_23: 1869270387208000648
+      ULTI prisma_24: 8666766724496608908
+      ULTI prisma_25: 6720673982353787970
+      ULTI prisma_26: -6448808995791777098
+      ULTI prisma_27: -7073004157770534509
+      ULTI prisma_28: -2483072466193557357
+      ULTI prisma_29: 1756492846349742163
+      ULTI prisma_3: 3520292344759728161
+      ULTI prisma_30: -7842684132778225855
+      ULTI prisma_31: 3500434614275753232
+      ULTI prisma_32: 391828289061642348
+      ULTI prisma_33: 8711230202277997007
+      ULTI prisma_34: 1144358280309729239
+      ULTI prisma_35: 7327075023860947306
+      ULTI prisma_36: -6513222276356059648
+      ULTI prisma_37: -4501234454117515349
+      ULTI prisma_38: 3802926298792619485
+      ULTI prisma_39: 3014223946127062503
+      ULTI prisma_4: 1238145423937023384
+      ULTI prisma_40: -1215941505862452841
+      ULTI prisma_41: -3906662344963612372
+      ULTI prisma_42: -5128581765208276931
+      ULTI prisma_43: 6679146047053869507
+      ULTI prisma_44: 978305451134369817
+      ULTI prisma_45: -5169335785550806321
+      ULTI prisma_46: 8419548179767360186
+      ULTI prisma_47: -7432747192999173766
+      ULTI prisma_48: 2325666762994658272
+      ULTI prisma_49: -4174634891843590020
+      ULTI prisma_5: -4802546965578234717
+      ULTI prisma_50: 1123719347839906341
+      ULTI prisma_51: -854648643240066680
+      ULTI prisma_52: 6754751808805622340
+      ULTI prisma_53: -6639099706394992551
+      ULTI prisma_54: 4589101342786478772
+      ULTI prisma_55: 8825405536001329083
+      ULTI prisma_56: -7635898467349435942
+      ULTI prisma_57: -181226756472329628
+      ULTI prisma_58: -1494352035847763999
+      ULTI prisma_59: 2616788902642301695
+      ULTI prisma_6: -5264180868845498629
+      ULTI prisma_60: 531798673369930365
+      ULTI prisma_61: -1774032776142224109
+      ULTI prisma_62: 1130664100128606880
+      ULTI prisma_63: 2309284727631852637
+      ULTI prisma_64: -6663290128587849495
+      ULTI prisma_65: -2468255675594235605
+      ULTI prisma_66: 7296420560766031059
+      ULTI prisma_67: -4172715956383182199
+      ULTI prisma_7: -5568344408626780651
+      ULTI prisma_8: -7429392529452056036
+      ULTI prisma_9: 8242565945833886092
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

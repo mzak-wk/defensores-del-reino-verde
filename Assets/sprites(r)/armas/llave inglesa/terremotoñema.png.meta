@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 93de42060832b854ea319d860b6d271e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2032509904961785034
+    second: "terremoto\xF1ema_0"
+  - first:
+      213: -7242670842827809383
+    second: "terremoto\xF1ema_1"
+  - first:
+      213: 715270187039432390
+    second: "terremoto\xF1ema_2"
+  - first:
+      213: 817502454779709163
+    second: "terremoto\xF1ema_3"
+  - first:
+      213: -2283718913991784822
+    second: "terremoto\xF1ema_4"
+  - first:
+      213: 8356729007016535639
+    second: "terremoto\xF1ema_5"
+  - first:
+      213: -1667528557497833971
+    second: "terremoto\xF1ema_6"
+  - first:
+      213: 7675017500775702407
+    second: "terremoto\xF1ema_7"
+  - first:
+      213: -2855108529502899884
+    second: "terremoto\xF1ema_8"
+  - first:
+      213: 2003824711793177392
+    second: "terremoto\xF1ema_9"
+  - first:
+      213: 1568487743429494735
+    second: "terremoto\xF1ema_10"
+  - first:
+      213: -536609091222978966
+    second: "terremoto\xF1ema_11"
+  - first:
+      213: 3540443426047652154
+    second: "terremoto\xF1ema_12"
+  - first:
+      213: 2239016149737368302
+    second: "terremoto\xF1ema_13"
+  - first:
+      213: -8748167603090812258
+    second: "terremoto\xF1ema_14"
+  - first:
+      213: 3069514018929752005
+    second: "terremoto\xF1ema_15"
+  - first:
+      213: -3810795635629923093
+    second: "terremoto\xF1ema_16"
+  - first:
+      213: 4470217433273661803
+    second: "terremoto\xF1ema_17"
+  - first:
+      213: 7430748145169056240
+    second: "terremoto\xF1ema_18"
+  - first:
+      213: -8786159184332072893
+    second: "terremoto\xF1ema_19"
+  - first:
+      213: -2577896295491768864
+    second: "terremoto\xF1ema_20"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_0"
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 428
+        width: 100
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6333a4892031bc3e0800000000000000
+      internalID: -2032509904961785034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_1"
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 407
+        width: 155
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d5b24ed3ddc7b90800000000000000
+      internalID: -7242670842827809383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_2"
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 516
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce99e802762de900800000000000000
+      internalID: 715270187039432390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_3"
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 398
+        width: 170
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6872cb62a585b00800000000000000
+      internalID: 817502454779709163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_4"
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 460
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a86cda45fb99e40e0800000000000000
+      internalID: -2283718913991784822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_5"
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 439
+        width: 65
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7566c6b81c019f370800000000000000
+      internalID: 8356729007016535639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_6"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 208
+        width: 164
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d06a585ac9fbbd8e0800000000000000
+      internalID: -1667528557497833971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_7"
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 345
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f54a2c0c3238a60800000000000000
+      internalID: 7675017500775702407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_8"
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 206
+        width: 183
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451bacf5bed9068d0800000000000000
+      internalID: -2855108529502899884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_9"
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 200
+        width: 183
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033f49a65f30fcb10800000000000000
+      internalID: 2003824711793177392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_10"
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 200
+        width: 184
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc74badda4364c510800000000000000
+      internalID: 1568487743429494735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_11"
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 200
+        width: 183
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6eb866efd49d88f0800000000000000
+      internalID: -536609091222978966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_12"
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 37
+        width: 161
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a31ffe4b98e222130800000000000000
+      internalID: 3540443426047652154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_13"
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 48
+        width: 115
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea657b4355921f10800000000000000
+      internalID: 2239016149737368302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_14"
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 65
+        width: 113
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e92113e2ae3489680800000000000000
+      internalID: -8748167603090812258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_15"
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 117
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7b36bbcba199a20800000000000000
+      internalID: 3069514018929752005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_16"
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 103
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be46ba25f855d1bc0800000000000000
+      internalID: -3810795635629923093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_17"
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 125
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69f8034217690e30800000000000000
+      internalID: 4470217433273661803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_18"
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 69
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1c13871125f1760800000000000000
+      internalID: 7430748145169056240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_19"
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 82
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348d9ddd5ca411680800000000000000
+      internalID: -8786159184332072893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "terremoto\xF1ema_20"
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 67
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0edea6f3af8793cd0800000000000000
+      internalID: -2577896295491768864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "terremoto\xF1ema_0": -2032509904961785034
+      "terremoto\xF1ema_1": -7242670842827809383
+      "terremoto\xF1ema_10": 1568487743429494735
+      "terremoto\xF1ema_11": -536609091222978966
+      "terremoto\xF1ema_12": 3540443426047652154
+      "terremoto\xF1ema_13": 2239016149737368302
+      "terremoto\xF1ema_14": -8748167603090812258
+      "terremoto\xF1ema_15": 3069514018929752005
+      "terremoto\xF1ema_16": -3810795635629923093
+      "terremoto\xF1ema_17": 4470217433273661803
+      "terremoto\xF1ema_18": 7430748145169056240
+      "terremoto\xF1ema_19": -8786159184332072893
+      "terremoto\xF1ema_2": 715270187039432390
+      "terremoto\xF1ema_20": -2577896295491768864
+      "terremoto\xF1ema_3": 817502454779709163
+      "terremoto\xF1ema_4": -2283718913991784822
+      "terremoto\xF1ema_5": 8356729007016535639
+      "terremoto\xF1ema_6": -1667528557497833971
+      "terremoto\xF1ema_7": 7675017500775702407
+      "terremoto\xF1ema_8": -2855108529502899884
+      "terremoto\xF1ema_9": 2003824711793177392
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
