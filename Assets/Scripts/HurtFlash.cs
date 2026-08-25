@@ -9,31 +9,50 @@ public class HurtFlash : MonoBehaviour
 
     SpriteRenderer sr;
     Color original;
+    Coroutine flashCoroutine;
 
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         original = sr.color;
         if (!vida) vida = GetComponent<BarraVida>();
+        if (!vida) vida = GetComponentInParent<BarraVida>();
     }
 
     void OnEnable()
     {
-        if (vida) vida.OnDamaged += _ => StartCoroutine(FlashCR());
+        if (vida) vida.OnDamaged += HandleDamaged;
     }
+
     void OnDisable()
     {
-        if (vida) vida.OnDamaged -= _ => StartCoroutine(FlashCR());
+        if (vida) vida.OnDamaged -= HandleDamaged;
+        if (flashCoroutine != null)
+        {
+            StopCoroutine(flashCoroutine);
+            flashCoroutine = null;
+        }
+        if (sr) sr.color = original;
+    }
+
+    private void HandleDamaged(float amount)
+    {
+        if (!gameObject.activeInHierarchy) return;
+        if (flashCoroutine != null)
+            StopCoroutine(flashCoroutine);
+
+        flashCoroutine = StartCoroutine(FlashCR());
     }
 
     System.Collections.IEnumerator FlashCR()
     {
         for (int i = 0; i < flashes; i++)
         {
-            sr.color = new Color(1f, 0.25f, 0.25f); // rojo
+            if (sr) sr.color = new Color(1f, 0.25f, 0.25f); // rojo
             yield return new WaitForSeconds(flashTime);
-            sr.color = original;
+            if (sr) sr.color = original;
             yield return new WaitForSeconds(flashTime);
         }
+        flashCoroutine = null;
     }
 }

@@ -3,31 +3,53 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Gestiona la vida, el daño por contacto, la curación, la regeneración y la invulnerabilidad temporal de Andrius.
+/// Emite eventos desacoplados para la barra de vida de la UI y el sistema de muerte.
+/// </summary>
 public class BarraVida : MonoBehaviour
 {
     [Header("Vida")]
     public float maxHP = 100f;
-    public float currentHP;
+    public float currentHP = 100f;
 
     [Header("Regeneración")]
-    public float regenPerSecond = 0.2f;   // base, la sobreescribe GameSession
+    public float regenPerSecond = 0.2f;
 
     [Header("Invulnerabilidad al recibir daño")]
-    public float invulnTimeOnHit = 0.3f;   // 300 ms
+    [Tooltip("Ventana de invulnerabilidad tras recibir un impacto (en segundos).")]
+    public float invulnTimeOnHit = 0.3f;
     public bool invulnerable { get; private set; }
 
-    [Header("UI (World Space)")]
-    public Image fill;        // barra principal (instante)
-    public Image fillDelay;   // barra lenta (retardo)
+    [Header("UI Opcional (World Space)")]
+    public Image fill;
+    public Image fillDelay;
+    public float chipSpeed = 1.5f;
 
-    [Header("UI - Velocidad del retardo")]
-    public float chipSpeed = 1.5f; // más alto = más rápido
+    [Header("Feedback Visual de Daño")]
+    [Tooltip("SpriteRenderer para parpadeo al recibir daño.")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Color hurtColor = new Color(1f, 0.4f, 0.4f, 1f);
 
-    public Action<float> OnDamaged;  // pasa cantidad
+    // Eventos de Instancia
+    public event Action<float, float> OnHealthChanged; // (currentHP, maxHP)
+    public Action<float> OnDamaged;                     // (cantidad)
     public Action OnDeath;
 
-    void Awake()
+    // Eventos Estáticos Globales
+    public static event Action<float, float> OnGlobalHealthChanged;
+    public static event Action<DeathReason> OnPlayerDeathWithReason;
+
+    private Color originalSpriteColor = Color.white;
+
+    private void Awake()
     {
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        if (spriteRenderer != null)
+            originalSpriteColor = spriteRenderer.color;
+
         if (GameSession.Instance != null)
         {
             maxHP = GameSession.Instance.playerMaxHP;
@@ -45,31 +67,43 @@ public class BarraVida : MonoBehaviour
         }
         else
         {
-            currentHP = Mathf.Clamp(currentHP, 0f, maxHP);
+            if (maxHP <= 0f) maxHP = 100f;
+            currentHP = Mathf.Clamp(currentHP <= 0f ? maxHP : currentHP, 0f, maxHP);
         }
 
-        if (fill) fill.fillAmount = (maxHP <= 0f) ? 0f : currentHP / maxHP;
-        if (fillDelay) fillDelay.fillAmount = (maxHP <= 0f) ? 0f : currentHP / maxHP;
+        UpdateWorldSpaceUI();
     }
 
-    void Update()
+    private void Start()
+    {
+        NotifyHealthChanged();
+    }
+
+    private void Update()
+    {
+        UpdateWorldSpaceUI();
+
+        // Regeneración pasiva continua
+        if (regenPerSecond > 0f && currentHP > 0f && currentHP < maxHP && !invulnerable)
+        {
+            float amount = regenPerSecond * Time.deltaTime;
+            Curar(amount, false);
+        }
+    }
+
+    private void UpdateWorldSpaceUI()
     {
         float t = (maxHP <= 0f) ? 0f : Mathf.Clamp01(currentHP / maxHP);
 
-        if (fill) fill.fillAmount = t;
+        if (fill != null) fill.fillAmount = t;
 
-        if (fillDelay)
+        if (fillDelay != null)
+        {
             fillDelay.fillAmount = Mathf.MoveTowards(
                 fillDelay.fillAmount,
                 t,
                 chipSpeed * Time.unscaledDeltaTime
             );
-
-        // --- Regeneración de vida ---
-        if (regenPerSecond > 0f && currentHP > 0f && currentHP < maxHP)
-        {
-            float amount = regenPerSecond * Time.deltaTime;
-            Curar(amount);
         }
     }
 
@@ -83,37 +117,99 @@ public class BarraVida : MonoBehaviour
             GameSession.Instance.playerCurrentHP = currentHP;
 
         OnDamaged?.Invoke(cantidad);
+        NotifyHealthChanged();
 
         if (currentHP <= 0f)
         {
+            invulnerable = true;
             OnDeath?.Invoke();
+            OnPlayerDeathWithReason?.Invoke(DeathReason.EnemyDamage);
+
+            if (DeathMenuController.Instance == null)
+            {
+#if UNITY_2023_1_OR_NEWER
+                var deathMenu = FindAnyObjectByType<DeathMenuController>(FindObjectsInactive.Include);
+#else
+                var deathMenu = FindObjectOfType<DeathMenuController>(true);
+#endif
+                if (deathMenu != null)
+                {
+                    deathMenu.gameObject.SetActive(true);
+                }
+            }
+
+            if (DeathMenuController.Instance != null)
+            {
+                DeathMenuController.Instance.TriggerDeathSequence(DeathReason.EnemyDamage);
+            }
+            else
+            {
+                // Fallback a GameOverController si DeathMenuController no está presente
+#if UNITY_2023_1_OR_NEWER
+                var goCtrl = FindAnyObjectByType<GameOverController>(FindObjectsInactive.Include);
+#else
+                var goCtrl = FindObjectOfType<GameOverController>(true);
+#endif
+                if (goCtrl != null)
+                {
+                    if (!goCtrl.gameObject.activeInHierarchy) goCtrl.gameObject.SetActive(true);
+                    if (goCtrl.gameOverUI != null) goCtrl.gameOverUI.SetActive(true);
+                }
+            }
             return;
         }
 
-        if (invulnTimeOnHit > 0f)
-            StartCoroutine(InvulnCR());
+        if (invulnTimeOnHit > 0f && gameObject.activeInHierarchy)
+        {
+            StartCoroutine(InvulnFeedbackCR());
+        }
     }
 
-    IEnumerator InvulnCR()
+    private IEnumerator InvulnFeedbackCR()
     {
         invulnerable = true;
-        yield return new WaitForSeconds(invulnTimeOnHit);
+
+        if (spriteRenderer != null)
+        {
+            float elapsed = 0f;
+            bool isFlash = true;
+
+            while (elapsed < invulnTimeOnHit)
+            {
+                spriteRenderer.color = isFlash ? hurtColor : originalSpriteColor;
+                isFlash = !isFlash;
+                yield return new WaitForSeconds(0.06f);
+                elapsed += 0.06f;
+            }
+
+            spriteRenderer.color = originalSpriteColor;
+        }
+        else
+        {
+            yield return new WaitForSeconds(invulnTimeOnHit);
+        }
+
         invulnerable = false;
     }
 
-    public void Curar(float cantidad)
+    public void Curar(float cantidad, bool notifyImmediately = true)
     {
-        if (currentHP <= 0f) return;
-        currentHP = Mathf.Min(maxHP, currentHP + Mathf.Max(0f, cantidad));
+        if (currentHP <= 0f || cantidad <= 0f) return;
+
+        currentHP = Mathf.Min(maxHP, currentHP + cantidad);
+
         if (GameSession.Instance != null)
             GameSession.Instance.playerCurrentHP = currentHP;
+
+        if (notifyImmediately)
+            NotifyHealthChanged();
     }
 
-    // Helper editor / debug
     public void FillToMax()
     {
         currentHP = maxHP;
         if (GameSession.Instance != null) GameSession.Instance.playerCurrentHP = currentHP;
+        NotifyHealthChanged();
     }
 
     public void RevivirAFull()
@@ -121,7 +217,18 @@ public class BarraVida : MonoBehaviour
         currentHP = maxHP;
         invulnerable = false;
 
+        if (spriteRenderer != null)
+            spriteRenderer.color = originalSpriteColor;
+
         if (GameSession.Instance != null)
             GameSession.Instance.playerCurrentHP = currentHP;
+
+        NotifyHealthChanged();
+    }
+
+    public void NotifyHealthChanged()
+    {
+        OnHealthChanged?.Invoke(currentHP, maxHP);
+        OnGlobalHealthChanged?.Invoke(currentHP, maxHP);
     }
 }

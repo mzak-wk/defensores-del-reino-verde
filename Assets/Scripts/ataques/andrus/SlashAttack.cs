@@ -102,6 +102,15 @@ public class SlashAttack : MonoBehaviour
 
         if (followTarget)
         {
+            if (trackFacing && target != null)
+            {
+                var targetSr = target.GetComponentInChildren<SpriteRenderer>();
+                if (targetSr != null)
+                {
+                    faceRight = !targetSr.flipX;
+                }
+            }
+
             float sign = faceRight ? 1f : -1f;
             float halfSquareWorld = box.size.x * 0.5f * Mathf.Abs(transform.lossyScale.x);
             Vector3 pos = target.position + new Vector3(sign * (halfSquareWorld + forwardDistance), verticalOffset, 0f);

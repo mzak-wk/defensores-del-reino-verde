@@ -126,7 +126,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (_instance == this)
         {
-            isQuitting = true;
             _instance = null;
         }
     }

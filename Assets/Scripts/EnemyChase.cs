@@ -137,7 +137,7 @@ public class EnemyChase : MonoBehaviour
 
     public void SetSpeedMultiplier(float multiplier)
     {
-        currentMultiplier = Mathf.Max(1f, multiplier);
+        currentMultiplier = Mathf.Max(0f, multiplier);
     }
 
     public void SetTemporarySpeedMultiplier(float multiplier, float duration)
@@ -149,7 +149,7 @@ public class EnemyChase : MonoBehaviour
     IEnumerator TemporaryMultiplierCoroutine(float multiplier, float duration)
     {
         float previous = currentMultiplier;
-        currentMultiplier = Mathf.Max(1f, multiplier);
+        currentMultiplier = Mathf.Max(0f, multiplier);
         yield return new WaitForSeconds(duration);
         currentMultiplier = previous;
     }

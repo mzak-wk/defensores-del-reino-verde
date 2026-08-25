@@ -57,6 +57,8 @@ public class EnemyWalkRandomAnim : MonoBehaviour
     // runtime animator de respaldo (si creamos uno)
     Animator runtimeAnimator = null;
     bool createdAnimator = false;
+    bool lastMovementState = false;
+    bool stateInitialized = false;
 
     void Awake()
     {
@@ -71,6 +73,8 @@ public class EnemyWalkRandomAnim : MonoBehaviour
         AplicarIdle();
         haveSample = false;
         timer = 0f; toggle = false;
+        stateInitialized = false;
+        lastMovementState = false;
     }
 
     void ElegirVarianteAlAzar()
@@ -219,33 +223,35 @@ void AplicarIdle()
             {
                 // Preferimos usar el parámetro bool si existe el nombre
                 string param = GetVariantAnimatorBoolParam();
-if (!string.IsNullOrEmpty(param) && AnimatorHasBool(act, param))
-{
-    bool current = act.GetBool(param);
-    if (current != hayMovimiento)
-    {
-        act.SetBool(param, hayMovimiento);
+                if (!string.IsNullOrEmpty(param) && AnimatorHasBool(act, param))
+                {
+                    bool current = act.GetBool(param);
+                    if (current != hayMovimiento || !stateInitialized)
+                    {
+                        act.SetBool(param, hayMovimiento);
 
-        if (hayMovimiento && !string.IsNullOrEmpty(GetVariantWalkStateName()))
-            act.Play(GetVariantWalkStateName());
-        else if (!hayMovimiento && !string.IsNullOrEmpty(GetVariantIdleStateName()))
-            act.Play(GetVariantIdleStateName());
-    }
-}
-else
-{
-    // No hay parámetro o el Animator no lo tiene → usar Play directo
-    if (hayMovimiento)
-    {
-        if (!string.IsNullOrEmpty(GetVariantWalkStateName()))
-            act.Play(GetVariantWalkStateName());
-    }
-    else
-    {
-        if (!string.IsNullOrEmpty(GetVariantIdleStateName()))
-            act.Play(GetVariantIdleStateName());
-    }
-}
+                        if (hayMovimiento && !string.IsNullOrEmpty(GetVariantWalkStateName()))
+                            act.Play(GetVariantWalkStateName());
+                        else if (!hayMovimiento && !string.IsNullOrEmpty(GetVariantIdleStateName()))
+                            act.Play(GetVariantIdleStateName());
+
+                        stateInitialized = true;
+                    }
+                }
+                else
+                {
+                    // No hay parámetro o el Animator no lo tiene → solo llamar Play cuando cambia el estado
+                    if (hayMovimiento != lastMovementState || !stateInitialized)
+                    {
+                        if (hayMovimiento && !string.IsNullOrEmpty(GetVariantWalkStateName()))
+                            act.Play(GetVariantWalkStateName());
+                        else if (!hayMovimiento && !string.IsNullOrEmpty(GetVariantIdleStateName()))
+                            act.Play(GetVariantIdleStateName());
+
+                        lastMovementState = hayMovimiento;
+                        stateInitialized = true;
+                    }
+                }
 
             }
         }

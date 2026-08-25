@@ -108,8 +108,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
+  m_Mass: 10
+  m_LinearDamping: 3
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -122,7 +122,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7468288604677679865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,8 +181,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f13fdf85db7a44d9b084085441329e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   bossSpeedMultiplier: 3
   applyToBossesAutomatically: 1
+  bossContactRange: 2
+  bossPauseDuration: 1.75
+  bossPauseRearmDistance: 2.5
 --- !u!114 &3614266143657111647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +309,11 @@ MonoBehaviour:
   xpReward: 5
   contactDamage: 5
   suppressDrops: 0
+  data: {fileID: 0}
+  originZone: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
   suppressNormalDropsOnBossDeath: 0
 --- !u!114 &6977393941840538651
 MonoBehaviour:
@@ -327,4 +336,6 @@ MonoBehaviour:
   chickenChance: 1
   chickenPrefab: {fileID: 8291378955158031080, guid: 23772d2499c67714b9c4f5c10de7e7e2, type: 3}
   chickenHeal: 200
+  sootChance: 0
+  sootPrefab: {fileID: 0}
   scatterRadius: 1

@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
     private Color originalColor;
     private Coroutine slowCoroutine;
     private bool isSlowed = false;
+    public bool IsSlowed => isSlowed;
 
     protected virtual void OnEnable()
     {

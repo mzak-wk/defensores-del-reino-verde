@@ -168,6 +168,16 @@ public class UIManager : MonoBehaviour
         for (int i = 0; i < hudRoot.transform.childCount; i++)
         {
             Transform child = hudRoot.transform.GetChild(i);
+            
+            // PROTEGER: Nunca ocultar el menú de muerte / Game Over
+            if (child.name.Contains("GameOver") ||
+                child.GetComponent<DeathMenuController>() != null ||
+                child.GetComponentInChildren<DeathMenuController>(true) != null ||
+                child.GetComponent<GameOverController>() != null)
+            {
+                continue;
+            }
+
             savedHudChildStates[child.gameObject.GetInstanceID()] = child.gameObject.activeSelf;
             child.gameObject.SetActive(false);
         }

@@ -160,10 +160,10 @@ public class BossRewardUI : MonoBehaviour
     {
         level = Mathf.Max(1, level); // Asegurar que level >= 1
 
-        // Base Level 1: 70, 25, 5
-        int common = 70;
-        int rare = 25;
-        int epic = 5;
+        // Base inicial configurable desde el Inspector
+        int common = weightCommon;
+        int rare = weightRare;
+        int epic = weightEpic;
 
         // Escalado por nivel: (level - 1) iteraciones de -15 Común, +10 Rara, +5 Épica
         int scaleLevels = level - 1;

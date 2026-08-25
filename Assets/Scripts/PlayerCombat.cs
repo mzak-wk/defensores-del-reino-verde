@@ -156,7 +156,7 @@ public class PlayerCombat : MonoBehaviour
 
         nextBasicTime = Time.time + weapon.BasicCooldown;
 
-        animator.SetTrigger("BasicAttack");
+        SafeSetTrigger("BasicAttack");
         
         BaseStats scaledStats = CalculateLevelScaledStats(weapon, weapon.Stats);
         SpawnAttack(weapon.BasicAttackPrefab, scaledStats, weapon.IsRanged, weapon);
@@ -417,7 +417,7 @@ public class PlayerCombat : MonoBehaviour
 
         nextSkillXTime = Time.time + weapon.CooldownX;
 
-        animator.SetTrigger("AttackX");
+        SafeSetTrigger("AttackX");
 
         BaseStats skillStats = weapon.Stats;
         skillStats.damage = weapon.DamageX;
@@ -444,7 +444,7 @@ public class PlayerCombat : MonoBehaviour
 
         nextSkillCTime = Time.time + weapon.CooldownC;
 
-        animator.SetTrigger("AttackC");
+        SafeSetTrigger("AttackC");
 
         BaseStats skillStats = weapon.Stats;
         skillStats.damage = weapon.DamageC;
@@ -471,7 +471,7 @@ public class PlayerCombat : MonoBehaviour
 
         nextSkillVTime = Time.time + weapon.CooldownV;
 
-        animator.SetTrigger("AttackV");
+        SafeSetTrigger("AttackV");
 
         BaseStats skillStats = weapon.Stats;
         skillStats.damage = weapon.DamageV;
@@ -599,15 +599,32 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    private readonly Collider2D[] enemyOverlapBuffer = new Collider2D[32];
+    private ContactFilter2D enemyContactFilter;
+    private bool enemyFilterInitialized;
+
     private Transform FindNearestEnemy(Vector3 fromPosition)
     {
-        Enemy[] enemies = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        if (!enemyFilterInitialized)
+        {
+            int enemyMask = LayerMask.GetMask("Enemy");
+            if (enemyMask == 0) enemyMask = ~0;
+            enemyContactFilter = new ContactFilter2D { useLayerMask = true, layerMask = enemyMask };
+            enemyFilterInitialized = true;
+        }
+
+        int count = Physics2D.OverlapCircle(fromPosition, 25f, enemyContactFilter, enemyOverlapBuffer);
         Transform nearest = null;
         float minDistSq = float.MaxValue;
 
-        foreach (var e in enemies)
+        for (int i = 0; i < count; i++)
         {
-            if (!e) continue;
+            Collider2D col = enemyOverlapBuffer[i];
+            if (col == null) continue;
+
+            Enemy e = col.GetComponentInParent<Enemy>();
+            if (e == null || !e.gameObject.activeInHierarchy) continue;
+
             float dSq = (e.transform.position - fromPosition).sqrMagnitude;
             if (dSq < minDistSq)
             {
@@ -616,7 +633,42 @@ public class PlayerCombat : MonoBehaviour
             }
         }
 
+        // Si no encontró por overlap local, fallback a búsqueda global
+        if (nearest == null)
+        {
+            Enemy[] enemies = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            foreach (var e in enemies)
+            {
+                if (!e || !e.gameObject.activeInHierarchy) continue;
+                float dSq = (e.transform.position - fromPosition).sqrMagnitude;
+                if (dSq < minDistSq)
+                {
+                    minDistSq = dSq;
+                    nearest = e.transform;
+                }
+            }
+        }
+
         return nearest;
+    }
+
+    /// <summary>
+    /// Dispara un trigger en el Animator únicamente si el parámetro existe en el runtime controller,
+    /// evitando advertencias o errores de consola.
+    /// </summary>
+    private void SafeSetTrigger(string triggerName)
+    {
+        if (animator == null || !animator.enabled || animator.runtimeAnimatorController == null)
+            return;
+
+        foreach (var param in animator.parameters)
+        {
+            if (param.type == AnimatorControllerParameterType.Trigger && param.name == triggerName)
+            {
+                animator.SetTrigger(triggerName);
+                return;
+            }
+        }
     }
 
     /// <summary>

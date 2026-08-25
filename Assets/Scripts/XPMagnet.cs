@@ -13,23 +13,33 @@ public class XPMagnet : MonoBehaviour
     public BarraVida playerHealth;         // arrastra aquí tu BarraVida real (Canvas)
     public bool skipChickenWhenFull = true;
 
-    float radius;
-    float pullSpeed;
+    private float radius;
+    private float pullSpeed;
+    private readonly Collider2D[] hitBuffer = new Collider2D[64];
+
+    private ContactFilter2D contactFilter;
 
     void Awake()
     {
+        contactFilter = new ContactFilter2D { useLayerMask = true, layerMask = attractMask };
         if (!playerHealth) playerHealth = FindAnyObjectByType<BarraVida>();
+        RecomputeFromShop();
+    }
+
+    void OnEnable()
+    {
         RecomputeFromShop();
     }
 
     void Update()
     {
-        // Por si en algún momento la tienda cambia durante la run:
-        RecomputeFromShop();
-
-        var hits = Physics2D.OverlapCircleAll(transform.position, radius, attractMask);
-        foreach (var h in hits)
+        contactFilter.layerMask = attractMask;
+        int count = Physics2D.OverlapCircle(transform.position, radius, contactFilter, hitBuffer);
+        for (int i = 0; i < count; i++)
         {
+            Collider2D h = hitBuffer[i];
+            if (h == null) continue;
+
             // Si es pollo y estás full vida → NO atraer
             var chicken = h.GetComponent<ChickenPickup>();
             if (skipChickenWhenFull && chicken && playerHealth && playerHealth.currentHP >= playerHealth.maxHP)

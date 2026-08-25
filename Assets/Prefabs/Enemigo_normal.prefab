@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 6
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -191,6 +191,9 @@ MonoBehaviour:
   target: {fileID: 0}
   bossSpeedMultiplier: 3
   applyToBossesAutomatically: 0
+  bossContactRange: 2
+  bossPauseDuration: 1.75
+  bossPauseRearmDistance: 2.5
 --- !u!114 &1270611904667133894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,4 +257,6 @@ MonoBehaviour:
   chickenChance: 0.05
   chickenPrefab: {fileID: 0}
   chickenHeal: 30
+  sootChance: 0
+  sootPrefab: {fileID: 0}
   scatterRadius: 0.6

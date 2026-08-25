@@ -163,12 +163,12 @@ TextureImporter:
       name: andrius llave sprites_0
       rect:
         serializedVersion: 2
-        x: 241
-        y: 2252
-        width: 317
-        height: 436
+        x: 239
+        y: 2231
+        width: 318
+        height: 437
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -185,12 +185,12 @@ TextureImporter:
       name: andrius llave sprites_1
       rect:
         serializedVersion: 2
-        x: 1010
-        y: 2252
+        x: 1006
+        y: 2231
         width: 316
-        height: 436
+        height: 437
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -207,12 +207,12 @@ TextureImporter:
       name: andrius llave sprites_2
       rect:
         serializedVersion: 2
-        x: 1778
-        y: 2252
-        width: 316
-        height: 436
+        x: 1780
+        y: 2231
+        width: 315
+        height: 449
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -229,12 +229,12 @@ TextureImporter:
       name: andrius llave sprites_3
       rect:
         serializedVersion: 2
-        x: 2546
-        y: 2253
-        width: 316
-        height: 435
+        x: 2545
+        y: 2230
+        width: 315
+        height: 444
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -252,11 +252,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 242
-        y: 1803
-        width: 316
+        y: 1780
+        width: 315
         height: 438
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: andrius llave sprites_5
       rect:
         serializedVersion: 2
-        x: 1009
-        y: 1802
-        width: 317
-        height: 436
+        x: 1010
+        y: 1780
+        width: 315
+        height: 438
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -295,12 +295,12 @@ TextureImporter:
       name: andrius llave sprites_6
       rect:
         serializedVersion: 2
-        x: 1777
-        y: 1804
-        width: 317
-        height: 442
+        x: 1778
+        y: 1781
+        width: 315
+        height: 441
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -318,11 +318,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2546
-        y: 1805
-        width: 316
-        height: 445
+        y: 1783
+        width: 315
+        height: 436
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -340,11 +340,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 242
-        y: 1356
-        width: 316
-        height: 447
+        y: 1335
+        width: 315
+        height: 445
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -362,11 +362,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 242
-        y: 909
-        width: 316
-        height: 450
+        y: 886
+        width: 315
+        height: 447
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -384,11 +384,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1010
-        y: 1356
+        y: 1333
         width: 317
-        height: 442
+        height: 441
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -406,11 +406,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1778
-        y: 1355
-        width: 316
-        height: 438
+        y: 1333
+        width: 315
+        height: 435
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -428,11 +428,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2545
-        y: 1356
-        width: 317
-        height: 437
+        y: 1333
+        width: 316
+        height: 436
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -450,11 +450,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1010
-        y: 908
-        width: 316
-        height: 444
+        y: 886
+        width: 315
+        height: 442
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -471,12 +471,12 @@ TextureImporter:
       name: andrius llave sprites_14
       rect:
         serializedVersion: 2
-        x: 1010
-        y: 460
-        width: 316
-        height: 448
+        x: 1778
+        y: 886
+        width: 315
+        height: 442
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -493,12 +493,12 @@ TextureImporter:
       name: andrius llave sprites_15
       rect:
         serializedVersion: 2
-        x: 1777
-        y: 907
-        width: 317
-        height: 445
+        x: 2546
+        y: 884
+        width: 315
+        height: 435
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -515,12 +515,12 @@ TextureImporter:
       name: andrius llave sprites_16
       rect:
         serializedVersion: 2
-        x: 2546
-        y: 907
-        width: 316
-        height: 436
+        x: 242
+        y: 437
+        width: 315
+        height: 441
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -537,12 +537,12 @@ TextureImporter:
       name: andrius llave sprites_17
       rect:
         serializedVersion: 2
-        x: 241
-        y: 459
-        width: 317
-        height: 442
+        x: 1010
+        y: 437
+        width: 315
+        height: 447
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -559,12 +559,12 @@ TextureImporter:
       name: andrius llave sprites_18
       rect:
         serializedVersion: 2
-        x: 1777
-        y: 460
-        width: 317
+        x: 1778
+        y: 437
+        width: 315
         height: 447
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -581,12 +581,12 @@ TextureImporter:
       name: andrius llave sprites_19
       rect:
         serializedVersion: 2
-        x: 2545
-        y: 460
-        width: 317
+        x: 2546
+        y: 437
+        width: 315
         height: 437
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -604,11 +604,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 242
-        y: 11
-        width: 316
-        height: 438
+        y: 0
+        width: 315
+        height: 425
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -625,7 +625,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 518aa7957511f4340ab959ee37863e0c
     internalID: 0
     vertices: []
     indices: 
@@ -649,6 +649,7 @@ TextureImporter:
       andrius llave sprites_19: -2705671993697827718
       andrius llave sprites_2: -2612267907275702818
       andrius llave sprites_20: -3526992528256037008
+      andrius llave sprites_21: -1776172418
       andrius llave sprites_3: 2302315589317226646
       andrius llave sprites_4: -4234187182095492200
       andrius llave sprites_5: -7209969966193082474

@@ -55,14 +55,20 @@ public class SootZone : MonoBehaviour
         isCollected = true;
         Unregister();
 
+        if (HazardMeterManager.Instance != null)
+        {
+            float reduction = (tempReduction > 0f) ? tempReduction : HazardMeterManager.Instance.DefaultHazardReduction;
+            HazardMeterManager.Instance.ReduceHazard(reduction);
+        }
+
         if (TemperatureManager.Instance != null)
         {
             float reduction = (tempReduction > 0f) ? tempReduction : TemperatureManager.Instance.TempReductionPerClean;
             TemperatureManager.Instance.ReduceTemperature(reduction);
         }
-        else
+        else if (HazardMeterManager.Instance == null)
         {
-            Debug.LogWarning("[SootZone] Se recogió la mancha de hollín pero no hay TemperatureManager activo en la escena.", this);
+            Debug.LogWarning("[SootZone] Se recogió la mancha de hollín pero no hay gestor térmico activo en la escena.", this);
         }
 
         Destroy(gameObject);

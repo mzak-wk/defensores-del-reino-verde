@@ -95,10 +95,13 @@ public class ErodedSoilZone : MonoBehaviour
 
         UnregisterFromManager();
 
+        if (HazardMeterManager.Instance != null)
+            HazardMeterManager.Instance.ReduceHazard(co2ReductionAmount);
+
         if (CO2Manager.Instance != null)
             CO2Manager.Instance.ReduceCO2(co2ReductionAmount);
-        else
-            Debug.LogWarning($"[{nameof(ErodedSoilZone)}] No existe un {nameof(CO2Manager)} activo en la escena.", this);
+        else if (HazardMeterManager.Instance == null)
+            Debug.LogWarning($"[{nameof(ErodedSoilZone)}] No existe un gestor ambiental activo en la escena.", this);
 
         Destroy(gameObject);
     }

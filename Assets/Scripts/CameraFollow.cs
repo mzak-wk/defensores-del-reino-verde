@@ -21,7 +21,8 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
         Vector3 targetPos = new Vector3(zoneTarget.x, zoneTarget.y, transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * 5f);
+        float t = 1f - Mathf.Exp(-5f * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPos, t);
     }
 
     public void SetTargetZone(Vector3 zoneCenter)

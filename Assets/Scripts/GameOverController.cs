@@ -19,6 +19,12 @@ public class GameOverController : MonoBehaviour
 
     void Awake()
     {
+        if (GetComponent<DeathMenuController>() != null || GetComponentInParent<DeathMenuController>() != null)
+        {
+            enabled = false;
+            return;
+        }
+
         SceneManager.sceneLoaded += OnSceneLoaded;
         CO2Manager.OnGameOver += OnGameOver;
         TemperatureManager.OnTemperatureGameOver += OnGameOver;
@@ -26,7 +32,10 @@ public class GameOverController : MonoBehaviour
 
     void Start()
     {
-        if (gameOverUI) gameOverUI.SetActive(false);
+        if (GetComponent<DeathMenuController>() == null && gameOverUI != null)
+        {
+            gameOverUI.SetActive(false);
+        }
         TryBindPlayerVidaOrWait();
     }
 
@@ -97,7 +106,10 @@ public class GameOverController : MonoBehaviour
         playerVida.OnDeath += OnGameOver;
         bound = true;
 
-        if (gameOverUI) gameOverUI.SetActive(false);
+        if (GetComponent<DeathMenuController>() == null && gameOverUI != null)
+        {
+            gameOverUI.SetActive(false);
+        }
 
         Debug.Log($"[GameOverController] Vinculado a BarraVida: {bv.name}");
     }
@@ -123,8 +135,22 @@ public class GameOverController : MonoBehaviour
         if (isGameOver)
             return;
 
+        // Si existe un DeathMenuController, delegar la secuencia cinemática completa a él
+        DeathMenuController deathMenu = null;
+        if (gameOverUI != null)
+            deathMenu = gameOverUI.GetComponent<DeathMenuController>() ?? gameOverUI.GetComponentInChildren<DeathMenuController>(true);
+        if (deathMenu == null)
+            deathMenu = FindFirstObjectByType<DeathMenuController>();
+
+        if (deathMenu != null)
+        {
+            isGameOver = true;
+            deathMenu.TriggerDeathSequence();
+            return;
+        }
+
         isGameOver = true;
-        Debug.Log("[GameOverController] Game Over activado.");
+        Debug.Log("[GameOverController] Game Over activado (Fallback).");
 
         // Forzar cierre de cualquier overlay abierto (diálogo, pausa, tienda) y marcar estado Game Over
         if (UIManager.Instance != null)
@@ -158,7 +184,7 @@ public class GameOverController : MonoBehaviour
             );
 
             foreach (var e in enemies)
-                Destroy(e.gameObject);
+                if (e != null) Destroy(e.gameObject);
         }
     }
 
@@ -194,8 +220,8 @@ public class GameOverController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // --- BOTÓN SALIR ---
-    public void Btn_SalirMenu(string sceneName)
+    // --- BOTÓN VOLVER AL MENÚ PRINCIPAL ---
+    public void Btn_SalirMenu(string sceneName = "MenuScene")
     {
         if (UIManager.Instance != null)
         {
@@ -203,7 +229,6 @@ public class GameOverController : MonoBehaviour
             UIManager.Instance.ResetGameOverState();
         }
 
-        // reset TOTAL de la sesión
         if (GameSession.Instance != null)
             GameSession.Instance.ResetAll();
 
@@ -214,5 +239,18 @@ public class GameOverController : MonoBehaviour
             sceneName = "MenuScene";
 
         SceneManager.LoadScene(sceneName);
+    }
+
+    // --- BOTÓN SALIR DEL JUEGO ---
+    public void Btn_Salir()
+    {
+        Time.timeScale = 1f;
+        AudioListener.pause = false;
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }

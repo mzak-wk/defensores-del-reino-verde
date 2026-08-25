@@ -680,8 +680,10 @@ public class GameSession : MonoBehaviour
     {
         if (_levelCheckpoint == null)
         {
-            Debug.LogWarning("[GameSession] No existe un checkpoint de nivel para restaurar.");
-            return false;
+            Debug.LogWarning("[GameSession] No existe un checkpoint de nivel para restaurar. Aplicando FullHeal y descarte de run.");
+            DiscardRunRewards();
+            FullHeal();
+            return true;
         }
 
         playerMaxHP = _levelCheckpoint.playerMaxHP;

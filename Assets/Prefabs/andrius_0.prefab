@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3739987521104154260}
   - component: {fileID: 7062996210111443676}
   - component: {fileID: -5497707170423466726}
+  - component: {fileID: 4889310339291728420}
   m_Layer: 3
   m_Name: andrius_0
   m_TagString: Player
@@ -90,7 +91,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.75, y: 9.29}
+  m_Size: {x: 2.74, y: 4.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -110,6 +111,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeedBase: 5
   moveSpeed: 5
+  velocityThreshold: 0.05
+  inputThreshold: 0.01
+  walkAnimationSpeedMultiplier: 1
+  spriteFacesRightByDefault: 1
 --- !u!50 &1338735391115026880
 Rigidbody2D:
   serializedVersion: 5
@@ -122,7 +127,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -144,7 +149,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4930502472480373482}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fb24c0dde2a57748bcb30b4511f099f, type: 3}
   m_Name: 
@@ -152,7 +157,7 @@ MonoBehaviour:
   idleSprite: {fileID: -2384558487252899887, guid: d193e93a23f44be4a9bb037f330dbd57, type: 3}
   stepA: {fileID: 0}
   stepB: {fileID: 0}
-  framesPerSecond: 6
+  framesPerSecond: 12
   inputThreshold: 0.001
   spriteMiraADerechaPorDefecto: 1
 --- !u!114 &2444502538391678910
@@ -263,6 +268,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.65, y: 4.82}
   m_Direction: 0
+--- !u!114 &4889310339291728420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4930502472480373482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e787211ca8e1ce849913200d25cdff2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 100
+  currentHP: 100
+  regenPerSecond: 0.2
+  invulnTimeOnHit: 0.3
+  fill: {fileID: 0}
+  fillDelay: {fileID: 0}
+  chipSpeed: 1.5
+  spriteRenderer: {fileID: 7729906672121963841}
+  hurtColor: {r: 1, g: 0.4, b: 0.4, a: 1}
 --- !u!1 &6636581693952009317
 GameObject:
   m_ObjectHideFlags: 0

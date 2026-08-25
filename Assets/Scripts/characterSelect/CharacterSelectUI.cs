@@ -13,7 +13,7 @@ public class CharacterSelectUI : MonoBehaviour
     public Color selectedColor = Color.yellow;
 
     [Header("Escena de juego")]
-    public string gameplaySceneName = "Level1Scene";
+    public string gameplaySceneName = "LevelHUB";
 
     // -1 = nada seleccionado aún
     int currentIndex = -1;

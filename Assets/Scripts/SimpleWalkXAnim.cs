@@ -17,6 +17,7 @@ public class SimpleWalkXAnim : MonoBehaviour
     public bool spriteMiraADerechaPorDefecto = true;
 
     SpriteRenderer sr;
+    Animator anim;
     float timer;
     bool toggle;
 
@@ -26,10 +27,18 @@ public class SimpleWalkXAnim : MonoBehaviour
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        if (anim == null)
+            anim = GetComponentInChildren<Animator>();
+
         if (!idleSprite) idleSprite = stepA;
         if (sr)
         {
-            if (sr.sprite == null) sr.sprite = idleSprite;
+            // Solo establecer sprite por defecto si no hay Animator activo
+            if (sr.sprite == null && (anim == null || anim.runtimeAnimatorController == null))
+            {
+                sr.sprite = idleSprite;
+            }
 
             // Leer la orientación inicial por defecto del sprite/prefab
             bool initialFlip = sr.flipX;
@@ -46,6 +55,9 @@ public class SimpleWalkXAnim : MonoBehaviour
 
     void Update()
     {
+        // Si el objeto tiene un Animator activo controlando la animación, este script no debe sobreescribir sr.sprite
+        bool hasActiveAnimator = anim != null && anim.enabled && anim.runtimeAnimatorController != null;
+
         // Leer input crudo (mismas teclas que tu movimiento)
         float x = Input.GetAxisRaw("Horizontal"); // A/D
         float y = Input.GetAxisRaw("Vertical");   // W/S
@@ -64,6 +76,10 @@ public class SimpleWalkXAnim : MonoBehaviour
             }
         }
 
+        // Si hay un Animator controlando el sprite, no forzar frames manuales
+        if (hasActiveAnimator)
+            return;
+
         if (hayMovimiento && (stepA || stepB))
         {
             // Alternar A/B constantemente mientras haya movimiento (ya sea por X o por Y)
@@ -81,7 +97,10 @@ public class SimpleWalkXAnim : MonoBehaviour
             // Sin ninguna tecla de movimiento: idle (manteniendo la orientación)
             toggle = false;
             timer = 0f;
-            sr.sprite = idleSprite ? idleSprite : stepA;
+            if (idleSprite || stepA)
+            {
+                sr.sprite = idleSprite ? idleSprite : stepA;
+            }
         }
     }
 }
