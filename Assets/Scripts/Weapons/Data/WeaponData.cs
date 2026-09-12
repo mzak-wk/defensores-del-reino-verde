@@ -93,25 +93,29 @@ public class WeaponData : ScriptableObject
     [SerializeField] private GameObject basicAttackPrefab;
     [SerializeField] private BaseStats baseStats = BaseStats.Default;
     [SerializeField] private float basicCooldown = 0.5f;
+    [SerializeField] private Sprite basicIcon;
 
-    [Header("Skill X")]
-    [SerializeField] private string skillXName = "Skill X";
+    [Header("Skill 1")]
+    [SerializeField] private string skillXName = "Habilidad 1";
+    [SerializeField] private Sprite skill1Icon;
     [SerializeField] private float damageX = 20f;
     [SerializeField] private float cooldownX = 5f;
     [SerializeField] private float rangeX = 3f;
     [SerializeField] private int requiredLevelX = 5;
     [SerializeField] private GameObject prefabX;
 
-    [Header("Skill C")]
-    [SerializeField] private string skillCName = "Skill C";
+    [Header("Skill 2")]
+    [SerializeField] private string skillCName = "Habilidad 2";
+    [SerializeField] private Sprite skill2Icon;
     [SerializeField] private float damageC = 40f;
     [SerializeField] private float cooldownC = 10f;
     [SerializeField] private float rangeC = 4f;
     [SerializeField] private int requiredLevelC = 10;
     [SerializeField] private GameObject prefabC;
 
-    [Header("Ultimate V")]
-    [SerializeField] private string skillVName = "Ultimate V";
+    [Header("Ultimate")]
+    [SerializeField] private string skillVName = "Definitiva";
+    [SerializeField] private Sprite ultimateIcon;
     [SerializeField] private float damageV = 100f;
     [SerializeField] private float cooldownV = 30f;
     [SerializeField] private float rangeV = 6f;
@@ -138,27 +142,40 @@ public class WeaponData : ScriptableObject
     public GameObject BasicAttackPrefab => basicAttackPrefab;
     public BaseStats Stats => baseStats;
     public float BasicCooldown => basicCooldown;
+    public Sprite BasicIcon => basicIcon != null ? basicIcon : icon;
 
     public string SkillXName => skillXName;
+    public string Skill1Name => skillXName;
+    public Sprite Skill1Icon => skill1Icon != null ? skill1Icon : icon;
     public float DamageX => damageX;
     public float CooldownX => cooldownX;
+    public float Cooldown1 => cooldownX;
     public float RangeX => rangeX;
     public int RequiredLevelX => requiredLevelX;
     public GameObject PrefabX => prefabX;
+    public GameObject Prefab1 => prefabX;
 
     public string SkillCName => skillCName;
+    public string Skill2Name => skillCName;
+    public Sprite Skill2Icon => skill2Icon != null ? skill2Icon : icon;
     public float DamageC => damageC;
     public float CooldownC => cooldownC;
+    public float Cooldown2 => cooldownC;
     public float RangeC => rangeC;
     public int RequiredLevelC => requiredLevelC;
     public GameObject PrefabC => prefabC;
+    public GameObject Prefab2 => prefabC;
 
     public string SkillVName => skillVName;
+    public string UltimateName => skillVName;
+    public Sprite UltimateIcon => ultimateIcon != null ? ultimateIcon : icon;
     public float DamageV => damageV;
     public float CooldownV => cooldownV;
+    public float CooldownUltimate => cooldownV;
     public float RangeV => rangeV;
     public int RequiredLevelV => requiredLevelV;
     public GameObject PrefabV => prefabV;
+    public GameObject PrefabUltimate => prefabV;
 
     public int MaxInternalLevel => maxInternalLevel;
     public string IdleStateName => idleStateName;

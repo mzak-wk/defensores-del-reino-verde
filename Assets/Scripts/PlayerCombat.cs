@@ -90,7 +90,9 @@ public class PlayerCombat : MonoBehaviour
 
     private void HandleBasicAttack()
     {
-        WeaponData weapon = weaponSlotManager.CurrentWeapon;
+        WeaponData weapon = (weaponSlotManager != null) ? weaponSlotManager.CurrentWeapon : null;
+        KeyCode basicKey = KeybindManager.Instance.GetKey(CombatAction.BasicAttack);
+        bool isBasicPressed = (basicKey == KeyCode.Mouse0) ? Input.GetMouseButton(0) : Input.GetKey(basicKey);
 
         // BUG FIX: validación GLOBAL de los ataques canalizados (vórtice y proyector).
         // El cierre no puede vivir solo dentro de HandleVortexAttack/HandleReforestationAttack
@@ -98,7 +100,7 @@ public class PlayerCombat : MonoBehaviour
         // de arma mientras uno está activo, se cierra en este mismo frame (evita arma fantasma).
         if (activeVortex != null)
         {
-            bool buttonReleased = !Input.GetMouseButton(0);
+            bool buttonReleased = !isBasicPressed;
             bool weaponChanged = weapon == null || weapon.WeaponId != "3";
             if (buttonReleased || weaponChanged)
             {
@@ -109,7 +111,7 @@ public class PlayerCombat : MonoBehaviour
 
         if (activeProjector != null)
         {
-            bool buttonReleased = !Input.GetMouseButton(0);
+            bool buttonReleased = !isBasicPressed;
             bool weaponChanged = weapon == null || weapon.WeaponId != "5";
             if (buttonReleased || weaponChanged)
             {
@@ -152,7 +154,7 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
 
-        if (!Input.GetMouseButton(0)) return;
+        if (!isBasicPressed) return;
 
         nextBasicTime = Time.time + weapon.BasicCooldown;
 
@@ -263,10 +265,9 @@ public class PlayerCombat : MonoBehaviour
         if (activeVortex != null && activeVortex.GetComponent<CaptureVortex>() == null)
             activeVortex = null;
 
-        // Este método ya solo se ejecuta con arma "3" y botón sostenido
-        // (el release se maneja al inicio de HandleBasicAttack), pero se
-        // mantiene la guarda por robustez.
-        if (!Input.GetMouseButton(0)) return;
+        KeyCode basicKey = KeybindManager.Instance.GetKey(CombatAction.BasicAttack);
+        bool isBasicPressed = (basicKey == KeyCode.Mouse0) ? Input.GetMouseButton(0) : Input.GetKey(basicKey);
+        if (!isBasicPressed) return;
 
         // Regla anti-duplicados: solo UN vórtice activo.
         if (activeVortex != null) return;
@@ -313,10 +314,9 @@ public class PlayerCombat : MonoBehaviour
         if (activeProjector != null && activeProjector.GetComponent<ReforestationProjector>() == null)
             activeProjector = null;
 
-        // Este método ya solo se ejecuta con arma "5" y botón sostenido
-        // (el release se maneja al inicio de HandleBasicAttack), pero se
-        // mantiene la guarda por robustez.
-        if (!Input.GetMouseButton(0)) return;
+        KeyCode basicKey = KeybindManager.Instance.GetKey(CombatAction.BasicAttack);
+        bool isBasicPressed = (basicKey == KeyCode.Mouse0) ? Input.GetMouseButton(0) : Input.GetKey(basicKey);
+        if (!isBasicPressed) return;
 
         // Regla anti-duplicados: solo UN proyector activo.
         if (activeProjector != null) return;
@@ -366,7 +366,9 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
 
-        bool firing = Input.GetMouseButton(0) && activeProjector != null;
+        KeyCode basicKey = KeybindManager.Instance.GetKey(CombatAction.BasicAttack);
+        bool isBasicPressed = (basicKey == KeyCode.Mouse0) ? Input.GetMouseButton(0) : Input.GetKey(basicKey);
+        bool firing = isBasicPressed && activeProjector != null;
         if (firing)
         {
             currentHeat += Time.deltaTime;
@@ -400,7 +402,8 @@ public class PlayerCombat : MonoBehaviour
 
     private void HandleSkillX()
     {
-        if (!Input.GetKeyDown(KeyCode.X)) return;
+        KeyCode key = KeybindManager.Instance.GetKey(CombatAction.Skill1);
+        if (!Input.GetKeyDown(key)) return;
 
         WeaponData weapon = weaponSlotManager.CurrentWeapon;
         if (weapon == null) return;
@@ -427,7 +430,8 @@ public class PlayerCombat : MonoBehaviour
 
     private void HandleSkillC()
     {
-        if (!Input.GetKeyDown(KeyCode.C)) return;
+        KeyCode key = KeybindManager.Instance.GetKey(CombatAction.Skill2);
+        if (!Input.GetKeyDown(key)) return;
 
         WeaponData weapon = weaponSlotManager.CurrentWeapon;
         if (weapon == null) return;
@@ -454,7 +458,8 @@ public class PlayerCombat : MonoBehaviour
 
     private void HandleSkillV()
     {
-        if (!Input.GetKeyDown(KeyCode.V)) return;
+        KeyCode key = KeybindManager.Instance.GetKey(CombatAction.Ultimate);
+        if (!Input.GetKeyDown(key)) return;
 
         WeaponData weapon = weaponSlotManager.CurrentWeapon;
         if (weapon == null) return;
@@ -465,11 +470,29 @@ public class PlayerCombat : MonoBehaviour
         int weaponLevel = weaponSlotManager.CurrentWeaponLevel;
         if (weaponLevel < weapon.RequiredLevelV)
         {
-            Debug.Log($"[PlayerCombat] Nivel de arma {weapon.RequiredLevelV} requerido para Ultimate V. Actual: {weaponLevel}");
+            Debug.Log($"[PlayerCombat] Nivel de arma {weapon.RequiredLevelV} requerido para Ultimate (tecla {key}). Nivel actual del arma: {weaponLevel}. (Consejo: Pon RequiredLevelV = 1 en el ScriptableObject del arma para probarla de inmediato en nivel 1)");
             return;
         }
 
-        nextSkillVTime = Time.time + weapon.CooldownV;
+        // Si el controlador del Cut-In estilo Persona 5 está disponible en escena, reproducir animación cinemática
+        if (UltimateCutInController.Instance != null && !UltimateCutInController.Instance.IsPlaying)
+        {
+            nextSkillVTime = Time.time + weapon.CooldownV;
+            UltimateCutInController.Instance.PlayCutIn(null, () =>
+            {
+                ExecuteUltimateAttack(weapon);
+            });
+        }
+        else
+        {
+            nextSkillVTime = Time.time + weapon.CooldownV;
+            ExecuteUltimateAttack(weapon);
+        }
+    }
+
+    private void ExecuteUltimateAttack(WeaponData weapon)
+    {
+        if (weapon == null || weapon.PrefabV == null) return;
 
         SafeSetTrigger("AttackV");
 
@@ -577,6 +600,15 @@ public class PlayerCombat : MonoBehaviour
                 ? Quaternion.Euler(0f, 180f, 0f) 
                 : Quaternion.identity;
 
+            // Check if it's a wave / ultimate attack (e.g. WaveUltimateAttack like Mugetsu / Final Getsuga)
+            WaveUltimateAttack wave = go.GetComponent<WaveUltimateAttack>();
+            if (wave != null)
+            {
+                wave.Init(dir, stats.damage, stats.projectileSpeed);
+                return;
+            }
+
+            // Melee attack (SlashAttack)
             SlashAttack slash = go.GetComponent<SlashAttack>();
             if (slash != null)
             {
@@ -708,5 +740,62 @@ public class PlayerCombat : MonoBehaviour
     {
         ExperienceSystem xp = GetComponent<ExperienceSystem>();
         return xp != null ? xp.level : 1;
+    }
+
+    /// <summary>
+    /// Retorna el tiempo restante de cooldown en segundos para una acción dada.
+    /// Utilizado por AbilityHUDController para animar la radial fill y el texto.
+    /// </summary>
+    public float GetCooldownRemaining(CombatAction action)
+    {
+        WeaponData weapon = (weaponSlotManager != null) ? weaponSlotManager.CurrentWeapon : null;
+        if (weapon == null) return 0f;
+
+        switch (action)
+        {
+            case CombatAction.BasicAttack:
+                if (weapon.WeaponId == "5" && isOverheated)
+                    return Mathf.Max(0f, overheatLockTimer);
+                return Mathf.Max(0f, nextBasicTime - Time.time);
+
+            case CombatAction.Skill1:
+                return Mathf.Max(0f, nextSkillXTime - Time.time);
+
+            case CombatAction.Skill2:
+                return Mathf.Max(0f, nextSkillCTime - Time.time);
+
+            case CombatAction.Ultimate:
+                return Mathf.Max(0f, nextSkillVTime - Time.time);
+
+            default:
+                return 0f;
+        }
+    }
+
+    /// <summary>
+    /// Retorna la duración total de cooldown configurada en el arma para una acción dada.
+    /// </summary>
+    public float GetTotalCooldown(CombatAction action)
+    {
+        WeaponData weapon = (weaponSlotManager != null) ? weaponSlotManager.CurrentWeapon : null;
+        if (weapon == null) return 1f;
+
+        switch (action)
+        {
+            case CombatAction.BasicAttack:
+                return Mathf.Max(0.01f, weapon.BasicCooldown);
+
+            case CombatAction.Skill1:
+                return Mathf.Max(0.01f, weapon.CooldownX);
+
+            case CombatAction.Skill2:
+                return Mathf.Max(0.01f, weapon.CooldownC);
+
+            case CombatAction.Ultimate:
+                return Mathf.Max(0.01f, weapon.CooldownV);
+
+            default:
+                return 1f;
+        }
     }
 }

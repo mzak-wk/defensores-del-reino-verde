@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: caa374b91c4dc6119b5e27e502344db2
+guid: 8b3b91b858709dc40a1cf9101ba5b39e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5030664842123403401
-    second: lutrofeli(_)_0
+      213: -4320295261928297051
+    second: logo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lutrofeli(_)_0
+      name: logo_0
       rect:
         serializedVersion: 2
-        x: 220
-        y: 0
-        width: 615
-        height: 953
+        x: 30
+        y: 24
+        width: 956
+        height: 464
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 980efc2350380d540800000000000000
-      internalID: 5030664842123403401
+      spriteID: 5ade5f3695a3b04c0800000000000000
+      internalID: -4320295261928297051
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lutrofeli(_)_0: 5030664842123403401
+      logo_0: -4320295261928297051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

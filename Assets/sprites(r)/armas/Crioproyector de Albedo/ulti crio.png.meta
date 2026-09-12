@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -109,12 +109,12 @@ TextureImporter:
       name: ulti crio_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 4194
-        height: 192
+        x: 0
+        y: 11
+        width: 150
+        height: 177
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -131,20 +131,20 @@ TextureImporter:
       name: ulti crio_1
       rect:
         serializedVersion: 2
-        x: 1079
-        y: 155
-        width: 49
-        height: 46
+        x: 166
+        y: 15
+        width: 170
+        height: 165
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2dad16ff253001b90800000000000000
-      internalID: -7273309743196546350
+      spriteID: f8c55b632a949614fbb99f942e1433e1
+      internalID: -2030145720
       vertices: []
       indices: 
       edges: []
@@ -153,20 +153,482 @@ TextureImporter:
       name: ulti crio_2
       rect:
         serializedVersion: 2
-        x: 2659
-        y: 172
-        width: 30
-        height: 29
+        x: 340
+        y: 12
+        width: 173
+        height: 177
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1a317ff3256958740800000000000000
-      internalID: 5153690628600042401
+      spriteID: aa1f331adae38744cac1ee2310df2d76
+      internalID: 1741635234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_3
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 12
+        width: 169
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85bf9a7fef0bb54da942a370215bf1f
+      internalID: 2018400871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_4
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 5
+        width: 175
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654b229e086ce1543b86f38e49b833e2
+      internalID: -1210943131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_5
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 14
+        width: 171
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fb3f75bb36ad74787203b444246bce
+      internalID: 1986289327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_6
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 14
+        width: 175
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdcf42a7b0d7d143a43fd68d7a59bd8
+      internalID: 1088631305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_7
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 17
+        width: 175
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6a74ed9c760a145aa8c341214bc2c5
+      internalID: -907544331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_8
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 15
+        width: 155
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9eb751b67e22f46b782a3bbe5af50e
+      internalID: -1999370322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_9
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 14
+        width: 170
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11dc9c914eabd5243b22b26ff9b8105b
+      internalID: -1796392511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_10
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 11
+        width: 171
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059f4223624ead24695595cedafa8db9
+      internalID: 1100965029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_11
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 10
+        width: 169
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e68a3ad371c47a4ebf0d5964f8c6c97
+      internalID: -292633428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_12
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 13
+        width: 181
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc0547d4610b4e46932dd4659aacf78
+      internalID: -1389577899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_13
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 12
+        width: 169
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c2f1723024ded47804a58eaf763e7e
+      internalID: 1791814567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_14
+      rect:
+        serializedVersion: 2
+        x: 2422
+        y: 13
+        width: 178
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776a22ba1772cda44a09c7d4da7d3c25
+      internalID: -1600490061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_15
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 14
+        width: 184
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca195131807ce3546922bed90c814520
+      internalID: 1818049994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_16
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 12
+        width: 147
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f7a5d58a61b3c44a086e8ba03892f2
+      internalID: -307674801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_17
+      rect:
+        serializedVersion: 2
+        x: 2949
+        y: 13
+        width: 167
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d981225191febc4429ba16983c166864
+      internalID: -312830455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_18
+      rect:
+        serializedVersion: 2
+        x: 3126
+        y: 12
+        width: 174
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7229181e5d2491344bca09a262638624
+      internalID: -911411492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_19
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 13
+        width: 165
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203bffd328e1ef34f9394b34764d3e48
+      internalID: -1209660388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_20
+      rect:
+        serializedVersion: 2
+        x: 3469
+        y: 13
+        width: 174
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0863e4f92c9d6e4885541de1fecf3b3
+      internalID: -1749930727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_21
+      rect:
+        serializedVersion: 2
+        x: 3646
+        y: 10
+        width: 174
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffd88123e6e8124f83e42a680b5a0d0
+      internalID: 322209705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_22
+      rect:
+        serializedVersion: 2
+        x: 3820
+        y: 12
+        width: 174
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a30844d6cce5a04f8402988b9ec75eb
+      internalID: 1585111807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ulti crio_23
+      rect:
+        serializedVersion: 2
+        x: 3994
+        y: 17
+        width: 185
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae3f40ad5d93644b9e319a58768c045
+      internalID: -1839019420
       vertices: []
       indices: 
       edges: []
@@ -175,7 +637,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 78ae41e41ea77d54ab953a5a0dcf971c
     internalID: 0
     vertices: []
     indices: 
@@ -186,8 +648,29 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       ulti crio_0: 6950766140181138301
-      ulti crio_1: -7273309743196546350
-      ulti crio_2: 5153690628600042401
+      ulti crio_1: -2030145720
+      ulti crio_10: 1100965029
+      ulti crio_11: -292633428
+      ulti crio_12: -1389577899
+      ulti crio_13: 1791814567
+      ulti crio_14: -1600490061
+      ulti crio_15: 1818049994
+      ulti crio_16: -307674801
+      ulti crio_17: -312830455
+      ulti crio_18: -911411492
+      ulti crio_19: -1209660388
+      ulti crio_2: 1741635234
+      ulti crio_20: -1749930727
+      ulti crio_21: 322209705
+      ulti crio_22: 1585111807
+      ulti crio_23: -1839019420
+      ulti crio_3: 2018400871
+      ulti crio_4: -1210943131
+      ulti crio_5: 1986289327
+      ulti crio_6: 1088631305
+      ulti crio_7: -907544331
+      ulti crio_8: -1999370322
+      ulti crio_9: -1796392511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

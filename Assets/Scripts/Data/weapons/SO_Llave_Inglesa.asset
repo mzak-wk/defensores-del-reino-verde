@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponId: 1
   displayName: Llave Inglesa
-  description: 
-  icon: {fileID: 3368291897825456969, guid: 31388b9493c07f8499b86a4a77bca250, type: 3}
+  description: nigerman
+  icon: {fileID: 3368291897825456969, guid: bac0ea9c6936b564ca5249c599fcb7d9, type: 3}
   rarity: {fileID: 11400000, guid: 8e6296d4e57cb2f4a92bbbce3ffb095f, type: 2}
   upgradeTags: []
   isRanged: 0
@@ -52,24 +52,28 @@ MonoBehaviour:
     areaDuration: 5
     areaScaleMultiplier: 1.5
   basicCooldown: 1
+  basicIcon: {fileID: 0}
   skillXName: Skill X
+  skill1Icon: {fileID: 0}
   damageX: 20
   cooldownX: 5
   rangeX: 3
   requiredLevelX: 5
   prefabX: {fileID: 6444036381957406254, guid: 8250c85ea2fa4ac4b97802c85b50141b, type: 3}
   skillCName: Skill C
+  skill2Icon: {fileID: 0}
   damageC: 40
   cooldownC: 10
   rangeC: 4
   requiredLevelC: 10
-  prefabC: {fileID: 8368213856330685145, guid: f56bbc47971ca5d40a16039138383736, type: 3}
+  prefabC: {fileID: 0}
   skillVName: Ultimate V
+  ultimateIcon: {fileID: 8932231100995997942, guid: bde830a8753cf07429c7b6cc120081c9, type: 3}
   damageV: 100
   cooldownV: 30
   rangeV: 6
-  requiredLevelV: 5
-  prefabV: {fileID: 8368213856330685145, guid: 001876fcc28f06f42bd1e7dc24b0108a, type: 3}
-  maxInternalLevel: 5
+  requiredLevelV: 1
+  prefabV: {fileID: 5637966029050411441, guid: 4f3ef0df33f04834b801d233751c17cb, type: 3}
+  maxInternalLevel: 1
   idleStateName: 
   weaponIndex: 1

@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: d3ea826cc1bad80418c587ae4279e34a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4139514546118865684
+    second: monolito 1 mano ataque_0
+  - first:
+      213: -4723783606572393117
+    second: monolito 1 mano ataque_1
+  - first:
+      213: 76231858606382136
+    second: monolito 1 mano ataque_2
+  - first:
+      213: 331048261123111479
+    second: monolito 1 mano ataque_3
+  - first:
+      213: -6866487311964753343
+    second: monolito 1 mano ataque_4
+  - first:
+      213: 6369881434183359917
+    second: monolito 1 mano ataque_5
+  - first:
+      213: 3036663822235923008
+    second: monolito 1 mano ataque_6
+  - first:
+      213: 807569314752237935
+    second: monolito 1 mano ataque_7
+  - first:
+      213: -2851206490255313708
+    second: monolito 1 mano ataque_8
+  - first:
+      213: 6860594071123492897
+    second: monolito 1 mano ataque_9
+  - first:
+      213: -3995948721291462049
+    second: monolito 1 mano ataque_10
+  - first:
+      213: 2688496525300877226
+    second: monolito 1 mano ataque_11
+  - first:
+      213: -8217592608781184967
+    second: monolito 1 mano ataque_12
+  - first:
+      213: -2132334786342726861
+    second: monolito 1 mano ataque_13
+  - first:
+      213: 4463983526100962629
+    second: monolito 1 mano ataque_14
+  - first:
+      213: 254391817697979090
+    second: monolito 1 mano ataque_15
+  - first:
+      213: 7371204830215892427
+    second: monolito 1 mano ataque_16
+  - first:
+      213: -5272235449098798945
+    second: monolito 1 mano ataque_17
+  - first:
+      213: 421744827664262775
+    second: monolito 1 mano ataque_18
+  - first:
+      213: -8699844807964012391
+    second: monolito 1 mano ataque_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 235
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cecc500d37d7d86c0800000000000000
+      internalID: -4139514546118865684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 246
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d507666dfb17eb0800000000000000
+      internalID: -4723783606572393117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_2
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 0
+        width: 226
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c1dc4b874de0100800000000000000
+      internalID: 76231858606382136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_3
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 0
+        width: 510
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73af0c7b3ae189400800000000000000
+      internalID: 331048261123111479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_4
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 0
+        width: 504
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1423d938b2655b0a0800000000000000
+      internalID: -6866487311964753343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_5
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 0
+        width: 224
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daddad15a6d566850800000000000000
+      internalID: 6369881434183359917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_6
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 0
+        width: 239
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 042f6aa48a5642a20800000000000000
+      internalID: 3036663822235923008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_7
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 0
+        width: 226
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6110595300153b00800000000000000
+      internalID: 807569314752237935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_8
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 94
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d43b0fadca7e68d0800000000000000
+      internalID: -2851206490255313708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_9
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 0
+        width: 235
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120877d65f9b53f50800000000000000
+      internalID: 6860594071123492897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_10
+      rect:
+        serializedVersion: 2
+        x: 2802
+        y: 122
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5afeb63fc98b88c0800000000000000
+      internalID: -3995948721291462049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_11
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 0
+        width: 236
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa74e6278557f4520800000000000000
+      internalID: 2688496525300877226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_12
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 8
+        width: 56
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930d8bc9f0f35fd80800000000000000
+      internalID: -8217592608781184967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_13
+      rect:
+        serializedVersion: 2
+        x: 2563
+        y: 29
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33355d53fcc6862e0800000000000000
+      internalID: -2132334786342726861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_14
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 40
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d8174ad5143fd30800000000000000
+      internalID: 4463983526100962629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_15
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 7
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da67a7a208c78300800000000000000
+      internalID: 254391817697979090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_16
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 40
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd69af1db7cb4660800000000000000
+      internalID: 7371204830215892427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_17
+      rect:
+        serializedVersion: 2
+        x: 2564
+        y: 8
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f987e34eac145d6b0800000000000000
+      internalID: -5272235449098798945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_18
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 8
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77669ceafa65ad500800000000000000
+      internalID: 421744827664262775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monolito 1 mano ataque_19
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 19
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 990574cad31f34780800000000000000
+      internalID: -8699844807964012391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      monolito 1 mano ataque_0: -4139514546118865684
+      monolito 1 mano ataque_1: -4723783606572393117
+      monolito 1 mano ataque_10: -3995948721291462049
+      monolito 1 mano ataque_11: 2688496525300877226
+      monolito 1 mano ataque_12: -8217592608781184967
+      monolito 1 mano ataque_13: -2132334786342726861
+      monolito 1 mano ataque_14: 4463983526100962629
+      monolito 1 mano ataque_15: 254391817697979090
+      monolito 1 mano ataque_16: 7371204830215892427
+      monolito 1 mano ataque_17: -5272235449098798945
+      monolito 1 mano ataque_18: 421744827664262775
+      monolito 1 mano ataque_19: -8699844807964012391
+      monolito 1 mano ataque_2: 76231858606382136
+      monolito 1 mano ataque_3: 331048261123111479
+      monolito 1 mano ataque_4: -6866487311964753343
+      monolito 1 mano ataque_5: 6369881434183359917
+      monolito 1 mano ataque_6: 3036663822235923008
+      monolito 1 mano ataque_7: 807569314752237935
+      monolito 1 mano ataque_8: -2851206490255313708
+      monolito 1 mano ataque_9: 6860594071123492897
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0f0256ed02feee542952f25d084c0f36
+guid: ea0329f21f28f3d4fa967583b0000685
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8205950651708530623
-    second: flecha_0
+      213: 5030664842123403401
+    second: lutrofeli(_)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flecha_0
+      name: lutrofeli(_)_0
       rect:
         serializedVersion: 2
-        x: 388
-        y: 388
-        width: 248
-        height: 248
+        x: 220
+        y: 0
+        width: 615
+        height: 953
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbfd87704a461e170800000000000000
-      internalID: 8205950651708530623
+      spriteID: 980efc2350380d540800000000000000
+      internalID: 5030664842123403401
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      flecha_0: 8205950651708530623
+      lutrofeli(_)_0: 5030664842123403401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

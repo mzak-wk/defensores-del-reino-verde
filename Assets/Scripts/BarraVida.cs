@@ -20,6 +20,7 @@ public class BarraVida : MonoBehaviour
     [Tooltip("Ventana de invulnerabilidad tras recibir un impacto (en segundos).")]
     public float invulnTimeOnHit = 0.3f;
     public bool invulnerable { get; private set; }
+    public void SetInvulnerable(bool value) => invulnerable = value;
 
     [Header("UI Opcional (World Space)")]
     public Image fill;

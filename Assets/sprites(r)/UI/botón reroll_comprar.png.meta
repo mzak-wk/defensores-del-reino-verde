@@ -103,12 +103,12 @@ TextureImporter:
       name: "bot\xF3n reroll_comprar_0"
       rect:
         serializedVersion: 2
-        x: 3
-        y: 11
-        width: 413
-        height: 197
+        x: 32
+        y: 108
+        width: 313
+        height: 303
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -121,11 +121,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: "bot\xF3n reroll_comprar_1"
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 108
+        width: 313
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf396aad805e47b47ae13efa545e6b18
+      internalID: 8405234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "bot\xF3n reroll_comprar_2"
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 108
+        width: 314
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a0e137f58e80a4a9aa1cc02b89a19d
+      internalID: -1560198327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e004fe535c166d54981cb08b72b2d0a7
     internalID: 0
     vertices: []
     indices: 
@@ -136,6 +180,8 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       "bot\xF3n reroll_comprar_0": 5495310676117386990
+      "bot\xF3n reroll_comprar_1": 8405234
+      "bot\xF3n reroll_comprar_2": -1560198327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

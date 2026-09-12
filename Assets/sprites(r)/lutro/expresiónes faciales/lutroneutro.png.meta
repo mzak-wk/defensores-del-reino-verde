@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cae84e98d89895ef294efc7384c6b8eb
+guid: ebdd85b6f31fa2a418562e6970f1f405
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -103,10 +103,10 @@ TextureImporter:
       name: lutroneutro_0
       rect:
         serializedVersion: 2
-        x: 222
-        y: 1
-        width: 613
-        height: 949
+        x: 223
+        y: 3
+        width: 610
+        height: 946
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

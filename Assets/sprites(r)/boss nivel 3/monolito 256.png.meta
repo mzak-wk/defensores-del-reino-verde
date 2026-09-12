@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cc0f9bb1772f2792fb2f474decf89fd0
+guid: a526218da287cf047952389d73efb163
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 665032258057231194
-    second: lutro(triste)_0
+      213: 8500002456061295454
+    second: monolito 256_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lutro(triste)_0
+      name: monolito 256_0
       rect:
         serializedVersion: 2
-        x: 220
+        x: 10
         y: 0
-        width: 615
-        height: 953
+        width: 236
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5b5da1b05baa3900800000000000000
-      internalID: 665032258057231194
+      spriteID: e5b3b77e23316f570800000000000000
+      internalID: 8500002456061295454
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lutro(triste)_0: 665032258057231194
+      monolito 256_0: 8500002456061295454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
