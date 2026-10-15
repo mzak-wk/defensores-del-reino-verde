@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -102,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,10 +130,10 @@ TextureImporter:
       name: "suelo erucio\xF1ema_0"
       rect:
         serializedVersion: 2
-        x: 355
-        y: 177
-        width: 305
-        height: 147
+        x: 0
+        y: 162
+        width: 341
+        height: 162
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: "suelo erucio\xF1ema_2"
       rect:
         serializedVersion: 2
-        x: 11
-        y: 161
-        width: 308
-        height: 133
+        x: 682
+        y: 162
+        width: 341
+        height: 162
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,10 +174,10 @@ TextureImporter:
       name: "suelo erucio\xF1ema_3"
       rect:
         serializedVersion: 2
-        x: 697
-        y: 178
-        width: 305
-        height: 138
+        x: 0
+        y: 0
+        width: 341
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,67 +193,67 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "suelo erucio\xF1ema_6"
+      name: "suelo erucio\xF1ema_1"
       rect:
         serializedVersion: 2
-        x: 12
-        y: 9
-        width: 313
-        height: 147
+        x: 341
+        y: 162
+        width: 341
+        height: 162
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 59f5f775f06414ad0800000000000000
-      internalID: -2719815668248649835
+      spriteID: 973d9255dbd5ff649b25d67e9bb82158
+      internalID: -991396875322854094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "suelo erucio\xF1ema_8"
+      name: "suelo erucio\xF1ema_4"
       rect:
         serializedVersion: 2
-        x: 355
-        y: 9
-        width: 306
-        height: 137
+        x: 341
+        y: 0
+        width: 341
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a8bf46f56cb474d60800000000000000
-      internalID: 7874345788856662922
+      spriteID: d131e11c3dcd4064492e6e0a180b9bae
+      internalID: 4587803748125476666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "suelo erucio\xF1ema_9"
+      name: "suelo erucio\xF1ema_5"
       rect:
         serializedVersion: 2
-        x: 697
-        y: 9
-        width: 312
-        height: 84
+        x: 682
+        y: 0
+        width: 341
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 82048fb6e2d054720800000000000000
-      internalID: 2829682433903312936
+      spriteID: 375988dd951876c4682c7dcd1dc6ed15
+      internalID: -5995763550877266944
       vertices: []
       indices: 
       edges: []
@@ -278,10 +278,6 @@ TextureImporter:
       "suelo erucio\xF1ema_3": 5495368900004819520
       "suelo erucio\xF1ema_4": 4587803748125476666
       "suelo erucio\xF1ema_5": -5995763550877266944
-      "suelo erucio\xF1ema_6": -2719815668248649835
-      "suelo erucio\xF1ema_7": -5543170567966231471
-      "suelo erucio\xF1ema_8": 7874345788856662922
-      "suelo erucio\xF1ema_9": 2829682433903312936
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

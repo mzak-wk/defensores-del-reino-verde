@@ -15,12 +15,34 @@ public class HubComputerController : MonoBehaviour
     [SerializeField] private KeyCode interactionKey = KeyCode.E;
     [SerializeField] private bool closeOnExit = false;
 
+    [Header("Indicador Visual [E]")]
+    [SerializeField] private WorldInteractionPrompt promptUI;
+
     [Header("Physics Interaction Detection")]
     [SerializeField] private bool useRadiusDetection = true;
     [SerializeField] private float interactionRadius = 2.5f;
 
     private bool playerInRange;
     private IPlayerMovementLock currentMovementLock;
+
+    private void Awake()
+    {
+        if (promptUI == null)
+        {
+            promptUI = GetComponent<WorldInteractionPrompt>() ?? GetComponentInChildren<WorldInteractionPrompt>();
+            if (promptUI == null)
+            {
+                promptUI = gameObject.AddComponent<WorldInteractionPrompt>();
+            }
+        }
+
+        if (promptUI != null)
+        {
+            promptUI.SetActionText("Computadora");
+            promptUI.SetAlwaysShowCountdown(false);
+            promptUI.SetPromptVisible(false);
+        }
+    }
 
     private void OnEnable()
     {
@@ -38,45 +60,91 @@ public class HubComputerController : MonoBehaviour
         }
 
         SetPlayerMovementLocked(false);
+
+        if (promptUI != null)
+        {
+            promptUI.SetPromptVisible(false);
+        }
     }
 
     private void Update()
     {
         CheckProximityDetection();
 
-        if (!playerInRange || hubUIManager == null)
+        bool isDialogueOpen = DialogueManager.Instance != null && DialogueManager.Instance.IsOpen;
+        bool isComputerOpen = hubUIManager != null && hubUIManager.IsOpen;
+        bool canInteract = playerInRange && !isDialogueOpen && !isComputerOpen;
+
+        if (promptUI != null)
         {
-            return;
+            promptUI.SetPromptVisible(canInteract);
         }
 
-        // Bloqueo 1.1: Evitar abrir el ordenador si el sistema de diálogos está abierto
-        if (DialogueManager.Instance != null && DialogueManager.Instance.IsOpen)
+        if (!canInteract || hubUIManager == null)
         {
             return;
         }
 
         if (Input.GetKeyDown(interactionKey))
         {
+            if (promptUI != null) promptUI.SetPromptVisible(false);
             OpenComputer();
         }
     }
+
+    private Transform cachedPlayerTransform;
 
     private void CheckProximityDetection()
     {
         if (!useRadiusDetection) return;
 
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, interactionRadius);
-        if (hit != null && hit.CompareTag(playerTag))
+        bool detected = false;
+        IPlayerMovementLock detectedLock = null;
+
+        // 1. Verificación directa por distancia al jugador (inmune a proyectiles, armas o ataques)
+        if (cachedPlayerTransform != null && Vector2.Distance(transform.position, cachedPlayerTransform.position) <= interactionRadius)
+        {
+            detected = true;
+            detectedLock = currentMovementLock;
+        }
+        else
+        {
+            GameObject pGO = GameObject.FindWithTag(playerTag);
+            if (pGO != null && Vector2.Distance(transform.position, pGO.transform.position) <= interactionRadius)
+            {
+                detected = true;
+                cachedPlayerTransform = pGO.transform;
+                detectedLock = pGO.GetComponent<IPlayerMovementLock>() ?? pGO.GetComponentInChildren<IPlayerMovementLock>();
+            }
+            else
+            {
+                // 2. Comprobar todos los colisionadores en el radio (no solo el primero)
+                Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactionRadius);
+                foreach (var h in hits)
+                {
+                    if (h == null || h.gameObject == gameObject) continue;
+                    if (h.CompareTag(playerTag) || (h.transform.root != null && h.transform.root.CompareTag(playerTag)))
+                    {
+                        detected = true;
+                        cachedPlayerTransform = h.transform.root;
+                        detectedLock = h.GetComponentInParent<IPlayerMovementLock>();
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (detected)
         {
             if (!playerInRange)
             {
                 playerInRange = true;
-                currentMovementLock = hit.GetComponent<IPlayerMovementLock>();
+                currentMovementLock = detectedLock;
             }
         }
         else
         {
-            if (playerInRange && useRadiusDetection)
+            if (playerInRange)
             {
                 playerInRange = false;
                 if (closeOnExit && hubUIManager != null && hubUIManager.IsOpen)
@@ -85,37 +153,51 @@ public class HubComputerController : MonoBehaviour
                 }
                 SetPlayerMovementLocked(false);
                 currentMovementLock = null;
+                cachedPlayerTransform = null;
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (useRadiusDetection || !other.CompareTag(playerTag))
+        if (other == null) return;
+        if (other.CompareTag(playerTag) || (other.transform.root != null && other.transform.root.CompareTag(playerTag)))
         {
-            return;
+            playerInRange = true;
+            cachedPlayerTransform = other.transform.root;
+            currentMovementLock = other.GetComponentInParent<IPlayerMovementLock>();
         }
-
-        playerInRange = true;
-        currentMovementLock = other.GetComponent<IPlayerMovementLock>();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (useRadiusDetection || !other.CompareTag(playerTag))
+        if (other == null) return;
+
+        // Si el jugador aún se encuentra dentro del radio físico, ignorar salidas de colliders hijos de ataque
+        if (cachedPlayerTransform != null && Vector2.Distance(transform.position, cachedPlayerTransform.position) <= interactionRadius)
         {
             return;
         }
 
-        playerInRange = false;
-
-        if (closeOnExit && hubUIManager != null && hubUIManager.IsOpen)
+        GameObject pGO = GameObject.FindWithTag(playerTag);
+        if (pGO != null && Vector2.Distance(transform.position, pGO.transform.position) <= interactionRadius)
         {
-            hubUIManager.CloseComputer();
+            return;
         }
 
-        SetPlayerMovementLocked(false);
-        currentMovementLock = null;
+        if (other.CompareTag(playerTag) || (other.transform.root != null && other.transform.root.CompareTag(playerTag)))
+        {
+            playerInRange = false;
+
+            if (closeOnExit && hubUIManager != null && hubUIManager.IsOpen)
+            {
+                hubUIManager.CloseComputer();
+            }
+
+            SetPlayerMovementLocked(false);
+            currentMovementLock = null;
+            cachedPlayerTransform = null;
+        }
     }
 
     private void OnDrawGizmosSelected()

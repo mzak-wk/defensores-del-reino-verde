@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponId: 2
   displayName: Prisma Fotovoltaico
   description: 
-  icon: {fileID: -8641717035135396843, guid: e7d9979c32cbc0c47bab8d8ddccb6b5e, type: 3}
+  icon: {fileID: -8641717035135396843, guid: e47841a71331f7447b624e7e7d01a8ad, type: 3}
   rarity: {fileID: 11400000, guid: 8e6296d4e57cb2f4a92bbbce3ffb095f, type: 2}
   upgradeTags: []
   isRanged: 1
@@ -52,19 +52,23 @@ MonoBehaviour:
     areaDuration: 5
     areaScaleMultiplier: 1.5
   basicCooldown: 0.5
+  basicIcon: {fileID: 0}
   skillXName: Skill X
+  skill1Icon: {fileID: 0}
   damageX: 20
   cooldownX: 5
   rangeX: 3
   requiredLevelX: 5
   prefabX: {fileID: 2596501575136268228, guid: fca4ff3b8ea1f38428a84e15f485d36c, type: 3}
   skillCName: Skill C
+  skill2Icon: {fileID: 0}
   damageC: 40
   cooldownC: 10
   rangeC: 4
   requiredLevelC: 10
   prefabC: {fileID: 2596501575136268228, guid: 0c6fcea99224663449049550357dea45, type: 3}
   skillVName: Ultimate V
+  ultimateIcon: {fileID: 0}
   damageV: 100
   cooldownV: 30
   rangeV: 6

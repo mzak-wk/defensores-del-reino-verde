@@ -81,13 +81,6 @@ public class SoilZoneSpawner : MonoBehaviour
 
         PruneCompletedZones();
 
-        if (totalSpawnedInCurrentEncounter >= EncounterZoneLimit
-            || zonesSpawnedThisWave >= GetBudgetForCurrentWave())
-        {
-            isSpawning = false;
-            return;
-        }
-
         if (CountActiveUnplantedZones() >= EffectiveMaxActiveZones)
             return;
 
@@ -214,8 +207,6 @@ public class SoilZoneSpawner : MonoBehaviour
         if (activeZone != ownerZone
             || preparedWaveNumber != activeZone.CurrentWave
             || activeUnplanted >= EffectiveMaxActiveZones
-            || totalSpawnedInCurrentEncounter >= EncounterZoneLimit
-            || zonesSpawnedThisWave >= GetBudgetForCurrentWave()
             || !isSpawning)
             return false;
 

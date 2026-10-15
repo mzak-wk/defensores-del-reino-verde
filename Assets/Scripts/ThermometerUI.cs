@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Interfaz visual del Termómetro Ambiental en el HUD.
+/// Interfaz visual del Termómetro Ambiental / Medidor de Ulti en el HUD.
 /// Utiliza los assets de 'termomeñemaconassetsdefuegiothieloyvaina+rellenodeldiablasasaso.png':
 /// - Marco del termómetro (Sprite _0)
 /// - Relleno vertical del termómetro (Sprite _1)
-/// - 3 Símbolos dinámicos de temperatura: Normal (_2), Calor/Peligro (_3), Frío (_4)
-/// - Texto TMP de lectura térmica.
+/// - 3 Símbolos dinámicos de temperatura: Normal/Sol (_2), Calor/Fuego (_3), Frío/Hielo (_4)
+/// - Texto TMP de lectura térmica (°C) o porcentaje de ulti (%).
 /// </summary>
 public class ThermometerUI : MonoBehaviour
 {
@@ -26,20 +26,21 @@ public class ThermometerUI : MonoBehaviour
     [SerializeField] private Sprite fillSprite;
 
     [Header("3 Símbolos de Estado de Temperatura")]
-    [Tooltip("Símbolo de temperatura normal / templada (30%-70%). Sprite _2")]
+    [Tooltip("Símbolo de temperatura normal / soleada / templada. Sprite _2")]
     [SerializeField] private Sprite symbolNormal;
-    [Tooltip("Símbolo de calor / peligro crítico (>70%). Sprite _3")]
+    [Tooltip("Símbolo de calor / fuego / peligro crítico. Sprite _3")]
     [SerializeField] private Sprite symbolHot;
-    [Tooltip("Símbolo de frío / inicio (<30%). Sprite _4")]
+    [Tooltip("Símbolo de frío / hielo / inicio polar. Sprite _4")]
     [SerializeField] private Sprite symbolCold;
 
-    [Header("Configuración de Umbrales")]
-    [Range(0f, 1f)] [SerializeField] private float coldThreshold = 0.30f;
-    [Range(0f, 1f)] [SerializeField] private float hotThreshold = 0.70f;
+    [Header("Ecosistema del Nivel")]
+    [Tooltip("Tipo de ecosistema activo. Si hay un HazardMeterManager en escena, se sincroniza automáticamente.")]
+    [SerializeField] private EcosystemType currentEcosystem = EcosystemType.TropicalForest;
 
-    [Header("Formato de Texto")]
+    [Header("Formato de Lectura")]
     [SerializeField] private bool showText = true;
-    [SerializeField] private string textFormat = "{0:0.0} °C";
+    [SerializeField] private string temperatureFormat = "{0:0.0} °C";
+    [SerializeField] private string bossUltiFormat = "{0:0}%";
 
     private HazardMeterManager boundManager;
 
@@ -50,16 +51,17 @@ public class ThermometerUI : MonoBehaviour
 
     private void OnEnable()
     {
-        HazardMeterManager.OnGlobalHazardValueChanged += HandleHazardChanged;
+        HazardMeterManager.OnGlobalHazardValueChanged += HandleGlobalHazardChanged;
         TryBindManager();
     }
 
     private void OnDisable()
     {
-        HazardMeterManager.OnGlobalHazardValueChanged -= HandleHazardChanged;
+        HazardMeterManager.OnGlobalHazardValueChanged -= HandleGlobalHazardChanged;
         if (boundManager != null)
         {
             boundManager.OnHazardValueChanged -= HandleHazardChanged;
+            boundManager.OnEcosystemHazardChanged -= HandleEcosystemHazardChanged;
             boundManager = null;
         }
     }
@@ -112,18 +114,54 @@ public class ThermometerUI : MonoBehaviour
         if (boundManager == null)
         {
             boundManager = HazardMeterManager.Instance ?? Object.FindFirstObjectByType<HazardMeterManager>();
+            if (boundManager == null)
+            {
+                // Auto-instanciar HazardMeterManager según la escena para garantizar sincronización perfecta
+                GameObject mgrGO = new GameObject("HazardMeterManager");
+                boundManager = mgrGO.AddComponent<HazardMeterManager>();
+                string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+                EcosystemType eco = EcosystemType.TropicalForest;
+                if (sceneName.Contains("Ice")) eco = EcosystemType.PolarIce;
+                else if (sceneName.Contains("Beach")) eco = EcosystemType.SunnyBeach;
+                else if (sceneName.Contains("Final")) eco = EcosystemType.FinalBossUlti;
+                boundManager.ApplyEcosystemPreset(eco);
+            }
+
             if (boundManager != null)
             {
                 boundManager.OnHazardValueChanged += HandleHazardChanged;
+                boundManager.OnEcosystemHazardChanged += HandleEcosystemHazardChanged;
+                currentEcosystem = boundManager.CurrentEcosystem;
                 HandleHazardChanged(boundManager.CurrentValue, boundManager.HazardLimit);
             }
         }
     }
 
+    private void HandleGlobalHazardChanged(float currentValue, float limit)
+    {
+        if (boundManager == null)
+        {
+            TryBindManager();
+        }
+        else
+        {
+            HandleHazardChanged(currentValue, limit);
+        }
+    }
+
+    private void HandleEcosystemHazardChanged(float currentValue, float limit, EcosystemType ecosystem)
+    {
+        currentEcosystem = ecosystem;
+        HandleHazardChanged(currentValue, limit);
+    }
+
     public void HandleHazardChanged(float currentValue, float limit)
     {
-        if (limit <= 0f) limit = 50f;
-        float progress = Mathf.Clamp01(currentValue / limit);
+        float minVal = boundManager != null ? boundManager.MinDisplayValue : 0f;
+        float range = limit - minVal;
+        if (range <= 0.001f) range = 50f;
+
+        float progress = Mathf.Clamp01((currentValue - minVal) / range);
 
         // Actualizar barra de llenado vertical
         if (fillImage != null)
@@ -131,47 +169,105 @@ public class ThermometerUI : MonoBehaviour
             fillImage.fillAmount = progress;
         }
 
-        // Actualizar símbolo según el rango térmico
-        UpdateSymbolState(progress);
+        // Actualizar símbolo dinámicamente según el ecosistema del nivel
+        UpdateSymbolForEcosystem(currentValue, progress, currentEcosystem);
 
         // Actualizar texto
         if (showText && valueText != null)
         {
-            valueText.text = string.Format(textFormat, currentValue, limit);
+            if (currentEcosystem == EcosystemType.FinalBossUlti)
+            {
+                valueText.text = string.Format(bossUltiFormat, currentValue);
+            }
+            else
+            {
+                valueText.text = string.Format(temperatureFormat, currentValue);
+            }
         }
     }
 
-    private void UpdateSymbolState(float progress)
+    /// <summary>
+    /// Cambia el ícono dinámicamente según la temperatura actual y el ecosistema del nivel:
+    /// - Nivel 1 (Bosque Tropical): Inicia en Sol (_2), calor extremo pasa a Fuego (_3).
+    /// - Nivel 2 (Polo Norte): Inicia en Hielo (_4), deshielo pasa a Sol (_2), derretimiento crítico a Fuego (_3).
+    /// - Nivel 3 (Playa Soleada): Inicia en Sol (_2), calor extremo pasa a Fuego (_3).
+    /// - Nivel Final (Boss Ulti): 0-40% Hielo (_4), 40-80% Sol (_2), >80% Fuego (_3).
+    /// </summary>
+    private void UpdateSymbolForEcosystem(float currentVal, float progress, EcosystemType ecosystem)
     {
         if (symbolImage == null) return;
 
-        if (progress > hotThreshold)
+        Sprite selectedSprite = symbolNormal;
+
+        switch (ecosystem)
         {
-            // Estado Calor / Peligro
-            if (symbolHot != null)
-            {
-                symbolImage.sprite = symbolHot;
-                symbolImage.gameObject.SetActive(true);
-            }
+            case EcosystemType.TropicalForest:
+                // Base: Bosque templado/tropical (~24°C = Sol).
+                // Si la erosión calienta a más de 38°C o >65% -> Fuego.
+                // Si baja mucho (< 20°C o <15%) -> Hielo.
+                if (progress >= 0.65f || currentVal >= 38f)
+                    selectedSprite = symbolHot != null ? symbolHot : symbolNormal;
+                else if (progress <= 0.15f || currentVal <= 20f)
+                    selectedSprite = symbolCold != null ? symbolCold : symbolNormal;
+                else
+                    selectedSprite = symbolNormal;
+                break;
+
+            case EcosystemType.PolarIce:
+                // Base: Polo Norte congelado (<0°C = Hielo).
+                // Descongelamiento (0°C a 10°C, 40%-80%) -> Sol.
+                // Derretimiento crítico (>10°C o >80%) -> Fuego.
+                if (progress >= 0.80f || currentVal >= 10f)
+                    selectedSprite = symbolHot != null ? symbolHot : symbolNormal;
+                else if (progress >= 0.40f || currentVal >= 0f)
+                    selectedSprite = symbolNormal != null ? symbolNormal : symbolCold;
+                else
+                    selectedSprite = symbolCold;
+                break;
+
+            case EcosystemType.SunnyBeach:
+                // Base: Playa cálida soleada (32°C = Sol).
+                // Residuos y calor extremo (>48°C o >65%) -> Fuego.
+                // Si baja de 28°C (<15%) -> Hielo.
+                if (progress >= 0.65f || currentVal >= 48f)
+                    selectedSprite = symbolHot != null ? symbolHot : symbolNormal;
+                else if (progress <= 0.15f || currentVal <= 28f)
+                    selectedSprite = symbolCold != null ? symbolCold : symbolNormal;
+                else
+                    selectedSprite = symbolNormal;
+                break;
+
+            case EcosystemType.FinalBossUlti:
+                // Medidor de Definitiva del Jefe Final:
+                // 0% a 40%: Hielo (carga baja/fría).
+                // 40% a 80%: Sol (acumulando energía).
+                // >80%: Fuego (¡Peligro inminente de Ulti!).
+                if (currentVal >= 80f || progress >= 0.80f)
+                    selectedSprite = symbolHot != null ? symbolHot : symbolNormal;
+                else if (currentVal >= 40f || progress >= 0.40f)
+                    selectedSprite = symbolNormal != null ? symbolNormal : symbolCold;
+                else
+                    selectedSprite = symbolCold;
+                break;
         }
-        else if (progress < coldThreshold)
+
+        if (selectedSprite != null)
         {
-            // Estado Frío / Base
-            if (symbolCold != null)
-            {
-                symbolImage.sprite = symbolCold;
-                symbolImage.gameObject.SetActive(true);
-            }
+            symbolImage.sprite = selectedSprite;
+            symbolImage.gameObject.SetActive(true);
         }
+    }
+
+    /// <summary>
+    /// Configura manualmente el ecosistema y actualiza la vista.
+    /// </summary>
+    public void SetEcosystem(EcosystemType ecosystem)
+    {
+        currentEcosystem = ecosystem;
+        if (boundManager != null)
+            HandleHazardChanged(boundManager.CurrentValue, boundManager.HazardLimit);
         else
-        {
-            // Estado Normal
-            if (symbolNormal != null)
-            {
-                symbolImage.sprite = symbolNormal;
-                symbolImage.gameObject.SetActive(true);
-            }
-        }
+            HandleHazardChanged(0f, 50f);
     }
 
     /// <summary>

@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -300832259
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -1333355427319389661, guid: 8a97e01a91dc3ea6d8efefd7670acee1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab05606bb7baf9240bb99b1f8171de85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 0}
+  dialogueData: {fileID: 11400000, guid: f1e2d3c4b5a67890123456789abcdef0, type: 2}
   playerTag: Player
   interactionKey: 101
   closeOnExit: 0

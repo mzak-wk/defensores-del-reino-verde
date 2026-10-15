@@ -11,6 +11,8 @@ public class LevelCard
     public Image stateImage;
     public Sprite spriteLocked;
     public Sprite spriteUnlocked;
+    [Tooltip("Sprite opcional al pasar el cursor (Hover/Highlighted) cuando el nivel está desbloqueado.")]
+    public Sprite spriteHighlighted;
     public Sprite spriteSelected;
     public int levelIndex;
     public string sceneName;
@@ -120,13 +122,35 @@ public class ComputerLevelPanel : MonoBehaviour
                 card.stateImage.sprite = card.spriteLocked;
                 card.button.interactable = false;
                 break;
+
             case LevelState.Unlocked:
                 card.stateImage.sprite = card.spriteUnlocked;
                 card.button.interactable = true;
+
+                // Configurar Sprite Swap en el componente Button para soportar Highlighted / Hover
+                if (card.button != null && card.spriteHighlighted != null)
+                {
+                    card.button.transition = Selectable.Transition.SpriteSwap;
+                    SpriteState spriteState = card.button.spriteState;
+                    spriteState.highlightedSprite = card.spriteHighlighted;
+                    spriteState.pressedSprite = card.spriteSelected != null ? card.spriteSelected : card.spriteHighlighted;
+                    card.button.spriteState = spriteState;
+                }
                 break;
+
             case LevelState.Selected:
-                card.stateImage.sprite = card.spriteSelected;
+                card.stateImage.sprite = card.spriteSelected != null ? card.spriteSelected : card.spriteUnlocked;
                 card.button.interactable = true;
+
+                // En estado seleccionado, mantenemos el visual seleccionado
+                if (card.button != null)
+                {
+                    card.button.transition = Selectable.Transition.SpriteSwap;
+                    SpriteState spriteState = card.button.spriteState;
+                    spriteState.highlightedSprite = card.spriteSelected;
+                    spriteState.pressedSprite = card.spriteSelected;
+                    card.button.spriteState = spriteState;
+                }
                 break;
         }
     }

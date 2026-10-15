@@ -55,6 +55,8 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Text")]
     [SerializeField] private TextMeshProUGUI speakerNameText;
+    [SerializeField] private TextMeshProUGUI npcNameText;
+    [SerializeField] private TextMeshProUGUI playerNameText;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private float characterDelay = 0.035f;
 
@@ -63,6 +65,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image playerPortrait;
     [Tooltip("Imagen del retrato del NPC / Boss.")]
     [SerializeField] private Image npcPortrait;
+    [Tooltip("Slot/RectTransform del retrato izquierdo.")]
+    [SerializeField] private RectTransform leftPortraitSlot;
+    [Tooltip("Slot/RectTransform del retrato derecho.")]
+    [SerializeField] private RectTransform rightPortraitSlot;
     [Tooltip("Lista de retratos mapeados por Hablante + Emoción. Si no hay coincidencia, se oculta el retrato.")]
     [SerializeField] private List<PortraitMapping> portraitMappings = new List<PortraitMapping>();
 
@@ -75,7 +81,15 @@ public class DialogueManager : MonoBehaviour
     [Header("Continue Indicator")]
     [SerializeField] private GameObject continueArrow;
 
+    [Header("Shop & Fallbacks")]
+    [SerializeField] private ShopUIController shopUIController;
+    [SerializeField] private Sprite defaultNpcPortrait;
+    [SerializeField] private Sprite defaultPlayerPortrait;
+
     [Header("Choice Buttons")]
+    [SerializeField] private Button talkButton;
+    [SerializeField] private Button shopButton;
+    [SerializeField] private Button closeButton;
     [Tooltip("Prefab del botón de opción. Debe tener TextMeshProUGUI como hijo.")]
     [SerializeField] private Button choiceButtonPrefab;
     [Tooltip("Contenedor donde se instanciarán los botones de opción dinámicamente.")]
@@ -113,6 +127,7 @@ public class DialogueManager : MonoBehaviour
         isQuitting = false;
 
         _instance = this;
+        EnsureDialogueUIReferences();
         SetDialogueRootActive(false);
         HideContinueArrow();
     }
@@ -137,12 +152,12 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (spawnedChoiceButtons.Count > 0)
+        if (HasActiveChoices())
         {
             return;
         }
 
-        if (Time.frameCount == ignoreAdvanceInputFrame)
+        if (Time.frameCount <= ignoreAdvanceInputFrame)
         {
             return;
         }
@@ -153,6 +168,23 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private bool HasActiveChoices()
+    {
+        if (spawnedChoiceButtons.Count > 0) return true;
+        if (talkButton != null && talkButton.gameObject.activeSelf) return true;
+        if (shopButton != null && shopButton.gameObject.activeSelf) return true;
+        if (closeButton != null && closeButton.gameObject.activeSelf) return true;
+        if (choiceButtonContainer != null && choiceButtonContainer.gameObject.activeSelf && choiceButtonContainer.childCount > 0)
+        {
+            for (int i = 0; i < choiceButtonContainer.childCount; i++)
+            {
+                var child = choiceButtonContainer.GetChild(i);
+                if (child != null && child.gameObject.activeSelf) return true;
+            }
+        }
+        return false;
+    }
+
     /// <summary>
     /// Inicia un diálogo con los datos proporcionados.
     /// </summary>
@@ -160,6 +192,8 @@ public class DialogueManager : MonoBehaviour
     /// <param name="movementLock">Referencia opcional para bloquear el movimiento del jugador.</param>
     public void StartDialogue(DialogueData data, IPlayerMovementLock movementLock = null)
     {
+        EnsureDialogueUIReferences();
+
         if (data == null || data.Lines == null || data.Lines.Count == 0)
         {
             Debug.LogWarning("[DialogueManager] Cannot start dialogue with null or empty DialogueData.");
@@ -208,7 +242,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Cierra el diálogo actual y limpia el estado.
+    /// Cierra el diálogo actual y limpia el estado sin apagar el componente DialogueManager.
     /// </summary>
     public void CloseDialogue()
     {
@@ -233,9 +267,180 @@ public class DialogueManager : MonoBehaviour
         currentMovementLock = null;
 
         OnDialogueClosed?.Invoke();
+    }
 
-        // Apagar el Canvas del diálogo al concluir la conversación.
-        gameObject.SetActive(false);
+    /// <summary>
+    /// Busca y conecta automáticamente la distribución de Canvas_Dialogo del HUB si faltan referencias.
+    /// </summary>
+    public void EnsureDialogueUIReferences()
+    {
+        if (dialogueRoot == null)
+        {
+            var allCanvases = Object.FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            foreach (var c in allCanvases)
+            {
+                if (c != null && c.name.Contains("Canvas_Dialogo"))
+                {
+                    dialogueRoot = c.gameObject;
+                    break;
+                }
+            }
+
+            if (dialogueRoot == null)
+            {
+                var canvasGO = GameObject.Find("Canvas_Dialogo");
+                if (canvasGO != null) dialogueRoot = canvasGO;
+            }
+        }
+
+        if (dialogueRoot != null)
+        {
+            if (dialogueText == null)
+            {
+                var texts = dialogueRoot.GetComponentsInChildren<TMP_Text>(true);
+                foreach (var t in texts)
+                {
+                    if (t.name.Contains("Text_Dialogo") || t.name.Contains("DialogueText"))
+                    {
+                        dialogueText = t;
+                        break;
+                    }
+                }
+            }
+
+            if (speakerNameText == null)
+            {
+                var texts = dialogueRoot.GetComponentsInChildren<TextMeshProUGUI>(true);
+                foreach (var t in texts)
+                {
+                    if (t.name.Contains("NPCName") || t.name.Contains("Speaker"))
+                    {
+                        speakerNameText = t;
+                        break;
+                    }
+                }
+            }
+
+            if (npcNameText == null && speakerNameText != null)
+            {
+                npcNameText = speakerNameText;
+            }
+
+            if (playerNameText == null)
+            {
+                var texts = dialogueRoot.GetComponentsInChildren<TextMeshProUGUI>(true);
+                foreach (var t in texts)
+                {
+                    if (t.name.Contains("PlayerName") || (t.name.Contains("Player") && !t.name.Contains("Portrait")))
+                    {
+                        playerNameText = t;
+                        break;
+                    }
+                }
+            }
+
+            if (dialoguePanelRect == null)
+            {
+                var rts = dialogueRoot.GetComponentsInChildren<RectTransform>(true);
+                foreach (var rt in rts)
+                {
+                    if (rt.name.Contains("Caja_Texto") || rt.name.Contains("Panel"))
+                    {
+                        dialoguePanelRect = rt;
+                        if (textContainerRect == null) textContainerRect = rt;
+                        break;
+                    }
+                }
+            }
+
+            if (continueArrow == null)
+            {
+                var trans = dialogueRoot.GetComponentsInChildren<Transform>(true);
+                foreach (var t in trans)
+                {
+                    if (t.name.ToLower().Contains("arrow") || t.name.ToLower().Contains("flecha"))
+                    {
+                        continueArrow = t.gameObject;
+                        break;
+                    }
+                }
+            }
+
+            if (choiceButtonContainer == null)
+            {
+                var trans = dialogueRoot.GetComponentsInChildren<Transform>(true);
+                foreach (var t in trans)
+                {
+                    if (t.name.Contains("Botones") || t.name.Contains("Buttons"))
+                    {
+                        choiceButtonContainer = t;
+                        break;
+                    }
+                }
+            }
+
+            if (choiceButtonContainer != null)
+            {
+                var buttons = choiceButtonContainer.GetComponentsInChildren<Button>(true);
+                foreach (var b in buttons)
+                {
+                    string bName = b.name.ToLower();
+                    if (talkButton == null && (bName.Contains("hablar") || bName.Contains("talk")))
+                    {
+                        talkButton = b;
+                    }
+                    else if (shopButton == null && (bName.Contains("tienda") || bName.Contains("shop")))
+                    {
+                        shopButton = b;
+                    }
+                    else if (closeButton == null && (bName.Contains("cerrar") || bName.Contains("close") || bName.Contains("salir")))
+                    {
+                        closeButton = b;
+                    }
+                }
+
+                if (choiceButtonPrefab == null && buttons.Length > 0)
+                {
+                    choiceButtonPrefab = buttons[0];
+                }
+
+                if (talkButton == null && buttons.Length > 0)
+                {
+                    talkButton = buttons[0];
+                }
+            }
+
+            if (npcPortrait == null)
+            {
+                var imgs = dialogueRoot.GetComponentsInChildren<Image>(true);
+                foreach (var img in imgs)
+                {
+                    if (img.name.Contains("NPCPortrait") || img.name.Contains("NPC"))
+                    {
+                        npcPortrait = img;
+                        break;
+                    }
+                }
+            }
+
+            if (playerPortrait == null)
+            {
+                var imgs = dialogueRoot.GetComponentsInChildren<Image>(true);
+                foreach (var img in imgs)
+                {
+                    if (img.name.Contains("Player") && !img.name.Contains("Name"))
+                    {
+                        playerPortrait = img;
+                        break;
+                    }
+                }
+            }
+
+            if (shopUIController == null)
+            {
+                shopUIController = Object.FindFirstObjectByType<ShopUIController>();
+            }
+        }
     }
 
     private void HandleAdvanceInput()
@@ -258,14 +463,8 @@ public class DialogueManager : MonoBehaviour
 
         if (currentData == null || currentLineIndex >= currentData.Lines.Count)
         {
-            if (autoCloseAfterLastLine)
-            {
-                StartCoroutine(CloseAfterDelay(autoCloseDelay));
-            }
-            else
-            {
-                CloseDialogue();
-            }
+            StopAutoClose();
+            CloseDialogue();
             return;
         }
 
@@ -339,15 +538,17 @@ public class DialogueManager : MonoBehaviour
         state = DialogueState.WaitingInput;
         ignoreAdvanceInputFrame = Time.frameCount;
 
-        DialogueLine line = currentData.Lines[currentLineIndex];
-        if (line.choices != null && line.choices.Count > 0)
+        if (currentData != null && currentLineIndex >= 0 && currentLineIndex < currentData.Lines.Count)
         {
-            ShowChoiceButtons(line.choices);
+            DialogueLine line = currentData.Lines[currentLineIndex];
+            if (line.choices != null && line.choices.Count > 0)
+            {
+                ShowChoiceButtons(line.choices);
+                return;
+            }
         }
-        else
-        {
-            ShowContinueArrow();
-        }
+
+        ShowContinueArrow();
     }
 
     private void FinishTyping()
@@ -363,9 +564,16 @@ public class DialogueManager : MonoBehaviour
 
     private void ShowChoiceButtons(List<DialogueChoice> choices)
     {
-        if (choiceButtonPrefab == null || choiceButtonContainer == null)
+        EnsureDialogueUIReferences();
+
+        if (choiceButtonContainer != null)
         {
-            Debug.LogWarning("[DialogueManager] Choice button prefab or container not assigned. Falling back to continue.");
+            choiceButtonContainer.gameObject.SetActive(true);
+        }
+
+        if (choiceButtonContainer == null && talkButton == null && shopButton == null && closeButton == null && choiceButtonPrefab == null)
+        {
+            Debug.LogWarning("[DialogueManager] Choice buttons not configured. Falling back to continue.");
             ShowContinueArrow();
             state = DialogueState.WaitingInput;
             return;
@@ -373,47 +581,129 @@ public class DialogueManager : MonoBehaviour
 
         state = DialogueState.WaitingInput;
 
+        // Limpiar botones anteriores
+        DestroyChoiceButtons();
+
+        if (choiceButtonContainer != null)
+        {
+            choiceButtonContainer.gameObject.SetActive(true);
+        }
+
+        // Colección de botones estáticos disponibles
+        List<Button> availableStaticButtons = new List<Button>();
+        if (talkButton != null) availableStaticButtons.Add(talkButton);
+        if (shopButton != null) availableStaticButtons.Add(shopButton);
+        if (closeButton != null) availableStaticButtons.Add(closeButton);
+
         for (int i = 0; i < choices.Count; i++)
         {
             DialogueChoice choice = choices[i];
-            int capturedIndex = i;
+            Button buttonToUse = null;
 
-            Button button = Instantiate(choiceButtonPrefab, choiceButtonContainer);
-            button.gameObject.SetActive(true);
-
-            TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
-            if (buttonText != null)
+            // 1. Intentar emparejar por actionType con botones dedicados
+            if (choice.actionType == DialogueActionType.OpenShop && shopButton != null && availableStaticButtons.Contains(shopButton))
             {
-                buttonText.text = choice.optionText;
+                buttonToUse = shopButton;
+                availableStaticButtons.Remove(shopButton);
+            }
+            else if (choice.actionType == DialogueActionType.CloseDialogue && closeButton != null && availableStaticButtons.Contains(closeButton))
+            {
+                buttonToUse = closeButton;
+                availableStaticButtons.Remove(closeButton);
+            }
+            else if (choice.actionType == DialogueActionType.None && talkButton != null && availableStaticButtons.Contains(talkButton))
+            {
+                buttonToUse = talkButton;
+                availableStaticButtons.Remove(talkButton);
+            }
+            // 2. Si no emparejó por acción pero quedan botones estáticos, usar el siguiente libre
+            else if (availableStaticButtons.Count > 0)
+            {
+                buttonToUse = availableStaticButtons[0];
+                availableStaticButtons.RemoveAt(0);
+            }
+            // 3. Si no hay botones estáticos disponibles, instanciar del prefab
+            else if (choiceButtonPrefab != null && choiceButtonContainer != null)
+            {
+                buttonToUse = Instantiate(choiceButtonPrefab, choiceButtonContainer);
+                spawnedChoiceButtons.Add(buttonToUse);
             }
 
-            button.onClick.RemoveAllListeners();
-            button.onClick.AddListener(() => OnChoiceSelected(choice));
-
-            spawnedChoiceButtons.Add(button);
+            if (buttonToUse != null)
+            {
+                SetupChoiceButton(buttonToUse, choice);
+            }
         }
+    }
+
+    private void SetupChoiceButton(Button button, DialogueChoice choice)
+    {
+        if (button == null) return;
+        button.gameObject.SetActive(true);
+
+        // Actualizar texto en TextMeshProUGUI, TMP_Text o Text legacy
+        TextMeshProUGUI tmpText = button.GetComponentInChildren<TextMeshProUGUI>(true);
+        if (tmpText != null)
+        {
+            tmpText.text = choice.optionText;
+        }
+        else
+        {
+            TMP_Text genericTmp = button.GetComponentInChildren<TMP_Text>(true);
+            if (genericTmp != null)
+            {
+                genericTmp.text = choice.optionText;
+            }
+            else
+            {
+                UnityEngine.UI.Text legacyText = button.GetComponentInChildren<UnityEngine.UI.Text>(true);
+                if (legacyText != null)
+                {
+                    legacyText.text = choice.optionText;
+                }
+            }
+        }
+
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(() => OnChoiceSelected(choice));
     }
 
     private void OnChoiceSelected(DialogueChoice choice)
     {
+        StopActiveCoroutines();
         DestroyChoiceButtons();
         HideContinueArrow();
+        ignoreAdvanceInputFrame = Time.frameCount + 2;
 
         bool dialogueClosed = ExecuteAction(choice.actionType, choice.customEventKey);
         if (dialogueClosed) return;
 
         if (choice.fullResponseText != null && choice.fullResponseText.Length > 0)
         {
+            ignoreAdvanceInputFrame = Time.frameCount + 2;
             StartTyping(choice.fullResponseText);
         }
         else if (choice.nextDialogueBlock != null)
         {
-            DialogueData nextData = choice.nextDialogueBlock;
-            CloseDialogue();
-            StartDialogue(nextData, currentMovementLock);
+            currentData = choice.nextDialogueBlock;
+            currentLineIndex = 0;
+            ignoreAdvanceInputFrame = Time.frameCount + 2;
+
+            DialogueLine firstLine = currentData.Lines[currentLineIndex];
+            UpdateSpeakerUI(firstLine.speaker, firstLine.emotion);
+
+            if (firstLine.choices != null && firstLine.choices.Count > 0)
+            {
+                StartTypingWithOptions(firstLine.text, firstLine.choices);
+            }
+            else
+            {
+                StartTyping(firstLine.text);
+            }
         }
         else
         {
+            ignoreAdvanceInputFrame = Time.frameCount + 2;
             AdvanceLine();
         }
     }
@@ -426,7 +716,8 @@ public class DialogueManager : MonoBehaviour
                 return false;
 
             case DialogueActionType.OpenShop:
-                ShopUIController shop = FindFirstObjectByType<ShopUIController>();
+                CloseDialogue();
+                ShopUIController shop = shopUIController != null ? shopUIController : Object.FindFirstObjectByType<ShopUIController>();
                 if (shop != null)
                 {
                     shop.OpenShop();
@@ -435,10 +726,10 @@ public class DialogueManager : MonoBehaviour
                 {
                     Debug.LogWarning("[DialogueManager] ShopUIController not found in scene.");
                 }
-                return false;
+                return true;
 
             case DialogueActionType.OpenWeaponChoice:
-                InitialWeaponChoiceUI weaponUI = FindFirstObjectByType<InitialWeaponChoiceUI>();
+                InitialWeaponChoiceUI weaponUI = Object.FindFirstObjectByType<InitialWeaponChoiceUI>();
                 if (weaponUI != null)
                 {
                     weaponUI.OpenPanelFromDialogue();
@@ -473,6 +764,26 @@ public class DialogueManager : MonoBehaviour
             }
         }
         spawnedChoiceButtons.Clear();
+
+        if (talkButton != null)
+        {
+            talkButton.onClick.RemoveAllListeners();
+            talkButton.gameObject.SetActive(false);
+        }
+        if (shopButton != null)
+        {
+            shopButton.onClick.RemoveAllListeners();
+            shopButton.gameObject.SetActive(false);
+        }
+        if (closeButton != null)
+        {
+            closeButton.onClick.RemoveAllListeners();
+            closeButton.gameObject.SetActive(false);
+        }
+        if (choiceButtonContainer != null)
+        {
+            choiceButtonContainer.gameObject.SetActive(false);
+        }
     }
 
     private IEnumerator CloseAfterDelay(float delay)
@@ -481,15 +792,97 @@ public class DialogueManager : MonoBehaviour
         CloseDialogue();
     }
 
+    private readonly Dictionary<EmotionType, Sprite> cachedPlayerPortraits = new Dictionary<EmotionType, Sprite>();
+
+    private Sprite LoadPlayerPortraitFallback(EmotionType emotion)
+    {
+        if (cachedPlayerPortraits.TryGetValue(emotion, out Sprite cached) && cached != null)
+        {
+            return cached;
+        }
+
+        string resourcePath = "Portraits/Andrius/andrius_serio";
+        switch (emotion)
+        {
+            case EmotionType.Feliz:
+                resourcePath = "Portraits/Andrius/andriusfeli";
+                break;
+            case EmotionType.Triste:
+                resourcePath = "Portraits/Andrius/tristandrius";
+                break;
+            case EmotionType.Enojado:
+                resourcePath = "Portraits/Andrius/andrius_enojao";
+                break;
+            default:
+                resourcePath = "Portraits/Andrius/andrius_serio";
+                break;
+        }
+
+        Sprite loaded = Resources.Load<Sprite>(resourcePath);
+        if (loaded == null)
+        {
+            loaded = Resources.Load<Sprite>("Portraits/Andrius/andrius_serio");
+        }
+
+        if (loaded != null)
+        {
+            cachedPlayerPortraits[emotion] = loaded;
+        }
+
+        return loaded;
+    }
+
     private void UpdateSpeakerUI(SpeakerType speaker, EmotionType emotion)
     {
         currentSpeaker = speaker;
 
         bool isPlayer = speaker == SpeakerType.Jugador;
 
-        if (speakerNameText != null)
+        if (isPlayer)
         {
-            speakerNameText.text = isPlayer ? "Jugador" : speaker.ToString();
+            // Solo Andrius a la izquierda, la derecha queda totalmente vacía
+            if (playerNameText != null)
+            {
+                playerNameText.gameObject.SetActive(true);
+                playerNameText.text = "Andrius";
+            }
+
+            if (speakerNameText != null && speakerNameText != playerNameText)
+            {
+                speakerNameText.gameObject.SetActive(false);
+                speakerNameText.text = string.Empty;
+            }
+
+            if (npcNameText != null && npcNameText != playerNameText)
+            {
+                npcNameText.gameObject.SetActive(false);
+                npcNameText.text = string.Empty;
+            }
+        }
+        else
+        {
+            // Habla NPC / Sistema a la derecha, la izquierda queda vacía
+            if (playerNameText != null && playerNameText != speakerNameText)
+            {
+                playerNameText.gameObject.SetActive(false);
+                playerNameText.text = string.Empty;
+            }
+
+            string targetName = (speaker == SpeakerType.Sistema)
+                ? "Registro Ecológico"
+                : ((npcNameText != null && !string.IsNullOrEmpty(npcNameText.text) && npcNameText != speakerNameText) ? npcNameText.text : "Opina");
+
+            if (speakerNameText != null)
+            {
+                speakerNameText.gameObject.SetActive(true);
+                speakerNameText.text = targetName;
+            }
+
+            if (npcNameText != null && npcNameText != speakerNameText)
+            {
+                npcNameText.gameObject.SetActive(true);
+                npcNameText.text = targetName;
+            }
         }
 
         Sprite portrait = GetPortrait(speaker, emotion);
@@ -497,13 +890,21 @@ public class DialogueManager : MonoBehaviour
         if (playerPortrait != null)
         {
             playerPortrait.gameObject.SetActive(isPlayer && portrait != null);
-            if (isPlayer && portrait != null) playerPortrait.sprite = portrait;
+            if (isPlayer && portrait != null)
+            {
+                playerPortrait.sprite = portrait;
+                playerPortrait.color = Color.white;
+            }
         }
 
         if (npcPortrait != null)
         {
             npcPortrait.gameObject.SetActive(!isPlayer && portrait != null);
-            if (!isPlayer && portrait != null) npcPortrait.sprite = portrait;
+            if (!isPlayer && portrait != null)
+            {
+                npcPortrait.sprite = portrait;
+                npcPortrait.color = Color.white;
+            }
         }
 
         if (dialoguePanelRect != null)
@@ -527,7 +928,8 @@ public class DialogueManager : MonoBehaviour
         {
             if (portraitMappings[i].speaker == speaker && portraitMappings[i].emotion == emotion)
             {
-                return portraitMappings[i].portraitSprite;
+                if (portraitMappings[i].portraitSprite != null)
+                    return portraitMappings[i].portraitSprite;
             }
         }
 
@@ -535,8 +937,22 @@ public class DialogueManager : MonoBehaviour
         {
             if (portraitMappings[i].speaker == speaker)
             {
-                return portraitMappings[i].portraitSprite;
+                if (portraitMappings[i].portraitSprite != null)
+                    return portraitMappings[i].portraitSprite;
             }
+        }
+
+        if (speaker == SpeakerType.NPC)
+        {
+            if (defaultNpcPortrait != null) return defaultNpcPortrait;
+            if (npcPortrait != null && npcPortrait.sprite != null) return npcPortrait.sprite;
+        }
+        else if (speaker == SpeakerType.Jugador)
+        {
+            if (defaultPlayerPortrait != null) return defaultPlayerPortrait;
+            Sprite fallback = LoadPlayerPortraitFallback(emotion);
+            if (fallback != null) return fallback;
+            if (playerPortrait != null && playerPortrait.sprite != null) return playerPortrait.sprite;
         }
 
         return null;
@@ -547,6 +963,37 @@ public class DialogueManager : MonoBehaviour
         if (dialogueRoot != null)
         {
             dialogueRoot.SetActive(active);
+
+            if (active)
+            {
+                // Auto-sanar escala: si el objeto o su RectTransform se guardó con escala (0,0,0), forzar escala normal
+                if (dialogueRoot.transform.localScale.sqrMagnitude < 0.01f)
+                {
+                    dialogueRoot.transform.localScale = Vector3.one;
+                }
+
+                if (dialoguePanelRect != null && dialoguePanelRect.localScale.sqrMagnitude < 0.01f)
+                {
+                    dialoguePanelRect.localScale = Vector3.one;
+                }
+
+                if (transform.localScale.sqrMagnitude < 0.01f)
+                {
+                    transform.localScale = Vector3.one;
+                }
+
+                // Asegurar orden de renderizado en Canvas para no quedar tapado por el fondo o game elements
+                Canvas canvas = dialogueRoot.GetComponent<Canvas>() ?? GetComponentInParent<Canvas>() ?? GetComponent<Canvas>();
+                if (canvas != null)
+                {
+                    if (canvas.transform.localScale.sqrMagnitude < 0.01f)
+                    {
+                        canvas.transform.localScale = Vector3.one;
+                    }
+                    canvas.overrideSorting = true;
+                    canvas.sortingOrder = 200;
+                }
+            }
         }
     }
 
@@ -576,6 +1023,17 @@ public class DialogueManager : MonoBehaviour
         if (speakerNameText != null)
         {
             speakerNameText.text = string.Empty;
+            speakerNameText.gameObject.SetActive(false);
+        }
+
+        if (npcNameText != null)
+        {
+            npcNameText.gameObject.SetActive(false);
+        }
+
+        if (playerNameText != null)
+        {
+            playerNameText.gameObject.SetActive(false);
         }
 
         if (playerPortrait != null)

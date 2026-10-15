@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c25081ec2689542ada454de66e66ff, type: 3}
+  m_Name: opina_woods_hub
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: 1
+    emotion: 1
+    text: "Llegamos a salvo en la furgoneta, Andrius! El bosque esta bajo grave amenaza ambiental. Que necesitas saber?"
+    choices:
+    - optionText: "Consejos del Bosque"
+      fullResponseText: ""
+      actionType: 0
+      customEventKey: ""
+      nextDialogueBlock: {fileID: 11400000, guid: d4e5f6a1b2c34d5e6f7a8b9c0d1e2f3a, type: 2}
+    - optionText: "Rumores y Lore"
+      fullResponseText: ""
+      actionType: 0
+      customEventKey: ""
+      nextDialogueBlock: {fileID: 11400000, guid: a1b2c3d4e5f67a8b9c0d1e2f3a4b5c6d, type: 2}
+    - optionText: "Listo, a luchar!"
+      fullResponseText: "Buena suerte, Andrius! Mantente cerca de las grietas para restaurar el suelo y recuperar vida. La naturaleza cuenta contigo!"
+      actionType: 0
+      customEventKey: ""
+      nextDialogueBlock: {fileID: 0}

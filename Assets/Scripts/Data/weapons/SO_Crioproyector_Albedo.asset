@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponId: 4
   displayName: Crioproyector Albedo
   description: 
-  icon: {fileID: 5491100636103902514, guid: 312c73999f06e044fb0b54d75e514e9c, type: 3}
+  icon: {fileID: 5491100636103902514, guid: 5f9b3cf3251986644a8408f9a4946f3a, type: 3}
   rarity: {fileID: 11400000, guid: c785a4f6cb466ee4da37286c934c582b, type: 2}
   upgradeTags: []
   isRanged: 1
@@ -52,19 +52,23 @@ MonoBehaviour:
     areaDuration: 5
     areaScaleMultiplier: 1.5
   basicCooldown: 5
+  basicIcon: {fileID: 0}
   skillXName: Skill X
+  skill1Icon: {fileID: 0}
   damageX: 20
   cooldownX: 5
   rangeX: 3
   requiredLevelX: 5
   prefabX: {fileID: 6643852170876251094, guid: f402f6f8bfc9f4a428b334842830c6fd, type: 3}
   skillCName: Skill C
+  skill2Icon: {fileID: 0}
   damageC: 40
   cooldownC: 10
   rangeC: 4
   requiredLevelC: 10
   prefabC: {fileID: 6643852170876251094, guid: e4626e8b235d3954b9d45d89c45e64a4, type: 3}
   skillVName: Ultimate V
+  ultimateIcon: {fileID: 0}
   damageV: 100
   cooldownV: 30
   rangeV: 6

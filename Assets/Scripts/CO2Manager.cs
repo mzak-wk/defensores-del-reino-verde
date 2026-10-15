@@ -39,6 +39,11 @@ public class CO2Manager : MonoBehaviour
         }
 
         Instance = this;
+        // Prevenir que tasas legacy descalibradas (ej. 10 PPM/s) causen instakill en 5 segundos
+        if (co2RiseRatePerZone > 2f)
+        {
+            co2RiseRatePerZone = 0.5f;
+        }
         currentCO2 = Mathf.Clamp(initialCO2, 0f, maximumCO2);
     }
 
@@ -50,6 +55,10 @@ public class CO2Manager : MonoBehaviour
 
     private void Update()
     {
+        // Si el gestor global HazardMeterManager está presente, él gobierna el peligro y Game Over
+        if (HazardMeterManager.Instance != null)
+            return;
+
         if (activeSoilZonesCount <= 0 || co2RiseRatePerZone <= 0f)
             return;
 
@@ -98,6 +107,26 @@ public class CO2Manager : MonoBehaviour
 
         currentCO2 = newCO2;
         NotifyCO2Changed();
+    }
+
+    /// <summary>Aumenta el CO2 sin permitir exceder el máximo (penalización térmica).</summary>
+    public void IncreaseCO2(float amount)
+    {
+        if (amount <= 0f)
+            return;
+
+        float newCO2 = Mathf.Min(maximumCO2, currentCO2 + amount);
+        if (Mathf.Approximately(newCO2, currentCO2))
+            return;
+
+        currentCO2 = newCO2;
+        NotifyCO2Changed();
+
+        if (currentCO2 >= maximumCO2 && !isGameOver && HazardMeterManager.Instance == null)
+        {
+            isGameOver = true;
+            OnGameOver?.Invoke();
+        }
     }
 
     private void NotifyCO2Changed()

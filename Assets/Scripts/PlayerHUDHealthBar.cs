@@ -48,7 +48,7 @@ public class PlayerHUDHealthBar : MonoBehaviour
 
     private BarraVida boundVida;
     private float targetNormalizedHealth = 1f;
-    private float currentNormalizedHealth = 1f;
+    public float CurrentNormalizedHealth => fillImage != null ? fillImage.fillAmount : targetNormalizedHealth;
 
     private void Awake()
     {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5551308627301458102}
   - component: {fileID: 137850062878587798}
   - component: {fileID: 4763807779209048522}
+  - component: {fileID: 1172461794568836706}
   m_Layer: 0
   m_Name: SootZone
   m_TagString: Untagged
@@ -87,7 +88,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &5551308627301458102
@@ -160,4 +161,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cc7d13bd8a57743bf70f39103d5cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionKey: 101
+  promptUI: {fileID: 0}
   tempReduction: 0
+--- !u!114 &1172461794568836706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887136247743303457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40920b0cee94044da09ab87eebf402c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyText: E
+  heightOffset: 1.5
+  bobSpeed: 3.5
+  bobAmount: 0.12
+  lookAtCamera: 1
+  visualContainer: {fileID: 0}
+  promptKeyText: {fileID: 0}
+  arrowIcon: {fileID: 0}
+  progressFillImage: {fileID: 0}
+  arrowSprite: {fileID: 0}

@@ -1,38 +1,57 @@
 using UnityEngine;
 
 /// <summary>
-/// Representa una mancha de hollín dejada por un enemigo en el Nivel 2.
-/// Al contacto inmediato con el jugador, reduce la temperatura del TemperatureManager y se destruye.
+/// Representa una mancha de hollín / vórtice contaminante en el Nivel 2 (Polo Norte).
+/// Reduce el albedo y acelera el derretimiento polar si no se atiende rápidamente.
+/// Al acercarse y presionar la tecla 'E', el jugador la limpia, enfriando el medidor térmico.
 /// </summary>
 [RequireComponent(typeof(Collider2D))]
 public class SootZone : MonoBehaviour
 {
-    [Header("Configuración")]
-    [Tooltip("Reducción de temperatura al ser limpiada. Si es <= 0, tomará el valor por defecto del TemperatureManager.")]
+    [Header("Interacción con Tecla 'E'")]
+    [Tooltip("Tecla requerida para limpiar la mancha de hollín.")]
+    [SerializeField] private KeyCode interactionKey = KeyCode.E;
+
+    [Tooltip("Indicador visual flotante sobre el hollín.")]
+    [SerializeField] private WorldInteractionPrompt promptUI;
+
+    [Header("Configuración Térmica")]
+    [Tooltip("Reducción de temperatura al ser limpiada. Si es <= 0, tomará el valor por defecto del gestor.")]
     [SerializeField, Min(0f)] private float tempReduction = 0f;
 
-    private bool isRegistered = false;
+    private bool isRegisteredInHazard = false;
+    private bool isRegisteredInTemp = false;
     private bool isCollected = false;
+    private bool playerInRange = false;
+
+    private void Awake()
+    {
+        if (promptUI == null)
+        {
+            promptUI = GetComponent<WorldInteractionPrompt>() ?? GetComponentInChildren<WorldInteractionPrompt>();
+            if (promptUI == null)
+            {
+                promptUI = gameObject.AddComponent<WorldInteractionPrompt>();
+            }
+        }
+
+        if (promptUI != null)
+        {
+            promptUI.SetActionText("Limpiar");
+            promptUI.SetAlwaysShowCountdown(false);
+            promptUI.SetPromptVisible(false);
+        }
+    }
 
     private void OnEnable()
     {
         if (isCollected) return;
-
-        if (TemperatureManager.Instance != null)
-        {
-            TemperatureManager.Instance.RegisterSoot();
-            isRegistered = true;
-        }
+        RegisterInManagers();
     }
 
     private void Start()
     {
-        // Respaldo por si se instanció antes de que TemperatureManager terminara su Awake
-        if (!isRegistered && !isCollected && TemperatureManager.Instance != null)
-        {
-            TemperatureManager.Instance.RegisterSoot();
-            isRegistered = true;
-        }
+        RegisterInManagers();
     }
 
     private void OnDisable()
@@ -40,19 +59,55 @@ public class SootZone : MonoBehaviour
         Unregister();
     }
 
+    private void Update()
+    {
+        if (isCollected || !playerInRange) return;
+
+        if (Input.GetKeyDown(interactionKey))
+        {
+            if (promptUI != null)
+                promptUI.SetKeyHeld(true);
+
+            CollectSoot();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (isCollected) return;
+        if (isCollected || !other.CompareTag("Player")) return;
 
-        if (other.CompareTag("Player"))
+        playerInRange = true;
+        if (promptUI != null)
+            promptUI.SetPromptVisible(true);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player")) return;
+
+        // Comprobación de seguridad: si el jugador sigue dentro del radio, ignorar salidas causadas por ataques
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null && Vector2.Distance(transform.position, player.transform.position) <= 2.5f)
         {
-            CollectSoot();
+            return;
+        }
+
+        playerInRange = false;
+        if (promptUI != null)
+        {
+            promptUI.SetPromptVisible(false);
+            promptUI.SetKeyHeld(false);
         }
     }
 
     private void CollectSoot()
     {
         isCollected = true;
+        playerInRange = false;
+
+        if (promptUI != null)
+            promptUI.SetPromptVisible(false);
+
         Unregister();
 
         if (HazardMeterManager.Instance != null)
@@ -66,23 +121,39 @@ public class SootZone : MonoBehaviour
             float reduction = (tempReduction > 0f) ? tempReduction : TemperatureManager.Instance.TempReductionPerClean;
             TemperatureManager.Instance.ReduceTemperature(reduction);
         }
-        else if (HazardMeterManager.Instance == null)
-        {
-            Debug.LogWarning("[SootZone] Se recogió la mancha de hollín pero no hay gestor térmico activo en la escena.", this);
-        }
 
         Destroy(gameObject);
     }
 
-    private void Unregister()
+    private void RegisterInManagers()
     {
-        if (!isRegistered) return;
+        if (isCollected) return;
 
-        if (TemperatureManager.Instance != null)
+        if (!isRegisteredInHazard && HazardMeterManager.Instance != null)
         {
-            TemperatureManager.Instance.UnregisterSoot();
+            HazardMeterManager.Instance.RegisterDamageZone(this);
+            isRegisteredInHazard = true;
         }
 
-        isRegistered = false;
+        if (!isRegisteredInTemp && TemperatureManager.Instance != null)
+        {
+            TemperatureManager.Instance.RegisterSoot();
+            isRegisteredInTemp = true;
+        }
+    }
+
+    private void Unregister()
+    {
+        if (isRegisteredInHazard && HazardMeterManager.Instance != null)
+        {
+            HazardMeterManager.Instance.UnregisterDamageZone(this);
+            isRegisteredInHazard = false;
+        }
+
+        if (isRegisteredInTemp && TemperatureManager.Instance != null)
+        {
+            TemperatureManager.Instance.UnregisterSoot();
+            isRegisteredInTemp = false;
+        }
     }
 }

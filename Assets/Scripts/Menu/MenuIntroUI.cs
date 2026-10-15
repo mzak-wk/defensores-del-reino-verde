@@ -40,6 +40,22 @@ public class MenuIntroUI : MonoBehaviour
     // internos
     Vector2 contentStart, contentEnd;
     Vector2 logoStart, logoEnd;
+    private readonly System.Collections.Generic.Dictionary<Transform, Vector3> initialButtonScales = new System.Collections.Generic.Dictionary<Transform, Vector3>();
+
+    private void Awake()
+    {
+        // Capturar la escala original diseñada en el editor para cada botón antes de cualquier manipulación
+        if (buttonObjects != null)
+        {
+            foreach (var b in buttonObjects)
+            {
+                if (b != null && !initialButtonScales.ContainsKey(b.transform))
+                {
+                    initialButtonScales[b.transform] = b.transform.localScale;
+                }
+            }
+        }
+    }
 
     void Start()
     {
@@ -61,9 +77,21 @@ public class MenuIntroUI : MonoBehaviour
         // Flash en 0
         if (flashImage) flashImage.color = new Color(1,1,1,0);
 
-        // Botones desactivados por si acaso
-        foreach (var b in buttonObjects)
-            if (b && b.activeSelf) b.SetActive(false);
+        // Guardar escalas por seguridad si no se guardaron en Awake
+        if (buttonObjects != null)
+        {
+            foreach (var b in buttonObjects)
+            {
+                if (b != null)
+                {
+                    if (!initialButtonScales.ContainsKey(b.transform))
+                    {
+                        initialButtonScales[b.transform] = b.transform.localScale;
+                    }
+                    if (b.activeSelf) b.SetActive(false);
+                }
+            }
+        }
 
         StartCoroutine(IntroCR());
     }
@@ -147,24 +175,78 @@ public class MenuIntroUI : MonoBehaviour
             yield return new WaitForSecondsRealtime(delayMusica);
             musicaFondo.Play();
         }
+
+        // 5) Enganchar partículas ambientales de fondo y micro-animaciones en botones
+        SetupAmbientVisualsAndJuice();
+        introCompleted = true;
     }
+
+    private void Update()
+    {
+        // Movimiento flotante orgánico (breathing/floating) del Logo tras la intro
+        if (introCompleted && logo != null)
+        {
+            float bob = Mathf.Sin(Time.unscaledTime * 2.2f) * 8f;
+            logo.anchoredPosition = logoEnd + new Vector2(0f, bob);
+        }
+    }
+
+    private void SetupAmbientVisualsAndJuice()
+    {
+        // 1. Agregar UIButtonJuice a los botones del menú si no lo tienen
+        foreach (var b in buttonObjects)
+        {
+            if (b != null && b.GetComponent<UIButtonJuice>() == null)
+            {
+                b.AddComponent<UIButtonJuice>();
+            }
+        }
+
+        // 2. Spawn de hojas y esporas ambientales en el Canvas
+        Canvas canvas = GetComponentInParent<Canvas>();
+        if (canvas != null && canvas.GetComponentInChildren<MenuAmbientParticles>() == null)
+        {
+            GameObject partGO = new GameObject("Menu_Ambient_Particles");
+            partGO.transform.SetParent(canvas.transform, false);
+            partGO.transform.SetSiblingIndex(1); // Detrás de los botones pero delante del fondo
+            partGO.AddComponent<MenuAmbientParticles>();
+        }
+    }
+
+    private bool introCompleted = false;
 
     IEnumerator FadeButtonIn(CanvasGroup cg, float dur)
     {
         float t = 0f;
-        // pequeño “pop” opcional:
-        // var tr = cg.transform; Vector3 s0 = Vector3.one * 0.92f, s1 = Vector3.one; tr.localScale = s0;
+        var tr = cg.transform;
+        Vector3 targetScale = Vector3.one;
+        if (initialButtonScales.TryGetValue(tr, out Vector3 saved))
+        {
+            targetScale = saved;
+        }
+        else
+        {
+            targetScale = tr.localScale;
+        }
+
+        Vector3 s0 = targetScale * 0.90f;
+        Vector3 s1 = targetScale;
+        tr.localScale = s0;
 
         while (t < dur)
         {
             t += Time.unscaledDeltaTime;
             float k = Mathf.Clamp01(t / dur);
-            cg.alpha = k;
-            // tr.localScale = Vector3.Lerp(s0, s1, k);
+            // Curva suave elástica al aparecer
+            float smooth = Mathf.SmoothStep(0f, 1f, k);
+            cg.alpha = smooth;
+            tr.localScale = Vector3.Lerp(s0, s1, smooth);
             yield return null;
         }
         cg.alpha = 1f;
+        tr.localScale = targetScale;
         cg.interactable = true;
         cg.blocksRaycasts = true;
     }
 }
+

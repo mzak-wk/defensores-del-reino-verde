@@ -157,6 +157,29 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Elimina el archivo de guardado de un slot específico si existe.
+    /// </summary>
+    public bool DeleteSave(int slotId)
+    {
+        string path = GetSavePath(slotId);
+        if (File.Exists(path))
+        {
+            try
+            {
+                File.Delete(path);
+                Debug.Log($"[SaveManager] Partida eliminada del Slot {slotId}.");
+                return true;
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError($"[SaveManager] Error al borrar el slot {slotId}: {e.Message}");
+                return false;
+            }
+        }
+        return false;
+    }
+
     // =====================================
     // Autoguardado
     // =====================================

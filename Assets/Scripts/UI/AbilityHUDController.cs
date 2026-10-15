@@ -130,23 +130,36 @@ public class AbilityHUDController : MonoBehaviour
     }
 
     /// <summary>
+    /// Configura las referencias de los slots desde el editor o herramientas automáticas.
+    /// </summary>
+    public void ConfigureSlots(GameObject container, AbilitySlotUI basic, AbilitySlotUI skill1, AbilitySlotUI skill2, AbilitySlotUI ultimate)
+    {
+        hudContainer = container;
+        basicSlot = basic;
+        skill1Slot = skill1;
+        skill2Slot = skill2;
+        ultimateSlot = ultimate;
+    }
+
+    /// <summary>
     /// Actualiza los iconos de las habilidades basándose en el arma activa.
     /// </summary>
     public void RefreshWeaponIcons(WeaponData weapon)
     {
         if (weapon == null) return;
 
-        if (basicSlot.iconImage != null)
-            basicSlot.iconImage.sprite = weapon.BasicIcon;
+        UpdateSlotIcon(basicSlot, weapon.BasicIcon);
+        UpdateSlotIcon(skill1Slot, weapon.Skill1Icon);
+        UpdateSlotIcon(skill2Slot, weapon.Skill2Icon);
+        UpdateSlotIcon(ultimateSlot, weapon.UltimateIcon);
+    }
 
-        if (skill1Slot.iconImage != null)
-            skill1Slot.iconImage.sprite = weapon.Skill1Icon;
-
-        if (skill2Slot.iconImage != null)
-            skill2Slot.iconImage.sprite = weapon.Skill2Icon;
-
-        if (ultimateSlot.iconImage != null)
-            ultimateSlot.iconImage.sprite = weapon.UltimateIcon;
+    private void UpdateSlotIcon(AbilitySlotUI slot, Sprite icon)
+    {
+        if (slot == null || slot.iconImage == null) return;
+        slot.iconImage.sprite = icon;
+        slot.iconImage.enabled = (icon != null);
+        slot.iconImage.preserveAspect = true;
     }
 
     private void UpdateSlotCooldown(AbilitySlotUI slot, float remaining, float total)

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c25081ec2689542ada454de66e66ff, type: 3}
+  m_Name: tree_climate_dialogue_1
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: 3
+    emotion: 0
+    text: "[Registro Ecológico] Has sanado una herida de erosión. Cuando el suelo pierde su cubierta vegetal por la tala o el calor extremo, la lluvia arrastra los nutrientes vitales y la tierra se vuelve infértil."
+    choices: []
+  - speaker: 3
+    emotion: 1
+    text: "Las raíces de este árbol entrelazan la tierra fértil, reteniendo la humedad esencial y enfriando el microclima local hasta en 4°C. Cada siembra es un escudo contra la desertificación."
+    choices: []

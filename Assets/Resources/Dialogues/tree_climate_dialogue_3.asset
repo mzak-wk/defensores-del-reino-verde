@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c25081ec2689542ada454de66e66ff, type: 3}
+  m_Name: tree_climate_dialogue_3
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: 3
+    emotion: 0
+    text: "[Registro Ecológico] El cambio climático y la deforestación provocan pérdida masiva de hábitat, sequías extremas y alteración del ciclo hidrológico de todo el continente."
+    choices: []
+  - speaker: 3
+    emotion: 1
+    text: "La flora restaurada devuelve el refugio a las especies amenazadas, estimula las lluvias regulares y devuelve el equilibrio biológico indispensable para la vida en el Reino Verde."
+    choices: []

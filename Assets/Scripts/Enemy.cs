@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     public float contactDamage = 5f;
 
     float hp;
+    public float CurrentHP => hp;
+    public bool IsAlive => hp > 0f && gameObject.activeInHierarchy;
     public Action<Enemy> OnDeath;
 
     // NUEVO: si true, al morir NO se invoca OnDeath ni drops

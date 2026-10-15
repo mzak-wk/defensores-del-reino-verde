@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 124354313491999543}
   - component: {fileID: 286594298983590978}
   - component: {fileID: 2536134399202373553}
+  - component: {fileID: 3456789012345678901}
   m_Layer: 0
   m_Name: Van
   m_TagString: Untagged
@@ -145,7 +146,7 @@ Animator:
   m_GameObject: {fileID: 7736748621315588925}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19700be27f55d254587781e743b919ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: c2431a849dab83d49a3a769d6d078f40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -157,3 +158,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3456789012345678901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7736748621315588925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f84ec42b181b94e820d0252d0b68e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entranceDirector: {fileID: 0}
+  fallbackStopTime: 5
+  movementThreshold: 0.005
+  idleOverrideController: {fileID: 22100000, guid: 7e519ed02add40b7b4d874b6770c4390, type: 2}
+  disableAnimatorOnStop: 0

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c25081ec2689542ada454de66e66ff, type: 3}
+  m_Name: opina_woods_consejos
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: 1
+    emotion: 0
+    text: "Presta mucha atencion al terreno, Andrius. Debido a la deforestacion enemiga, han aparecido grietas de erosion ambiental en el suelo."
+    choices: []
+  - speaker: 1
+    emotion: 0
+    text: "Por cada segundo que una grieta siga abierta, aumentara la temperatura del bosque (+0.1 C). Veras la alerta roja elevandose del suelo!"
+    choices: []
+  - speaker: 1
+    emotion: 1
+    text: "Ya no necesitas presionar ninguna tecla: solo acercate a la grieta y permanece cerca. El suelo se restaurara automaticamente brotando un arbol!"
+    choices: []
+  - speaker: 1
+    emotion: 1
+    text: "Ademas, cada vez que sanes una zona recuperaras vida y enfriaras el termometro. Manten el equilibrio antes de que el calor provoque un colapso climatico!"
+    choices: []

@@ -227,7 +227,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8191
 --- !u!1 &4059998629623805948
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 3018179104971348409}
   - component: {fileID: 2045975633054931724}
   - component: {fileID: 4019926665855250000}
+  - component: {fileID: 1140105631516994616}
   m_Layer: 0
   m_Name: erupcion
   m_TagString: Untagged
@@ -382,8 +383,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1529824355
   m_SortingLayer: 2
-  m_SortingOrder: 6
-  m_Sprite: {fileID: 5495368900004819520, guid: 72c364566c4e3e64bb9f49165486905b, type: 3}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 5495368900004819520, guid: abc3e97580051404abbebc2c9db75e4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -442,6 +443,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ef1c5575dd0474eb226165c225e439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionKey: 101
+  interactionRadius: 2.4
+  promptUI: {fileID: 0}
+  countdownDuration: 5
+  timeoutPenaltyAmount: 4
+  pauseCountdownWhileInteracting: 1
   requiredTime: 3
   co2ReductionAmount: 10
   treePrefab: {fileID: 6688709771648309939, guid: 2dbcd2b9dbfa6a34790c72debda08ea2, type: 3}
@@ -468,6 +475,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1140105631516994616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4626000605294126645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40920b0cee94044da09ab87eebf402c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyText: E
+  actionText: Interactuar
+  heightOffset: 1.5
+  baseScale: 0.038
+  bobSpeed: 3.5
+  bobAmount: 0.12
+  alwaysShowCountdown: 1
+  visualContainer: {fileID: 0}
+  promptBadgeRoot: {fileID: 0}
+  countdownBadgeRoot: {fileID: 0}
+  promptKeyText: {fileID: 0}
+  actionLabelText: {fileID: 0}
+  countdownText: {fileID: 0}
+  countdownFillImage: {fileID: 0}
+  progressRingImage: {fileID: 0}
+  penaltyNoticeText: {fileID: 0}
 --- !u!1 &6107333392875627169
 GameObject:
   m_ObjectHideFlags: 0

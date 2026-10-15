@@ -13,15 +13,21 @@ MonoBehaviour:
   m_Name: inicial_weapon_choice
   m_EditorClassIdentifier: 
   lines:
+  - speaker: 0
+    emotion: 0
+    text: "\xBFQuien eres?"
+    choices: []
   - speaker: 1
     emotion: 0
-    text: Ute e el elejido para detener a lutro
+    text: Llamame Opina, vengo a traerte ayuda, se lo que quieres hacer, te he estado
+      investigando
     choices: []
   - speaker: 0
     emotion: 0
-    text: joda mani como asi de que habla
+    text: Tengo muchas preguntas, pero si vienes a ayudarme cuando pase todo esto
+      aclaramos las cosas, debo detener a lutro cueste lo que cueste
     choices: []
   - speaker: 1
     emotion: 0
-    text: no mas preguntas escoja un armita
+    text: "Tengo justo lo que necesitas, Elije una, la que m\xE1s te guste"
     choices: []

@@ -712,10 +712,10 @@ TextureImporter:
       name: Andrius muerte_0
       rect:
         serializedVersion: 2
-        x: 71
-        y: 780
-        width: 204
-        height: 223
+        x: 69
+        y: 907
+        width: 258
+        height: 318
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -734,10 +734,10 @@ TextureImporter:
       name: Andrius muerte_1
       rect:
         serializedVersion: 2
-        x: 424
-        y: 690
-        width: 195
-        height: 229
+        x: 494
+        y: 813
+        width: 269
+        height: 350
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,10 +756,10 @@ TextureImporter:
       name: Andrius muerte_6
       rect:
         serializedVersion: 2
-        x: 758
-        y: 684
-        width: 218
-        height: 237
+        x: 897
+        y: 751
+        width: 290
+        height: 263
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -778,10 +778,10 @@ TextureImporter:
       name: Andrius muerte_13
       rect:
         serializedVersion: 2
-        x: 740
-        y: 388
-        width: 256
-        height: 217
+        x: 878
+        y: 429
+        width: 317
+        height: 299
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -800,10 +800,10 @@ TextureImporter:
       name: Andrius muerte_15
       rect:
         serializedVersion: 2
-        x: 418
-        y: 384
-        width: 205
-        height: 225
+        x: 489
+        y: 422
+        width: 295
+        height: 297
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -822,10 +822,10 @@ TextureImporter:
       name: Andrius muerte_20
       rect:
         serializedVersion: 2
-        x: 91
-        y: 379
-        width: 176
-        height: 201
+        x: 78
+        y: 434
+        width: 258
+        height: 298
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -844,10 +844,10 @@ TextureImporter:
       name: Andrius muerte_177
       rect:
         serializedVersion: 2
-        x: 45
-        y: 40
-        width: 258
-        height: 265
+        x: 50
+        y: 27
+        width: 322
+        height: 355
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -866,10 +866,10 @@ TextureImporter:
       name: Andrius muerte_191
       rect:
         serializedVersion: 2
-        x: 399
-        y: 39
-        width: 247
-        height: 263
+        x: 494
+        y: 25
+        width: 291
+        height: 336
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -888,10 +888,10 @@ TextureImporter:
       name: Andrius muerte_193
       rect:
         serializedVersion: 2
-        x: 737
-        y: 38
-        width: 248
-        height: 244
+        x: 890
+        y: 25
+        width: 313
+        height: 345
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

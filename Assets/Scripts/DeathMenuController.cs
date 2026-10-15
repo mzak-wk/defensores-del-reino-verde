@@ -75,6 +75,7 @@ public class DeathMenuController : MonoBehaviour
     [SerializeField] private bool singleCycleDeath = true;
     [Tooltip("Si es true, la animación del texto de glitch se reproduce en loop constante.")]
     [SerializeField] private bool loopDeathTextAnimation = true;
+    public bool LoopDeathTextAnimation => loopDeathTextAnimation;
 
     [Header("Opciones de Escena y Gameplay")]
     [Tooltip("Nombre de la escena del menú principal.")]
@@ -101,10 +102,18 @@ public class DeathMenuController : MonoBehaviour
         Instance = this;
 
         SceneManager.sceneLoaded += OnSceneLoaded;
-        CO2Manager.OnGameOver += TriggerDeathSequence;
+        CO2Manager.OnGameOver += HandleCO2GameOver;
         TemperatureManager.OnTemperatureGameOver += TriggerDeathSequence;
         HazardMeterManager.OnHazardGameOver += TriggerDeathSequenceWithReason;
         BarraVida.OnPlayerDeathWithReason += TriggerDeathSequenceWithReason;
+    }
+
+    private void HandleCO2GameOver()
+    {
+        if (HazardMeterManager.Instance != null)
+            return;
+
+        TriggerDeathSequence(DeathReason.TemperatureLimit);
     }
 
     private void OnEnable()
@@ -128,7 +137,7 @@ public class DeathMenuController : MonoBehaviour
     {
         UnbindPlayerVida();
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        CO2Manager.OnGameOver -= TriggerDeathSequence;
+        CO2Manager.OnGameOver -= HandleCO2GameOver;
         TemperatureManager.OnTemperatureGameOver -= TriggerDeathSequence;
         HazardMeterManager.OnHazardGameOver -= TriggerDeathSequenceWithReason;
         BarraVida.OnPlayerDeathWithReason -= TriggerDeathSequenceWithReason;

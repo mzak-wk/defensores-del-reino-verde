@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c25081ec2689542ada454de66e66ff, type: 3}
+  m_Name: opina_woods_rumores
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: 1
+    emotion: 0
+    text: "He estado interceptando transmisiones enemigas... No estan trabajando solos. Una corporacion oscura financia las maquinas de deforestacion."
+    choices: []
+  - speaker: 1
+    emotion: 0
+    text: "Dicen los rumores que en la espesura del bosque yace un antiguo espiritu guardian corrompido por la maquinaria. Purificarlo sera nuestra mayor prueba aqui."
+    choices: []
+  - speaker: 1
+    emotion: 1
+    text: "Y si logramos liberar este bosque, la red enemiga se replegara hacia el frio extremo del norte y la costa. El destino del Reino Verde esta en tus manos, Andrius!"
+    choices: []
