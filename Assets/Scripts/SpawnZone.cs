@@ -41,6 +41,8 @@ public class SpawnZone : MonoBehaviour
     [Header("Márgenes de Aparición (Padding)")]
     [SerializeField] private float spawnMarginX = 3.5f;
     [SerializeField] private float spawnMarginY = 2.0f;
+    public float SpawnMarginX => spawnMarginX;
+    public float SpawnMarginY => spawnMarginY;
 
     [Header("Dispersión de Enemigos")]
     [Tooltip("Distancia mínima entre enemigos al spawnear. Evita apilamiento visual.")]

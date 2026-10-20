@@ -500,6 +500,177 @@ public class GameSession : MonoBehaviour
         }
     }
 
+    [Header("Base de Datos de Ítems")]
+    [SerializeField] private ItemDatabase itemDatabase;
+
+    public ItemDatabase ItemDatabaseRef
+    {
+        get
+        {
+            if (itemDatabase == null)
+            {
+                itemDatabase = Resources.Load<ItemDatabase>("ItemDatabase");
+            }
+            return itemDatabase;
+        }
+    }
+
+    // ==========================================
+    // Cálculos de Stats de Ítems Equipados
+    // ==========================================
+    public float GetTotalDamageBonus()
+    {
+        float total = 0f;
+        ItemDatabase db = ItemDatabaseRef;
+        if (db == null || equippedItems == null) return total;
+
+        for (int i = 0; i < equippedItems.Length; i++)
+        {
+            if (string.IsNullOrEmpty(equippedItems[i])) continue;
+            ItemData item = db.GetItemById(equippedItems[i]);
+            if (item == null) continue;
+            int level = GetItemLevel(item.ItemId);
+            total += item.GetEffectiveDamageBonus(level);
+        }
+        return total;
+    }
+
+    public float GetTotalAutoAttackCDR()
+    {
+        float total = 0f;
+        ItemDatabase db = ItemDatabaseRef;
+        if (db == null || equippedItems == null) return total;
+
+        for (int i = 0; i < equippedItems.Length; i++)
+        {
+            if (string.IsNullOrEmpty(equippedItems[i])) continue;
+            ItemData item = db.GetItemById(equippedItems[i]);
+            if (item == null) continue;
+            int level = GetItemLevel(item.ItemId);
+            total += item.GetEffectiveAutoAttackCDR(level);
+        }
+        return total;
+    }
+
+    public float GetTotalActiveSkillCDR()
+    {
+        float total = 0f;
+        ItemDatabase db = ItemDatabaseRef;
+        if (db == null || equippedItems == null) return total;
+
+        for (int i = 0; i < equippedItems.Length; i++)
+        {
+            if (string.IsNullOrEmpty(equippedItems[i])) continue;
+            ItemData item = db.GetItemById(equippedItems[i]);
+            if (item == null) continue;
+            int level = GetItemLevel(item.ItemId);
+            total += item.GetEffectiveActiveSkillCDR(level);
+        }
+        return total;
+    }
+
+    public float GetTotalProjectileSizeBonus()
+    {
+        float total = 0f;
+        ItemDatabase db = ItemDatabaseRef;
+        if (db == null || equippedItems == null) return total;
+
+        for (int i = 0; i < equippedItems.Length; i++)
+        {
+            if (string.IsNullOrEmpty(equippedItems[i])) continue;
+            ItemData item = db.GetItemById(equippedItems[i]);
+            if (item == null) continue;
+            int level = GetItemLevel(item.ItemId);
+            total += item.GetEffectiveProjectileSizeBonus(level);
+        }
+        return total;
+    }
+
+    public float GetTotalMaxHpBonusPercent()
+    {
+        float total = 0f;
+        ItemDatabase db = ItemDatabaseRef;
+        if (db == null || equippedItems == null) return total;
+
+        for (int i = 0; i < equippedItems.Length; i++)
+        {
+            if (string.IsNullOrEmpty(equippedItems[i])) continue;
+            ItemData item = db.GetItemById(equippedItems[i]);
+            if (item == null) continue;
+            int level = GetItemLevel(item.ItemId);
+            total += item.GetEffectiveMaxHpBonus(level);
+        }
+        return total;
+    }
+
+    public float GetTotalDefenseBonusPercent()
+    {
+        float total = 0f;
+        ItemDatabase db = ItemDatabaseRef;
+        if (db == null || equippedItems == null) return total;
+
+        for (int i = 0; i < equippedItems.Length; i++)
+        {
+            if (string.IsNullOrEmpty(equippedItems[i])) continue;
+            ItemData item = db.GetItemById(equippedItems[i]);
+            if (item == null) continue;
+            int level = GetItemLevel(item.ItemId);
+            total += item.GetEffectiveDefenseBonus(level);
+        }
+        return total;
+    }
+
+    public float GetTotalLutroCoinBonusPercent()
+    {
+        float total = 0f;
+        ItemDatabase db = ItemDatabaseRef;
+        if (db == null || equippedItems == null) return total;
+
+        for (int i = 0; i < equippedItems.Length; i++)
+        {
+            if (string.IsNullOrEmpty(equippedItems[i])) continue;
+            ItemData item = db.GetItemById(equippedItems[i]);
+            if (item == null) continue;
+            int level = GetItemLevel(item.ItemId);
+            total += item.GetEffectiveLutroCoinBonus(level);
+        }
+        return total;
+    }
+
+    public float GetTotalPickupRangeBonusPercent()
+    {
+        float total = 0f;
+        ItemDatabase db = ItemDatabaseRef;
+        if (db == null || equippedItems == null) return total;
+
+        for (int i = 0; i < equippedItems.Length; i++)
+        {
+            if (string.IsNullOrEmpty(equippedItems[i])) continue;
+            ItemData item = db.GetItemById(equippedItems[i]);
+            if (item == null) continue;
+            int level = GetItemLevel(item.ItemId);
+            total += item.GetEffectivePickupRangeBonus(level);
+        }
+        return total;
+    }
+
+    public int GetTotalExtraDashes()
+    {
+        int total = 0;
+        ItemDatabase db = ItemDatabaseRef;
+        if (db == null || equippedItems == null) return total;
+
+        for (int i = 0; i < equippedItems.Length; i++)
+        {
+            if (string.IsNullOrEmpty(equippedItems[i])) continue;
+            ItemData item = db.GetItemById(equippedItems[i]);
+            if (item == null) continue;
+            int level = GetItemLevel(item.ItemId);
+            total += item.GetEffectiveExtraDashes(level);
+        }
+        return total;
+    }
+
     // ==========================
     // Ciclo de vida
     // ==========================

@@ -53,7 +53,8 @@ public class BarraVida : MonoBehaviour
 
         if (GameSession.Instance != null)
         {
-            maxHP = GameSession.Instance.playerMaxHP;
+            float hpBonus = GameSession.Instance.GetTotalMaxHpBonusPercent();
+            maxHP = GameSession.Instance.playerMaxHP * (1f + hpBonus / 100f);
             regenPerSecond = GameSession.Instance.regenPerSecond;
 
             if (GameSession.Instance.playerCurrentHP <= 0f)
@@ -111,6 +112,14 @@ public class BarraVida : MonoBehaviour
     public void RecibirDanio(float cantidad)
     {
         if (invulnerable || cantidad <= 0f || currentHP <= 0f) return;
+
+        // Reducción de daño por Defensa de ítems equipados (cap 75%)
+        if (GameSession.Instance != null)
+        {
+            float defense = GameSession.Instance.GetTotalDefenseBonusPercent();
+            float reduction = Mathf.Clamp(defense / 100f, 0f, 0.75f);
+            cantidad *= (1f - reduction);
+        }
 
         currentHP = Mathf.Max(0f, currentHP - cantidad);
 

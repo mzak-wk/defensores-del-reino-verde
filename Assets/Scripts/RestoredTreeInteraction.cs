@@ -30,12 +30,27 @@ public class RestoredTreeInteraction : MonoBehaviour
     private bool playerInRange = false;
     private Transform playerTransform;
     private IPlayerMovementLock currentMovementLock;
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor = Color.white;
 
     private void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) originalColor = spriteRenderer.color;
+
+        EnsureTriggerColliders();
         EnsureDialoguesLoaded();
         EnsurePromptUI();
         FindBoundSpawnZone();
+    }
+
+    private void EnsureTriggerColliders()
+    {
+        var colliders = GetComponentsInChildren<Collider2D>(true);
+        foreach (var col in colliders)
+        {
+            col.isTrigger = true; // Permite pasar libremente a enemigos y jugador, evitando atascos
+        }
     }
 
     private void Start()

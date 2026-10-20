@@ -34,6 +34,12 @@ public class PlayerCombat : MonoBehaviour
     private bool isOverheated;           // bloqueo por sobrecalentamiento
     private float overheatLockTimer;     // countdown de bloqueo (= weapon.BasicCooldown)
 
+    [Header("Auto-Ataque Toggle")]
+    [Tooltip("Permite alternar el auto-ataque para disparar continuamente sin presionar la tecla.")]
+    public bool autoAttackToggle = false;
+    [Tooltip("Tecla para alternar el auto-ataque (inicialmente desactivado).")]
+    public KeyCode autoAttackToggleKey = KeyCode.T;
+
     private void Awake()
     {
         if (weaponSlotManager == null)
@@ -51,6 +57,13 @@ public class PlayerCombat : MonoBehaviour
 
         // Cinemáticas (ej. intro de boss): se congelan TODOS los ataques.
         if (combatLocked) return;
+
+        // Toggle de Auto-Ataque (Tecla T por defecto, inicialmente apagado)
+        if (Input.GetKeyDown(autoAttackToggleKey))
+        {
+            autoAttackToggle = !autoAttackToggle;
+            Debug.Log($"[PlayerCombat] Auto-Ataque: {(autoAttackToggle ? "ACTIVADO" : "DESACTIVADO")}");
+        }
 
         HandleBasicAttack();
         HandleSkillX();
@@ -93,6 +106,7 @@ public class PlayerCombat : MonoBehaviour
         WeaponData weapon = (weaponSlotManager != null) ? weaponSlotManager.CurrentWeapon : null;
         KeyCode basicKey = KeybindManager.Instance.GetKey(CombatAction.BasicAttack);
         bool isBasicPressed = (basicKey == KeyCode.Mouse0) ? Input.GetMouseButton(0) : Input.GetKey(basicKey);
+        bool shouldAttack = isBasicPressed || autoAttackToggle;
 
         // BUG FIX: validación GLOBAL de los ataques canalizados (vórtice y proyector).
         // El cierre no puede vivir solo dentro de HandleVortexAttack/HandleReforestationAttack
@@ -100,7 +114,7 @@ public class PlayerCombat : MonoBehaviour
         // de arma mientras uno está activo, se cierra en este mismo frame (evita arma fantasma).
         if (activeVortex != null)
         {
-            bool buttonReleased = !isBasicPressed;
+            bool buttonReleased = !shouldAttack;
             bool weaponChanged = weapon == null || weapon.WeaponId != "3";
             if (buttonReleased || weaponChanged)
             {
@@ -111,7 +125,7 @@ public class PlayerCombat : MonoBehaviour
 
         if (activeProjector != null)
         {
-            bool buttonReleased = !isBasicPressed;
+            bool buttonReleased = !shouldAttack;
             bool weaponChanged = weapon == null || weapon.WeaponId != "5";
             if (buttonReleased || weaponChanged)
             {
@@ -129,8 +143,6 @@ public class PlayerCombat : MonoBehaviour
         if (weapon.BasicCooldown <= 0f) return;
 
         // Vórtice de Captura (Arma ID "3"): ataque continuo por botón sostenido.
-        // No aplica el cooldown de "fuego" (nextBasicTime): su BasicCooldown
-        // marca el ritmo de ticks de daño dentro del propio vórtice.
         if (weapon.WeaponId == "3")
         {
             HandleVortexAttack(weapon);
@@ -145,6 +157,9 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
 
+        // Si no se presiona el botón y el auto-ataque toggle no está activado, NO atacar
+        if (!shouldAttack) return;
+
         if (Time.time < nextBasicTime) return;
 
         // Lightning Ring (Arma ID "6"): auto-disparo orbital. Ignora input y firePoint.
@@ -154,9 +169,9 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
 
-        if (!isBasicPressed) return;
-
-        nextBasicTime = Time.time + weapon.BasicCooldown;
+        float autoCDR = GameSession.Instance ? GameSession.Instance.GetTotalAutoAttackCDR() : 0f;
+        float cdrMult = Mathf.Clamp(1f - (autoCDR / 100f), 0.2f, 1f);
+        nextBasicTime = Time.time + (weapon.BasicCooldown * cdrMult);
 
         SafeSetTrigger("BasicAttack");
         
@@ -267,7 +282,7 @@ public class PlayerCombat : MonoBehaviour
 
         KeyCode basicKey = KeybindManager.Instance.GetKey(CombatAction.BasicAttack);
         bool isBasicPressed = (basicKey == KeyCode.Mouse0) ? Input.GetMouseButton(0) : Input.GetKey(basicKey);
-        if (!isBasicPressed) return;
+        if (!isBasicPressed && !autoAttackToggle) return;
 
         // Regla anti-duplicados: solo UN vórtice activo.
         if (activeVortex != null) return;
@@ -316,7 +331,7 @@ public class PlayerCombat : MonoBehaviour
 
         KeyCode basicKey = KeybindManager.Instance.GetKey(CombatAction.BasicAttack);
         bool isBasicPressed = (basicKey == KeyCode.Mouse0) ? Input.GetMouseButton(0) : Input.GetKey(basicKey);
-        if (!isBasicPressed) return;
+        if (!isBasicPressed && !autoAttackToggle) return;
 
         // Regla anti-duplicados: solo UN proyector activo.
         if (activeProjector != null) return;
@@ -368,7 +383,7 @@ public class PlayerCombat : MonoBehaviour
 
         KeyCode basicKey = KeybindManager.Instance.GetKey(CombatAction.BasicAttack);
         bool isBasicPressed = (basicKey == KeyCode.Mouse0) ? Input.GetMouseButton(0) : Input.GetKey(basicKey);
-        bool firing = isBasicPressed && activeProjector != null;
+        bool firing = (isBasicPressed || autoAttackToggle) && activeProjector != null;
         if (firing)
         {
             currentHeat += Time.deltaTime;
@@ -418,7 +433,9 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
 
-        nextSkillXTime = Time.time + weapon.CooldownX;
+        float skillCDR_X = GameSession.Instance ? GameSession.Instance.GetTotalActiveSkillCDR() : 0f;
+        float cdrMult_X = Mathf.Clamp(1f - (skillCDR_X / 100f), 0.2f, 1f);
+        nextSkillXTime = Time.time + (weapon.CooldownX * cdrMult_X);
 
         SafeSetTrigger("AttackX");
 
@@ -446,7 +463,9 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
 
-        nextSkillCTime = Time.time + weapon.CooldownC;
+        float skillCDR_C = GameSession.Instance ? GameSession.Instance.GetTotalActiveSkillCDR() : 0f;
+        float cdrMult_C = Mathf.Clamp(1f - (skillCDR_C / 100f), 0.2f, 1f);
+        nextSkillCTime = Time.time + (weapon.CooldownC * cdrMult_C);
 
         SafeSetTrigger("AttackC");
 
@@ -474,10 +493,13 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
 
+        float skillCDR_V = GameSession.Instance ? GameSession.Instance.GetTotalActiveSkillCDR() : 0f;
+        float cdrMult_V = Mathf.Clamp(1f - (skillCDR_V / 100f), 0.2f, 1f);
+
         // Si el controlador del Cut-In estilo Persona 5 está disponible en escena, reproducir animación cinemática
         if (UltimateCutInController.Instance != null && !UltimateCutInController.Instance.IsPlaying)
         {
-            nextSkillVTime = Time.time + weapon.CooldownV;
+            nextSkillVTime = Time.time + (weapon.CooldownV * cdrMult_V);
             UltimateCutInController.Instance.PlayCutIn(null, () =>
             {
                 ExecuteUltimateAttack(weapon);
@@ -485,7 +507,7 @@ public class PlayerCombat : MonoBehaviour
         }
         else
         {
-            nextSkillVTime = Time.time + weapon.CooldownV;
+            nextSkillVTime = Time.time + (weapon.CooldownV * cdrMult_V);
             ExecuteUltimateAttack(weapon);
         }
     }
@@ -518,6 +540,13 @@ public class PlayerCombat : MonoBehaviour
         
         // Rango/área aumenta
         float rangeMultiplier = Mathf.Lerp(1f, 2.5f, t);
+
+        // Modificadores de Ítems Equipados con Rendimientos Decrecientes
+        if (GameSession.Instance != null)
+        {
+            damageMultiplier *= (1f + GameSession.Instance.GetTotalDamageBonus() / 100f);
+            rangeMultiplier *= (1f + GameSession.Instance.GetTotalProjectileSizeBonus() / 100f);
+        }
 
         BaseStats scaled = baseStats;
         scaled.damage *= damageMultiplier;

@@ -96,8 +96,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Transform choiceButtonContainer;
 
     [Header("Close Option")]
+#pragma warning disable 0414
     [SerializeField] private bool autoCloseAfterLastLine = true;
     [SerializeField] private float autoCloseDelay = 0.8f;
+#pragma warning restore 0414
 
     public bool IsOpen => state != DialogueState.Closed;
     public event System.Action OnDialogueClosed;

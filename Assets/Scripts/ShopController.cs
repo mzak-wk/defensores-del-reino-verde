@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,13 +39,14 @@ public class ShopController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldText;
 
     [Header("Precios Base por Rareza")]
-    [SerializeField] private int basePriceComun = 5;
-    [SerializeField] private int basePriceRaro = 15;
-    [SerializeField] private int basePriceEpico = 30;
-    [SerializeField] private int basePriceLegendario = 60;
+    [SerializeField] private int basePriceComun = 15;
+    [SerializeField] private int basePriceRaro = 35;
+    [SerializeField] private int basePriceEpico = 75;
+    [SerializeField] private int basePriceLegendario = 150;
 
     [Header("Reroll")]
     [SerializeField] private int initialRerollCost = 5;
+    [SerializeField] private int rerollCostIncrement = 5;
 
     [Header("Shake")]
     [SerializeField] private float shakeDuration = 0.3f;
@@ -72,6 +73,8 @@ public class ShopController : MonoBehaviour
                 shopSlots[i].button.onClick.AddListener(() => OnSlotClicked(capturedIndex));
             }
         }
+
+        EnsureGoldTextAssigned();
     }
 
     private void OnEnable()
@@ -82,11 +85,19 @@ public class ShopController : MonoBehaviour
             GenerateNewShop();
         else
             RefreshShopVisuals();
+
+        GoldManager.OnGoldChanged += HandleGoldChanged;
     }
 
     private void OnDisable()
     {
         selectedSlotIndex = -1;
+        GoldManager.OnGoldChanged -= HandleGoldChanged;
+    }
+
+    private void HandleGoldChanged(int totalGold, int delta)
+    {
+        UpdateGoldDisplay();
     }
 
     private void GenerateNewShop()
@@ -124,6 +135,12 @@ public class ShopController : MonoBehaviour
                 shopSlots[i].priceText.text = "---";
                 shopSlots[i].button.interactable = false;
             }
+
+            if (shopSlots[i].coinIcon != null && shopSlots[i].coinIcon.sprite == null)
+            {
+                Sprite coinSp = Resources.Load<Sprite>("lutro_coin") ?? Resources.Load<Sprite>("moneda");
+                if (coinSp != null) shopSlots[i].coinIcon.sprite = coinSp;
+            }
         }
 
         UpdateGoldDisplay();
@@ -148,8 +165,8 @@ public class ShopController : MonoBehaviour
             if (item != null)
             {
                 excludeIds.Add(item.ItemId);
-                int currentLevel = GameSession.Instance.GetItemLevel(item.ItemId);
-                int maxLevel = GameSession.Instance.GetMaxLevelForRarity(item.Rarity);
+                int currentLevel = GameSession.Instance ? GameSession.Instance.GetItemLevel(item.ItemId) : 0;
+                int maxLevel = GameSession.Instance ? GameSession.Instance.GetMaxLevelForRarity(item.Rarity) : 1;
 
                 shopSlots[i].currentItem = item;
                 shopSlots[i].currentLevel = currentLevel;
@@ -160,6 +177,12 @@ public class ShopController : MonoBehaviour
                 shopSlots[i].iconImage.color = Color.white;
                 shopSlots[i].priceText.text = shopSlots[i].calculatedPrice.ToString();
                 shopSlots[i].button.interactable = true;
+
+                if (shopSlots[i].coinIcon != null && shopSlots[i].coinIcon.sprite == null)
+                {
+                    Sprite coinSp = Resources.Load<Sprite>("lutro_coin") ?? Resources.Load<Sprite>("moneda");
+                    if (coinSp != null) shopSlots[i].coinIcon.sprite = coinSp;
+                }
             }
             else
             {
@@ -174,6 +197,9 @@ public class ShopController : MonoBehaviour
 
     private ItemData GetRandomAvailableItem(HashSet<string> excludeIds)
     {
+        if (itemDatabase == null)
+            itemDatabase = Resources.Load<ItemDatabase>("ItemDatabase");
+
         if (itemDatabase == null || GameSession.Instance == null) return null;
 
         int highestLevel = GameSession.Instance.highestLevelUnlocked;
@@ -245,7 +271,21 @@ public class ShopController : MonoBehaviour
             default: basePrice = basePriceComun; break;
         }
 
-        return Mathf.CeilToInt(basePrice * (1f + 0.5f * currentLevel));
+        // Si ya tiene el item (nivel > 0), el coste aumenta +40% por cada nivel actual
+        return Mathf.CeilToInt(basePrice * (1f + 0.40f * currentLevel));
+    }
+
+    private bool TrySpendGold(int amount)
+    {
+        if (GoldManager.Instance != null)
+        {
+            return GoldManager.Instance.TrySpend(amount);
+        }
+        else if (GameSession.Instance != null)
+        {
+            return GameSession.Instance.TrySpend(amount);
+        }
+        return false;
     }
 
     private void OnSlotClicked(int slotIndex)
@@ -271,19 +311,22 @@ public class ShopController : MonoBehaviour
     private void AttemptPurchase(int slotIndex)
     {
         ShopSlot slot = shopSlots[slotIndex];
-        if (slot.currentItem == null || GameSession.Instance == null) return;
+        if (slot.currentItem == null) return;
 
-        if (!GameSession.Instance.TrySpend(slot.calculatedPrice))
+        if (!TrySpendGold(slot.calculatedPrice))
         {
             PlayShake();
             return;
         }
 
-        int newLevel = GameSession.Instance.GetItemLevel(slot.currentItem.ItemId) + 1;
-        GameSession.Instance.SetItemLevel(slot.currentItem.ItemId, newLevel);
+        if (GameSession.Instance != null)
+        {
+            int newLevel = GameSession.Instance.GetItemLevel(slot.currentItem.ItemId) + 1;
+            GameSession.Instance.SetItemLevel(slot.currentItem.ItemId, newLevel);
 
-        if (!GameSession.Instance.unlockedItems.Contains(slot.currentItem.ItemId))
-            GameSession.Instance.unlockedItems.Add(slot.currentItem.ItemId);
+            if (!GameSession.Instance.unlockedItems.Contains(slot.currentItem.ItemId))
+                GameSession.Instance.unlockedItems.Add(slot.currentItem.ItemId);
+        }
 
         ClearSlot(slotIndex);
         DeselectAll();
@@ -306,15 +349,16 @@ public class ShopController : MonoBehaviour
 
     private void OnRerollClicked()
     {
-        if (GameSession.Instance == null) return;
+        if (GameSession.Instance == null && GoldManager.Instance == null) return;
 
-        if (!GameSession.Instance.TrySpend(currentRerollCost))
+        if (!TrySpendGold(currentRerollCost))
         {
             PlayShake();
             return;
         }
 
-        currentRerollCost *= 2;
+        // Cada reroll cuesta progresivamente más
+        currentRerollCost += rerollCostIncrement;
         GenerateNewShop();
     }
 
@@ -336,21 +380,25 @@ public class ShopController : MonoBehaviour
         string name = item.ItemName;
         string rarity = item.Rarity.ToString();
         string levelInfo;
+        int nextLevel = currentLevel + 1;
+
         if (currentLevel == 0)
         {
-            levelInfo = "Nivel: Nuevo → Pasará a Nivel 1";
+            levelInfo = "Nivel: <color=#A3E635>Nuevo → Pasará a Nivel 1</color>";
         }
         else if (maxLevel >= 999)
         {
-            levelInfo = $"Nivel actual: {currentLevel} → Siguiente: {currentLevel + 1}";
+            levelInfo = $"Nivel: <color=#38BDF8>{currentLevel} → {nextLevel}</color> (Mejora con rendimientos decrecientes)";
         }
         else
         {
-            levelInfo = $"Nivel actual: {currentLevel} → Siguiente: {currentLevel + 1} (Máx: {maxLevel})";
+            levelInfo = $"Nivel: <color=#38BDF8>{currentLevel} → {nextLevel}</color> (Máx: {maxLevel})";
         }
-        string passive = string.IsNullOrEmpty(item.PassiveConcept) ? "Sin pasiva" : item.PassiveConcept;
 
-        itemDescriptionText.text = $"{name} [{rarity}]\n{levelInfo}\n{passive}";
+        string statsDesc = item.GetDetailedDescription(currentLevel, nextLevel);
+        string passive = string.IsNullOrEmpty(item.PassiveConcept) ? "" : $"\n<size=85%><i>{item.PassiveConcept}</i></size>";
+
+        itemDescriptionText.text = $"<b>{name}</b> [{rarity}]\n{levelInfo}\n{statsDesc}{passive}";
     }
 
     private void ClearDescription()
@@ -361,8 +409,11 @@ public class ShopController : MonoBehaviour
 
     private void UpdateGoldDisplay()
     {
-        if (goldText == null || GameSession.Instance == null) return;
-        goldText.text = GameSession.Instance.gold.ToString();
+        if (goldText == null) return;
+        int currentGold = GoldManager.Instance != null 
+            ? GoldManager.Instance.gold 
+            : (GameSession.Instance != null ? GameSession.Instance.gold : 0);
+        goldText.text = currentGold.ToString();
     }
 
     private void UpdateRerollDisplay()
@@ -405,5 +456,84 @@ public class ShopController : MonoBehaviour
     {
         currentRerollCost = initialRerollCost;
         isShopGenerated = false;
+    }
+
+    private void EnsureGoldTextAssigned()
+    {
+        if (goldText != null) return;
+
+        // 1. Buscar en hijos
+        TextMeshProUGUI[] allTexts = GetComponentsInChildren<TextMeshProUGUI>(true);
+        foreach (var t in allTexts)
+        {
+            string lower = t.gameObject.name.ToLower();
+            if (lower.Contains("gold") || lower.Contains("oro") || lower.Contains("moneda"))
+            {
+                goldText = t;
+                return;
+            }
+        }
+
+        // 2. Si no existe, construir un badge elegante de LutroCoin en el panelContainer de la tienda
+        Transform parentTransform = panelContainer != null ? panelContainer.transform : transform;
+        if (parentTransform != null)
+        {
+            Transform existingBadge = parentTransform.Find("ShopGoldBadge");
+            if (existingBadge != null)
+            {
+                goldText = existingBadge.GetComponentInChildren<TextMeshProUGUI>();
+                return;
+            }
+
+            GameObject badgeGO = new GameObject("ShopGoldBadge");
+            badgeGO.transform.SetParent(parentTransform, false);
+
+            RectTransform rt = badgeGO.AddComponent<RectTransform>();
+            rt.anchorMin = new Vector2(1f, 1f);
+            rt.anchorMax = new Vector2(1f, 1f);
+            rt.pivot = new Vector2(1f, 1f);
+            rt.anchoredPosition = new Vector2(-20f, -20f);
+            rt.sizeDelta = new Vector2(130f, 38f);
+
+            Image bg = badgeGO.AddComponent<Image>();
+            bg.color = new Color(0.08f, 0.10f, 0.14f, 0.90f);
+
+            Outline outline = badgeGO.AddComponent<Outline>();
+            outline.effectColor = new Color(0.92f, 0.70f, 0.12f, 0.50f);
+            outline.effectDistance = new Vector2(1f, -1f);
+
+            GameObject iconGO = new GameObject("CoinIcon");
+            iconGO.transform.SetParent(badgeGO.transform, false);
+            RectTransform iconRt = iconGO.AddComponent<RectTransform>();
+            iconRt.anchorMin = new Vector2(0f, 0.5f);
+            iconRt.anchorMax = new Vector2(0f, 0.5f);
+            iconRt.pivot = new Vector2(0.5f, 0.5f);
+            iconRt.anchoredPosition = new Vector2(20f, 0f);
+            iconRt.sizeDelta = new Vector2(28f, 28f);
+
+            Image iconImg = iconGO.AddComponent<Image>();
+            iconImg.preserveAspect = true;
+            Sprite coinSprite = Resources.Load<Sprite>("lutro_coin") ?? Resources.Load<Sprite>("moneda");
+            if (coinSprite != null) iconImg.sprite = coinSprite;
+
+            GameObject textGO = new GameObject("GoldValue");
+            textGO.transform.SetParent(badgeGO.transform, false);
+            RectTransform textRt = textGO.AddComponent<RectTransform>();
+            textRt.anchorMin = new Vector2(0f, 0f);
+            textRt.anchorMax = new Vector2(1f, 1f);
+            textRt.pivot = new Vector2(0f, 0.5f);
+            textRt.offsetMin = new Vector2(38f, 0f);
+            textRt.offsetMax = new Vector2(-8f, 0f);
+
+            TextMeshProUGUI tmp = textGO.AddComponent<TextMeshProUGUI>();
+            TMP_FontAsset fontAsset = Resources.Load<TMP_FontAsset>("Fonts & Materials/Nunito SDF");
+            if (fontAsset != null) tmp.font = fontAsset;
+            tmp.fontSize = 20f;
+            tmp.fontStyle = FontStyles.Bold;
+            tmp.alignment = TextAlignmentOptions.MidlineLeft;
+            tmp.color = new Color(0.98f, 0.80f, 0.08f, 1f);
+
+            goldText = tmp;
+        }
     }
 }

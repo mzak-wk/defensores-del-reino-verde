@@ -347,9 +347,11 @@ MonoBehaviour:
   gameplayCamera: {fileID: 0}
   blockingLayers:
     serializedVersion: 2
-    m_Bits: 256
-  clearanceRadius: 0.75
-  maxPlacementAttempts: 30
+    m_Bits: 2305
+  clearanceRadius: 2.2
+  spawnMargin: 3.5
+  minSeparationDistance: 3.5
+  maxSpawnAttempts: 40
   viewportPadding: 0.5
 --- !u!1 &850264272206174551
 GameObject:

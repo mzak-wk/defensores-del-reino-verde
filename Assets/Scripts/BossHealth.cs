@@ -15,7 +15,7 @@ public class BossHealth : Enemy
     [Header("Configuración de Drops")]
     public bool suppressNormalDropsOnBossDeath = true;
 
-    public float CurrentHP => currentHP;
+    public new float CurrentHP => currentHP;
     public float MaxHP => maxHP;
     public bool IsDead => currentHP <= 0f;
 

@@ -44,6 +44,7 @@ public class ErodedSoilZone : MonoBehaviour
     [SerializeField] private Slider progressBarUI;
 
     private readonly HashSet<Collider2D> playerColliders = new HashSet<Collider2D>();
+    private readonly List<GameObject> activeFloatingTexts = new List<GameObject>();
     private float currentProgress;
     private float tickTimer = 0f;
     private bool isCompleted;
@@ -98,6 +99,12 @@ public class ErodedSoilZone : MonoBehaviour
     private void OnDisable()
     {
         UnregisterFromManagers();
+        CleanupFloatingTexts();
+    }
+
+    private void OnDestroy()
+    {
+        CleanupFloatingTexts();
     }
 
     private void Update()
@@ -189,41 +196,23 @@ public class ErodedSoilZone : MonoBehaviour
         tmp.outlineColor = new Color32(40, 0, 0, 220);
         tmp.outlineWidth = 0.25f;
 
-        StartCoroutine(AnimateAndDestroyFloatingText(textGO, tmp));
+        // El componente corre en textGO mismo para nunca quedar huérfano si la zona es destruida
+        FloatingPenaltyText fpt = textGO.AddComponent<FloatingPenaltyText>();
+        fpt.Init(tmp);
+
+        activeFloatingTexts.Add(textGO);
     }
 
-    private IEnumerator AnimateAndDestroyFloatingText(GameObject go, TextMeshProUGUI tmp)
+    private void CleanupFloatingTexts()
     {
-        float duration = 1.35f;
-        float elapsed = 0f;
-        Vector3 startPos = go.transform.position;
-        Vector3 endPos = startPos + Vector3.up * 1.1f;
-        Color startColor = tmp.color;
-
-        while (elapsed < duration)
+        for (int i = 0; i < activeFloatingTexts.Count; i++)
         {
-            elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / duration);
-
-            if (go != null)
+            if (activeFloatingTexts[i] != null)
             {
-                go.transform.position = Vector3.Lerp(startPos, endPos, Mathf.SmoothStep(0f, 1f, t));
-
-                if (tmp != null)
-                {
-                    Color c = startColor;
-                    c.a = Mathf.Lerp(1f, 0f, t * t);
-                    tmp.color = c;
-                }
+                Destroy(activeFloatingTexts[i]);
             }
-
-            yield return null;
         }
-
-        if (go != null)
-        {
-            Destroy(go);
-        }
+        activeFloatingTexts.Clear();
     }
 
     private void CheckPlayerProximity()
@@ -302,6 +291,7 @@ public class ErodedSoilZone : MonoBehaviour
         playerColliders.Clear();
         playerInRange = false;
         UpdateProgressUI(false);
+        CleanupFloatingTexts(); // Eliminar de inmediato cualquier texto flotante residual antes de que brote el árbol
 
         if (promptUI != null)
         {
@@ -409,6 +399,12 @@ public class ErodedSoilZone : MonoBehaviour
         if (progressBarUI == null)
             return;
 
+        // Ocultar si está en pausa o hay overlay modal activo (menú de muerte o pausa)
+        if (Mathf.Approximately(Time.timeScale, 0f) || (UIManager.Instance != null && !UIManager.Instance.IsHUDVisible))
+        {
+            visible = false;
+        }
+
         progressBarUI.gameObject.SetActive(visible && !isCompleted);
         progressBarUI.minValue = 0f;
         progressBarUI.maxValue = 1f;
@@ -432,4 +428,47 @@ public class ErodedSoilZone : MonoBehaviour
         playerHealAmount = Mathf.Max(0f, playerHealAmount);
     }
 #endif
+}
+
+/// <summary>
+/// Componente autosuficiente para animar y autodestruir el texto flotante de penalización térmica.
+/// Evita que el GameObject quede congelado en la escena si la zona de erosión es destruida.
+/// </summary>
+public class FloatingPenaltyText : MonoBehaviour
+{
+    private TextMeshProUGUI tmp;
+
+    public void Init(TextMeshProUGUI textMesh)
+    {
+        tmp = textMesh;
+        StartCoroutine(AnimateAndDestroy());
+    }
+
+    private IEnumerator AnimateAndDestroy()
+    {
+        float duration = 1.35f;
+        float elapsed = 0f;
+        Vector3 startPos = transform.position;
+        Vector3 endPos = startPos + Vector3.up * 1.1f;
+        Color startColor = (tmp != null) ? tmp.color : Color.red;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+
+            transform.position = Vector3.Lerp(startPos, endPos, Mathf.SmoothStep(0f, 1f, t));
+
+            if (tmp != null)
+            {
+                Color c = startColor;
+                c.a = Mathf.Lerp(1f, 0f, t * t);
+                tmp.color = c;
+            }
+
+            yield return null;
+        }
+
+        Destroy(gameObject);
+    }
 }

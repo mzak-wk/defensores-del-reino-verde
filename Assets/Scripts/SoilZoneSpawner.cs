@@ -7,13 +7,13 @@ using UnityEngine.Serialization;
 /// </summary>
 public class SoilZoneSpawner : MonoBehaviour
 {
-    private const int AbsoluteMaxZonesPerEncounter = 5;
+    private const int AbsoluteMaxZonesPerEncounter = 3;
 
     [Header("Prefab y presupuesto")]
     [SerializeField] private ErodedSoilZone erodedSoilPrefab;
-    [Tooltip("Cantidad maxima total de zonas que pueden aparecer durante un encuentro.")]
+    [Tooltip("Cantidad maxima total de zonas/árboles que pueden aparecer durante un encuentro (evita saturar la pantalla).")]
     [FormerlySerializedAs("maxZonesPerWave")]
-    [SerializeField, Min(1)] private int maxZonesPerEncounter = 5;
+    [SerializeField, Range(1, 4)] private int maxZonesPerEncounter = 3;
 
     [Header("Presion progresiva")]
     [Tooltip("Zonas sin sembrar que pueden coexistir como maximo en pantalla.")]
@@ -27,13 +27,13 @@ public class SoilZoneSpawner : MonoBehaviour
     [SerializeField] private Camera gameplayCamera;
     [Tooltip("Capas solidas que impiden crear una zona de suelo.")]
     [SerializeField] private LayerMask blockingLayers;
-    [SerializeField, Min(0f)] private float clearanceRadius = 0.75f;
+    [SerializeField, Min(0f)] private float clearanceRadius = 2.2f;
     [Tooltip("Distancia minima a los bordes fisicos de la zona caminable.")]
-    [SerializeField, Min(0f)] private float spawnMargin = 1.5f;
+    [SerializeField, Min(0f)] private float spawnMargin = 3.5f;
     [Tooltip("Distancia minima entre cualquier zona creada en este encuentro, incluso tras convertirse en arbol.")]
-    [SerializeField, Min(0f)] private float minSeparationDistance = 2.5f;
+    [SerializeField, Min(0f)] private float minSeparationDistance = 3.5f;
     [Tooltip("Intentos maximos para encontrar una posicion libre antes de omitir esta aparicion.")]
-    [SerializeField, Min(1)] private int maxSpawnAttempts = 15;
+    [SerializeField, Min(1)] private int maxSpawnAttempts = 40;
     [Tooltip("Margen en unidades de mundo que mantiene la zona completa dentro de la camara.")]
     [SerializeField, Min(0f)] private float viewportPadding = 0.5f;
 
@@ -58,6 +58,14 @@ public class SoilZoneSpawner : MonoBehaviour
             enabled = false;
             return;
         }
+
+        // Si blockingLayers está vacío o solo tiene Wall, asegurar Default y Muros_Espectrales
+        int defaultLayer = LayerMask.NameToLayer("Default");
+        int wallLayer = LayerMask.NameToLayer("Wall");
+        int spectralLayer = LayerMask.NameToLayer("Muros_Espectrales");
+        if (defaultLayer >= 0) blockingLayers |= (1 << defaultLayer);
+        if (wallLayer >= 0) blockingLayers |= (1 << wallLayer);
+        if (spectralLayer >= 0) blockingLayers |= (1 << spectralLayer);
     }
 
     private void Start()
@@ -322,28 +330,123 @@ public class SoilZoneSpawner : MonoBehaviour
             return false;
 
         Bounds bounds = activeZoneBounds.bounds;
-        float minX = bounds.min.x + spawnMargin;
-        float maxX = bounds.max.x - spawnMargin;
-        float minY = bounds.min.y + spawnMargin;
-        float maxY = bounds.max.y - spawnMargin;
-        if (minX >= maxX || minY >= maxY)
+        float marginX = Mathf.Max(spawnMargin, ownerZone != null ? ownerZone.SpawnMarginX : 3.5f, 3.5f);
+        float marginY = Mathf.Max(spawnMargin, ownerZone != null ? ownerZone.SpawnMarginY : 2.0f, 2.0f);
+
+        float minX = bounds.min.x + marginX;
+        float maxX = bounds.max.x - marginX;
+        float minY = bounds.min.y + marginY;
+        float maxY = bounds.max.y - marginY;
+
+        // Si la zona es reducida y el margen excede las dimensiones, ajustar al centro con margen seguro
+        if (minX >= maxX)
         {
-            Debug.LogWarning($"[{nameof(SoilZoneSpawner)}] El margen de spawn agota el area caminable de '{activeZone.name}'.", activeZone);
-            return false;
+            float halfSpan = Mathf.Max(0.5f, bounds.extents.x * 0.4f);
+            minX = bounds.center.x - halfSpan;
+            maxX = bounds.center.x + halfSpan;
         }
+        if (minY >= maxY)
+        {
+            float halfSpan = Mathf.Max(0.5f, bounds.extents.y * 0.4f);
+            minY = bounds.center.y - halfSpan;
+            maxY = bounds.center.y + halfSpan;
+        }
+
+        // Construir la máscara de capas bloqueantes (Default, Wall, Muros_Espectrales + capas configuradas)
+        int effectiveBlockingMask = blockingLayers.value;
+        int defaultLayer = LayerMask.NameToLayer("Default");
+        int wallLayer = LayerMask.NameToLayer("Wall");
+        int spectralLayer = LayerMask.NameToLayer("Muros_Espectrales");
+        if (defaultLayer >= 0) effectiveBlockingMask |= (1 << defaultLayer);
+        if (wallLayer >= 0) effectiveBlockingMask |= (1 << wallLayer);
+        if (spectralLayer >= 0) effectiveBlockingMask |= (1 << spectralLayer);
+
+        float effectiveClearance = Mathf.Max(clearanceRadius, 2.0f);
+        Vector2 fissureExtentBox = new Vector2(3.4f, 1.8f);
 
         for (int attempt = 0; attempt < maxSpawnAttempts; attempt++)
         {
             Vector2 candidate = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+
+            // 1. Verificar que el centro y los 4 extremos de la grieta estén ESTRICTAMENTE dentro de los límites de la zona activa
             if (!activeZoneBounds.OverlapPoint(candidate))
                 continue;
 
+            if (!activeZoneBounds.OverlapPoint(candidate + new Vector2(1.7f, 0f)) ||
+                !activeZoneBounds.OverlapPoint(candidate - new Vector2(1.7f, 0f)) ||
+                !activeZoneBounds.OverlapPoint(candidate + new Vector2(0f, 0.9f)) ||
+                !activeZoneBounds.OverlapPoint(candidate - new Vector2(0f, 0.9f)))
+            {
+                continue;
+            }
+
+            // 2. Mantener la zona completamente visible dentro de la cámara
             if (!IsInsideCamera(candidate))
                 continue;
 
-            if (blockingLayers.value != 0 && Physics2D.OverlapCircle(candidate, clearanceRadius, blockingLayers) != null)
+            // 3. Comprobar que no colisione con NINGÚN obstáculo sólido (muros, rocas, árboles del escenario, límites)
+            bool collisionFound = false;
+
+            // Chequeo A: Caja de cobertura de la grieta
+            Collider2D[] boxHits = Physics2D.OverlapBoxAll(candidate, fissureExtentBox, 0f, effectiveBlockingMask);
+            for (int i = 0; i < boxHits.Length; i++)
+            {
+                Collider2D col = boxHits[i];
+                if (col == null) continue;
+                if (col.gameObject == activeZone.gameObject) continue;
+
+                // Si es un trigger, solo bloquea si pertenece a otra zona erosionada o árbol plantado
+                if (col.isTrigger)
+                {
+                    if (col.GetComponentInParent<ErodedSoilZone>() != null || col.GetComponentInParent<RestoredTreeInteraction>() != null)
+                    {
+                        collisionFound = true;
+                        break;
+                    }
+                    continue;
+                }
+
+                // Ignorar colisiones de personajes dinámicos
+                if (col.CompareTag("Player") || col.CompareTag("Enemy"))
+                    continue;
+
+                // Cualquier colisionador sólido ambiental/muro/árbol bloquea el spawn
+                collisionFound = true;
+                break;
+            }
+
+            if (collisionFound)
                 continue;
 
+            // Chequeo B: Radio de despeje circular
+            Collider2D[] circleHits = Physics2D.OverlapCircleAll(candidate, effectiveClearance, effectiveBlockingMask);
+            for (int i = 0; i < circleHits.Length; i++)
+            {
+                Collider2D col = circleHits[i];
+                if (col == null) continue;
+                if (col.gameObject == activeZone.gameObject) continue;
+
+                if (col.isTrigger)
+                {
+                    if (col.GetComponentInParent<ErodedSoilZone>() != null || col.GetComponentInParent<RestoredTreeInteraction>() != null)
+                    {
+                        collisionFound = true;
+                        break;
+                    }
+                    continue;
+                }
+
+                if (col.CompareTag("Player") || col.CompareTag("Enemy"))
+                    continue;
+
+                collisionFound = true;
+                break;
+            }
+
+            if (collisionFound)
+                continue;
+
+            // 4. Distancia mínima respecto a otras zonas generadas en este encuentro
             if (IsTooCloseToEncounterZone(candidate))
                 continue;
 
@@ -362,8 +465,8 @@ public class SoilZoneSpawner : MonoBehaviour
         Vector3 center = gameplayCamera.WorldToViewportPoint(position);
         float halfHeight = gameplayCamera.orthographicSize;
         float halfWidth = halfHeight * gameplayCamera.aspect;
-        float paddingX = (clearanceRadius + viewportPadding) / Mathf.Max(halfWidth * 2f, 0.01f);
-        float paddingY = (clearanceRadius + viewportPadding) / Mathf.Max(halfHeight * 2f, 0.01f);
+        float paddingX = (Mathf.Max(clearanceRadius, 2.0f) + viewportPadding) / Mathf.Max(halfWidth * 2f, 0.01f);
+        float paddingY = (Mathf.Max(clearanceRadius, 1.2f) + viewportPadding) / Mathf.Max(halfHeight * 2f, 0.01f);
 
         return center.z > 0f
             && center.x >= paddingX && center.x <= 1f - paddingX

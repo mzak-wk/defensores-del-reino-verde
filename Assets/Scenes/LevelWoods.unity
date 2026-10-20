@@ -3626,6 +3626,7 @@ MonoBehaviour:
   magnetPullBonus: 0
   unlockAllWeaponsForTesting: 0
   allGameWeapons: []
+  itemDatabase: {fileID: 0}
 --- !u!4 &1400105550
 Transform:
   m_ObjectHideFlags: 0
@@ -5979,7 +5980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7579468159266436551, guid: 4b01382817822bb42a1b2fe25fdcf6b6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: -137
       objectReference: {fileID: 0}
     - target: {fileID: 7579468159266436551, guid: 4b01382817822bb42a1b2fe25fdcf6b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6129,32 +6130,36 @@ PrefabInstance:
       value: UltimateCutIn
       objectReference: {fileID: 0}
     - target: {fileID: 1211941449818477337, guid: f8270ee6293a49a4193113ed9a8f79bc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1988.5588
+      objectReference: {fileID: 0}
+    - target: {fileID: 1211941449818477337, guid: f8270ee6293a49a4193113ed9a8f79bc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1076.2
+      value: 1156.5
       objectReference: {fileID: 0}
     - target: {fileID: 1211941449818477337, guid: f8270ee6293a49a4193113ed9a8f79bc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 97
+      value: -0.000005722
       objectReference: {fileID: 0}
     - target: {fileID: 1211941449818477337, guid: f8270ee6293a49a4193113ed9a8f79bc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.8001
+      value: -9.15
       objectReference: {fileID: 0}
     - target: {fileID: 2273475541573090577, guid: f8270ee6293a49a4193113ed9a8f79bc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1934.8129
+      value: 1935.7186
       objectReference: {fileID: 0}
     - target: {fileID: 2273475541573090577, guid: f8270ee6293a49a4193113ed9a8f79bc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1008.7729
+      value: 1174.8
       objectReference: {fileID: 0}
     - target: {fileID: 2273475541573090577, guid: f8270ee6293a49a4193113ed9a8f79bc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7.2162
+      value: 7.659298
       objectReference: {fileID: 0}
     - target: {fileID: 2273475541573090577, guid: f8270ee6293a49a4193113ed9a8f79bc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 8
+      value: 32.619
       objectReference: {fileID: 0}
     - target: {fileID: 5328879560179907399, guid: f8270ee6293a49a4193113ed9a8f79bc, type: 3}
       propertyPath: m_SizeDelta.y

@@ -62,6 +62,53 @@ public class ItemData : ScriptableObject
     public KeyCode ActiveAbilityKey => activeAbilityKey;
     public float ActiveAbilityDuration => activeAbilityDuration;
 
+    public const float DEFAULT_DIMINISHING_DECAY = 0.70f;
+
+    /// <summary>
+    /// Multiplicador acumulado con rendimientos decrecientes (Diminishing Returns).
+    /// Nivel 1 = 1.0f
+    /// Nivel 2 = 1.70f (+70% extra)
+    /// Nivel 3 = 2.19f (+49% extra)
+    /// Nivel 4 = 2.53f (+34% extra)
+    /// Nivel 5 = 2.77f (+24% extra)
+    /// </summary>
+    public static float GetDiminishingMultiplier(int level, float decayRate = DEFAULT_DIMINISHING_DECAY)
+    {
+        if (level <= 0) return 0f;
+        if (level == 1) return 1f;
+
+        float totalMultiplier = 0f;
+        float currentIncrement = 1f;
+
+        for (int i = 0; i < level; i++)
+        {
+            totalMultiplier += currentIncrement;
+            currentIncrement *= decayRate;
+        }
+
+        return totalMultiplier;
+    }
+
+    /// <summary>
+    /// Retorna cuánto incremento relativo dará subir de currentLevel a (currentLevel + 1).
+    /// </summary>
+    public static float GetNextLevelIncrementMultiplier(int currentLevel, float decayRate = DEFAULT_DIMINISHING_DECAY)
+    {
+        if (currentLevel <= 0) return 1f;
+        return Mathf.Pow(decayRate, currentLevel);
+    }
+
+    public float GetEffectiveMaxHpBonus(int level) => maxHpBonusPercent * GetDiminishingMultiplier(level);
+    public float GetEffectiveDamageBonus(int level) => damageBonusPercent * GetDiminishingMultiplier(level);
+    public float GetEffectiveAutoAttackCDR(int level) => autoAttackCooldownReduction * GetDiminishingMultiplier(level);
+    public float GetEffectiveActiveSkillCDR(int level) => activeSkillCooldownReduction * GetDiminishingMultiplier(level);
+    public float GetEffectiveProjectileSizeBonus(int level) => projectileSizeBonusPercent * GetDiminishingMultiplier(level);
+    public float GetEffectiveDefenseBonus(int level) => defenseBonusPercent * GetDiminishingMultiplier(level);
+    public float GetEffectiveLutroCoinBonus(int level) => lutroCoinBonusPercent * GetDiminishingMultiplier(level);
+    public float GetEffectivePickupRangeBonus(int level) => pickupRangeBonusPercent * GetDiminishingMultiplier(level);
+    public float GetEffectiveDashDamageBonus(int level) => dashDamageBonusNextAttack * GetDiminishingMultiplier(level);
+    public int GetEffectiveExtraDashes(int level) => Mathf.Max(0, Mathf.FloorToInt(extraDashes * (level > 0 ? 1 + (level - 1) * 0.5f : 0)));
+
     public bool HasPositiveStats()
     {
         return maxHpBonusPercent > 0f
@@ -80,22 +127,65 @@ public class ItemData : ScriptableObject
 
     public string GetStatsSummary()
     {
+        return GetDetailedDescription(1, -1);
+    }
+
+    public string GetDetailedDescription(int currentLevel, int nextLevel = -1)
+    {
         System.Text.StringBuilder sb = new System.Text.StringBuilder();
 
-        if (maxHpBonusPercent > 0f) sb.AppendLine($"  +{maxHpBonusPercent}% Vida Máxima");
-        if (autoAttackCooldownReduction > 0f) sb.AppendLine($"  -{autoAttackCooldownReduction}% Cooldown Ataque Auto");
-        if (damageBonusPercent > 0f) sb.AppendLine($"  +{damageBonusPercent}% Daño");
-        if (projectileSizeBonusPercent > 0f) sb.AppendLine($"  +{projectileSizeBonusPercent}% Tamaño Proyectil");
-        if (defenseBonusPercent > 0f) sb.AppendLine($"  +{defenseBonusPercent}% Defensa");
-        if (lutroCoinBonusPercent > 0f) sb.AppendLine($"  +{lutroCoinBonusPercent}% Monedas Lutro");
-        if (activeSkillCooldownReduction > 0f) sb.AppendLine($"  -{activeSkillCooldownReduction}% Cooldown Habilidad Activa");
-        if (pickupRangeBonusPercent > 0f) sb.AppendLine($"  +{pickupRangeBonusPercent}% Rango Recogida");
-        if (dashDamageBonusNextAttack > 0f) sb.AppendLine($"  +{dashDamageBonusNextAttack} Daño Próximo Ataque tras Dash");
-        if (extraDashes > 0) sb.AppendLine($"  +{extraDashes} Dash(s) Extra(s)");
+        void AppendStat(string name, float baseVal, string suffix = "%", bool isReduction = false)
+        {
+            if (baseVal <= 0f) return;
+
+            string sign = isReduction ? "-" : "+";
+            if (currentLevel <= 0)
+            {
+                // Nuevo ítem -> mostrará su valor en nivel 1
+                sb.AppendLine($"  {sign}{baseVal:0.#}{suffix} {name}");
+            }
+            else if (nextLevel > currentLevel)
+            {
+                float currentVal = baseVal * GetDiminishingMultiplier(currentLevel);
+                float nextVal = baseVal * GetDiminishingMultiplier(nextLevel);
+                float diff = nextVal - currentVal;
+                sb.AppendLine($"  {name}: {sign}{currentVal:0.#}{suffix} → {sign}{nextVal:0.#}{suffix} ({sign}{diff:0.#}{suffix})");
+            }
+            else
+            {
+                float currentVal = baseVal * GetDiminishingMultiplier(currentLevel);
+                sb.AppendLine($"  {sign}{currentVal:0.#}{suffix} {name}");
+            }
+        }
+
+        AppendStat("Vida Máxima", maxHpBonusPercent);
+        AppendStat("Cooldown Ataque Auto", autoAttackCooldownReduction, "%", true);
+        AppendStat("Daño", damageBonusPercent);
+        AppendStat("Tamaño Proyectil", projectileSizeBonusPercent);
+        AppendStat("Defensa", defenseBonusPercent);
+        AppendStat("Monedas Lutro", lutroCoinBonusPercent);
+        AppendStat("Cooldown Habilidad Activa", activeSkillCooldownReduction, "%", true);
+        AppendStat("Rango Recogida", pickupRangeBonusPercent);
+        AppendStat("Daño tras Dash", dashDamageBonusNextAttack, "");
+
+        if (extraDashes > 0)
+        {
+            int curD = GetEffectiveExtraDashes(currentLevel);
+            if (nextLevel > currentLevel)
+            {
+                int nextD = GetEffectiveExtraDashes(nextLevel);
+                sb.AppendLine($"  Dash(s) Extra(s): +{curD} → +{nextD}");
+            }
+            else
+            {
+                sb.AppendLine($"  +{curD} Dash(s) Extra(s)");
+            }
+        }
+
         if (leavesDashTrail) sb.AppendLine("  Deja estela al hacer Dash");
         if (specialHitsTwice) sb.AppendLine("  Golpe especial impacta dos veces");
 
         if (sb.Length == 0) return "Sin efectos pasivos.";
-        return sb.ToString();
+        return sb.ToString().TrimEnd();
     }
 }
